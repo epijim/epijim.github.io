@@ -3,27 +3,27 @@
 	<title type="text">James Black &#8211; Articles</title>
 	<subtitle type="html">Epidemiologist</subtitle>
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-	<icon>http://0.0.0.0:4000/images/icon152.png</icon>
-	<link rel="alternate" type="text/html" href="http://0.0.0.0:4000" />
-	<updated>2014-02-13T20:12:57+00:00</updated>
-	<id>http://0.0.0.0:4000/</id>
+	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
+	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
+	<updated>2014-02-13T20:17:13+00:00</updated>
+	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
-		<uri>http://0.0.0.0:4000/</uri>
+		<uri>http://www.epijim.co.uk/</uri>
 		<email>james.black@cantab.net</email>
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
-	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/articles-feed.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/articles-feed.xml" />
 	
 	<entry>
 		<title type="html"><![CDATA[Linear regression with R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/regression/" />
-		<id>http://0.0.0.0:4000/articles/regression</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/regression/" />
+		<id>http://www.epijim.co.uk/articles/regression</id>
 		<published>2014-02-11T00:00:00+00:00</published>
 		<updated>2014-02-11T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Linear regression code for use with R.</summary>
@@ -541,18 +541,18 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 
 &lt;/html&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Wine spend and academic performance]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/wine-budget/" />
-		<id>http://0.0.0.0:4000/articles/wine-budget</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/wine-budget/" />
+		<id>http://www.epijim.co.uk/articles/wine-budget</id>
 		<published>2014-02-10T00:00:00+00:00</published>
 		<updated>2014-02-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Wine budget and academic performance at Cambridge University.</summary>
@@ -783,18 +783,18 @@ what do the numbers look like if I attempt to adjust out
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Visualising flow with a sankey plot]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/sankey-arrow-plot/" />
-		<id>http://0.0.0.0:4000/articles/sankey-arrow-plot</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/sankey-arrow-plot/" />
+		<id>http://www.epijim.co.uk/articles/sankey-arrow-plot</id>
 		<published>2014-02-05T00:00:00+00:00</published>
 		<updated>2014-02-05T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Showing how to make a sankey plot using R.</summary>
@@ -873,19 +873,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting my Facebook data]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/facebook-network/" />
-		<id>http://0.0.0.0:4000/articles/facebook-network</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/facebook-network/" />
+		<id>http://www.epijim.co.uk/articles/facebook-network</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2014-02-05T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Plotting my Facebook data using R.</summary>
@@ -1591,19 +1591,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Facebook friend migrations]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/great-circles/" />
-		<id>http://0.0.0.0:4000/articles/great-circles</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/great-circles/" />
+		<id>http://www.epijim.co.uk/articles/great-circles</id>
 		<updated>2014-02-13T00:00:00-00:00</updated>
 		<published>2014-01-26T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Facebook friend migrations (great circles and geocoding in R).</summary>
@@ -1679,19 +1679,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
 	&lt;figcaption&gt;Zoomed into NZ. Once again, hometown is in blue, location now in red.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Mapping my google location data]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/mapping-python/" />
-		<id>http://0.0.0.0:4000/articles/mapping-python</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/mapping-python/" />
+		<id>http://www.epijim.co.uk/articles/mapping-python</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2013-12-19T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Mapping my google location data with python.</summary>
@@ -2067,19 +2067,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[In-text distributions]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/intext-distributions/" />
-		<id>http://0.0.0.0:4000/articles/intext-distributions</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/intext-distributions/" />
+		<id>http://www.epijim.co.uk/articles/intext-distributions</id>
 		<updated>2013-12-02T00:00:00-00:00</updated>
 		<published>2013-12-02T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">In-text distributions using LaTeX.</summary>
@@ -2123,56 +2123,56 @@ Ten-year modelled CVD risk was 27.3 (SD 13.9, histogram
 &lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Modelling intensity of treatment after diabetes diagnosis]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper4/" />
-		<id>http://0.0.0.0:4000/articles/paper4</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper4/" />
+		<id>http://www.epijim.co.uk/articles/paper4</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Does early intensive multifactorial therapy reduce modelled cardiovascular risk in individuals with screen-detected diabetes?</summary>
 		<content type="html">&lt;p&gt;This paper is currently in press at Diabetic Medicine.&lt;/p&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot;&gt;Modelling intensity of treatment after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper4/&quot;&gt;Modelling intensity of treatment after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[CVD risk factors after diabetes diagnosis]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper3/" />
-		<id>http://0.0.0.0:4000/articles/paper3</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper3/" />
+		<id>http://www.epijim.co.uk/articles/paper3</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Change in cardiovascular risk factors following early diagnosis of type 2 diabetes</summary>
 		<content type="html">&lt;p&gt;This paper is currently in press at the British Journal of General Practice.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot;&gt;CVD risk factors after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper3/&quot;&gt;CVD risk factors after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Bariatric surgery in children]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper2/" />
-		<id>http://0.0.0.0:4000/articles/paper2</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper2/" />
+		<id>http://www.epijim.co.uk/articles/paper2</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis.</summary>
@@ -2198,7 +2198,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037&lt;/p&gt;
  using a random effects model. &lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_meta.png&quot; alt=&quot;Metaanalysis&quot; /&gt;
+	&lt;img src=&quot;http://www.epijim.co.uk/images/paper2_meta.png&quot; alt=&quot;Metaanalysis&quot; /&gt;
 	&lt;figcaption&gt;Meta-analysis of BMI change after bariatric surgery for adolescent obesity, by surgery type and overall. AGB, adjustable gastric banding; BMI, body mass index; BPD, biliopancreatic diversion; CI, confidence interval; RYGB, Roux-en-Y gastric bypass; SG, sleeve gastrectomy.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -2214,19 +2214,19 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037&lt;/p&gt;
  surgery in children and adolescents.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot;&gt;Bariatric surgery in children&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper2/&quot;&gt;Bariatric surgery in children&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Health related quality of life after injury]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper1/" />
-		<id>http://0.0.0.0:4000/articles/paper1</id>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper1/" />
+		<id>http://www.epijim.co.uk/articles/paper1</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.</summary>
@@ -2236,7 +2236,7 @@ general health status using the EQ-5D.&lt;/strong&gt;
 The Journal of trauma, 71(4), 1003–10. doi:10.1097/TA.0b013e3182238833&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; alt=&quot;Acknowledgments&quot; /&gt;
+	&lt;img src=&quot;http://www.epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;Acknowledgments&quot; /&gt;
 	&lt;figcaption&gt;Being a independent meta-analysis, getting the collaboration of authors
 	 from identified papers was paramount.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2270,7 +2270,7 @@ The Journal of trauma, 71(4), 1003–10. doi:10.1097/TA.0b013e3182238833&lt;/p&g
  injury is likely being underestimated.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper1/&quot;&gt;Health related quality of life after injury&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper1/&quot;&gt;Health related quality of life after injury&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>

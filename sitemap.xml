@@ -1,79 +1,79 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://0.0.0.0:4000/articles/paper1/</loc>
+        <loc>http://www.epijim.co.uk/articles/paper1/</loc>
         <lastmod>2014-02-13T14:15:48+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/paper2/</loc>
+        <loc>http://www.epijim.co.uk/articles/paper2/</loc>
         <lastmod>2014-02-13T14:15:54+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/paper3/</loc>
+        <loc>http://www.epijim.co.uk/articles/paper3/</loc>
         <lastmod>2014-02-13T17:06:03+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/paper4/</loc>
+        <loc>http://www.epijim.co.uk/articles/paper4/</loc>
         <lastmod>2014-02-13T17:11:26+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/plots/</loc>
+        <loc>http://www.epijim.co.uk/plots/</loc>
         <lastmod>2014-02-13T15:00:46+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/my-papers/</loc>
+        <loc>http://www.epijim.co.uk/my-papers/</loc>
         <lastmod>2014-02-13T17:13:01+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/intext-distributions/</loc>
+        <loc>http://www.epijim.co.uk/articles/intext-distributions/</loc>
         <lastmod>2014-02-13T14:39:25+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/mapping-python/</loc>
+        <loc>http://www.epijim.co.uk/articles/mapping-python/</loc>
         <lastmod>2014-02-13T14:45:39+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/great-circles/</loc>
+        <loc>http://www.epijim.co.uk/articles/great-circles/</loc>
         <lastmod>2014-02-13T16:56:50+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/facebook-network/</loc>
+        <loc>http://www.epijim.co.uk/articles/facebook-network/</loc>
         <lastmod>2014-02-13T14:39:43+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/sankey-arrow-plot/</loc>
+        <loc>http://www.epijim.co.uk/articles/sankey-arrow-plot/</loc>
         <lastmod>2014-02-13T14:41:21+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/wine-budget/</loc>
+        <loc>http://www.epijim.co.uk/articles/wine-budget/</loc>
         <lastmod>2014-02-13T14:45:58+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles/regression/</loc>
+        <loc>http://www.epijim.co.uk/articles/regression/</loc>
         <lastmod>2014-02-13T14:46:19+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/about/</loc>
+        <loc>http://www.epijim.co.uk/about/</loc>
         <lastmod>2014-02-13T09:51:13+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/articles-feed.xml</loc>
+        <loc>http://www.epijim.co.uk/articles-feed.xml</loc>
         <lastmod>2014-02-12T22:09:32+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/blog/</loc>
+        <loc>http://www.epijim.co.uk/blog/</loc>
         <lastmod>2014-02-13T17:13:01+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/</loc>
+        <loc>http://www.epijim.co.uk/</loc>
         <lastmod>2014-02-13T17:13:01+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/tag/</loc>
+        <loc>http://www.epijim.co.uk/tag/</loc>
         <lastmod>2014-02-12T22:09:35+00:00</lastmod>
     </url>
     <url>
-        <loc>http://0.0.0.0:4000/work/</loc>
+        <loc>http://www.epijim.co.uk/work/</loc>
         <lastmod>2014-02-12T22:09:35+00:00</lastmod>
     </url>
 </urlset>
