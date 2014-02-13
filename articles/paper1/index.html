@@ -6,25 +6,25 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Visualising flow with a sankey plot &#8211; James Black</title>
-	<meta name="description" content="Showing how to make a sankey plot using R.">
-	<meta name="keywords" content="R, Sankey">
+	<title>Health related quality of life after injury &#8211; James Black</title>
+	<meta name="description" content="Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.">
+	<meta name="keywords" content="papers, publications, HRQoL">
 	<!-- Twitter Cards -->
 	
 		<meta name="twitter:card" content="summary">
-			<meta name="twitter:image" content="http://0.0.0.0:4000/images/sankey_thumb.png">
+			<meta name="twitter:image" content="http://0.0.0.0:4000/images/paper1_ack.png">
 		
 	
-	<meta name="twitter:title" content="Visualising flow with a sankey plot">
-	<meta name="twitter:description" content="Showing how to make a sankey plot using R.">
+	<meta name="twitter:title" content="Health related quality of life after injury">
+	<meta name="twitter:description" content="Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.">
 	<meta name="twitter:site" content="@">
 	<meta name="twitter:creator" content="@">
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Visualising flow with a sankey plot">
-	<meta property="og:description" content="Showing how to make a sankey plot using R.">
-	<meta property="og:url" content="http://0.0.0.0:4000/articles/sankey-arrow-plot/">
+	<meta property="og:title" content="Health related quality of life after injury">
+	<meta property="og:description" content="Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.">
+	<meta property="og:url" content="http://0.0.0.0:4000/articles/paper1/">
 	<meta property="og:site_name" content="James Black">
 
 	<!-- Webmaster Tools verifications -->
@@ -32,7 +32,7 @@
 	
 
 	
-	<link rel="canonical" href="http://0.0.0.0:4000/articles/sankey-arrow-plot/">
+	<link rel="canonical" href="http://0.0.0.0:4000/articles/paper1/">
 	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
 	<link href="http://feeds.feedburner.com/MadeMistakesArticles" type="application/atom+xml" rel="alternate" title="James Black &#8211; Articles Feed">
 	<link href="http://feeds.feedburner.com/MadeMistakesPaperFaces" type="application/atom+xml" rel="alternate" title="James Black &#8211; PaperFaces Portrait Feed">
@@ -108,105 +108,70 @@
 		<article class="hentry" itemscope itemtype="http://schema.org/Article">
 		<header class="entry-header">
 		
-			<h1 class="entry-title" itemprop="name">Visualising flow with a sankey plot</h1>
+			<h1 class="entry-title" itemprop="name">Health related quality of life after injury</h1>
 		</header>
 		<div class="entry-wrapper">
 			<div class="entry-content" itemprop="articleBody">
-				<figure>
-	<a href="/images/sankey_example.png"><img src="/images/sankey_example.png" /></a>
-	<figcaption>An example of the function output, taken from my thesis.</figcaption>
-</figure>
-
-<p>Above is a Sankey plot that takes the number of individuals given the option of being
- screened for diabetes, and how individuals left the screening programme,
- till a fraction of the original number were diagnosed with diabetes.
- I’m using this figure in my PhD, and the numbers behind it come from a paper<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> describing 
- a diabetes screening trial that was run by my supervisors.</p>
-
-<p>The original Sankey diagram visualised the efficiency of a steam engine, 
-but a more famous example is probably Minard’s picture of Napoleon’s disastrous Russian 
-campaign (below). The general idea behind these plots is that the width of the arrows is 
-to scale, so you can see the flow much more instinctively than a standard flow chart. 
-Although Minard took it a step further by plotting it over a map, and also plotting the temperatures.</p>
+				<p><em>Black, J. A., Herbison, G. P., Lyons, R. A., Polinder, S., &amp; Derrett, S.</em> (2011). 
+<strong>Recovery after injury: an individual patient data meta-analysis of 
+general health status using the EQ-5D.</strong> 
+The Journal of trauma, 71(4), 1003–10. doi:10.1097/TA.0b013e3182238833</p>
 
 <figure>
-	<a href="/images/sankey_minard.png"><img src="/images/sankey_minard.png" /></a>
-	<figcaption>Minard's summary of the failed Russian Campaign.</figcaption>
+	<img src="http://0.0.0.0:4000/images/paper1_ack.png" alt="Acknowledgments" />
+	<figcaption>Being a independent meta-analysis, getting the collaboration of authors
+	 from identified papers was paramount.</figcaption>
 </figure>
 
-<p>The code is super simple to run. First the setup. We set the working directory, then set up
- a function to pull other functions and their dependencies from a Gist (an online repository).</p>
+<p>Background: General information of health-related quality of life pathways to recovery
+ after injury are largely absent from the literature. This article describes a study which: 
+ (1) collated and synthesized individual patient data of injured persons from an earlier 
+ systematic review and (2) produced general predictions of health-related quality of life 
+ for different injury groups for up to 1 year postinjury. </p>
 
-<div class="highlight"><pre><code class="r">setwd<span class="p">(</span><span class="s">&quot;~/Dropbox/Personal/fun with code/sankey_arrow&quot;</span><span class="p">)</span>
- 
-sourc.https     <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>url<span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># install and load the RCurl package </span>
-  <span class="kr">if</span> <span class="p">(</span>match<span class="p">(</span><span class="s">&#39;RCurl&#39;</span><span class="p">,</span> nomatch<span class="o">=</span><span class="m">0</span><span class="p">,</span> installed.packages<span class="p">()[,</span><span class="m">1</span><span class="p">])</span><span class="o">==</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-    install.packages<span class="p">(</span>c<span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">),</span> dependencies <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-    require<span class="p">(</span>RCurl<span class="p">)</span>  
-  <span class="p">}</span> <span class="kr">else</span> require<span class="p">(</span>RCurl<span class="p">)</span>    
-  
-  <span class="c1"># parse and evaluate each .R script</span>
-  sapply<span class="p">(</span>c<span class="p">(</span>url<span class="p">,</span> <span class="kc">...</span><span class="p">),</span> <span class="kr">function</span><span class="p">(</span>u<span class="p">)</span> <span class="p">{</span>
-    eval<span class="p">(</span>parse<span class="p">(</span>text <span class="o">=</span> getURL<span class="p">(</span>u<span class="p">,</span> followlocation <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
-                             cainfo  <span class="o">=</span> system.file<span class="p">(</span><span class="s">&quot;CurlSSL&quot;</span><span class="p">,</span> <span class="s">&quot;cacert.pem&quot;</span><span class="p">,</span> 
-                                                   package <span class="o">=</span> <span class="s">&quot;RCurl&quot;</span><span class="p">))),</span> envir <span class="o">=</span> .GlobalEnv<span class="p">)</span>
-  <span class="p">}</span> <span class="p">)</span>
- 
-<span class="c1"># from https://gist.github.com/1423501</span>
-sourc.https<span class="p">(</span><span class="s">&quot;https://gist.github.com/epijim/8832627/raw/91f8fb601a483a6e60c6cbc7eeea939e010cf7ce/Sankey.R&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
+<p>Methods: A systematic search of literature from January 1990 to December 2008 was completed.
+ Researchers were approached to share their anonymous individual level data. Injuries 
+ were grouped into 39 categories based on the Eurocost injury classifications. Multilevel 
+ mixed effects models were used to produce predictions across both the five dimensions 
+ and the visual analog scale of the EQ-5D measure at 3 days, 30 days, 120 days, and 
+ 360 days postinjury. </p>
 
-<p>The last line of the previous code snippet read in the function to make the Sankey plot.
- I’m pulling it from my own Gist, rather than the official one, as I edited two lines that 
- effect how the text is written.</p>
+<p>Results: Individual patient data from 10,496 injured persons 
+ (76% of known data worldwide) was retrieved. Predictions were fitted to 27 of the 39 
+ injury categories covering a wide spectrum of injury types. Across most injuries, 
+ pain, or discomfort, usual activities and mobility were the most commonly impaired 
+ dimensions. Recovery for pain or discomfort was generally more gradual than other health 
+ dimensions. For many injury categories, a consid- erable proportion of people reported 
+ residual impairment at 360 days. Regardless of the anatomic location of injury, 
+ similar patterns of recovery or persistent impairment were seen for fractures and strains/sprains. 
+ Recovery patterns differed and took much longer than estimated in the Global Burden of Disease Study. </p>
 
-<p>Then we just need to give the function the numbers that go in (inputs) and the numbers that
- go out. Then the labels in the same order. It’s crazy simple!</p>
+<p>Conclusions: This study has produced recovery patterns for 27 injury groups using most of
+ the worldwide individual-level data. For many injury catego- ries, recovery is 
+ incomplete and takes much longer than estimated. This study infers that the burden of 
+ injury is likely being underestimated.</p>
 
-<div class="highlight"><pre><code class="r">inputs <span class="o">=</span> c<span class="p">(</span><span class="m">35297</span><span class="p">)</span>
-losses <span class="o">=</span> c<span class="p">(</span><span class="m">1758</span><span class="p">,</span><span class="m">8885</span><span class="p">,</span><span class="m">23787</span><span class="p">,</span><span class="m">867</span><span class="p">)</span>
-unit <span class="o">=</span> <span class="s">&quot;n =&quot;</span>
- 
-labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;At high diabetes risk&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not meet criteria&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not attend screening&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not have diabetes&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Diagnosed with diabetes&quot;</span><span class="p">)</span>
-  pdf<span class="p">(</span><span class="s">&quot;Sankey.pdf&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">12</span><span class="p">,</span> height<span class="o">=</span><span class="m">10</span><span class="p">)</span>
-    SankeyR<span class="p">(</span>inputs<span class="p">,</span>losses<span class="p">,</span>unit<span class="p">,</span>labels<span class="p">)</span>
-  dev.off<span class="p">()</span>
-</code></pre></div>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/19435491">Echouffo-Tcheugui et al(2009) BMC Public Health, 9:136</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 
 				<div class="entry-related">
 					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://0.0.0.0:4000" data-subtome-feeds="http://feeds.feedburner.com/MadeMistakesArticles"><i class="fa fa-rss fa-fw"></i></a></h2>
 					<ul>
 						
-						<li><a href="http://0.0.0.0:4000/articles/regression/">Linear regression with R</a></li>
+						<li><a href="http://0.0.0.0:4000/my-papers/">My papers</a></li>
 						
-						<li><a href="http://0.0.0.0:4000/articles/wine-budget/">Wine spend and academic performance</a></li>
+						<li><a href="http://0.0.0.0:4000/articles/paper3/">CVD risk factors after diabetes diagnosis</a></li>
 						
-						<li><a href="http://0.0.0.0:4000/articles/facebook-network/">Plotting my Facebook data</a></li>
+						<li><a href="http://0.0.0.0:4000/articles/paper4/">Modelling intensity of treatment after diabetes diagnosis</a></li>
 						
-						<li><a href="http://0.0.0.0:4000/articles/great-circles/">Facebook friend migrations</a></li>
+						<li><a href="http://0.0.0.0:4000/articles/paper2/">Bariatric surgery in children</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->
 				<hr />
 				<div class="entry-meta">
-					<meta itemprop="keywords" content="R, Sankey">
-					<span class="entry-tags"><a href="http://0.0.0.0:4000/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://0.0.0.0:4000/tag/sankey/" title="Sankey" class="tag" rel="tag">Sankey</a></span>
+					<meta itemprop="keywords" content="papers, publications, HRQoL">
+					<span class="entry-tags"><a href="http://0.0.0.0:4000/tag/papers/" title="papers" class="tag" rel="tag">papers</a><a href="http://0.0.0.0:4000/tag/publications/" title="publications" class="tag" rel="tag">publications</a><a href="http://0.0.0.0:4000/tag/hrqol/" title="HRQoL" class="tag" rel="tag">HRQoL</a></span>
 					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://0.0.0.0:4000/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
-					<span class="entry-date"><time datetime="2014-02-05T00:00:00+00:00" itemprop="datePublished" class="published updated">February 05, 2014</time></span>
+					<span class="entry-date"><time datetime="2011-07-31T00:00:00+01:00" itemprop="datePublished" class="published">July 31, 2011</time></span> <span class="entry-date">(Updated <time datetime="2014-01-10" itemprop="dateModified" class="updated">01/10/2014</time>)</span>
 				</div><!-- /.entry-meta -->
 			</div><!-- /.entry-content -->
 			<div class="ads">
@@ -278,7 +243,7 @@ labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;A
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
-    var disqus_title = 'Visualising flow with a sankey plot';
+    var disqus_title = 'Health related quality of life after injury';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

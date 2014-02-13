@@ -6,25 +6,25 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Visualising flow with a sankey plot &#8211; James Black</title>
-	<meta name="description" content="Showing how to make a sankey plot using R.">
-	<meta name="keywords" content="R, Sankey">
+	<title>Facebook friend migrations &#8211; James Black</title>
+	<meta name="description" content="Facebook friend migrations (great circles and geocoding in R).">
+	<meta name="keywords" content="R, Great circles">
 	<!-- Twitter Cards -->
 	
 		<meta name="twitter:card" content="summary">
-			<meta name="twitter:image" content="http://0.0.0.0:4000/images/sankey_thumb.png">
+			<meta name="twitter:image" content="http://0.0.0.0:4000/images/greatcircles_thumb.png">
 		
 	
-	<meta name="twitter:title" content="Visualising flow with a sankey plot">
-	<meta name="twitter:description" content="Showing how to make a sankey plot using R.">
+	<meta name="twitter:title" content="Facebook friend migrations">
+	<meta name="twitter:description" content="Facebook friend migrations (great circles and geocoding in R).">
 	<meta name="twitter:site" content="@">
 	<meta name="twitter:creator" content="@">
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Visualising flow with a sankey plot">
-	<meta property="og:description" content="Showing how to make a sankey plot using R.">
-	<meta property="og:url" content="http://0.0.0.0:4000/articles/sankey-arrow-plot/">
+	<meta property="og:title" content="Facebook friend migrations">
+	<meta property="og:description" content="Facebook friend migrations (great circles and geocoding in R).">
+	<meta property="og:url" content="http://0.0.0.0:4000/articles/great-circles/">
 	<meta property="og:site_name" content="James Black">
 
 	<!-- Webmaster Tools verifications -->
@@ -32,7 +32,7 @@
 	
 
 	
-	<link rel="canonical" href="http://0.0.0.0:4000/articles/sankey-arrow-plot/">
+	<link rel="canonical" href="http://0.0.0.0:4000/articles/great-circles/">
 	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
 	<link href="http://feeds.feedburner.com/MadeMistakesArticles" type="application/atom+xml" rel="alternate" title="James Black &#8211; Articles Feed">
 	<link href="http://feeds.feedburner.com/MadeMistakesPaperFaces" type="application/atom+xml" rel="alternate" title="James Black &#8211; PaperFaces Portrait Feed">
@@ -108,84 +108,81 @@
 		<article class="hentry" itemscope itemtype="http://schema.org/Article">
 		<header class="entry-header">
 		
-			<h1 class="entry-title" itemprop="name">Visualising flow with a sankey plot</h1>
+			<h1 class="entry-title" itemprop="name">Facebook friend migrations</h1>
 		</header>
 		<div class="entry-wrapper">
 			<div class="entry-content" itemprop="articleBody">
 				<figure>
-	<a href="/images/sankey_example.png"><img src="/images/sankey_example.png" /></a>
-	<figcaption>An example of the function output, taken from my thesis.</figcaption>
+	<a href="/images/greatcircles_1_final.png"><img src="/images/greatcircles_1_final.png" /></a>
+	<figcaption>Great circles plot of my facebook friend's migrations.</figcaption>
 </figure>
 
-<p>Above is a Sankey plot that takes the number of individuals given the option of being
- screened for diabetes, and how individuals left the screening programme,
- till a fraction of the original number were diagnosed with diabetes.
- I’m using this figure in my PhD, and the numbers behind it come from a paper<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> describing 
- a diabetes screening trial that was run by my supervisors.</p>
+<p>Facebook users are asked to fill in their hometown, and where they live now (although
+ only about 60%ish of my friends actually filled this data in). This data is all up for 
+ grabs using the Facebook API, as I detailed in an earlier post. In the plot above, the 
+ blue dot is my Facebook friends hometown and the red is where they live now. I have put 
+ a black line connecting hometown to current location.</p>
 
-<p>The original Sankey diagram visualised the efficiency of a steam engine, 
-but a more famous example is probably Minard’s picture of Napoleon’s disastrous Russian 
-campaign (below). The general idea behind these plots is that the width of the arrows is 
-to scale, so you can see the flow much more instinctively than a standard flow chart. 
-Although Minard took it a step further by plotting it over a map, and also plotting the temperatures.</p>
+<p>Unfortunately this map only highlights outliers – the vast majority of my friends are
+ clustered in a few cities. I played around a bit with the transparency of the points and 
+ lines to try and get a sense of numbers involved, but this graph still doesn’t convey 
+ the fact that a big portion of my friends currently live in Cambridge, and their 
+ hometown was London, Wellington or Auckland.</p>
+
+<p>The lines connecting hometown to current location are drawn as ‘great circles’, using
+ the geosphere package. The site Flowing data gives a good tutorial on how to 
+ use the package. One thing it doesn’t help with though, is what to do when a connecting 
+ line crosses the international dateline. The problem is that the command spits out a 
+ matrix giving the path between two points, but if someone crosses the date line it 
+ spits out a list of two matrices. One matrix for each side of the datelie. That’s 
+ why I added the messy IF statements to the code below.</p>
+
+<p>The plot above also suggests the fastest way between London and New Zealand is by
+ skirting the North Pole. This surprised me – so in case you don’t believe the plot 
+ above, the picture below is a screenshot of the shortest distance between Auckland 
+ and London, according to the website Maptools.</p>
 
 <figure>
-	<a href="/images/sankey_minard.png"><img src="/images/sankey_minard.png" /></a>
-	<figcaption>Minard's summary of the failed Russian Campaign.</figcaption>
+	<a href="/images/greatcircles_2_profile.png"><img src="/images/greatcircles_2_profile.png" /></a>
+	<figcaption>Screenshot of a great circle according to www.freemaptools.com.</figcaption>
 </figure>
 
-<p>The code is super simple to run. First the setup. We set the working directory, then set up
- a function to pull other functions and their dependencies from a Gist (an online repository).</p>
+<p>Here’s the plot again without the lines. I think my next plan is to find a way to plot
+ the latitude and longitudes into a country level chloropleth. I played around with 
+ hexbinning, but the data is too clumped for that style of plot.</p>
 
-<div class="highlight"><pre><code class="r">setwd<span class="p">(</span><span class="s">&quot;~/Dropbox/Personal/fun with code/sankey_arrow&quot;</span><span class="p">)</span>
- 
-sourc.https     <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>url<span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># install and load the RCurl package </span>
-  <span class="kr">if</span> <span class="p">(</span>match<span class="p">(</span><span class="s">&#39;RCurl&#39;</span><span class="p">,</span> nomatch<span class="o">=</span><span class="m">0</span><span class="p">,</span> installed.packages<span class="p">()[,</span><span class="m">1</span><span class="p">])</span><span class="o">==</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-    install.packages<span class="p">(</span>c<span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">),</span> dependencies <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-    require<span class="p">(</span>RCurl<span class="p">)</span>  
-  <span class="p">}</span> <span class="kr">else</span> require<span class="p">(</span>RCurl<span class="p">)</span>    
-  
-  <span class="c1"># parse and evaluate each .R script</span>
-  sapply<span class="p">(</span>c<span class="p">(</span>url<span class="p">,</span> <span class="kc">...</span><span class="p">),</span> <span class="kr">function</span><span class="p">(</span>u<span class="p">)</span> <span class="p">{</span>
-    eval<span class="p">(</span>parse<span class="p">(</span>text <span class="o">=</span> getURL<span class="p">(</span>u<span class="p">,</span> followlocation <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
-                             cainfo  <span class="o">=</span> system.file<span class="p">(</span><span class="s">&quot;CurlSSL&quot;</span><span class="p">,</span> <span class="s">&quot;cacert.pem&quot;</span><span class="p">,</span> 
-                                                   package <span class="o">=</span> <span class="s">&quot;RCurl&quot;</span><span class="p">))),</span> envir <span class="o">=</span> .GlobalEnv<span class="p">)</span>
-  <span class="p">}</span> <span class="p">)</span>
- 
-<span class="c1"># from https://gist.github.com/1423501</span>
-sourc.https<span class="p">(</span><span class="s">&quot;https://gist.github.com/epijim/8832627/raw/91f8fb601a483a6e60c6cbc7eeea939e010cf7ce/Sankey.R&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
+<figure>
+	<a href="/images/greatcircles_3_point.png"><img src="/images/greatcircles_3_point.png" /></a>
+	<figcaption>First plot, without the great circle lines.</figcaption>
+</figure>
 
-<p>The last line of the previous code snippet read in the function to make the Sankey plot.
- I’m pulling it from my own Gist, rather than the official one, as I edited two lines that 
- effect how the text is written.</p>
+<p>I was pretty surprised by the spread of my friends migrations. A lot more than I thought
+ were still within a few thousand KMs of their hometown. As not all my friends filled in 
+ the hometown and current location fields in Facebook, I’m assuming there is a bias where 
+ the friends that migrate are also less likely to share their data on Facebook.</p>
 
-<p>Then we just need to give the function the numbers that go in (inputs) and the numbers that
- go out. Then the labels in the same order. It’s crazy simple!</p>
+<figure>
+	<a href="/images/greatcircles_4_hist.png"><img src="/images/greatcircles_4_hist.png" /></a>
+	<figcaption>Histograph of the distance my FB friends are from home.</figcaption>
+</figure>
 
-<div class="highlight"><pre><code class="r">inputs <span class="o">=</span> c<span class="p">(</span><span class="m">35297</span><span class="p">)</span>
-losses <span class="o">=</span> c<span class="p">(</span><span class="m">1758</span><span class="p">,</span><span class="m">8885</span><span class="p">,</span><span class="m">23787</span><span class="p">,</span><span class="m">867</span><span class="p">)</span>
-unit <span class="o">=</span> <span class="s">&quot;n =&quot;</span>
- 
-labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;At high diabetes risk&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not meet criteria&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not attend screening&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not have diabetes&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Diagnosed with diabetes&quot;</span><span class="p">)</span>
-  pdf<span class="p">(</span><span class="s">&quot;Sankey.pdf&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">12</span><span class="p">,</span> height<span class="o">=</span><span class="m">10</span><span class="p">)</span>
-    SankeyR<span class="p">(</span>inputs<span class="p">,</span>losses<span class="p">,</span>unit<span class="p">,</span>labels<span class="p">)</span>
-  dev.off<span class="p">()</span>
-</code></pre></div>
+<p>With the caveat that the data has holes, and as it is just my Facebook friends is
+ completely unrepresentative, the plot below (raw data points in red over a box plot) 
+ separates my friends into those with a hometown in NZ, and those with a hometown 
+ anywhere else. You can see the clusters of Kiwis that have moved to Melbourne, and the 
+ cluster in Europe.</p>
 
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/19435491">Echouffo-Tcheugui et al(2009) BMC Public Health, 9:136</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<figure>
+	<a href="/images/greatcircles_5_swarm.png"><img src="/images/greatcircles_5_swarm.png" /></a>
+	<figcaption>Swarm plot comparing Kiwi's to other friends.</figcaption>
+</figure>
+
+<p>This last plot is zoomed into New Zealand.</p>
+
+<figure>
+	<a href="/images/greatcircles_6_NZ.png"><img src="/images/greatcircles_6_NZ.png" /></a>
+	<figcaption>Zoomed into NZ. Once again, hometown is in blue, location now in red.</figcaption>
+</figure>
 
 				<div class="entry-related">
 					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://0.0.0.0:4000" data-subtome-feeds="http://feeds.feedburner.com/MadeMistakesArticles"><i class="fa fa-rss fa-fw"></i></a></h2>
@@ -195,18 +192,18 @@ labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;A
 						
 						<li><a href="http://0.0.0.0:4000/articles/wine-budget/">Wine spend and academic performance</a></li>
 						
-						<li><a href="http://0.0.0.0:4000/articles/facebook-network/">Plotting my Facebook data</a></li>
+						<li><a href="http://0.0.0.0:4000/articles/sankey-arrow-plot/">Visualising flow with a sankey plot</a></li>
 						
-						<li><a href="http://0.0.0.0:4000/articles/great-circles/">Facebook friend migrations</a></li>
+						<li><a href="http://0.0.0.0:4000/articles/facebook-network/">Plotting my Facebook data</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->
 				<hr />
 				<div class="entry-meta">
-					<meta itemprop="keywords" content="R, Sankey">
-					<span class="entry-tags"><a href="http://0.0.0.0:4000/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://0.0.0.0:4000/tag/sankey/" title="Sankey" class="tag" rel="tag">Sankey</a></span>
+					<meta itemprop="keywords" content="R, Great circles">
+					<span class="entry-tags"><a href="http://0.0.0.0:4000/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://0.0.0.0:4000/tag/great-circles/" title="Great circles" class="tag" rel="tag">Great circles</a></span>
 					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://0.0.0.0:4000/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
-					<span class="entry-date"><time datetime="2014-02-05T00:00:00+00:00" itemprop="datePublished" class="published updated">February 05, 2014</time></span>
+					<span class="entry-date"><time datetime="2014-01-26T00:00:00+00:00" itemprop="datePublished" class="published">January 26, 2014</time></span> <span class="entry-date">(Updated <time datetime="2014-02-13" itemprop="dateModified" class="updated">02/13/2014</time>)</span>
 				</div><!-- /.entry-meta -->
 			</div><!-- /.entry-content -->
 			<div class="ads">
@@ -278,7 +275,7 @@ labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;A
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
-    var disqus_title = 'Visualising flow with a sankey plot';
+    var disqus_title = 'Facebook friend migrations';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
