@@ -1,118 +1,152 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="lt-ie9 lt-ie8 no-js" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="lt-ie9 no-js" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"><!--<![endif]-->
-
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Linear regression with R &#8211; James Black</title>
-	<meta name="description" content="Linear regression code for use with R.">
-	<meta name="keywords" content="R, Wine, Cambridge University">
-	<!-- Twitter Cards -->
-	
-		<meta name="twitter:card" content="summary">
-			<meta name="twitter:image" content="http://0.0.0.0:4000/images/regression_thumb.png">
-		
-	
-	<meta name="twitter:title" content="Linear regression with R">
-	<meta name="twitter:description" content="Linear regression code for use with R.">
-	<meta name="twitter:site" content="@">
-	<meta name="twitter:creator" content="@">
-	<!-- Open Graph -->
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Linear regression with R">
-	<meta property="og:description" content="Linear regression code for use with R.">
-	<meta property="og:url" content="http://0.0.0.0:4000/articles/regression/">
-	<meta property="og:site_name" content="James Black">
+<meta charset="utf-8">
+<title>Linear regression with R &#8211; James Black</title>
+<meta name="description" content="Linear regression code for use with R.">
+<meta name="keywords" content="R, Wine, Cambridge University">
 
-	<!-- Webmaster Tools verifications -->
-	
-	
 
-	
-	<link rel="canonical" href="http://0.0.0.0:4000/articles/regression/">
-	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
-	<link href="http://feeds.feedburner.com/MadeMistakesArticles" type="application/atom+xml" rel="alternate" title="James Black &#8211; Articles Feed">
-	<link href="http://feeds.feedburner.com/MadeMistakesPaperFaces" type="application/atom+xml" rel="alternate" title="James Black &#8211; PaperFaces Portrait Feed">
-	<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
 
-	<!-- http://t.co/dKP3o1e -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linear regression with R">
+<meta property="og:description" content="Linear regression code for use with R.">
+<meta property="og:url" content="http://0.0.0.0:4000/articles/regression/">
+<meta property="og:site_name" content="James Black">
 
-	<meta http-equiv="cleartype" content="on">
 
-	<!-- For all browsers -->
-	<link rel="stylesheet" href="http://0.0.0.0:4000/css/main.min-b18f500fc8710c1f7acf8c04b0249d6f.css">
 
-	<!-- Web fonts -->
-	<script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7.js"></script>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-	<!-- HTML5 Shiv and Media Query Support -->
-	<!--[if lt IE 9]>
-		<script src="http://0.0.0.0:4000/js/vendor/html5shiv-5a98a86b5cb48c1506f338463259ce41.js"></script>
-		<script src="http://0.0.0.0:4000/js/vendor/respond-e5d7fffb3a9f891c926ee1b836d448d8.js"></script>
-	<![endif]-->
 
-	<!-- Icons -->
-	<!-- 16x16 -->
-	<link rel="shortcut icon" href="http://0.0.0.0:4000/favicon.ico">
-	<!-- 32x32 -->
-	<link rel="shortcut icon" href="http://0.0.0.0:4000/favicon.png">
-	<!-- non-retina iPhone pre iOS 7 -->
-	<link rel="apple-touch-icon-precomposed" href="http://0.0.0.0:4000/images/icon57.png" sizes="57x57">
-	<!-- non-retina iPad pre iOS 7 -->
-	<link rel="apple-touch-icon-precomposed" href="http://0.0.0.0:4000/images/icon72.png" sizes="72x72">
-	<!-- non-retina iPad iOS 7 -->
-	<link rel="apple-touch-icon" href="http://0.0.0.0:4000/images/icon76.png" sizes="76x76">
-	<!-- retina iPhone pre iOS 7 -->
-	<link rel="apple-touch-icon-precomposed" href="http://0.0.0.0:4000/images/icon114.png" sizes="114x114">
-	<!-- retina iPhone iOS 7 -->
-	<link rel="apple-touch-icon" href="http://0.0.0.0:4000/images/icon120.png" sizes="120x120">
-	<!-- retina iPad pre iOS 7 -->
-	<link rel="apple-touch-icon-precomposed" href="http://0.0.0.0:4000/images/icon144.png" sizes="144x144">
-	<!-- retina iPad iOS 7 -->
-	<link rel="apple-touch-icon" href="http://0.0.0.0:4000/images/icon152.png" sizes="152x152">
+<link rel="canonical" href="http://0.0.0.0:4000/articles/regression/">
+<link href="http://0.0.0.0:4000/feed.xml" type="application/atom+xml" rel="alternate" title="James Black Feed">
+<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://0.0.0.0:4000/assets/css/main.min.css">
+<!-- Webfonts -->
+<script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="http://0.0.0.0:4000/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://0.0.0.0:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://0.0.0.0:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://0.0.0.0:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://0.0.0.0:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://0.0.0.0:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://0.0.0.0:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47906301-1', 'epijim.co.uk');
+  ga('send', 'pageview');
+
+</script>
 </head>
 
 <body id="post">
 
-<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a newer one to better enjoy this site?</a></div><![endif]-->
-<div class="masthead-wrapper">
-	<header id="masthead" itemscope itemtype="http://schema.org/Organization">
-		<a href="http://0.0.0.0:4000" class="site-logo" rel="home" title="James Black" itemprop="url"><img src="http://0.0.0.0:4000/images/jimmy_logo.png" width="50" height="50" alt="James Black logo" itemprop="logo"></a>
-		<span class="site-title" itemprop="name"><a href="http://0.0.0.0:4000">James Black</a></span>
-	</header><!-- /.masthead -->
-	<nav role="navigation" id="site-nav" class="nav">
-		<ul>
-		
-			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://0.0.0.0:4000/" itemprop="url"><span itemprop="name">Home</span></a></li>
-		
-			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://0.0.0.0:4000/blog/" itemprop="url"><span itemprop="name">Blog</span></a></li>
-		
-			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://0.0.0.0:4000/plots/" itemprop="url"><span itemprop="name">Gallery</span></a></li>
-		
-			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://0.0.0.0:4000/my-papers/" itemprop="url"><span itemprop="name">My papers</span></a></li>
-		
-			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://0.0.0.0:4000/about/" itemprop="url"><span itemprop="name">About me</span></a></li>
-		
-		</ul>
-	</nav><!-- /#site-nav -->
-</div><!-- /.entry-wrapper -->
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+	        
+			<li>
+				
+					<a href="http://0.0.0.0:4000/">About</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://0.0.0.0:4000/latest/">Latest</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://0.0.0.0:4000/tags/">Index</a>
+				 
+			</li>
+	        
+	        <li><a href="http://0.0.0.0:4000/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+	        <li class="dosearch"><i class="icon-search"></i> Search</li>
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<div class="search-wrapper">
+	<div class="search-form">
+		<input type="text" class="search-field" placeholder="Search...">
+		<i class="icon-remove-sign icon-2x"></i>
+		<ul class="search-results post-list"></ul><!-- /.search-results -->
+	</div><!-- /.search-form -->
+</div><!-- ./search-wrapper -->
+
+<header class="masthead">
+	<div class="wrap">
+        
+    		<a href="http://0.0.0.0:4000" class="site-logo" rel="home" title="James Black"><img src="http://0.0.0.0:4000/images/jimmy_logo.png" width="200" height="200" alt="James Black logo" class="animated fadeInUp"></a>
+        
+        <h1 class="site-title animated fadeIn"><a href="http://0.0.0.0:4000">James Black</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Reading Epidemiology at Jesus College, University of Cambridge</h2>
+	</div>
+</header><!-- /.masthead -->
+
 
 <div id="main" role="main">
-		<article class="hentry" itemscope itemtype="http://schema.org/Article">
-		<header class="entry-header">
-		
-			<h1 class="entry-title" itemprop="name">Linear regression with R</h1>
-		</header>
-		<div class="entry-wrapper">
-			<div class="entry-content" itemprop="articleBody">
-				<html>
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <span class="entry-tags"><a href="http://0.0.0.0:4000/tags/#R" title="Pages tagged R">R</a>&nbsp;&bull;&nbsp;<a href="http://0.0.0.0:4000/tags/#Wine" title="Pages tagged Wine">Wine</a>&nbsp;&bull;&nbsp;<a href="http://0.0.0.0:4000/tags/#Cambridge University" title="Pages tagged Cambridge University">Cambridge University</a></span>
+        
+          <h1 class="entry-title">Linear regression with R</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        <img src="http://0.0.0.0:4000/images/bio_photo.png" alt="James Black photo" class="author-photo">
+        <span class="author vcard">By <span class="fn"><a href="http://0.0.0.0:4000/about/" title="About James Black">James Black</a></span></span>
+        <span class="entry-date date published"><time datetime="2014-02-11T00:00:00+00:00"><i class="icon-calendar-empty"></i> February 11, 2014</time></span>
+        
+        <span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>
+        <span><a href="http://0.0.0.0:4000/articles/regression/" rel="bookmark" title="Linear regression with R"><i class="icon-link"></i> Permalink</a></span>
+        
+        <span class="social-share-facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://0.0.0.0:4000/articles/regression/" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Like</a></span>
+        <span class="social-share-twitter">
+            <a href="https://twitter.com/intent/tweet?text=http://0.0.0.0:4000/articles/regression/" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+        <span class="social-share-googleplus">
+            <a href="https://plus.google.com/share?url=http://0.0.0.0:4000/articles/regression/" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <!-- /.social-share -->
+      </footer>
+      <div class="entry-content">
+        <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="x-ua-compatible" content="IE=9" />
@@ -626,935 +660,96 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 
 </html>
 
-				<div class="entry-related">
-					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://0.0.0.0:4000" data-subtome-feeds="http://feeds.feedburner.com/MadeMistakesArticles"><i class="fa fa-rss fa-fw"></i></a></h2>
-					<ul>
-						
-						<li><a href="http://0.0.0.0:4000/articles/wine-budget/">Wine spend and academic performance</a></li>
-						
-						<li><a href="http://0.0.0.0:4000/articles/sankey-arrow-plot/">Visualising flow with a sankey plot</a></li>
-						
-						<li><a href="http://0.0.0.0:4000/articles/facebook-network/">Plotting my Facebook data</a></li>
-						
-						<li><a href="http://0.0.0.0:4000/articles/great-circles/">Facebook friend migrations</a></li>
-						
-					</ul>
-				</div><!-- /.entry-related -->
-				<hr />
-				<div class="entry-meta">
-					<meta itemprop="keywords" content="R, Wine, Cambridge University">
-					<span class="entry-tags"><a href="http://0.0.0.0:4000/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://0.0.0.0:4000/tag/wine/" title="Wine" class="tag" rel="tag">Wine</a><a href="http://0.0.0.0:4000/tag/cambridge-university/" title="Cambridge University" class="tag" rel="tag">Cambridge University</a></span>
-					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://0.0.0.0:4000/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
-					<span class="entry-date"><time datetime="2014-02-11T00:00:00+00:00" itemprop="datePublished" class="published updated">February 11, 2014</time></span>
-				</div><!-- /.entry-meta -->
-			</div><!-- /.entry-content -->
-			<div class="ads">
-				<style>
-.responsive-ads { width: 300px; height: 200px; }
-@media(min-width: 768px) { .responsive-ads { width: 468px; height: 60px; } }
-@media(min-width: 1000px) { .responsive-ads { width: 160px; height: 600px; } }
-</style>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Made Mistakes -->
-<ins class="adsbygoogle responsive-ads"
-	style="display:inline-block"
-	data-ad-client="ca-pub-7328585512091257"
-	data-ad-slot="3049671934"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-			</div><!-- /.ads -->
-			
-			<div id="disqus_thread" class="entry-content"></div><!-- /#disqus_thread -->
-			<noscript><div class="upgrade">Please enable JavaScript to view comments.</div><!-- /.upgrade --></noscript>
-			
-		</div><!-- /.entry-wrapper -->
-	</article>
+        <div id="disqus_thread"></div><!-- /#disqus_thread -->
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="http://0.0.0.0:4000/articles/wine-budget/" class="btn" title="Wine spend and academic performance">Previous article</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
 </div><!-- /#main -->
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <p>&#169; 2012&#8211;2014 <a href="http://0.0.0.0:4000/about/">James Black</a>, <a href="http://0.0.0.0:4000/humans.txt">site is based off this theme</a>.</p>
-		<div class="social-icons">
-			
-			
-			<a href="http://github.com/epijim" title="James Black on Github" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
-			
-			<a href="https://plus.google.com/112022213613617220776/" title="James Black on Google+" target="_blank"><i class="fa fa-google-plus-square fa-fw fa-2x"></i></a>
-			
-			
-		</div><!-- /.social-icons -->
-		
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-47906301-1', 'epijim.co.uk');
-  ga('send', 'pageview');
-	</script>
+    <span>&copy; 2014 James Black. Source theme by Michael Rose. Site is compiled by Kramdown into Jekyll and hosted on github.pages.io.</span>
+<div class="social-icons">
+	
+	
+	<a href="https://plus.google.com/112022213613617220776/" title="James Black on Google+" target="_blank"><i class="icon-google-plus icon-2x"></i></a>
+	
+	
+	
+	
+	
+	
+</div><!-- /.social-icons -->
   </footer>
 </div><!-- /.footer-wrapper -->
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://0.0.0.0:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://0.0.0.0:4000/assets/js/scripts.min.js"></script>
 
+<!-- Jekyll Simple Search option -->
+<script>
+  $(document).ready(function() {
+      $('.search-field').simpleJekyllSearch({
+          jsonFile : 'http://0.0.0.0:4000/search.json',
+          searchResults : '.search-results',
+          template : '<li><article><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></article></li>',
+          noResults: '<p>Nothing found.</p>'
+        });
+  });
 
-
-
-
-<!DOCTYPE html>
-<html>
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>made-mistakes/_includes/_scripts.html at master · mmistakes/made-mistakes</title>
-    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
-    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
-    <meta property="fb:app_id" content="1401488693436528"/>
-
-      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="mmistakes/made-mistakes" name="twitter:title" /><meta content="made-mistakes - Made Mistakes website codebase, built using Jekyll." name="twitter:description" /><meta content="https://0.gravatar.com/avatar/1ce71bc10b86565464b612093d89707e?d=https%3A%2F%2Fidenticons.github.com%2F5ebec58d8b27011b64cbb4d2d69cb776.png&amp;r=x&amp;s=400" name="twitter:image:src" />
-<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://0.gravatar.com/avatar/1ce71bc10b86565464b612093d89707e?d=https%3A%2F%2Fidenticons.github.com%2F5ebec58d8b27011b64cbb4d2d69cb776.png&amp;r=x&amp;s=400" property="og:image" /><meta content="mmistakes/made-mistakes" property="og:title" /><meta content="https://github.com/mmistakes/made-mistakes" property="og:url" /><meta content="made-mistakes - Made Mistakes website codebase, built using Jekyll." property="og:description" />
-
-    <meta name="hostname" content="github-fe124-cp1-prd.iad.github.net">
-    <meta name="ruby" content="ruby 2.1.0p0-github-tcmalloc (87d8860372) [x86_64-linux]">
-    <link rel="assets" href="https://github.global.ssl.fastly.net/">
-    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
-    <link rel="xhr-socket" href="/_sockets" />
-
-
-    <meta name="msapplication-TileImage" content="/windows-tile.png" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="selected-link" value="repo_source" data-pjax-transient />
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="836FF38E:1495:54EC755:52FD1D4A" name="octolytics-dimension-request_id" /><meta content="2760096" name="octolytics-actor-id" /><meta content="epijim" name="octolytics-actor-login" /><meta content="89f2867a270f5e6c0cea3bf309787246aae64f2291eefb62caecc80a3eb7a7ee" name="octolytics-actor-hash" />
+  (function( $, window, undefined ) {
     
-
+     var bs = {
+          close: $(".icon-remove-sign"),
+          searchform: $(".search-form"),
+          canvas: $("body"),
+          dothis: $('.dosearch')
+      };
     
+    bs.dothis.on('click', function() {
+      $('.search-wrapper').css({ display: "block" });
+      bs.searchform.toggleClass('active');
+      bs.searchform.find('input').focus();
+      bs.canvas.toggleClass('search-overlay');
+    });
     
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="SgMivZeB44KreJQB9J6qnUkQU9cqDScy7kHj1/r3vZI=" name="csrf-token" />
-
-    <link href="https://github.global.ssl.fastly.net/assets/github-1d6e450b54230462761f7f0fb692c60039b0e67c.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="https://github.global.ssl.fastly.net/assets/github2-c469964c4993c0751743b979f2122ff040bf6330.css" media="all" rel="stylesheet" type="text/css" />
-    
-    
-
-
-      <script src="https://github.global.ssl.fastly.net/assets/frameworks-693e11922dcacc3a7408a911fe1647da4febd3bd.js" type="text/javascript"></script>
-      <script async="async" defer="defer" src="https://github.global.ssl.fastly.net/assets/github-b832f1268a15109dc196b23efc6da1450d870760.js" type="text/javascript"></script>
-      
-      <meta http-equiv="x-pjax-version" content="d0068056a2082ac210b275fe4b77bf91">
-
-        <link data-pjax-transient rel='permalink' href='/mmistakes/made-mistakes/blob/cadb08cc1b57303a3799adb401389c66cc9ec804/_includes/_scripts.html'>
-
-  <meta name="description" content="made-mistakes - Made Mistakes website codebase, built using Jekyll." />
-
-  <meta content="1376749" name="octolytics-dimension-user_id" /><meta content="mmistakes" name="octolytics-dimension-user_login" /><meta content="9797531" name="octolytics-dimension-repository_id" /><meta content="mmistakes/made-mistakes" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="9797531" name="octolytics-dimension-repository_network_root_id" /><meta content="mmistakes/made-mistakes" name="octolytics-dimension-repository_network_root_nwo" />
-  <link href="https://github.com/mmistakes/made-mistakes/commits/master.atom" rel="alternate" title="Recent Commits to made-mistakes:master" type="application/atom+xml" />
-
-  </head>
-
-
-  <body class="logged_in  env-production  vis-public page-blob tipsy-tooltips">
-    <div class="wrapper">
-      
-      
-      
-      
-
-
-      <div class="header header-logged-in true">
-  <div class="container clearfix">
-
-    <a class="header-logo-invertocat" href="https://github.com/">
-  <span class="mega-octicon octicon-mark-github"></span>
-</a>
-
-    
-    <a href="/notifications" aria-label="You have no unread notifications" class="notification-indicator tooltipped downwards" data-gotokey="n">
-        <span class="mail-status all-read"></span>
-</a>
-
-      <div class="command-bar js-command-bar  in-repository">
-          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
-
-<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
-    
-    data-username="epijim"
-      data-repo="mmistakes/made-mistakes"
-      data-branch="master"
-      data-sha="ad7839e54b16b9bbcda7a31e965f4c18f92be0a5"
-  >
-
-    <input type="hidden" name="nwo" value="mmistakes/made-mistakes" />
-
-    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
-      <span class="minibutton select-menu-button js-menu-target">
-        <span class="js-select-button">This repository</span>
-      </span>
-
-      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
-        <div class="select-menu-modal">
-
-          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
-            <span class="select-menu-item-icon octicon octicon-check"></span>
-            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
-            <div class="select-menu-item-text js-select-button-text">This repository</div>
-          </div> <!-- /.select-menu-item -->
-
-          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
-            <span class="select-menu-item-icon octicon octicon-check"></span>
-            <input type="radio" name="search_target" value="global" />
-            <div class="select-menu-item-text js-select-button-text">All repositories</div>
-          </div> <!-- /.select-menu-item -->
-
-        </div>
-      </div>
-    </div>
-
-  <span class="octicon help tooltipped downwards" aria-label="Show command bar help">
-    <span class="octicon octicon-question"></span>
-  </span>
-
-
-  <input type="hidden" name="ref" value="cmdform">
-
-</form>
-        <ul class="top-nav">
-          <li class="explore"><a href="/explore">Explore</a></li>
-            <li><a href="https://gist.github.com">Gist</a></li>
-            <li><a href="/blog">Blog</a></li>
-          <li><a href="https://help.github.com">Help</a></li>
-        </ul>
-      </div>
-
-    
-
-
-  <ul id="user-links">
-    <li>
-      <a href="/epijim" class="name">
-        <img alt="James Black" class=" js-avatar" data-user="2760096" height="20" src="https://1.gravatar.com/avatar/5e224bb5597f40759824ecec7515160e?d=https%3A%2F%2Fidenticons.github.com%2F60ecc826f4fc7c1fd3e63cba23b8e1d7.png&amp;r=x&amp;s=140" width="20" /> epijim
-      </a>
-    </li>
-
-    <li class="new-menu dropdown-toggle js-menu-container">
-      <a href="#" class="js-menu-target tooltipped downwards" aria-label="Create new...">
-        <span class="octicon octicon-plus"></span>
-        <span class="dropdown-arrow"></span>
-      </a>
-
-      <div class="js-menu-content">
-      </div>
-    </li>
-
-    <li>
-      <a href="/settings/profile" id="account_settings"
-        class="tooltipped downwards"
-        aria-label="Account settings ">
-        <span class="octicon octicon-tools"></span>
-      </a>
-    </li>
-    <li>
-      <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" aria-label="Sign out">
-        <span class="octicon octicon-log-out"></span>
-      </a>
-    </li>
-
-  </ul>
-
-<div class="js-new-dropdown-contents hidden">
-  
-
-<ul class="dropdown-menu">
-  <li>
-    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
-  </li>
-  <li>
-    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
-  </li>
-
-
-    <li class="section-title">
-      <span title="mmistakes/made-mistakes">This repository</span>
-    </li>
-      <li>
-        <a href="/mmistakes/made-mistakes/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
-      </li>
-</ul>
-
-</div>
-
-
-    
-  </div>
-</div>
-
-      
-
-        
-
-
-
-
-          <div class="site" itemscope itemtype="http://schema.org/WebPage">
-    
-    <div class="pagehead repohead instapaper_ignore readability-menu">
-      <div class="container">
-        
-
-<ul class="pagehead-actions">
-
-    <li class="subscription">
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="SgMivZeB44KreJQB9J6qnUkQU9cqDScy7kHj1/r3vZI=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="9797531" />
-
-    <div class="select-menu js-menu-container js-select-menu">
-      <a class="social-count js-social-count" href="/mmistakes/made-mistakes/watchers">
-        2
-      </a>
-      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0">
-        <span class="js-select-button">
-          <span class="octicon octicon-eye-watch"></span>
-          Watch
-        </span>
-      </span>
-
-      <div class="select-menu-modal-holder">
-        <div class="select-menu-modal subscription-menu-modal js-menu-content">
-          <div class="select-menu-header">
-            <span class="select-menu-title">Notification status</span>
-            <span class="octicon octicon-remove-close js-menu-close"></span>
-          </div> <!-- /.select-menu-header -->
-
-          <div class="select-menu-list js-navigation-container" role="menu">
-
-            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
-                <h4>Not watching</h4>
-                <span class="description">You only receive notifications for conversations in which you participate or are @mentioned.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-eye-watch"></span>
-                  Watch
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
-                <h4>Watching</h4>
-                <span class="description">You receive notifications for all conversations in this repository.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-eye-unwatch"></span>
-                  Unwatch
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <div class="select-menu-item-text">
-                <input id="do_ignore" name="do" type="radio" value="ignore" />
-                <h4>Ignoring</h4>
-                <span class="description">You do not receive any notifications for conversations in this repository.</span>
-                <span class="js-select-button-text hidden-select-button-text">
-                  <span class="octicon octicon-mute"></span>
-                  Stop ignoring
-                </span>
-              </div>
-            </div> <!-- /.select-menu-item -->
-
-          </div> <!-- /.select-menu-list -->
-
-        </div> <!-- /.select-menu-modal -->
-      </div> <!-- /.select-menu-modal-holder -->
-    </div> <!-- /.select-menu -->
-
-</form>
-    </li>
-
-  <li>
-  
-
-  <div class="js-toggler-container js-social-container starring-container ">
-    <a href="/mmistakes/made-mistakes/unstar"
-      class="minibutton with-count js-toggler-target star-button starred upwards"
-      title="Unstar this repository" data-remote="true" data-method="post" rel="nofollow">
-      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
-    </a>
-
-    <a href="/mmistakes/made-mistakes/star"
-      class="minibutton with-count js-toggler-target star-button unstarred upwards"
-      title="Star this repository" data-remote="true" data-method="post" rel="nofollow">
-      <span class="octicon octicon-star"></span><span class="text">Star</span>
-    </a>
-
-      <a class="social-count js-social-count" href="/mmistakes/made-mistakes/stargazers">
-        16
-      </a>
-  </div>
-
-  </li>
-
-
-        <li>
-          <a href="/mmistakes/made-mistakes/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="nofollow" data-method="post">
-            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
-          </a>
-          <a href="/mmistakes/made-mistakes/network" class="social-count">10</a>
-        </li>
-
-
-</ul>
-
-        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
-          <span class="repo-label"><span>public</span></span>
-          <span class="mega-octicon octicon-repo"></span>
-          <span class="author">
-            <a href="/mmistakes" class="url fn" itemprop="url" rel="author"><span itemprop="title">mmistakes</span></a>
-          </span>
-          <span class="repohead-name-divider">/</span>
-          <strong><a href="/mmistakes/made-mistakes" class="js-current-repository js-repo-home-link">made-mistakes</a></strong>
-
-          <span class="page-context-loader">
-            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-          </span>
-
-        </h1>
-      </div><!-- /.container -->
-    </div><!-- /.repohead -->
-
-    <div class="container">
-      
-
-      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline  ">
-        <div class="repository-sidebar">
-            
-
-<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
-  <div class="sunken-menu-contents">
-    <ul class="sunken-menu-group">
-      <li class="tooltipped leftwards" aria-label="Code">
-        <a href="/mmistakes/made-mistakes" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /mmistakes/made-mistakes">
-          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-        <li class="tooltipped leftwards" aria-label="Issues">
-          <a href="/mmistakes/made-mistakes/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /mmistakes/made-mistakes/issues">
-            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
-            <span class='counter'>0</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>        </li>
-
-      <li class="tooltipped leftwards" aria-label="Pull Requests">
-        <a href="/mmistakes/made-mistakes/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /mmistakes/made-mistakes/pulls">
-            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
-            <span class='counter'>0</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-
-        <li class="tooltipped leftwards" aria-label="Wiki">
-          <a href="/mmistakes/made-mistakes/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /mmistakes/made-mistakes/wiki">
-            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
-            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>        </li>
-    </ul>
-    <div class="sunken-menu-separator"></div>
-    <ul class="sunken-menu-group">
-
-      <li class="tooltipped leftwards" aria-label="Pulse">
-        <a href="/mmistakes/made-mistakes/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /mmistakes/made-mistakes/pulse">
-          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-      <li class="tooltipped leftwards" aria-label="Graphs">
-        <a href="/mmistakes/made-mistakes/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /mmistakes/made-mistakes/graphs">
-          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-
-      <li class="tooltipped leftwards" aria-label="Network">
-        <a href="/mmistakes/made-mistakes/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /mmistakes/made-mistakes/network">
-          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
-          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
-</a>      </li>
-    </ul>
-
-
-  </div>
-</div>
-
-              <div class="only-with-full-nav">
-                
-
-  
-
-<div class="clone-url open"
-  data-protocol-type="http"
-  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
-  <h3><strong>HTTPS</strong> clone URL</h3>
-  <div class="clone-url-box">
-    <input type="text" class="clone js-url-field"
-           value="https://github.com/mmistakes/made-mistakes.git" readonly="readonly">
-
-    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/mmistakes/made-mistakes.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-  </div>
-</div>
-
-  
-
-<div class="clone-url "
-  data-protocol-type="ssh"
-  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
-  <h3><strong>SSH</strong> clone URL</h3>
-  <div class="clone-url-box">
-    <input type="text" class="clone js-url-field"
-           value="git@github.com:mmistakes/made-mistakes.git" readonly="readonly">
-
-    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:mmistakes/made-mistakes.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-  </div>
-</div>
-
-  
-
-<div class="clone-url "
-  data-protocol-type="subversion"
-  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
-  <h3><strong>Subversion</strong> checkout URL</h3>
-  <div class="clone-url-box">
-    <input type="text" class="clone js-url-field"
-           value="https://github.com/mmistakes/made-mistakes" readonly="readonly">
-
-    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/mmistakes/made-mistakes" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-  </div>
-</div>
-
-
-<p class="clone-options">You can clone with
-      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
-      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
-      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
-  <span class="octicon help tooltipped upwards" aria-label="Get help on which URL is right for you.">
-    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
-    <span class="octicon octicon-question"></span>
-    </a>
-  </span>
-</p>
-
-
-
-                <a href="/mmistakes/made-mistakes/archive/master.zip"
-                   class="minibutton sidebar-button"
-                   title="Download this repository as a zip file"
-                   rel="nofollow">
-                  <span class="octicon octicon-cloud-download"></span>
-                  Download ZIP
-                </a>
-              </div>
-        </div><!-- /.repository-sidebar -->
-
-        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
-          
-
-
-<!-- blob contrib key: blob_contributors:v21:809c655a8e0eb8f12f37af5a5d050df9 -->
-
-<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
-
-<a href="/mmistakes/made-mistakes/find/master" data-pjax data-hotkey="t" class="js-show-file-finder" style="display:none">Show File Finder</a>
-
-<div class="file-navigation">
-  
-
-<div class="select-menu js-menu-container js-select-menu" >
-  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
-    data-master-branch="master"
-    data-ref="master"
-    role="button" aria-label="Switch branches or tags" tabindex="0">
-    <span class="octicon octicon-git-branch"></span>
-    <i>branch:</i>
-    <span class="js-select-button">master</span>
-  </span>
-
-  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
-
-    <div class="select-menu-modal">
-      <div class="select-menu-header">
-        <span class="select-menu-title">Switch branches/tags</span>
-        <span class="octicon octicon-remove-close js-menu-close"></span>
-      </div> <!-- /.select-menu-header -->
-
-      <div class="select-menu-filters">
-        <div class="select-menu-text-filter">
-          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
-        </div>
-        <div class="select-menu-tabs">
-          <ul>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
-            </li>
-            <li class="select-menu-tab">
-              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
-            </li>
-          </ul>
-        </div><!-- /.select-menu-tabs -->
-      </div><!-- /.select-menu-filters -->
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
-
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <div class="select-menu-item js-navigation-item selected">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/blob/master/_includes/_scripts.html"
-                 data-name="master"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="master">master</a>
-            </div> <!-- /.select-menu-item -->
-        </div>
-
-          <div class="select-menu-no-results">Nothing to show</div>
-      </div> <!-- /.select-menu-list -->
-
-      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
-        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
-
-
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/v6.1/_includes/_scripts.html"
-                 data-name="v6.1"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="v6.1">v6.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/v6.0/_includes/_scripts.html"
-                 data-name="v6.0"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="v6.0">v6.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/v5.0/_includes/_scripts.html"
-                 data-name="v5.0"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="v5.0">v5.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/tam-simplicium/_includes/_scripts.html"
-                 data-name="tam-simplicium"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="tam-simplicium">tam-simplicium</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/confectionis/_includes/_scripts.html"
-                 data-name="confectionis"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="confectionis">confectionis</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.2.6/_includes/_scripts.html"
-                 data-name="7.2.6"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.2.6">7.2.6</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.2.5/_includes/_scripts.html"
-                 data-name="7.2.5"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.2.5">7.2.5</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.2.4/_includes/_scripts.html"
-                 data-name="7.2.4"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.2.4">7.2.4</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.2.2/_includes/_scripts.html"
-                 data-name="7.2.2"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.2.2">7.2.2</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.2.1/_includes/_scripts.html"
-                 data-name="7.2.1"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.2.1">7.2.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.2.0/_includes/_scripts.html"
-                 data-name="7.2.0"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.2.0">7.2.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.1.1/_includes/_scripts.html"
-                 data-name="7.1.1"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.1.1">7.1.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.1.0/_includes/_scripts.html"
-                 data-name="7.1.0"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.1.0">7.1.0</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.0.1/_includes/_scripts.html"
-                 data-name="7.0.1"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.0.1">7.0.1</a>
-            </div> <!-- /.select-menu-item -->
-            <div class="select-menu-item js-navigation-item ">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/mmistakes/made-mistakes/tree/7.0.0/_includes/_scripts.html"
-                 data-name="7.0.0"
-                 data-skip-pjax="true"
-                 rel="nofollow"
-                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
-                 title="7.0.0">7.0.0</a>
-            </div> <!-- /.select-menu-item -->
-        </div>
-
-        <div class="select-menu-no-results">Nothing to show</div>
-      </div> <!-- /.select-menu-list -->
-
-    </div> <!-- /.select-menu-modal -->
-  </div> <!-- /.select-menu-modal-holder -->
-</div> <!-- /.select-menu -->
-
-  <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/mmistakes/made-mistakes" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">made-mistakes</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/mmistakes/made-mistakes/tree/master/_includes" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">_includes</span></a></span><span class="separator"> / </span><strong class="final-path">_scripts.html</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="_includes/_scripts.html" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
-  </div>
-</div>
-
-
-  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/mmistakes/made-mistakes/contributors/master/_includes/_scripts.html">
-    Fetching contributors…
-
-    <div class="participation">
-      <p class="loader-loading"><img alt="Octocat-spinner-32-eaf2f5" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" /></p>
-      <p class="loader-error">Cannot retrieve contributors at this time</p>
-    </div>
-  </div>
-
-<div class="file-box">
-  <div class="file">
-    <div class="meta">
-      <div class="info file-name">
-        <span class="icon"><b class="octicon octicon-file-text"></b></span>
-        <span class="mode" title="File Mode">file</span>
-        <span class="meta-divider"></span>
-          <span>39 lines (34 sloc)</span>
-          <span class="meta-divider"></span>
-        <span>1.869 kb</span>
-      </div>
-      <div class="actions">
-        <div class="button-group">
-                <a class="minibutton tooltipped upwards js-update-url-with-hash"
-                   aria-label="Clicking this button will automatically fork this project so you can edit the file"
-                   href="/mmistakes/made-mistakes/edit/master/_includes/_scripts.html"
-                   data-method="post" rel="nofollow">Edit</a>
-          <a href="/mmistakes/made-mistakes/raw/master/_includes/_scripts.html" class="button minibutton " id="raw-url">Raw</a>
-            <a href="/mmistakes/made-mistakes/blame/master/_includes/_scripts.html" class="button minibutton js-update-url-with-hash">Blame</a>
-          <a href="/mmistakes/made-mistakes/commits/master/_includes/_scripts.html" class="button minibutton " rel="nofollow">History</a>
-        </div><!-- /.button-group -->
-          <a class="minibutton danger empty-icon tooltipped downwards"
-             href="/mmistakes/made-mistakes/delete/master/_includes/_scripts.html"
-             aria-label="Fork this project and delete file"
-             data-method="post" data-test-id="delete-blob-file" rel="nofollow">
-          Delete
-        </a>
-      </div><!-- /.actions -->
-    </div>
-        <div class="blob-wrapper data type-html js-blob-data">
-        <table class="file-code file-diff tab-size-8">
-          <tr class="file-code-line">
-            <td class="blob-line-nums">
-              <span id="L1" rel="#L1">1</span>
-<span id="L2" rel="#L2">2</span>
-<span id="L3" rel="#L3">3</span>
-<span id="L4" rel="#L4">4</span>
-<span id="L5" rel="#L5">5</span>
-<span id="L6" rel="#L6">6</span>
-<span id="L7" rel="#L7">7</span>
-<span id="L8" rel="#L8">8</span>
-<span id="L9" rel="#L9">9</span>
-<span id="L10" rel="#L10">10</span>
-<span id="L11" rel="#L11">11</span>
-<span id="L12" rel="#L12">12</span>
-<span id="L13" rel="#L13">13</span>
-<span id="L14" rel="#L14">14</span>
-<span id="L15" rel="#L15">15</span>
-<span id="L16" rel="#L16">16</span>
-<span id="L17" rel="#L17">17</span>
-<span id="L18" rel="#L18">18</span>
-<span id="L19" rel="#L19">19</span>
-<span id="L20" rel="#L20">20</span>
-<span id="L21" rel="#L21">21</span>
-<span id="L22" rel="#L22">22</span>
-<span id="L23" rel="#L23">23</span>
-<span id="L24" rel="#L24">24</span>
-<span id="L25" rel="#L25">25</span>
-<span id="L26" rel="#L26">26</span>
-<span id="L27" rel="#L27">27</span>
-<span id="L28" rel="#L28">28</span>
-<span id="L29" rel="#L29">29</span>
-<span id="L30" rel="#L30">30</span>
-<span id="L31" rel="#L31">31</span>
-<span id="L32" rel="#L32">32</span>
-<span id="L33" rel="#L33">33</span>
-<span id="L34" rel="#L34">34</span>
-<span id="L35" rel="#L35">35</span>
-<span id="L36" rel="#L36">36</span>
-<span id="L37" rel="#L37">37</span>
-<span id="L38" rel="#L38">38</span>
-<span id="L39" rel="#L39">39</span>
-
-            </td>
-            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><span class="c">&lt;!-- jQuery --&gt;</span></div><div class='line' id='LC2'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;</span> <span class="na">data-cfasync=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC3'><span class="nt">&lt;script </span><span class="na">data-cfasync=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&quot;http://0.0.0.0:4000/js/vendor/jquery-397754ba49e9e0cf4e7c190da78dda05.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC4'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://0.0.0.0:4000/js/main.min-b1c052388578ab3b44858ccabf1f47d6.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC5'><br/></div><div class='line' id='LC6'><span class="c">&lt;!-- Asynchronous Google Analytics snippet --&gt;</span></div><div class='line' id='LC7'><span class="nt">&lt;script&gt;</span></div><div class='line' id='LC8'>	<span class="kd">var</span> <span class="nx">_gaq</span> <span class="o">=</span> <span class="nx">_gaq</span> <span class="o">||</span> <span class="p">[];</span></div><div class='line' id='LC9'>	<span class="kd">var</span> <span class="nx">pluginUrl</span> <span class="o">=</span> </div><div class='line' id='LC10'>	<span class="s1">&#39;//www.google-analytics.com/plugins/ga/inpage_linkid.js&#39;</span><span class="p">;</span></div><div class='line' id='LC11'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_require&#39;</span><span class="p">,</span> <span class="s1">&#39;inpage_linkid&#39;</span><span class="p">,</span> <span class="nx">pluginUrl</span><span class="p">]);</span></div><div class='line' id='LC12'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_setAccount&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]);</span></div><div class='line' id='LC13'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">]);</span></div><div class='line' id='LC14'><br/></div><div class='line' id='LC15'>	<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div><div class='line' id='LC16'>		<span class="kd">var</span> <span class="nx">ga</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></div><div class='line' id='LC17'>		<span class="nx">ga</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;https:&#39;</span> <span class="o">==</span> <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">?</span> <span class="s1">&#39;https://&#39;</span> <span class="o">:</span> <span class="s1">&#39;http://&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;stats.g.doubleclick.net/dc.js&#39;</span><span class="p">;</span></div><div class='line' id='LC18'>		<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">ga</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span></div><div class='line' id='LC19'>	<span class="p">})();</span></div><div class='line' id='LC20'><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC21'><br/></div><div class='line' id='LC22'><span class="c">&lt;!-- Modernizr --&gt;</span></div><div class='line' id='LC23'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://0.0.0.0:4000/js/vendor/modernizr-ab083e250330742e0b9d2a5548ea8745.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC24'><br/></div><div class='line' id='LC25'></div><div class='line' id='LC26'><span class="c">&lt;!-- Disqus Comments --&gt;</span></div><div class='line' id='LC27'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC28'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */</span></div><div class='line' id='LC29'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kd">var</span> <span class="nx">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;jamesblack&#39;</span><span class="p">;</span> <span class="c1">// Required - Replace example with your forum shortname</span></div><div class='line' id='LC30'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kd">var</span> <span class="nx">disqus_title</span> <span class="o">=</span> <span class="s1">&#39;Linear regression with R&#39;</span><span class="p">;</span></div><div class='line' id='LC31'><br/></div><div class='line' id='LC32'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/* * * DON&#39;T EDIT BELOW THIS LINE * * */</span></div><div class='line' id='LC33'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div><div class='line' id='LC34'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kd">var</span> <span class="nx">dsq</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></div><div class='line' id='LC35'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">dsq</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;//&#39;</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">&#39;.disqus.com/embed.js&#39;</span><span class="p">;</span></div><div class='line' id='LC36'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dsq</span><span class="p">);</span></div><div class='line' id='LC37'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">})();</span></div><div class='line' id='LC38'><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC39'></div></pre></div></td>
-          </tr>
-        </table>
-  </div>
-
-  </div>
-</div>
-
-<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
-<div id="jump-to-line" style="display:none">
-  <form accept-charset="UTF-8" class="js-jump-to-line-form">
-    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
-    <button type="submit" class="button">Go</button>
-  </form>
-</div>
-
-        </div>
-
-      </div><!-- /.repo-container -->
-      <div class="modal-backdrop"></div>
-    </div><!-- /.container -->
-  </div><!-- /.site -->
-
-
-    </div><!-- /.wrapper -->
-
-      <div class="container">
-  <div class="site-footer">
-    <ul class="site-footer-links right">
-      <li><a href="https://status.github.com/">Status</a></li>
-      <li><a href="http://developer.github.com">API</a></li>
-      <li><a href="http://training.github.com">Training</a></li>
-      <li><a href="http://shop.github.com">Shop</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-
-    </ul>
-
-    <a href="/">
-      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
-    </a>
-
-    <ul class="site-footer-links">
-      <li>&copy; 2014 <span title="0.05734s from github-fe124-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
-        <li><a href="/site/terms">Terms</a></li>
-        <li><a href="/site/privacy">Privacy</a></li>
-        <li><a href="/security">Security</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-  </div><!-- /.site-footer -->
-</div><!-- /.container -->
-
-
-    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
-  <div class="fullscreen-container js-fullscreen-container">
-    <div class="textarea-wrap">
-      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
-          <div class="suggester-container">
-              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
-                 data-url="/mmistakes/made-mistakes/suggestions/commit">
-              </div>
-          </div>
-    </div>
-  </div>
-  <div class="fullscreen-sidebar">
-    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" aria-label="Exit Zen Mode">
-      <span class="mega-octicon octicon-screen-normal"></span>
-    </a>
-    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
-      aria-label="Switch themes">
-      <span class="octicon octicon-color-mode"></span>
-    </a>
-  </div>
-</div>
-
-
-
-    <div id="ajax-error-message" class="flash flash-error">
-      <span class="octicon octicon-alert"></span>
-      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
-      Something went wrong with that request. Please try again.
-    </div>
-
-  </body>
-</html>
-
-
+      bs.close.on('click', function() {
+        $('.search-wrapper').removeAttr( 'style' );
+        bs.searchform.toggleClass('active');
+        bs.canvas.removeClass('search-overlay');
+    });
+  })( jQuery, window );
+</script>
+
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jamesblack'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>	        
 
 </body>
 </html>
