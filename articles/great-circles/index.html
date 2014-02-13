@@ -6,25 +6,25 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>About &#8211; James Black</title>
-	<meta name="description" content="James Black. A PhD student reading epidemiology at Jesus College, University of Cambridge.">
-	<meta name="keywords" content="Michael Rose, design, Buffalo, web design">
+	<title>Facebook friend migrations &#8211; James Black</title>
+	<meta name="description" content="Facebook friend migrations (great circles and geocoding in R).">
+	<meta name="keywords" content="R, Great circles">
 	<!-- Twitter Cards -->
 	
 		<meta name="twitter:card" content="summary">
-			<meta name="twitter:image" content="http://0.0.0.0:4000/images/jimmy_logo.png">
+			<meta name="twitter:image" content="http://0.0.0.0:4000/images/greatcircles_thumb.png">
 		
 	
-	<meta name="twitter:title" content="About">
-	<meta name="twitter:description" content="James Black. A PhD student reading epidemiology at Jesus College, University of Cambridge.">
+	<meta name="twitter:title" content="Facebook friend migrations">
+	<meta name="twitter:description" content="Facebook friend migrations (great circles and geocoding in R).">
 	<meta name="twitter:site" content="@">
 	<meta name="twitter:creator" content="@">
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="About">
-	<meta property="og:description" content="James Black. A PhD student reading epidemiology at Jesus College, University of Cambridge.">
-	<meta property="og:url" content="http://0.0.0.0:4000/about/">
+	<meta property="og:title" content="Facebook friend migrations">
+	<meta property="og:description" content="Facebook friend migrations (great circles and geocoding in R).">
+	<meta property="og:url" content="http://0.0.0.0:4000/articles/great-circles/">
 	<meta property="og:site_name" content="James Black">
 
 	<!-- Webmaster Tools verifications -->
@@ -32,7 +32,7 @@
 	
 
 	
-	<link rel="canonical" href="http://0.0.0.0:4000/about/">
+	<link rel="canonical" href="http://0.0.0.0:4000/articles/great-circles/">
 	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
 	<link href="http://feeds.feedburner.com/MadeMistakesArticles" type="application/atom+xml" rel="alternate" title="James Black &#8211; Articles Feed">
 	<link href="http://feeds.feedburner.com/MadeMistakesPaperFaces" type="application/atom+xml" rel="alternate" title="James Black &#8211; PaperFaces Portrait Feed">
@@ -79,7 +79,7 @@
 	<link rel="apple-touch-icon" href="http://0.0.0.0:4000/images/icon152.png" sizes="152x152">
 </head>
 
-<body id="page">
+<body id="post">
 
 <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a newer one to better enjoy this site?</a></div><![endif]-->
 <div class="masthead-wrapper">
@@ -105,156 +105,128 @@
 </div><!-- /.entry-wrapper -->
 
 <div id="main" role="main">
-		<article class="entry" itemscope itemtype="http://schema.org/WebPage">
+		<article class="hentry" itemscope itemtype="http://schema.org/Article">
 		<header class="entry-header">
-			
-			<h1 class="entry-title" itemprop="name">About me</h1>
+		
+			<h1 class="entry-title" itemprop="name">Facebook friend migrations</h1>
 		</header>
 		<div class="entry-wrapper">
-			<div class="entry-content" itemprop="description">
-				<link rel="stylesheet" href="http://0.0.0.0:4000/css/form.min-e5c986dd7bfec35a70e254701e13cba5.css" />
+			<div class="entry-content" itemprop="articleBody">
+				<figure>
+	<a href="/images/greatcircles_1_final.png"><img src="/images/greatcircles_1_final.png" /></a>
+	<figcaption>Great circles plot of my facebook friend's migrations.</figcaption>
+</figure>
 
-<script src="http://0.0.0.0:4000/js/vendor/wufoo-6914c32ece5165ec526490abe845b33c.js"></script>
+<p>Facebook users are asked to fill in their hometown, and where they live now (although
+ only about 60%ish of my friends actually filled this data in). This data is all up for 
+ grabs using the Facebook API, as I detailed in an earlier post. In the plot above, the 
+ blue dot is my Facebook friends hometown and the red is where they live now. I have put 
+ a black line connecting hometown to current location.</p>
 
-<h2 id="who-am-i">Who am I?</h2>
+<p>Unfortunately this map only highlights outliers – the vast majority of my friends are
+ clustered in a few cities. I played around a bit with the transparency of the points and 
+ lines to try and get a sense of numbers involved, but this graph still doesn’t convey 
+ the fact that a big portion of my friends currently live in Cambridge, and their 
+ hometown was London, Wellington or Auckland.</p>
 
-<p>I’m James Black, a PhD student studying at the MRC Epidemiology unit, within Cambridge University.
- I live in Jesus College, Cambridge, although I’m originally from New Zealand.</p>
+<p>The lines connecting hometown to current location are drawn as ‘great circles’, using
+ the geosphere package. The site Flowing data gives a good tutorial on how to 
+ use the package. One thing it doesn’t help with though, is what to do when a connecting 
+ line crosses the international dateline. The problem is that the command spits out a 
+ matrix giving the path between two points, but if someone crosses the date line it 
+ spits out a list of two matrices. One matrix for each side of the datelie. That’s 
+ why I added the messy IF statements to the code below.</p>
 
-<hr />
+<p>The plot above also suggests the fastest way between London and New Zealand is by
+ skirting the North Pole. This surprised me – so in case you don’t believe the plot 
+ above, the picture below is a screenshot of the shortest distance between Auckland 
+ and London, according to the website Maptools.</p>
 
-<h2 id="contact-me">Contact Me</h2>
+<figure>
+	<a href="/images/greatcircles_2_profile.png"><img src="/images/greatcircles_2_profile.png" /></a>
+	<figcaption>Screenshot of a great circle according to www.freemaptools.com.</figcaption>
+</figure>
 
-<form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="on" enctype="multipart/form-data" method="post" novalidate="" action="https://epijim.wufoo.com/forms/z1abgabt0oztawm/#public">
+<p>Here’s the plot again without the lines. I think my next plan is to find a way to plot
+ the latitude and longitudes into a country level chloropleth. I played around with 
+ hexbinning, but the data is too clumped for that style of plot.</p>
 
+<figure>
+	<a href="/images/greatcircles_3_point.png"><img src="/images/greatcircles_3_point.png" /></a>
+	<figcaption>First plot, without the great circle lines.</figcaption>
+</figure>
 
-<ul>
+<p>I was pretty surprised by the spread of my friends migrations. A lot more than I thought
+ were still within a few thousand KMs of their hometown. As not all my friends filled in 
+ the hometown and current location fields in Facebook, I’m assuming there is a bias where 
+ the friends that migrate are also less likely to share their data on Facebook.</p>
 
-<li id="foli1" class="notranslate      ">
-<label class="desc" id="title1" for="Field1">
-Your name
-</label>
-<span>
-<input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1" />
-<label for="Field1">First</label>
-</span>
-<span>
-<input id="Field2" name="Field2" type="text" class="field text ln" value="" size="14" tabindex="2" />
-<label for="Field2">Last</label>
-</span>
-</li>
-<li id="foli3" class="notranslate      ">
-<label class="desc" id="title3" for="Field3">
-Your email
-<span id="req_3" class="req">*</span>
-</label>
-<div>
-<input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required="" /> 
-</div>
-</li>
-<li id="foli4" class="notranslate      "><label class="desc" id="title4" for="Field4">
-Your message
-<span id="req_4" class="req">*</span>
-</label>
+<figure>
+	<a href="/images/greatcircles_4_hist.png"><img src="/images/greatcircles_4_hist.png" /></a>
+	<figcaption>Histograph of the distance my FB friends are from home.</figcaption>
+</figure>
 
-<div>
-<textarea id="Field4" name="Field4" class="field textarea medium" spellcheck="true" rows="10" cols="50" tabindex="4" onkeyup="" required=""></textarea>
+<p>With the caveat that the data has holes, and as it is just my Facebook friends is
+ completely unrepresentative, the plot below (raw data points in red over a box plot) 
+ separates my friends into those with a hometown in NZ, and those with a hometown 
+ anywhere else. You can see the clusters of Kiwis that have moved to Melbourne, and the 
+ cluster in Europe.</p>
 
-</div>
-</li> <li class="buttons ">
-<div>
+<figure>
+	<a href="/images/greatcircles_5_swarm.png"><img src="/images/greatcircles_5_swarm.png" /></a>
+	<figcaption>Swarm plot comparing Kiwi's to other friends.</figcaption>
+</figure>
 
-                    <input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit" /></div>
-</li>
+<p>This last plot is zoomed into New Zealand.</p>
 
-<li class="hidden">
-<label for="comment">Do Not Fill This Out</label>
-<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="wFldnr+X9edK2VuJR70ijNyIDQwEwhcz36AY0hCiK0U=" />
-</li>
-</ul>
-</form>
+<figure>
+	<a href="/images/greatcircles_6_NZ.png"><img src="/images/greatcircles_6_NZ.png" /></a>
+	<figcaption>Zoomed into NZ. Once again, hometown is in blue, location now in red.</figcaption>
+</figure>
 
-<hr />
-
-<h1 id="still-interested-here-is-a-bit-more">Still interested? Here is a bit more.</h1>
-
-<h3 id="the-path-to-epidemiology">The path to epidemiology</h3>
-
-<p>After a foray into microbiology and pharmacology via a Bachelor of Biomedical Science in 
-Infection and Immunity, I moved into epidemiology with a Postgraduate Diploma in Public 
-Health and a Masters in Public Health from the University of Otago. </p>
-
-<p>My work there involved synthesising quality of life recovery profiles across 
-economically relevant injury categories. 
-The data from this work was presented to the Global Burden of Disease (GBD) injury expert 
-group at the Swansea meeting, and later detailed summary estimates were provided to aid 
-in developing the injury weights for the GBD 2010. I also did work modelling QALY losses 
-in the elective surgery waiting lists at Victoria University. </p>
-
-<p>In London I worked on an  evaluation of the National Child Measurement 
-Program at the London School of Hygiene and 
-Tropical Medicine. Obesity related epidemiology led me to the MRC Epidemiology Unit, where 
-I am completing a thesis exploring the relationships between diabetes and cardiovascular disease.</p>
-
-<h3 id="my-interests">My interests</h3>
-
-<p>I am interested in learning more about the heterogeneity present in diabetes 
-related outcomes. For the next few years I plan to explore the relative effect of 
-different treatments, practice and patient characteristics on cardiovascular disease 
-in people with type 2 diabetes.</p>
-
-<p>I also have a keen interest in life at Jesus College, having served as the 
-social (2012/13) and sports (2013/14) officer, as well as building 
-and now maintaining the <a href="http://mcr.jesus.cam.ac.uk">MCR website</a>.</p>
-
-<h2 id="education">Education</h2>
-
-<p>PhD in Epidemiology (Candidate, 2015, Cantab) <br />
-Masters of Philosophy in Epidemiology (2012, Cantab) <br />
-Masters in Public Health (with Distinction, 2010) <br />
-Post-graduate Diploma in Public Health (2009) <br />
-Bachelor of Biomedical Science in Infection and Immunity (2008) </p>
-
-<hr />
-
-<h1 id="research">Research</h1>
-
-<h3 id="type-2-diabetes-treatment-consequences-and-outcomes">Type 2 diabetes treatment, consequences and outcomes</h3>
-
-<p>While at the MRC Epidemiology Unit I am researching type 2 diabetes. 
-The first part of my PhD is exploring the effect of intensive multifactorial 
-treatment on modelled cardiovascular disease in people with diabetes. 
-This work highlighted the large heterogeneity in disease risk amongst people at diagnosis. 
-As patient centred care is paramount in diabetes, and realistic goal setting is 
-essential in this process, I plan to further explore this 
-heterogeneity over the next 3 years.</p>
-
-<h3 id="child-obesity-health-pathway">Child obesity health pathway</h3>
-
-<p>At London School I was employed on two studies within an NIHR programme grant 
-involving child obesity in the United Kingdom. The first study was on the impact of the 
-National Child Measurement Programme on parental knowledge, intent to change 
-and perceptions of child obesity. The second study aimed to develop an interactive tool 
-aid GPs and practice nurses in the management of children with obesity in a primary 
-care setting. I remained in close contact with the team at London School, as well as 
-other collaborators at UCLH, and have enjoyed remaining a part of this 
-research in my spare time.</p>
-
-<h3 id="quality-of-life-norms-after-injury">Quality of life norms after injury</h3>
-
-<p>At the University of Otago I completed an individual patient data meta-analysis of 
-10,429 patients health related quality of life after injury. 
-This was assessed by combining raw study data within a multi-level mixed effects model 
-to address study heterogeneity. This thesis aimed to provide a descriptive benchmark of 
-quality of life norms after injury and has since been included as one of the many data 
-sources used as injury estimates in the GBD-2010 project.</p>
-
+				<div class="entry-related">
+					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://0.0.0.0:4000" data-subtome-feeds="http://feeds.feedburner.com/MadeMistakesArticles"><i class="fa fa-rss fa-fw"></i></a></h2>
+					<ul>
+						
+						<li><a href="http://0.0.0.0:4000/articles/regression/">Linear regression with R</a></li>
+						
+						<li><a href="http://0.0.0.0:4000/articles/wine-budget/">Wine spend and academic performance</a></li>
+						
+						<li><a href="http://0.0.0.0:4000/articles/sankey-arrow-plot/">Visualising flow with a sankey plot</a></li>
+						
+						<li><a href="http://0.0.0.0:4000/articles/facebook-network/">Plotting my Facebook data</a></li>
+						
+					</ul>
+				</div><!-- /.entry-related -->
 				<hr />
 				<div class="entry-meta">
-					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Last updated by <span itemprop="name" class="fn"><a href="http://0.0.0.0:4000/about/" title="About James Black" itemprop="url">James Black</a></span> on </span> <span class="entry-date"><time datetime="2014-01-16" itemprop="dateModified" class="updated">January 16, 2014</time></span>
-				</div><!-- .entry-meta -->
+					<meta itemprop="keywords" content="R, Great circles">
+					<span class="entry-tags"><a href="http://0.0.0.0:4000/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://0.0.0.0:4000/tag/great-circles/" title="Great circles" class="tag" rel="tag">Great circles</a></span>
+					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://0.0.0.0:4000/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
+					<span class="entry-date"><time datetime="2014-01-26T00:00:00+00:00" itemprop="datePublished" class="published">January 26, 2014</time></span> <span class="entry-date">(Updated <time datetime="2014-02-13" itemprop="dateModified" class="updated">02/13/2014</time>)</span>
+				</div><!-- /.entry-meta -->
 			</div><!-- /.entry-content -->
+			<div class="ads">
+				<style>
+.responsive-ads { width: 300px; height: 200px; }
+@media(min-width: 768px) { .responsive-ads { width: 468px; height: 60px; } }
+@media(min-width: 1000px) { .responsive-ads { width: 160px; height: 600px; } }
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Made Mistakes -->
+<ins class="adsbygoogle responsive-ads"
+	style="display:inline-block"
+	data-ad-client="ca-pub-7328585512091257"
+	data-ad-slot="3049671934"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</div><!-- /.ads -->
+			
+			<div id="disqus_thread" class="entry-content"></div><!-- /#disqus_thread -->
+			<noscript><div class="upgrade">Please enable JavaScript to view comments.</div><!-- /.upgrade --></noscript>
+			
 		</div><!-- /.entry-wrapper -->
 	</article>
 </div><!-- /#main -->
@@ -1054,7 +1026,7 @@ sources used as injury estimates in the GBD-2010 project.</p>
 <span id="L39" rel="#L39">39</span>
 
             </td>
-            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><span class="c">&lt;!-- jQuery --&gt;</span></div><div class='line' id='LC2'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;</span> <span class="na">data-cfasync=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC3'><span class="nt">&lt;script </span><span class="na">data-cfasync=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&quot;http://0.0.0.0:4000/js/vendor/jquery-397754ba49e9e0cf4e7c190da78dda05.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC4'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://0.0.0.0:4000/js/main.min-b1c052388578ab3b44858ccabf1f47d6.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC5'><br/></div><div class='line' id='LC6'><span class="c">&lt;!-- Asynchronous Google Analytics snippet --&gt;</span></div><div class='line' id='LC7'><span class="nt">&lt;script&gt;</span></div><div class='line' id='LC8'>	<span class="kd">var</span> <span class="nx">_gaq</span> <span class="o">=</span> <span class="nx">_gaq</span> <span class="o">||</span> <span class="p">[];</span></div><div class='line' id='LC9'>	<span class="kd">var</span> <span class="nx">pluginUrl</span> <span class="o">=</span> </div><div class='line' id='LC10'>	<span class="s1">&#39;//www.google-analytics.com/plugins/ga/inpage_linkid.js&#39;</span><span class="p">;</span></div><div class='line' id='LC11'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_require&#39;</span><span class="p">,</span> <span class="s1">&#39;inpage_linkid&#39;</span><span class="p">,</span> <span class="nx">pluginUrl</span><span class="p">]);</span></div><div class='line' id='LC12'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_setAccount&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]);</span></div><div class='line' id='LC13'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">]);</span></div><div class='line' id='LC14'><br/></div><div class='line' id='LC15'>	<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div><div class='line' id='LC16'>		<span class="kd">var</span> <span class="nx">ga</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></div><div class='line' id='LC17'>		<span class="nx">ga</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;https:&#39;</span> <span class="o">==</span> <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">?</span> <span class="s1">&#39;https://&#39;</span> <span class="o">:</span> <span class="s1">&#39;http://&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;stats.g.doubleclick.net/dc.js&#39;</span><span class="p">;</span></div><div class='line' id='LC18'>		<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">ga</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span></div><div class='line' id='LC19'>	<span class="p">})();</span></div><div class='line' id='LC20'><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC21'><br/></div><div class='line' id='LC22'><span class="c">&lt;!-- Modernizr --&gt;</span></div><div class='line' id='LC23'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://0.0.0.0:4000/js/vendor/modernizr-ab083e250330742e0b9d2a5548ea8745.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC24'><br/></div><div class='line' id='LC25'></div></pre></div></td>
+            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><span class="c">&lt;!-- jQuery --&gt;</span></div><div class='line' id='LC2'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;</span> <span class="na">data-cfasync=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC3'><span class="nt">&lt;script </span><span class="na">data-cfasync=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&quot;http://0.0.0.0:4000/js/vendor/jquery-397754ba49e9e0cf4e7c190da78dda05.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC4'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://0.0.0.0:4000/js/main.min-b1c052388578ab3b44858ccabf1f47d6.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC5'><br/></div><div class='line' id='LC6'><span class="c">&lt;!-- Asynchronous Google Analytics snippet --&gt;</span></div><div class='line' id='LC7'><span class="nt">&lt;script&gt;</span></div><div class='line' id='LC8'>	<span class="kd">var</span> <span class="nx">_gaq</span> <span class="o">=</span> <span class="nx">_gaq</span> <span class="o">||</span> <span class="p">[];</span></div><div class='line' id='LC9'>	<span class="kd">var</span> <span class="nx">pluginUrl</span> <span class="o">=</span> </div><div class='line' id='LC10'>	<span class="s1">&#39;//www.google-analytics.com/plugins/ga/inpage_linkid.js&#39;</span><span class="p">;</span></div><div class='line' id='LC11'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_require&#39;</span><span class="p">,</span> <span class="s1">&#39;inpage_linkid&#39;</span><span class="p">,</span> <span class="nx">pluginUrl</span><span class="p">]);</span></div><div class='line' id='LC12'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_setAccount&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]);</span></div><div class='line' id='LC13'>	<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;_trackPageview&#39;</span><span class="p">]);</span></div><div class='line' id='LC14'><br/></div><div class='line' id='LC15'>	<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div><div class='line' id='LC16'>		<span class="kd">var</span> <span class="nx">ga</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">ga</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></div><div class='line' id='LC17'>		<span class="nx">ga</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;https:&#39;</span> <span class="o">==</span> <span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">?</span> <span class="s1">&#39;https://&#39;</span> <span class="o">:</span> <span class="s1">&#39;http://&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;stats.g.doubleclick.net/dc.js&#39;</span><span class="p">;</span></div><div class='line' id='LC18'>		<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">ga</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span></div><div class='line' id='LC19'>	<span class="p">})();</span></div><div class='line' id='LC20'><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC21'><br/></div><div class='line' id='LC22'><span class="c">&lt;!-- Modernizr --&gt;</span></div><div class='line' id='LC23'><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://0.0.0.0:4000/js/vendor/modernizr-ab083e250330742e0b9d2a5548ea8745.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></div><div class='line' id='LC24'><br/></div><div class='line' id='LC25'></div><div class='line' id='LC26'><span class="c">&lt;!-- Disqus Comments --&gt;</span></div><div class='line' id='LC27'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC28'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */</span></div><div class='line' id='LC29'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kd">var</span> <span class="nx">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;jamesblack&#39;</span><span class="p">;</span> <span class="c1">// Required - Replace example with your forum shortname</span></div><div class='line' id='LC30'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kd">var</span> <span class="nx">disqus_title</span> <span class="o">=</span> <span class="s1">&#39;Facebook friend migrations&#39;</span><span class="p">;</span></div><div class='line' id='LC31'><br/></div><div class='line' id='LC32'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/* * * DON&#39;T EDIT BELOW THIS LINE * * */</span></div><div class='line' id='LC33'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span></div><div class='line' id='LC34'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kd">var</span> <span class="nx">dsq</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></div><div class='line' id='LC35'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">dsq</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;//&#39;</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">&#39;.disqus.com/embed.js&#39;</span><span class="p">;</span></div><div class='line' id='LC36'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dsq</span><span class="p">);</span></div><div class='line' id='LC37'>&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">})();</span></div><div class='line' id='LC38'><span class="nt">&lt;/script&gt;</span></div><div class='line' id='LC39'></div></pre></div></td>
           </tr>
         </table>
   </div>
