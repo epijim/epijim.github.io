@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-14T10:34:46+00:00</updated>
+	<updated>2014-02-14T10:36:42+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -36,7 +36,7 @@
 
 &lt;figure&gt;
 	&lt;a href=&quot;/images/linkedin_network.png&quot;&gt;&lt;img src=&quot;/images/linkedin_network.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Distance to the nearest pub from a grid of points in Cambridge.&lt;/figcaption&gt;
+	&lt;figcaption&gt;My plot created by the inmaps app.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
