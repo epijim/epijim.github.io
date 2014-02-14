@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-14T10:02:49+00:00</updated>
+	<updated>2014-02-14T10:34:46+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,33 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/articles-feed.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[Linkedin network map]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/linkedin-network/" />
+		<id>http://www.epijim.co.uk/articles/linkedin-network</id>
+		<published>2014-02-14T00:00:00+00:00</published>
+		<updated>2014-02-14T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Using Linkedin in labs to make a network map.</summary>
+		<content type="html">&lt;p&gt;In an earlier post, I &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;plotted my Facebook network using R&lt;/a&gt;.
+ This was great for Facebook, as I wanted to be in control of my data. 
+ For Linkedin on the other hand; I don’t really use it, and 
+ there is nothing personal on the site. So I felt comfortable using an app to make my plot.&lt;/p&gt;
+
+&lt;p&gt;The make the plot below, all you have to do is login to &lt;em&gt;inmaps.linkedinlabs.com&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/linkedin_network.png&quot;&gt;&lt;img src=&quot;/images/linkedin_network.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Distance to the nearest pub from a grid of points in Cambridge.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linear regression with R]]></title>
