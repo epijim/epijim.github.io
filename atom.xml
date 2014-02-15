@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-14T14:45:25+00:00</updated>
+	<updated>2014-02-15T20:09:40+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,61 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[In-text distributions]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/scholar-words/" />
+		<id>http://www.epijim.co.uk/articles/scholar-words</id>
+		<updated>2013-12-02T00:00:00-00:00</updated>
+		<published>2014-02-15T00:00:00+00:00</published>
+		
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/intextdistributions_1_hists.png&quot;&gt;&lt;img src=&quot;/images/intextdistributions_1_hists.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Example of an intext histogram from my thesis.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Example in-text distribution from my first year report.&lt;/p&gt;
+
+&lt;p&gt;Recently I picked up Tufte’s first book on displaying data, which features his in-text
+ &lt;a href=&quot;http://en.wikipedia.org/wiki/Sparkline&quot;&gt;sparklines&lt;/a&gt;. As always, a LaTeX package already exists.&lt;/p&gt;
+
+&lt;p&gt;Almost all health data has just too much variance in it for a normal sparkline,
+ meaning some sort of kernel density function needs to be applied to smooth the data. 
+ This is annoying – because when using it in-text, you don’t want to have to describe 
+ how the line was smoothed.&lt;/p&gt;
+
+&lt;p&gt;Brilliantly though, the package authors also included a command to create histograms.
+ I feel a lot more confident with these, as readers can clearly count the bins, and when 
+ applied in-text the lack of y-axis isn’t important, as it’s obvious you are only 
+ interested in the shapes. The best bit – the package is super simple to run (see below)!&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;latex&quot;&gt;&lt;span class=&quot;k&quot;&gt;\documentclass&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;[12pt]&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;article&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;\usepackage&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;sparklines&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% makes inline curves&lt;/span&gt;
+ 
+&lt;span class=&quot;k&quot;&gt;\begin&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
+ 
+Ten-year modelled CVD risk was 27.3 (SD 13.9, histogram 
+    &lt;span class=&quot;k&quot;&gt;\begin&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;sparkline&lt;span class=&quot;nb&quot;&gt;}{&lt;/span&gt;4&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% start first sparkline&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;\sparkspike&lt;/span&gt; .083 .69 &lt;span class=&quot;c&quot;&gt;% first is x spacing, second is height&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;\sparkspike&lt;/span&gt; .25 .97
+        &lt;span class=&quot;k&quot;&gt;\sparkspike&lt;/span&gt; .417 .42
+        &lt;span class=&quot;k&quot;&gt;\sparkspike&lt;/span&gt; .583 .15
+        &lt;span class=&quot;k&quot;&gt;\sparkspike&lt;/span&gt; .75 .04
+        &lt;span class=&quot;k&quot;&gt;\sparkspike&lt;/span&gt; .917 .01
+    &lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;sparkline&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;% end of sparkline&lt;/span&gt;
+) rest of sentance.
+  
+&lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/scholar-words/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 15, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linkedin network map]]></title>
@@ -2302,6 +2357,8 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 
 
 
+
+
 	&lt;li&gt;
 		&lt;a href=&quot;http://www.epijim.co.uk/articles/paper4/&quot;&gt;
 			&lt;img src=&quot;http://www.epijim.co.uk/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
@@ -2396,6 +2453,11 @@ BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 		<content type="html">&lt;p&gt;Below is a gallery of everything I’ve posted to this site. Click a picture to see more.&lt;/p&gt;
 
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
+
+	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/scholar-words/&quot; title=&quot;In-text distributions&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
 		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
