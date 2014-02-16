@@ -3,27 +3,489 @@
 	<title type="text">James Black</title>
 	<subtitle type="html">Epidemiologist</subtitle>
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
-	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-15T20:18:04+00:00</updated>
-	<id>http://www.epijim.co.uk/</id>
+	<icon>http://0.0.0.0:4000/images/icon152.png</icon>
+	<link rel="alternate" type="text/html" href="http://0.0.0.0:4000" />
+	<updated>2014-02-16T14:00:59+00:00</updated>
+	<id>http://0.0.0.0:4000/</id>
 	<author>
 		<name>James Black</name>
-		<uri>http://www.epijim.co.uk/</uri>
+		<uri>http://0.0.0.0:4000/</uri>
 		<email>james.black@cantab.net</email>
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
-	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/atom.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[My google scholar profile]]></title>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/scholar/" />
+		<id>http://0.0.0.0:4000/articles/scholar</id>
+		<published>2014-02-15T00:00:00+00:00</published>
+		<updated>2014-02-15T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://0.0.0.0:4000</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/scholar_2014-02-16.png&quot;&gt;&lt;img src=&quot;/images/scholar_2014-02-16.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Google scholar wordcloud from 16th Feb, 2014. Authors on left, title of papers on right.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The script below allows you to scrape google scholar and pull data about any
+ author with a profile page. Above is an example from my page, taken on the 16th of February 2014. 
+ On the left are my co-authors, names sized by how many papers we co-authored, 
+ and on the right are the words from the titles of my papers.&lt;/p&gt;
+
+&lt;p&gt;Below is a table created by the script that shows details on each of my papers, scraped from
+ google scholar.&lt;/p&gt;
+
+&lt;!-- Table generated in R 3.0.2 by googleVis 0.4.7 package --&gt;
+&lt;!-- Sun Feb 16 13:29:36 2014 --&gt;
+&lt;!-- jsHeader --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ 
+// jsData 
+function gvisDataTableID157ed78abf520 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ &quot;Disability-adjusted life years (DALYs) for 291 diseases and injuries in 21 regions, 1990-2010: a systematic analysis for the Global Burden of Disease Study 2010&quot;,
+&quot;2013&quot;,
+&quot;The Lancet 380 (9859), 2197-2223&quot;,
+false,
+&quot;531&quot; 
+],
+[
+ &quot;Years lived with disability (YLDs) for 1160 sequelae of 289 diseases and injuries 1990-2010: a systematic analysis for the Global Burden of Disease Study 2010&quot;,
+&quot;2013&quot;,
+&quot;The Lancet 380 (9859), 2163-2196&quot;,
+false,
+&quot;347&quot; 
+],
+[
+ &quot;Outcome after injury--a systematic literature search of studies using the EQ-5D&quot;,
+&quot;2009&quot;,
+&quot;Journal of Trauma and Acute Care Surgery 67 (4), 883-890&quot;,
+false,
+&quot;16&quot; 
+],
+[
+ &quot;Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D&quot;,
+&quot;2011&quot;,
+&quot;Journal of Trauma and Acute Care Surgery 71 (4), 1003-1010&quot;,
+true,
+&quot;8&quot; 
+],
+[
+ &quot;Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis&quot;,
+&quot;2013&quot;,
+&quot;Obesity Reviews 14 (8), 634-44&quot;,
+true,
+&quot;5&quot; 
+],
+[
+ &quot;Scoping the impact of the national child measurement programme feedback on the child obesity pathway: study protocol&quot;,
+&quot;2012&quot;,
+&quot;BMC public health 12 (1), 783&quot;,
+false,
+&quot;5&quot; 
+] 
+];
+data.addColumn(&#39;string&#39;,&#39;Title&#39;);
+data.addColumn(&#39;string&#39;,&#39;Year&#39;);
+data.addColumn(&#39;string&#39;,&#39;Reference&#39;);
+data.addColumn(&#39;boolean&#39;,&#39;First author&#39;);
+data.addColumn(&#39;string&#39;,&#39;Citations&#39;);
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartTableID157ed78abf520() {
+var data = gvisDataTableID157ed78abf520();
+var options = {};
+options[&quot;allowHtml&quot;] = true;
+options[&quot;width&quot;] =    600;
+options[&quot;height&quot;] =    500;
+
+
+    var chart = new google.visualization.Table(
+    document.getElementById(&#39;TableID157ed78abf520&#39;)
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = &quot;table&quot;;
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartTableID157ed78abf520);
+})();
+function displayChartTableID157ed78abf520() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load(&quot;visualization&quot;, &quot;1&quot;, { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length &gt; 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+&lt;/script&gt;
+
+&lt;!-- jsChart --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartTableID157ed78abf520&quot;&gt;&lt;/script&gt;
+
+&lt;!-- divChart --&gt;
+
+&lt;div id=&quot;TableID157ed78abf520&quot; style=&quot;width: 600px; height: 500px;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;R code to scrape google scholar is below. Full credit goes to R bloggers, although that post
+ is a few years old and needed the author
+ function fixed and some quotation marks added to make it work.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;getPckg &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;wordcloud&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;wordcloud&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wordcloud&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wordcloud&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tm&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;tm&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sendmailR&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;sendmailR&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sendmailR&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sendmailR&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;RColorBrewer&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;RColorBrewer&amp;#39; from Bioconductor\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RColorBrewer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RColorBrewer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;# helper functions&lt;/span&gt;
+googleCite &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; plotIt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pdfname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  
+  theurl &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;hl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  alldata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  
+  author &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;James Black&amp;quot;&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ipage &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    checker &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ipage &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;
+    page &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;view_op=list_works&amp;amp;pagesize=100&amp;amp;cstart=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checker&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    temper &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getcites&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checkcite&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;checker&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    alldata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temper&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temper&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;stopit &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;break&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irow &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+    tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+    
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  
+  
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotIt&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; w &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mfrow &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    makeAuthorCloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    makePaperCloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  from &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sprintf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;sendmailR@%s&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Sys.info&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  to &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;simplystatisticsgs@gmail.com&amp;gt;&amp;quot;&lt;/span&gt;
+  subject &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; author
+  body &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mime_part&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  tmpEmail &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;email &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sendmail&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;from&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; to&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; subject&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; body&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; control&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;smtpServer&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ASPMX.L.GOOGLE.COM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;silent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+getAuthor &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;webpage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;warn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  con &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;webpage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;encoding&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  z &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; z&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  ind &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;ind&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+getcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checkcite&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  old.locale &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Sys.getlocale&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  Sys.setlocale&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;locale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;warn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  con &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;### grab the end of citations&lt;/span&gt;
+  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 0 0.5em 0 0.5em;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 0 0.5em 0 0.5em;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  
+  stopit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# print(checkcite)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# print(endcites)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; checkcite&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; stopit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+  
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-table&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;)]]&lt;/span&gt;
+  cites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-table item&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; unique&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+  cit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; vector&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mode&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  ncites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;
+  
+  data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;icite &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# print(icite)&lt;/span&gt;
+    temp_data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;matrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;nrow&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ncol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    temp &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; cites&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;icite&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;icite&lt;span class=&quot;m&quot;&gt;+1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-dark-large-link&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-dark-large-link\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    temp2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\&amp;quot;cit-gray\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; temp2&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; temp2&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-year\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-citedby&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;+1&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Citations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\227&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;--&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#8208;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\227&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;--&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#8208;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\305&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;stopit&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  Sys.setlocale&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;locale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;old.locale&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+getPckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+makeAuthorCloud &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  
+  colIndex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.character&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;colIndex&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;, &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tolower&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)})&lt;/span&gt;
+  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;...&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;word &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp2&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; row.names &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;order&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; decreasing &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),]&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;
+  
+  pal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;BuGn&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+  pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+  
+  wordcloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;word&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            min.freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Inf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            random.order &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;vfont&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sans serif&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+makePaperCloud &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  
+  colIndex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Corpus&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;DataframeSource&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; colIndex&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; removePunctuation&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tolower&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; removeWords&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopwords&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;english&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+  
+  tdm &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; TermDocumentMatrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  m &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.matrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tdm&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  v &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sort&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rowSums&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;decreasing&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;word &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;v&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;freq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;v&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  pal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;RdPu&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+  
+  wordcloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;word&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            min.freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Inf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            random.order &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;vfont&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sans serif&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+searchCite &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  auth.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  auth.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;auth.names&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;auth.names&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; collapse&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  search.page &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://scholar.google.com/citations?hl=en&amp;amp;view_op=search_authors&amp;amp;mauthors=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; auth.names&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  thepage &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;search.page&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;thepage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;user=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;### if they have someone for a hit&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;##grab the first hit&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    theurl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://scholar.google.com/citations?hl=en&amp;amp;user=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    print&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;googleCite&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; stop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;No Author found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;thepage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+gcSummary &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  citations &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Citations&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+  nauthors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  nF &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  nL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  nFL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  nFS &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  totalPapers &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  totalCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  medianCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; median&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  medianAuthorCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; median&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;nauthors&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  hindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexF &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nF&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexFL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nFL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexFS &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nFL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cumsum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  gindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  nyears &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;format&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Sys.time&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;%Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; min&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Year&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  mindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; hindex&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;nyears
+  
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Total papers = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;totalPapers&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median citations per paper = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;medianCites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median (citations / # of authors) per paper = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;medianAuthorCites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;G-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;M-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexF&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexL&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First or last author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexFL&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First or second author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexFS&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://scholar.google.com/citations?user=-S7V41QAAAAJ&amp;amp;hl=en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pdfname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;James_black.pdf&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/scholar/&quot;&gt;My google scholar profile&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 15, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linkedin network map]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/linkedin-network/" />
-		<id>http://www.epijim.co.uk/articles/linkedin-network</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/linkedin-network/" />
+		<id>http://0.0.0.0:4000/articles/linkedin-network</id>
 		<published>2014-02-14T00:00:00+00:00</published>
 		<updated>2014-02-14T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;In an earlier post, I &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;plotted my Facebook network using R&lt;/a&gt;.
@@ -38,18 +500,18 @@
 	&lt;figcaption&gt;My plot created by the inmaps app.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linear regression with R]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/regression/" />
-		<id>http://www.epijim.co.uk/articles/regression</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/regression/" />
+		<id>http://0.0.0.0:4000/articles/regression</id>
 		<published>2014-02-11T00:00:00+00:00</published>
 		<updated>2014-02-11T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;html&gt;
@@ -566,18 +1028,18 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 
 &lt;/html&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Wine spend and academic performance]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/wine-budget/" />
-		<id>http://www.epijim.co.uk/articles/wine-budget</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/wine-budget/" />
+		<id>http://0.0.0.0:4000/articles/wine-budget</id>
 		<published>2014-02-10T00:00:00+00:00</published>
 		<updated>2014-02-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;About a week ago a good friend of mine, Tim, showed me a link to an economist blog post&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -807,18 +1269,18 @@ what do the numbers look like if I attempt to adjust out
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Visualising flow with a sankey plot]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/sankey-arrow-plot/" />
-		<id>http://www.epijim.co.uk/articles/sankey-arrow-plot</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/sankey-arrow-plot/" />
+		<id>http://0.0.0.0:4000/articles/sankey-arrow-plot</id>
 		<published>2014-02-05T00:00:00+00:00</published>
 		<updated>2014-02-05T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -896,19 +1358,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting my Facebook data]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/facebook-network/" />
-		<id>http://www.epijim.co.uk/articles/facebook-network</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/facebook-network/" />
+		<id>http://0.0.0.0:4000/articles/facebook-network</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2014-02-05T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -1613,19 +2075,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Facebook friend migrations]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/great-circles/" />
-		<id>http://www.epijim.co.uk/articles/great-circles</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/great-circles/" />
+		<id>http://0.0.0.0:4000/articles/great-circles</id>
 		<updated>2014-02-13T00:00:00-00:00</updated>
 		<published>2014-01-26T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -1700,19 +2162,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
 	&lt;figcaption&gt;Zoomed into NZ. Once again, hometown is in blue, location now in red.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Mapping my google location data]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/mapping-python/" />
-		<id>http://www.epijim.co.uk/articles/mapping-python</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/mapping-python/" />
+		<id>http://0.0.0.0:4000/articles/mapping-python</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2013-12-19T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -2087,19 +2549,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[In-text distributions]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/intext-distributions/" />
-		<id>http://www.epijim.co.uk/articles/intext-distributions</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/intext-distributions/" />
+		<id>http://0.0.0.0:4000/articles/intext-distributions</id>
 		<updated>2013-12-02T00:00:00-00:00</updated>
 		<published>2013-12-02T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -2142,18 +2604,18 @@ Ten-year modelled CVD risk was 27.3 (SD 13.9, histogram
 &lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Distance to the nearest pub]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/pub-distances/" />
-		<id>http://www.epijim.co.uk/articles/pub-distances</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/pub-distances/" />
+		<id>http://0.0.0.0:4000/articles/pub-distances</id>
 		<published>2013-11-29T00:00:00+00:00</published>
 		<updated>2013-11-29T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;The plot below shows the distance to the nearest bar or pub (in blue), from a grid of
@@ -2255,19 +2717,19 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[My papers]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/my-papers/" />
-		<id>http://www.epijim.co.uk/my-papers</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/my-papers/" />
+		<id>http://0.0.0.0:4000/my-papers</id>
 		<updated>2014-02-09T00:00:00-00:00</updated>
 		<published>2013-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Below is a list of my first authored papers, followed by papers I co-authored.&lt;/p&gt;
@@ -2302,9 +2764,11 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 
 
 
+
+
 	&lt;li&gt;
-		&lt;a href=&quot;http://www.epijim.co.uk/articles/paper4/&quot;&gt;
-			&lt;img src=&quot;http://www.epijim.co.uk/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot;&gt;
+			&lt;img src=&quot;http://0.0.0.0:4000/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;1. Modelling intensity of treatment after diabetes diagnosis&lt;/h4&gt;
 			&lt;p&gt;Does early intensive multifactorial therapy reduce modelled cardiovascular risk in individuals with screen-detected diabetes?&lt;/p&gt;
 		&lt;/a&gt;
@@ -2314,8 +2778,8 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://www.epijim.co.uk/articles/paper3/&quot;&gt;
-			&lt;img src=&quot;http://www.epijim.co.uk/images/paper3_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot;&gt;
+			&lt;img src=&quot;http://0.0.0.0:4000/images/paper3_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;2. CVD risk factors after diabetes diagnosis&lt;/h4&gt;
 			&lt;p&gt;Change in cardiovascular risk factors following early diagnosis of type 2 diabetes&lt;/p&gt;
 		&lt;/a&gt;
@@ -2325,8 +2789,8 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://www.epijim.co.uk/articles/paper2/&quot;&gt;
-			&lt;img src=&quot;http://www.epijim.co.uk/images/paper2_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot;&gt;
+			&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;3. Bariatric surgery in children&lt;/h4&gt;
 			&lt;p&gt;Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis.&lt;/p&gt;
 		&lt;/a&gt;
@@ -2336,8 +2800,8 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://www.epijim.co.uk/articles/paper1/&quot;&gt;
-			&lt;img src=&quot;http://www.epijim.co.uk/images/paper1_ack.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper1/&quot;&gt;
+			&lt;img src=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;4. Health related quality of life after injury&lt;/h4&gt;
 			&lt;p&gt;Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.&lt;/p&gt;
 		&lt;/a&gt;
@@ -2378,140 +2842,145 @@ A181–A181. doi:10.1136/archdischild-2012-301885.424&lt;/p&gt;
 child obesity pathway: study protocol.&lt;/strong&gt; 
 BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/my-papers/&quot;&gt;My papers&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/my-papers/&quot;&gt;My papers&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Gallery of my posts]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/plots/" />
-		<id>http://www.epijim.co.uk/gallery</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/plots/" />
+		<id>http://0.0.0.0:4000/gallery</id>
 		<updated>2014-01-06T00:00:00-00:00</updated>
 		<published>2012-08-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Below is a gallery of everything I’ve posted to this site. Click a picture to see more.&lt;/p&gt;
 
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/scholar/&quot; title=&quot;My google scholar profile&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/regression/&quot; title=&quot;Linear regression with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/wine-budget/&quot; title=&quot;Wine spend and academic performance&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/regression/&quot; title=&quot;Linear regression with R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/sankey-arrow-plot/&quot; title=&quot;Visualising flow with a sankey plot&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/wine-budget/&quot; title=&quot;Wine spend and academic performance&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/facebook-network/&quot; title=&quot;Plotting my Facebook data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/sankey-arrow-plot/&quot; title=&quot;Visualising flow with a sankey plot&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/great-circles/&quot; title=&quot;Facebook friend migrations&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/greatcircles_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/greatcircles_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-network/&quot; title=&quot;Plotting my Facebook data&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/mapping-python/&quot; title=&quot;Mapping my google location data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/great-circles/&quot; title=&quot;Facebook friend migrations&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/greatcircles_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/greatcircles_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/intext-distributions/&quot; title=&quot;In-text distributions&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/mapping-python/&quot; title=&quot;Mapping my google location data&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/pub-distances/&quot; title=&quot;Distance to the nearest pub&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/intext-distributions/&quot; title=&quot;In-text distributions&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper4/&quot; title=&quot;Modelling intensity of treatment after diabetes diagnosis&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pub-distances/&quot; title=&quot;Distance to the nearest pub&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper3/&quot; title=&quot;CVD risk factors after diabetes diagnosis&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot; title=&quot;Modelling intensity of treatment after diabetes diagnosis&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper2/&quot; title=&quot;Bariatric surgery in children&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot; title=&quot;CVD risk factors after diabetes diagnosis&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper1/&quot; title=&quot;Health related quality of life after injury&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot; title=&quot;Bariatric surgery in children&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper1/&quot; title=&quot;Health related quality of life after injury&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/plots/&quot;&gt;Gallery of my posts&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on August 31, 2012.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/plots/&quot;&gt;Gallery of my posts&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on August 31, 2012.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Modelling intensity of treatment after diabetes diagnosis]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper4/" />
-		<id>http://www.epijim.co.uk/articles/paper4</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper4/" />
+		<id>http://0.0.0.0:4000/articles/paper4</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;This paper is currently in press at Diabetic Medicine.&lt;/p&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper4/&quot;&gt;Modelling intensity of treatment after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot;&gt;Modelling intensity of treatment after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[CVD risk factors after diabetes diagnosis]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper3/" />
-		<id>http://www.epijim.co.uk/articles/paper3</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper3/" />
+		<id>http://0.0.0.0:4000/articles/paper3</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;This paper is currently in press at the British Journal of General Practice.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper3/&quot;&gt;CVD risk factors after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot;&gt;CVD risk factors after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Bariatric surgery in children]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper2/" />
-		<id>http://www.epijim.co.uk/articles/paper2</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper2/" />
+		<id>http://0.0.0.0:4000/articles/paper2</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;&lt;em&gt;Black, J. A., White, B., Viner, R. M., &amp;amp; Simmons, R. K.&lt;/em&gt; (2013). 
@@ -2536,7 +3005,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037&lt;/p&gt;
  using a random effects model. &lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http://www.epijim.co.uk/images/paper2_meta.png&quot; alt=&quot;Metaanalysis&quot; /&gt;
+	&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_meta.png&quot; alt=&quot;Metaanalysis&quot; /&gt;
 	&lt;figcaption&gt;Meta-analysis of BMI change after bariatric surgery for adolescent obesity, by surgery type and overall. AGB, adjustable gastric banding; BMI, body mass index; BPD, biliopancreatic diversion; CI, confidence interval; RYGB, Roux-en-Y gastric bypass; SG, sleeve gastrectomy.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -2552,19 +3021,19 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037&lt;/p&gt;
  surgery in children and adolescents.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper2/&quot;&gt;Bariatric surgery in children&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot;&gt;Bariatric surgery in children&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Health related quality of life after injury]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/paper1/" />
-		<id>http://www.epijim.co.uk/articles/paper1</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper1/" />
+		<id>http://0.0.0.0:4000/articles/paper1</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://www.epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;&lt;em&gt;Black, J. A., Herbison, G. P., Lyons, R. A., Polinder, S., &amp;amp; Derrett, S.&lt;/em&gt; (2011). 
@@ -2573,7 +3042,7 @@ general health status using the EQ-5D.&lt;/strong&gt;
 The Journal of trauma, 71(4), 1003–10. doi:10.1097/TA.0b013e3182238833&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http://www.epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;Acknowledgments&quot; /&gt;
+	&lt;img src=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; alt=&quot;Acknowledgments&quot; /&gt;
 	&lt;figcaption&gt;Being a independent meta-analysis, getting the collaboration of authors
 	 from identified papers was paramount.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -2607,7 +3076,7 @@ The Journal of trauma, 71(4), 1003–10. doi:10.1097/TA.0b013e3182238833&lt;/p&g
  injury is likely being underestimated.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/paper1/&quot;&gt;Health related quality of life after injury&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper1/&quot;&gt;Health related quality of life after injury&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
