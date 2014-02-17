@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-16T14:02:50+00:00</updated>
+	<updated>2014-02-17T22:38:01+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -16,466 +16,81 @@
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/articles-feed.xml" />
 	
 	<entry>
-		<title type="html"><![CDATA[My google scholar profile]]></title>
-		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/scholar/" />
-		<id>http://www.epijim.co.uk/articles/scholar</id>
-		<published>2014-02-15T00:00:00+00:00</published>
-		<updated>2014-02-15T00:00:00+00:00</updated>
+		<title type="html"><![CDATA[Jesus College MCR webpage]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/analysing-mcr-page/" />
+		<id>http://www.epijim.co.uk/articles/analysing-mcr-page</id>
+		<published>2014-02-16T00:00:00+00:00</published>
+		<updated>2014-02-16T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
 			<uri>http://www.epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
-		<summary type="text">My google scholar profile.</summary>
-		<content type="html">&lt;figure&gt;
-	&lt;a href=&quot;/images/scholar_2014-02-16.png&quot;&gt;&lt;img src=&quot;/images/scholar_2014-02-16.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Google scholar wordcloud from 16th Feb, 2014. Authors on left, title of papers on right.&lt;/figcaption&gt;
-&lt;/figure&gt;
+		<summary type="text">Looking closely at the MCR webpage usage.</summary>
+		<content type="html">&lt;p&gt;Throughout 2012 the Jesus MCR webpage was infected by a series of malicious scripts,
+ which led us to can the website entirely (it also had Joomla as a CMS, which I deteste
+ compared to Wordpress). So over Christmas 2012/13 we rebuilt it completely. &lt;/p&gt;
 
-&lt;p&gt;The script below allows you to scrape google scholar and pull data about any
- author with a profile page. Above is an example from my page, taken on the 16th of February 2014. 
- On the left are my co-authors, names sized by how many papers we co-authored, 
- and on the right are the words from the titles of my papers.&lt;/p&gt;
+&lt;p&gt;Below is all data from Jan 2013 to Jan 2014, spanning the first 12 months of the new site 
+running. During that time 5,819 ‘individuals&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;’ visited 13,804 times and viewed 39,942 pages.&lt;/p&gt;
 
-&lt;p&gt;Below is a table created by the script that shows details on each of my papers, scraped from
- google scholar.&lt;/p&gt;
+&lt;p&gt;The first plot below shows the number of people that visited per country, as well as a
+ few other statistics visible on click. &lt;/p&gt;
 
-&lt;!-- Table generated in R 3.0.2 by googleVis 0.4.7 package --&gt;
-&lt;!-- Sun Feb 16 13:29:36 2014 --&gt;
-&lt;!-- jsHeader --&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
- 
-// jsData 
-function gvisDataTableID157ed78abf520 () {
-var data = new google.visualization.DataTable();
-var datajson =
-[
- [
- &quot;Disability-adjusted life years (DALYs) for 291 diseases and injuries in 21 regions, 1990-2010: a systematic analysis for the Global Burden of Disease Study 2010&quot;,
-&quot;2013&quot;,
-&quot;The Lancet 380 (9859), 2197-2223&quot;,
-false,
-&quot;531&quot; 
-],
-[
- &quot;Years lived with disability (YLDs) for 1160 sequelae of 289 diseases and injuries 1990-2010: a systematic analysis for the Global Burden of Disease Study 2010&quot;,
-&quot;2013&quot;,
-&quot;The Lancet 380 (9859), 2163-2196&quot;,
-false,
-&quot;347&quot; 
-],
-[
- &quot;Outcome after injury--a systematic literature search of studies using the EQ-5D&quot;,
-&quot;2009&quot;,
-&quot;Journal of Trauma and Acute Care Surgery 67 (4), 883-890&quot;,
-false,
-&quot;16&quot; 
-],
-[
- &quot;Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D&quot;,
-&quot;2011&quot;,
-&quot;Journal of Trauma and Acute Care Surgery 71 (4), 1003-1010&quot;,
-true,
-&quot;8&quot; 
-],
-[
- &quot;Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis&quot;,
-&quot;2013&quot;,
-&quot;Obesity Reviews 14 (8), 634-44&quot;,
-true,
-&quot;5&quot; 
-],
-[
- &quot;Scoping the impact of the national child measurement programme feedback on the child obesity pathway: study protocol&quot;,
-&quot;2012&quot;,
-&quot;BMC public health 12 (1), 783&quot;,
-false,
-&quot;5&quot; 
-] 
-];
-data.addColumn(&#39;string&#39;,&#39;Title&#39;);
-data.addColumn(&#39;string&#39;,&#39;Year&#39;);
-data.addColumn(&#39;string&#39;,&#39;Reference&#39;);
-data.addColumn(&#39;boolean&#39;,&#39;First author&#39;);
-data.addColumn(&#39;string&#39;,&#39;Citations&#39;);
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartTableID157ed78abf520() {
-var data = gvisDataTableID157ed78abf520();
-var options = {};
-options[&quot;allowHtml&quot;] = true;
-options[&quot;width&quot;] =    600;
-options[&quot;height&quot;] =    500;
+&lt;iframe width=&quot;600&quot; height=&quot;400&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?q=select+col0+from+1bkoCjVPzxzXuexgh8H1qe5c6t9pnMvXXTdjioQQ&amp;amp;viz=MAP&amp;amp;h=false&amp;amp;lat=31.1673566580505&amp;amp;lng=102.7194905&amp;amp;t=1&amp;amp;z=2&amp;amp;l=col0&amp;amp;y=2&amp;amp;tmplt=2&amp;amp;hml=ONE_COL_LAT_LNG&quot;&gt;&lt;/iframe&gt;
 
+&lt;p&gt;This plot has the same data, but grouped by city rather than country. Both of these plots
+ are google fusion tables.&lt;/p&gt;
 
-    var chart = new google.visualization.Table(
-    document.getElementById(&#39;TableID157ed78abf520&#39;)
-    );
-    chart.draw(data,options);
-    
+&lt;iframe width=&quot;600&quot; height=&quot;400&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://www.google.com/fusiontables/embedviz?q=select+col0+from+1usjrYMHtxlujxICuJ-8Ik48RD_u62YEreQVb19A&amp;amp;viz=MAP&amp;amp;h=false&amp;amp;lat=48.413979685096336&amp;amp;lng=6.796510445312376&amp;amp;t=1&amp;amp;z=5&amp;amp;l=col0&amp;amp;y=2&amp;amp;tmplt=2&amp;amp;hml=ONE_COL_LAT_LNG&quot;&gt;&lt;/iframe&gt;
 
-}
-  
- 
-// jsDisplayChart
-(function() {
-var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-var chartid = &quot;table&quot;;
-  
-// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
-var i, newPackage = true;
-for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
-if (pkgs[i] === chartid)
-newPackage = false;
-}
-if (newPackage)
-  pkgs.push(chartid);
-  
-// Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartTableID157ed78abf520);
-})();
-function displayChartTableID157ed78abf520() {
-  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
-  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
-  window.clearTimeout(window.__gvisLoad);
-  // The timeout is set to 100 because otherwise the container div we are
-  // targeting might not be part of the document yet
-  window.__gvisLoad = setTimeout(function() {
-  var pkgCount = pkgs.length;
-  google.load(&quot;visualization&quot;, &quot;1&quot;, { packages:pkgs, callback: function() {
-  if (pkgCount != pkgs.length) {
-  // Race condition where another setTimeout call snuck in after us; if
-  // that call added a package, we must not shift its callback
-  return;
-}
-while (callbacks.length &gt; 0)
-callbacks.shift()();
-} });
-}, 100);
-}
- 
-// jsFooter
-&lt;/script&gt;
+&lt;p&gt;And now a plot with the numbers that visit per week, broken down by new or returning users.
+ I haven’t found that much info on how it defines new users (&lt;em&gt;I also haven’t looked that hard&lt;/em&gt;), 
+ but it seems that it’s based on whether they have a cookie from a previous visit. As someone 
+ that uses plugins that block tracking cookies, this means every time I visited the site I would 
+ count as a new visitor.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;!-- jsChart --&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartTableID157ed78abf520&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=1&amp;range=A1%3AC54&amp;gid=0&amp;pub=1&quot;,&quot;options&quot;:{&quot;displayAnnotations&quot;:true,&quot;titleTextStyle&quot;:{&quot;fontSize&quot;:16},&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Left vertical axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}],&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Chart title&quot;,&quot;height&quot;:371,&quot;scaleType&quot;:&quot;fixed&quot;,&quot;width&quot;:600,&quot;wmode&quot;:&quot;opaque&quot;,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Horizontal axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},&quot;animation&quot;:{&quot;duration&quot;:500}},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:true,&quot;chartType&quot;:&quot;AnnotatedTimeLine&quot;,&quot;chartName&quot;:&quot;Chart 1&quot;} &lt;/script&gt;
 
-&lt;!-- divChart --&gt;
+&lt;p&gt;The plot below shows the joys of being a university student orientated website - we get
+ a lot of users on OSX.&lt;/p&gt;
 
-&lt;div id=&quot;TableID157ed78abf520&quot; style=&quot;width: 600px; height: 500px;&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=1&amp;range=A1%3AB11&amp;gid=2&amp;pub=1&quot;,&quot;options&quot;:{&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}],&quot;titleTextStyle&quot;:{&quot;bold&quot;:false,&quot;color&quot;:&quot;#000&quot;,&quot;italic&quot;:false,&quot;fontSize&quot;:16},&quot;pieHole&quot;:&quot;0.5&quot;,&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Users by operating system&quot;,&quot;legend&quot;:&quot;right&quot;,&quot;colors&quot;:[&quot;#3366CC&quot;,&quot;#DC3912&quot;,&quot;#FF9900&quot;,&quot;#109618&quot;,&quot;#990099&quot;,&quot;#0099C6&quot;,&quot;#DD4477&quot;,&quot;#66AA00&quot;,&quot;#B82E2E&quot;,&quot;#316395&quot;,&quot;#994499&quot;,&quot;#22AA99&quot;,&quot;#AAAA11&quot;,&quot;#6633CC&quot;,&quot;#E67300&quot;,&quot;#8B0707&quot;,&quot;#651067&quot;,&quot;#329262&quot;,&quot;#5574A6&quot;,&quot;#3B3EAC&quot;,&quot;#B77322&quot;,&quot;#16D620&quot;,&quot;#B91383&quot;,&quot;#F4359E&quot;,&quot;#9C5935&quot;,&quot;#A9C413&quot;,&quot;#2A778D&quot;,&quot;#668D1C&quot;,&quot;#BEA413&quot;,&quot;#0C5922&quot;,&quot;#743411&quot;],&quot;is3D&quot;:false,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Horizontal axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},&quot;width&quot;:600,&quot;height&quot;:371},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:false,&quot;chartType&quot;:&quot;PieChart&quot;,&quot;chartName&quot;:&quot;Chart 2&quot;} &lt;/script&gt;
+
+&lt;p&gt;The plot beneath shows some of the holes in the data - while 26% came via google, and 14% from
+ facebook, for over a third there was no information on where they come from last. &lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=1&amp;range=A13%3AB18&amp;gid=2&amp;pub=1&quot;,&quot;options&quot;:{&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;max&quot;:null,&quot;min&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;max&quot;:null,&quot;min&quot;:null},&quot;maxValue&quot;:null}],&quot;titleTextStyle&quot;:{&quot;bold&quot;:false,&quot;color&quot;:&quot;#000&quot;,&quot;fontSize&quot;:16},&quot;pieHole&quot;:0.5,&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Source&quot;,&quot;height&quot;:371,&quot;animation&quot;:{&quot;duration&quot;:500},&quot;colors&quot;:[&quot;#3366CC&quot;,&quot;#DC3912&quot;,&quot;#FF9900&quot;,&quot;#109618&quot;,&quot;#990099&quot;,&quot;#0099C6&quot;,&quot;#DD4477&quot;,&quot;#66AA00&quot;,&quot;#B82E2E&quot;,&quot;#316395&quot;,&quot;#994499&quot;,&quot;#22AA99&quot;,&quot;#AAAA11&quot;,&quot;#6633CC&quot;,&quot;#E67300&quot;,&quot;#8B0707&quot;,&quot;#651067&quot;,&quot;#329262&quot;,&quot;#5574A6&quot;,&quot;#3B3EAC&quot;,&quot;#B77322&quot;,&quot;#16D620&quot;,&quot;#B91383&quot;,&quot;#F4359E&quot;,&quot;#9C5935&quot;,&quot;#A9C413&quot;,&quot;#2A778D&quot;,&quot;#668D1C&quot;,&quot;#BEA413&quot;,&quot;#0C5922&quot;,&quot;#743411&quot;],&quot;width&quot;:600,&quot;is3D&quot;:false,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;max&quot;:null,&quot;min&quot;:null},&quot;maxValue&quot;:null},&quot;tooltip&quot;:{&quot;trigger&quot;:&quot;none&quot;},&quot;focusTarget&quot;:&quot;series&quot;},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:false,&quot;chartType&quot;:&quot;PieChart&quot;,&quot;chartName&quot;:&quot;Chart 3&quot;} &lt;/script&gt;
+
+&lt;p&gt;For the 5.7% of the individuals logged into their google accounts, a much richer set of
+ data is recorded.&lt;/p&gt;
+
+&lt;p&gt;The vast majority of visitors are young.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=1&amp;range=A22%3AB28&amp;gid=2&amp;pub=1&quot;,&quot;options&quot;:{&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;title&quot;:null,&quot;minValue&quot;:null,&quot;logScale&quot;:false,&quot;viewWindow&quot;:{&quot;max&quot;:null,&quot;min&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;logScale&quot;:false,&quot;viewWindow&quot;:{&quot;max&quot;:null,&quot;min&quot;:null},&quot;maxValue&quot;:null}],&quot;titleTextStyle&quot;:{&quot;bold&quot;:true,&quot;color&quot;:&quot;#000&quot;,&quot;fontSize&quot;:16},&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Age distribution (~4.7% of visitors)&quot;,&quot;height&quot;:371,&quot;animation&quot;:{&quot;duration&quot;:500},&quot;legend&quot;:&quot;none&quot;,&quot;width&quot;:600,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindowMode&quot;:null,&quot;viewWindow&quot;:null,&quot;maxValue&quot;:null},&quot;isStacked&quot;:false,&quot;focusTarget&quot;:&quot;series&quot;,&quot;tooltip&quot;:{&quot;trigger&quot;:&quot;none&quot;}},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:false,&quot;chartType&quot;:&quot;ColumnChart&quot;,&quot;chartName&quot;:&quot;Chart 4&quot;} &lt;/script&gt;
+
+&lt;p&gt;Based on the kind of sites your users visit, google summarises what kind of online personality
+ they have. While this is not a robust statement, I am glad the largest group is News Junkies &amp;amp; 
+ Avid Readers.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=0&amp;range=A37%3AB46&amp;gid=2&amp;pub=1&quot;,&quot;options&quot;:{&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}],&quot;titleTextStyle&quot;:{&quot;bold&quot;:false,&quot;color&quot;:&quot;#000&quot;,&quot;fontSize&quot;:16},&quot;pieHole&quot;:0.5,&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;&#39;Affinity&#39; of the ~4.7% using google&quot;,&quot;colors&quot;:[&quot;#3366CC&quot;,&quot;#DC3912&quot;,&quot;#FF9900&quot;,&quot;#109618&quot;,&quot;#990099&quot;,&quot;#0099C6&quot;,&quot;#DD4477&quot;,&quot;#66AA00&quot;,&quot;#B82E2E&quot;,&quot;#316395&quot;,&quot;#994499&quot;,&quot;#22AA99&quot;,&quot;#AAAA11&quot;,&quot;#6633CC&quot;,&quot;#E67300&quot;,&quot;#8B0707&quot;,&quot;#651067&quot;,&quot;#329262&quot;,&quot;#5574A6&quot;,&quot;#3B3EAC&quot;,&quot;#B77322&quot;,&quot;#16D620&quot;,&quot;#B91383&quot;,&quot;#F4359E&quot;,&quot;#9C5935&quot;,&quot;#A9C413&quot;,&quot;#2A778D&quot;,&quot;#668D1C&quot;,&quot;#BEA413&quot;,&quot;#0C5922&quot;,&quot;#743411&quot;],&quot;is3D&quot;:false,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Horizontal axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},&quot;width&quot;:600,&quot;height&quot;:371},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:false,&quot;chartType&quot;:&quot;PieChart&quot;,&quot;chartName&quot;:&quot;Chart 5&quot;} &lt;/script&gt;
+
+&lt;p&gt;Less impressive is what google thinks is the market segments our site covers….&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=0&amp;range=A50%3AB59&amp;gid=2&amp;pub=1&quot;,&quot;options&quot;:{&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}],&quot;titleTextStyle&quot;:{&quot;bold&quot;:false,&quot;color&quot;:&quot;#000&quot;,&quot;fontSize&quot;:16},&quot;pieHole&quot;:0.5,&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Market segments covered by mcr.jesus.cam.ac.uk users (from the ~4.7%)&quot;,&quot;height&quot;:371,&quot;animation&quot;:{&quot;duration&quot;:500},&quot;colors&quot;:[&quot;#3366CC&quot;,&quot;#DC3912&quot;,&quot;#FF9900&quot;,&quot;#109618&quot;,&quot;#990099&quot;,&quot;#0099C6&quot;,&quot;#DD4477&quot;,&quot;#66AA00&quot;,&quot;#B82E2E&quot;,&quot;#316395&quot;,&quot;#994499&quot;,&quot;#22AA99&quot;,&quot;#AAAA11&quot;,&quot;#6633CC&quot;,&quot;#E67300&quot;,&quot;#8B0707&quot;,&quot;#651067&quot;,&quot;#329262&quot;,&quot;#5574A6&quot;,&quot;#3B3EAC&quot;,&quot;#B77322&quot;,&quot;#16D620&quot;,&quot;#B91383&quot;,&quot;#F4359E&quot;,&quot;#9C5935&quot;,&quot;#A9C413&quot;,&quot;#2A778D&quot;,&quot;#668D1C&quot;,&quot;#BEA413&quot;,&quot;#0C5922&quot;,&quot;#743411&quot;],&quot;width&quot;:600,&quot;is3D&quot;:false,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Horizontal axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:false,&quot;chartType&quot;:&quot;PieChart&quot;,&quot;chartName&quot;:&quot;Chart 6&quot;} &lt;/script&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;‘Individuals’ in the sense there isn’t a cookie present to say they’ve visited before. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;In reality I actually allow cookies from cam.ac.uk and my own domain, so I can exclude my own visits &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
 &lt;/div&gt;
 
-&lt;p&gt;R code to scrape google scholar is below. Full credit goes to R bloggers, although that post
- is a few years old and needed the author
- function fixed and some quotation marks added to make it work.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;getPckg &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;wordcloud&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;wordcloud&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wordcloud&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wordcloud&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tm&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;tm&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sendmailR&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;sendmailR&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sendmailR&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sendmailR&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;RColorBrewer&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;RColorBrewer&amp;#39; from Bioconductor\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RColorBrewer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RColorBrewer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-&lt;span class=&quot;c1&quot;&gt;# helper functions&lt;/span&gt;
-googleCite &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; plotIt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pdfname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  
-  theurl &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;hl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  alldata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
-  
-  author &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;James Black&amp;quot;&lt;/span&gt;
-  
-  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ipage &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    checker &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ipage &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;
-    page &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;view_op=list_works&amp;amp;pagesize=100&amp;amp;cstart=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checker&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    temper &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getcites&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checkcite&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;checker&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    alldata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temper&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temper&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;stopit &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;break&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
-  
-  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irow &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
-    tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-    
-    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
-  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
-  
-  
-  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotIt&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; w &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mfrow &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    makeAuthorCloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    makePaperCloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  from &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sprintf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;sendmailR@%s&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Sys.info&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-  to &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;simplystatisticsgs@gmail.com&amp;gt;&amp;quot;&lt;/span&gt;
-  subject &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; author
-  body &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mime_part&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  tmpEmail &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;email &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sendmail&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;from&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; to&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; subject&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; body&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; control&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;smtpServer&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ASPMX.L.GOOGLE.COM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;silent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-getAuthor &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;webpage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;warn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  con &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;webpage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;encoding&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  z &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; z&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-  ind &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;ind&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-getcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checkcite&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  old.locale &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Sys.getlocale&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  Sys.setlocale&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;locale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;warn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  con &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;### grab the end of citations&lt;/span&gt;
-  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 0 0.5em 0 0.5em;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 0 0.5em 0 0.5em;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-  
-  stopit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# print(checkcite)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# print(endcites)&lt;/span&gt;
-  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; checkcite&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; stopit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-  
-  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-table&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;)]]&lt;/span&gt;
-  cites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-table item&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; unique&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-  cit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; vector&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mode&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  ncites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;
-  
-  data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
-  
-  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;icite &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# print(icite)&lt;/span&gt;
-    temp_data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;matrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;nrow&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ncol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    temp &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; cites&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;icite&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;icite&lt;span class=&quot;m&quot;&gt;+1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-dark-large-link&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-dark-large-link\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    
-    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    temp2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\&amp;quot;cit-gray\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; temp2&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; temp2&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    
-    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-year\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    
-    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-citedby&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;+1&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Citations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\227&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;--&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#8208;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\227&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;--&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#8208;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\305&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;stopit&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  Sys.setlocale&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;locale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;old.locale&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-getPckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-makeAuthorCloud &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  
-  colIndex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.character&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;colIndex&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;, &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tolower&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)})&lt;/span&gt;
-  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;...&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;word &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp2&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; row.names &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;order&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; decreasing &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),]&lt;/span&gt;
-  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;
-  
-  pal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;BuGn&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-  pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-  
-  wordcloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;word&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-            min.freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Inf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            random.order &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-            colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;vfont&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sans serif&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-makePaperCloud &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  
-  colIndex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Corpus&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;DataframeSource&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; colIndex&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
-  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; removePunctuation&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tolower&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; removeWords&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopwords&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;english&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-  
-  tdm &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; TermDocumentMatrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  m &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.matrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tdm&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  v &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sort&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rowSums&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;decreasing&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  d &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;word &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;v&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;freq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;v&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  pal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;RdPu&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-  
-  wordcloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;word&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-            min.freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Inf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            random.order &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;vfont&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sans serif&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-searchCite &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  auth.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-  auth.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;auth.names&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;auth.names&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; collapse&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  search.page &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://scholar.google.com/citations?hl=en&amp;amp;view_op=search_authors&amp;amp;mauthors=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; auth.names&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  thepage &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;search.page&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;thepage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;user=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;### if they have someone for a hit&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;##grab the first hit&lt;/span&gt;
-    x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    theurl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://scholar.google.com/citations?hl=en&amp;amp;user=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    print&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;googleCite&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; stop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;No Author found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;thepage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-gcSummary &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-  citations &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Citations&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
-  nauthors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  nF &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  nL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  nFL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  nFS &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  totalPapers &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  totalCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  medianCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; median&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  medianAuthorCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; median&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;nauthors&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  hindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  hindexF &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nF&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  hindexL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  hindexFL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nFL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  hindexFS &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nFL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cumsum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  gindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-  nyears &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;format&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Sys.time&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;%Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; min&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Year&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  mindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; hindex&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;nyears
-  
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Total papers = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;totalPapers&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median citations per paper = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;medianCites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median (citations / # of authors) per paper = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;medianAuthorCites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;G-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;M-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexF&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexL&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First or last author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexFL&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First or second author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexFS&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://scholar.google.com/citations?user=-S7V41QAAAAJ&amp;amp;hl=en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pdfname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;James_black.pdf&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/scholar/&quot;&gt;My google scholar profile&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 15, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/analysing-mcr-page/&quot;&gt;Jesus College MCR webpage&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
@@ -2728,6 +2343,469 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 &lt;/div&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[My google scholar profile]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/scholar/" />
+		<id>http://www.epijim.co.uk/articles/scholar</id>
+		<published>2013-02-15T00:00:00+00:00</published>
+		<updated>2013-02-15T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">My google scholar profile.</summary>
+		<content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/scholar_2014-02-16.png&quot;&gt;&lt;img src=&quot;/images/scholar_2014-02-16.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Google scholar wordcloud from 16th Feb, 2014. Authors on left, title of papers on right.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The script below allows you to scrape google scholar and pull data about any
+ author with a profile page. Above is an example from my page, taken on the 16th of February 2014. 
+ On the left are my co-authors, names sized by how many papers we co-authored, 
+ and on the right are the words from the titles of my papers.&lt;/p&gt;
+
+&lt;p&gt;Below is a table created by the script that shows details on each of my papers, scraped from
+ google scholar.&lt;/p&gt;
+
+&lt;!-- Table generated in R 3.0.2 by googleVis 0.4.7 package --&gt;
+&lt;!-- Sun Feb 16 13:29:36 2014 --&gt;
+&lt;!-- jsHeader --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ 
+// jsData 
+function gvisDataTableID157ed78abf520 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ &quot;Disability-adjusted life years (DALYs) for 291 diseases and injuries in 21 regions, 1990-2010: a systematic analysis for the Global Burden of Disease Study 2010&quot;,
+&quot;2013&quot;,
+&quot;The Lancet 380 (9859), 2197-2223&quot;,
+false,
+&quot;531&quot; 
+],
+[
+ &quot;Years lived with disability (YLDs) for 1160 sequelae of 289 diseases and injuries 1990-2010: a systematic analysis for the Global Burden of Disease Study 2010&quot;,
+&quot;2013&quot;,
+&quot;The Lancet 380 (9859), 2163-2196&quot;,
+false,
+&quot;347&quot; 
+],
+[
+ &quot;Outcome after injury--a systematic literature search of studies using the EQ-5D&quot;,
+&quot;2009&quot;,
+&quot;Journal of Trauma and Acute Care Surgery 67 (4), 883-890&quot;,
+false,
+&quot;16&quot; 
+],
+[
+ &quot;Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D&quot;,
+&quot;2011&quot;,
+&quot;Journal of Trauma and Acute Care Surgery 71 (4), 1003-1010&quot;,
+true,
+&quot;8&quot; 
+],
+[
+ &quot;Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis&quot;,
+&quot;2013&quot;,
+&quot;Obesity Reviews 14 (8), 634-44&quot;,
+true,
+&quot;5&quot; 
+],
+[
+ &quot;Scoping the impact of the national child measurement programme feedback on the child obesity pathway: study protocol&quot;,
+&quot;2012&quot;,
+&quot;BMC public health 12 (1), 783&quot;,
+false,
+&quot;5&quot; 
+] 
+];
+data.addColumn(&#39;string&#39;,&#39;Title&#39;);
+data.addColumn(&#39;string&#39;,&#39;Year&#39;);
+data.addColumn(&#39;string&#39;,&#39;Reference&#39;);
+data.addColumn(&#39;boolean&#39;,&#39;First author&#39;);
+data.addColumn(&#39;string&#39;,&#39;Citations&#39;);
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartTableID157ed78abf520() {
+var data = gvisDataTableID157ed78abf520();
+var options = {};
+options[&quot;allowHtml&quot;] = true;
+options[&quot;width&quot;] =    600;
+options[&quot;height&quot;] =    500;
+
+
+    var chart = new google.visualization.Table(
+    document.getElementById(&#39;TableID157ed78abf520&#39;)
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = &quot;table&quot;;
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartTableID157ed78abf520);
+})();
+function displayChartTableID157ed78abf520() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load(&quot;visualization&quot;, &quot;1&quot;, { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length &gt; 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+&lt;/script&gt;
+
+&lt;!-- jsChart --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartTableID157ed78abf520&quot;&gt;&lt;/script&gt;
+
+&lt;!-- divChart --&gt;
+
+&lt;div id=&quot;TableID157ed78abf520&quot; style=&quot;width: 600px; height: 500px;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;R code to scrape google scholar is below. Full credit goes to R bloggers, although that post
+ is a few years old and needed the author
+ function fixed and some quotation marks added to make it work.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;getPckg &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;wordcloud&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;wordcloud&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wordcloud&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wordcloud&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tm&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;tm&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;tm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;sendmailR&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;sendmailR&amp;#39; from CRAN\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sendmailR&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sendmailR&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+pckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;RColorBrewer&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Installing &amp;#39;RColorBrewer&amp;#39; from Bioconductor\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  getPckg&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RColorBrewer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;RColorBrewer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;# helper functions&lt;/span&gt;
+googleCite &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; plotIt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pdfname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  
+  theurl &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;hl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  alldata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  
+  author &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;James Black&amp;quot;&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ipage &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    checker &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ipage &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;
+    page &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;view_op=list_works&amp;amp;pagesize=100&amp;amp;cstart=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checker&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    temper &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getcites&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checkcite&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;checker&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    alldata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temper&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temper&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;stopit &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;break&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;irow &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+    tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+    
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tmp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+    alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;irow&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grepl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;author&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Second Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last Author&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  
+  
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotIt&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; w &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mfrow &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    makeAuthorCloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    makePaperCloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;is.null&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pdfname&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  from &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sprintf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;sendmailR@%s&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Sys.info&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  to &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;simplystatisticsgs@gmail.com&amp;gt;&amp;quot;&lt;/span&gt;
+  subject &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; author
+  body &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; mime_part&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  tmpEmail &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; try&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;email &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sendmail&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;from&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; to&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; subject&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; body&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; control&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;smtpServer&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ASPMX.L.GOOGLE.COM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;silent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+getAuthor &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;webpage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;warn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  con &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;webpage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;encoding&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  z &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; z&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  ind &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;ind&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+getcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; checkcite&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  old.locale &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Sys.getlocale&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  Sys.setlocale&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;locale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;C&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;warn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  con &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;page&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;### grab the end of citations&lt;/span&gt;
+  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 0 0.5em 0 0.5em;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 0 0.5em 0 0.5em;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  
+  stopit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# print(checkcite)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# print(endcites)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;endcites &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; checkcite&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; stopit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+  
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-table&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  keepers &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;keepers&lt;span class=&quot;p&quot;&gt;)]]&lt;/span&gt;
+  cites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-table item&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; unique&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+  cit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; vector&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mode&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; length&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  ncites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;
+  
+  data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;
+  
+  &lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;icite &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# print(icite)&lt;/span&gt;
+    temp_data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;matrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;nrow&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; ncol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    temp &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; cites&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;icite&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;icite&lt;span class=&quot;m&quot;&gt;+1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-dark-large-link&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-dark-large-link\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cit-gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    temp2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\&amp;quot;cit-gray\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; temp2&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; temp2&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-year\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    
+    tites &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; grep&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;col-citedby&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;+1&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;tites&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; temp_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  colnames&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Journal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Citations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\227&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;--&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#8208;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\227&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;--&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#8208;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gsub&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\305&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; replacement&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fixed&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;con&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopit&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;stopit&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  Sys.setlocale&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;locale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;old.locale&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+getPckg &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; install.packages&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pckg&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; repos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+makeAuthorCloud &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  
+  colIndex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Author&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.character&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;colIndex&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;, &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tolower&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)})&lt;/span&gt;
+  out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  tmp2 &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;...&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;word &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp2&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; tmp2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; row.names &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;order&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; decreasing &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),]&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;
+  
+  pal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;BuGn&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+  pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+  
+  wordcloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;word&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            min.freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Inf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            random.order &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;vfont&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sans serif&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+makePaperCloud &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  
+  colIndex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Paper&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; Corpus&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;DataframeSource&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tab&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; colIndex&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; removePunctuation&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; tolower&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  corpus &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tm_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; removeWords&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stopwords&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;english&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+  
+  tdm &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; TermDocumentMatrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;corpus&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  m &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.matrix&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tdm&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  v &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sort&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rowSums&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;m&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;decreasing&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  d &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;word &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;v&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;freq&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;v&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  pal &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;RdPu&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+  
+  wordcloud&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;word&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; d&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;freq&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+            min.freq &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max.words &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Inf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            random.order &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;vfont&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;sans serif&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+searchCite &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  auth.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Author&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  auth.names &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;auth.names&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;auth.names&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; collapse&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;+&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  search.page &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://scholar.google.com/citations?hl=en&amp;amp;view_op=search_authors&amp;amp;mauthors=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; auth.names&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  thepage &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; url&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;search.page&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; readLines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;thepage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;user=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+  &lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;### if they have someone for a hit&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;##grab the first hit&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    x &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; strsplit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; split&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]][&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    theurl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://scholar.google.com/citations?hl=en&amp;amp;user=&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    print&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;googleCite&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;theurl&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; stop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;No Author found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  close&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;thepage&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+gcSummary &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  citations &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Citations&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;is.na&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+  nauthors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;N Authors&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  n &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  nF &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  nL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  nFL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  nFS &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  totalPapers &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dim&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alldata&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  totalCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  medianCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; median&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  medianAuthorCites &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; median&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;nauthors&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  hindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexF &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nF&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexFL &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Last &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nFL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  hindexFS &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_First &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; alldata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Is_Second&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nFL&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  tmp &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cumsum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;citations&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  gindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; sum&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tmp &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;n&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+  nyears &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;format&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Sys.time&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;%Y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; min&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;as.numeric&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Year&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;na.rm&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  mindex &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; hindex&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;nyears
+  
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Total papers = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;totalPapers&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median citations per paper = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;medianCites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median (citations / # of authors) per paper = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;medianAuthorCites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;G-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;M-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mindex&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexF&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Last author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexL&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First or last author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexFL&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;First or second author H-index = &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hindexFS&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cat&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://scholar.google.com/citations?user=-S7V41QAAAAJ&amp;amp;hl=en&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;pdfname&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;James_black.pdf&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/scholar/&quot;&gt;My google scholar profile&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 15, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
