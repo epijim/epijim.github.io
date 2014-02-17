@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-17T22:38:01+00:00</updated>
+	<updated>2014-02-17T22:42:35+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -2941,8 +2941,8 @@ out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quo
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
 
 	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/analysing-mcr-page/&quot; title=&quot;Jesus College MCR webpage&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
