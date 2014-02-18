@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-18T07:29:58+00:00</updated>
+	<updated>2014-02-18T07:52:14+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -50,6 +50,13 @@ running. During that time 5,819 ‘individuals&lt;sup id=&quot;fnref:1&quot;&gt;
  count as a new visitor.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=1&amp;range=A1%3AC54&amp;gid=0&amp;pub=1&quot;,&quot;options&quot;:{&quot;displayAnnotations&quot;:true,&quot;titleTextStyle&quot;:{&quot;fontSize&quot;:16},&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Left vertical axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}],&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Chart title&quot;,&quot;height&quot;:371,&quot;scaleType&quot;:&quot;fixed&quot;,&quot;width&quot;:600,&quot;wmode&quot;:&quot;opaque&quot;,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Horizontal axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},&quot;animation&quot;:{&quot;duration&quot;:500}},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:true,&quot;chartType&quot;:&quot;AnnotatedTimeLine&quot;,&quot;chartName&quot;:&quot;Chart 1&quot;} &lt;/script&gt;
+
+&lt;p&gt;The data in the last plot is probably a bit shabby, and a clearer picture comes out if you
+ use location as indicator of new vs. returning. In the next plot it looks like you can see 
+ the new students (or people outside Cambridge), who start in October, dominating visits for 
+ a short period in August to September.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js&quot;&gt; {&quot;dataSourceUrl&quot;:&quot;//docs.google.com/spreadsheet/tq?key=0AvBt7ZO0aI7GdGlPRFBxWXBIcTFiam40czJlUXVfSUE&amp;transpose=0&amp;headers=1&amp;range=F1%3AH54&amp;gid=0&amp;pub=1&quot;,&quot;options&quot;:{&quot;displayAnnotations&quot;:true,&quot;titleTextStyle&quot;:{&quot;fontSize&quot;:16},&quot;vAxes&quot;:[{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Left vertical axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},{&quot;useFormatFromData&quot;:true,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null}],&quot;booleanRole&quot;:&quot;certainty&quot;,&quot;title&quot;:&quot;Chart title&quot;,&quot;height&quot;:371,&quot;width&quot;:600,&quot;wmode&quot;:&quot;opaque&quot;,&quot;hAxis&quot;:{&quot;useFormatFromData&quot;:true,&quot;title&quot;:&quot;Horizontal axis title&quot;,&quot;minValue&quot;:null,&quot;viewWindow&quot;:{&quot;min&quot;:null,&quot;max&quot;:null},&quot;maxValue&quot;:null},&quot;animation&quot;:{&quot;duration&quot;:500}},&quot;state&quot;:{},&quot;view&quot;:{},&quot;isDefaultVisualization&quot;:true,&quot;chartType&quot;:&quot;AnnotatedTimeLine&quot;,&quot;chartName&quot;:&quot;Chart 2&quot;} &lt;/script&gt;
 
 &lt;p&gt;The plot below shows the joys of being a university student orientated website - we get
  a lot of users on OSX.&lt;/p&gt;
