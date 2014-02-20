@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-19T17:51:45+00:00</updated>
+	<updated>2014-02-20T15:44:05+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,350 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/articles-feed.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[Restaurant hygiene ratings in Cambridge]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/restaurant-hygiene/" />
+		<id>http://www.epijim.co.uk/articles/restaurant-hygiene</id>
+		<published>2014-02-19T00:00:00+00:00</published>
+		<updated>2014-02-19T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Plotting Cambridge restaurant cleanliness using R.</summary>
+		<content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/hygiene_1.png&quot;&gt;&lt;img src=&quot;/images/hygiene_1.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;The dirtiest restaurants in Cambridge (Hygiene rating of 1), on the 20th Feb 2014.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Above is a plot of the restaurants in Cambridge that have a food safety rating of one.
+ I’ve manually moved the labels so none overlap, which means the locations are 
+ approximate. This plot is the last one from the analysis below.&lt;/p&gt;
+
+&lt;p&gt;This plot was made after a friend pointed out the Food Standards Agency publishes their data, 
+ so anyone can go to their &lt;a href=&quot;http://ratings.food.gov.uk/open-data/en-GB&quot;&gt;open data site&lt;/a&gt; and 
+ download away. So, after downloading the file, I copied it across to a csv (it comes as xml). &lt;/p&gt;
+
+&lt;p&gt;Then, I load up the packages and the data file I’ll be using.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggplot2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggmap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;devtools&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;RColorBrewer&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# scale colours&lt;/span&gt;
+
+setwd&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;folder to output to&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+cam_restaurants &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cam_restaurants.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# load data &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now places like newsagents that sell food also get rated, so I’m going to subset out just the
+ the kinda joints I’m really interested in.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;  selected&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Mobile caterer&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&amp;quot;Pub/bar/nightclub&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&amp;quot;Restaurant/Cafe/Canteen&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;s&quot;&gt;&amp;quot;Takeaway/sandwich shop&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  cam_clip &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; cam_restaurants&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;cam_restaurants&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;BusinessType &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; selected&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I’ll also need to get three maps of Cambridge at different magnifications.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;cam &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Cambridge, UK&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;scale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bw&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+cam_mid &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Cambridge, UK&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;scale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bw&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+cam_zoom &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Cambridge, UK&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;scale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bw&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And the first plot - where the food selling places are, and which of the four categories they are.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cam_4.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cam_clip&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                            y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                            colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;BusinessType&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                        size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                        shape&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/hygiene_1.png&quot;&gt;&lt;img src=&quot;/images/hygiene_2.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Food outlets in Cambridge, by outlet type.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;What about the food ratings? First I’ll split it into 1 &amp;amp; 2 (which is bad) and 3-5 (which are
+ the ones rated the highest).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;cam_cut &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; cam_clip
+  levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_cut&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;RatingValue&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  combine1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_cut&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;RatingValue&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_cut&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;RatingValue&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; combine1&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;abbreviate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;combine1&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; collapse &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  combine2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;3&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;4&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;5&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Exempt&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_cut&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;RatingValue&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_cut&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;RatingValue&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; combine2&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;abbreviate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;combine2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; collapse &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And now I plot the dirty (1-2) against the clean (3-5 and exempt). If you run this code, you’ll
+ see the &lt;em&gt;extant&lt;/em&gt; options makes sure my contour plot isn’t constrained. Which also meant I had
+ to edit this plot down after running it.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cam_dirty_points.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_mid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; extent &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;normal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; maprange&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cam_clip_dirty&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                 aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Latitude&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  stat_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cam_clip_dirty&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                 aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     fill &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; ..level..&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; alpha &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; ..level..&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                 size &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bins &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; geom &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;polygon&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cam_clip_dirty&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                 y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Latitude&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+             size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             shape&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cam_clean_points.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_mid&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; extent &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;normal&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; maprange&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cam_clip_clean&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                 aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Latitude&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  stat_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cam_clip_clean&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                 aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     fill &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; ..level..&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; alpha &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; ..level..&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                 size &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bins &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; geom &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;polygon&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cam_clip_clean&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                 y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Latitude&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+             color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             shape&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/hygiene_3.png&quot;&gt;&lt;img src=&quot;/images/hygiene_3.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Location of restaurants with good and bad food safety ratings.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;And a gif going from 1 (bad) to 5 (great). No code, as gifs from R requires installing external
+ programs via the terminal. This makes it more clear that it’s not just &lt;em&gt;‘the dodgy places are in Mill Rd’&lt;/em&gt;,
+  as the 4 star rated places are also clustered towards Mill Rd. It’s mainly just 
+  but it looks like the very worst rated places are out towards Mill Rd, while the 5 star 
+  rated places are clustered back towards the centre.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/hygiene_4a.gif&quot;&gt;&lt;img src=&quot;/images/hygiene_4a.gif&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Looped gif across ratings 1-5.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So most of the restaurants with poor food safety ratings are around mill road. So what are the called?&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+ The following code will plot their names, zooming in on Mill Road. I manually moved the labels around 
+ to make them readable. So it’s just the rough location.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;cam_clip_dirty_1&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Business &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.character&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_clip_dirty_1&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;BusinessName&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# change format for plotting&lt;/span&gt;
+cam_clip_dirty_1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; cam_clip&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;cam_clip&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;RatingValue &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# clip to dirty&lt;/span&gt;
+cam_mill &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Mill Rd, Cambridge, UK&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;scale&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bw&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# focus on mill road&lt;/span&gt;
+p &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cam_mill&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+p &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; p &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Longitude&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Latitude&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+p &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; p &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_text&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; cam_clip_dirty_1&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                   aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                       y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                       label &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; Business&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                       color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Business
+                       &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                   size &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vjust &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; hjust &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+p
+ggsave&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dodgey_name.pdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/hygiene_1.png&quot;&gt;&lt;img src=&quot;/images/hygiene_1.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;The dirtiest restaurants in Cambridge (Hygiene rating of 1), on the 20 Feb 2014.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;I should add this was their status on the 20th of Feb 2014, they may of redeemed themselves since! I know a favourite curry house of many Jesuans, was also responsible for a major food poisoning outbreak. So these poor ratings are hopefully transient. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[How to plot FB network data]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/facebook-howto/" />
+		<id>http://www.epijim.co.uk/articles/facebook-howto</id>
+		<updated>2014-02-19T00:00:00-00:00</updated>
+		<published>2014-02-19T00:00:00+00:00</published>
+		
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">How I plotted my Facebook data using R.</summary>
+		<content type="html">&lt;p&gt;In an &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;earlier post I showed my facebook friend network&lt;/a&gt;, plotted with R. Below is the code.
+ I found the original code &lt;a href=&quot;http://thinktostart.wordpress.com/2013/11/19/analyzing-facebook-with-r/&quot;&gt;to access the Facebook API&lt;/a&gt;, 
+ and &lt;a href=&quot;http://blog.revolutionanalytics.com/2013/11/how-to-analyze-you-facebook-friends-network-with-r.html&quot;&gt;draw the plot&lt;/a&gt;
+ , on other sites.&lt;/p&gt;
+
+&lt;p&gt;So, load the needed packages.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Rfacebook&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Rook&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;igraph&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gtools&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Needed for cutting variables into quartiles&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You need to get the necessary &lt;em&gt;APP ID&lt;/em&gt; and &lt;em&gt;APP SECRET&lt;/em&gt; from the &lt;a href=&quot;https://developers.facebook.com/apps&quot;&gt;facebook developers site&lt;/a&gt;.
+ Then feed that info into an object called &lt;em&gt;fb_auth&lt;/em&gt;, which you call whenever you want to 
+ access the API.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;fb_oauth &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; fbOAuth&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;app_id&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;APP ID FROM SITE&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; app_secret&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;APP SECRET FROM SITE&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#now we have our fb_oauth connection&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#	so we will just save them to be able to use them later&lt;/span&gt;
+save&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fb_oauth&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#so if you want to connect to Facebook again you just have to call&lt;/span&gt;
+load&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fb_oauth&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+me &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;me&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+me&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;c1&quot;&gt;# my name # If it works - you&amp;#39;ll see your name&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now to download your friends. This isn’t needed for the network plot, but worth
+ downloading anyway. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#Too many friends in one group gets rejected by FB API. &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#Break into groups of 80.&lt;/span&gt;
+split_my_friends_1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;
+split_my_friends_2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;160&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; 
+split_my_friends_3 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;161&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; 
+split_my_friends_4 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;241&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;320&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; 
+split_my_friends_5 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;321&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; 
+split_my_friends_6 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;401&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;480&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; 
+split_my_friends_7 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  my_friends&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;481&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends&lt;span class=&quot;p&quot;&gt;),]&lt;/span&gt; 
+
+my_friends_info_1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_1&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+my_friends_info_2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_2&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+my_friends_info_3 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_3&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+my_friends_info_4 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_4&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+my_friends_info_5 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_5&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+my_friends_info_6 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_6&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+my_friends_info_7 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getUsers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;split_my_friends_7&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;id&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; private_info&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+my_friends_info&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind.fill&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info_1&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;my_friends_info_2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                             my_friends_info_3&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;my_friends_info_4&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                             my_friends_info_5&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;my_friends_info_6&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                             my_friends_info_7&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Test it worked&lt;/span&gt;
+head&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; n&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#first 10 friends - ID is the order they joined FB&lt;/span&gt;
+nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# number of friends&lt;/span&gt;
+table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;relationship_status&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;gender&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;location&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_friends_info&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;hometown&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Download who is friends with who (within those friends with me!).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;my_network &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getNetwork&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fb_oauth&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;adj.matrix&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The following code sets up the data. I define three plots, based on three algorithms. They are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;layout.drl - force-directed graph layout developed by Shawn Martin and colleagues at Sandia National Laboratories.&lt;/li&gt;
+  &lt;li&gt;layout.fr - a force-based algorithm proposed by Fruchterman and Reingold&lt;/li&gt;
+  &lt;li&gt;layout.kk - an algorithm for drawing general undirected graphs by Kamada and Kawai&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# friends who are friends with me alone&lt;/span&gt;
+singletons &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rowSums&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tina_network&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;# remove singletons&lt;/span&gt;
+my_graph &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; graph.adjacency&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;tina_network&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;singletons&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;singletons&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# make connections one way&lt;/span&gt;
+my_graph_simple &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; simplify&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                            remove.multiple &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; remove.loops &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;# set up plot&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#actual model&lt;/span&gt;
+layout.drl &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; layout.drl&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;options&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simmer.attraction&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+layout.fr &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; layout.fruchterman.reingold&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                         options&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simmer.attraction&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+layout.kk &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; layout.kamada.kawai&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;options&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simmer.attraction&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now to style the plot, and colour the nodes/vertices based on their “betweenness”.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#styling of plot&lt;/span&gt;
+E&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;color &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rgb&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+E&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;width &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0001&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Let&amp;#39;s colour based on connectedness.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#this is the number of &amp;quot;shortest paths&amp;quot; going &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#through a particular individual&lt;/span&gt;
+hc4 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; heat.colors&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+betweenness &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; betweenness&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+vcolors &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; factor&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cut&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;betweenness&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; quantile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;betweenness&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; include.lowest &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+vcolors &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; quantcut&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;betweenness&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; q&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;seq&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;by&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+vcolors2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; hc4&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;vcolors&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now plot the different layouts.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;network_drl.pdf&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vertex.size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vertex.color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vcolors2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     vertex.label&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+     vertex.label.cex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     edge.arrow.size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; edge.curved&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;layout&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;layout.drl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;network_fr.pdf&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vertex.size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vertex.color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vcolors2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     vertex.label&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+     vertex.label.cex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     edge.arrow.size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; edge.curved&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;layout&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;layout.fr&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+pdf&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;network_kk.pdf&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;my_graph_simple&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vertex.size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; vertex.color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vcolors2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     vertex.label&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+     vertex.label.cex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+     edge.arrow.size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; edge.curved&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;layout&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;layout.kk&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And the three plots that code makes (this isn’t my FB data).&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/networkhowto_drl.png&quot;&gt;&lt;img src=&quot;/images/networkhowto_drl.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;DRL: force-directed graph layout developed by Shawn Martin and colleagues at Sandia National Laboratories.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/networkhowto_fr.png&quot;&gt;&lt;img src=&quot;/images/networkhowto_fr.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;FR: a force-based algorithm proposed by Fruchterman and Reingold.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/networkhowto_kk.png&quot;&gt;&lt;img src=&quot;/images/networkhowto_kk.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;KK: an algorithm for drawing general undirected graphs by Kamada and Kawai.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/facebook-howto/&quot;&gt;How to plot FB network data&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Jesus College MCR webpage]]></title>
@@ -1053,7 +1397,7 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
 &lt;/figure&gt;
 
 &lt;p&gt;The relatively recently released &lt;em&gt;RFacebook&lt;/em&gt; package allows you to tap into Facebook API,
- making graphs like above pretty easy to make. Most of the code here comes from this blog. 
+ making graphs like above pretty easy to make. I’ve put the code in &lt;a href=&quot;http://epijim.co.uk/articles/facebook-howto/&quot;&gt;a separate post here&lt;/a&gt;. 
  Setting up the access token is a little fiddly (if you don’t set up an app access only 
  lasts for 2 hours).&lt;/p&gt;
 
