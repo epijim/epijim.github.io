@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-20T19:50:03+00:00</updated>
+	<updated>2014-02-21T08:47:01+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -357,6 +357,163 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/figure&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/facebook-howto/&quot;&gt;How to plot FB network data&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[Contour mapping cambridge crime]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/crime-cambridge/" />
+		<id>http://www.epijim.co.uk/articles/crime-cambridge</id>
+		<published>2014-02-19T00:00:00+00:00</published>
+		<updated>2014-02-19T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Plotting Cambridge crime data on a map using R.</summary>
+		<content type="html">&lt;p&gt;The Cambridge Constabulary &lt;a href=&quot;http://data.police.uk/data/&quot;&gt;has location data&lt;/a&gt; on just over 280,000 crimes that have happened
+ between December 2010 and October 2013. It’s just too great of a dataset not to take a look…&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_1.png&quot;&gt;&lt;img src=&quot;/images/crimes_1.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Crime density accross the county.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Not surprisingly, the majority of crimes take place where the people are.
+ So what about in Cambridge?&lt;/p&gt;
+
+&lt;p&gt;Each point below is a crime, and they are coded by the 16 types of crime that the police
+ have pre-categorised. I didn’t bother with a key, as 16 is just too much to 
+ get my head around at once.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_2.png&quot;&gt;&lt;img src=&quot;/images/crimes_2.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Three years of Cambridge crime plotted.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Below is the same map, focusing on the four types of crimes that looked interesting to me.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Antisocial behavior (I’m going to call them ASBOs, although really they are incidents not convictions or actual orders)&lt;/li&gt;
+  &lt;li&gt;Burglaries&lt;/li&gt;
+  &lt;li&gt;Drug related arrests&lt;/li&gt;
+  &lt;li&gt;Bicycle thefts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_3.png&quot;&gt;&lt;img src=&quot;/images/crimes_3.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Stripping the 16 types down to just the four I&#39;m interested in.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;While it’s possible to see a possible clustering of bicycle thefts in the centre of town,
+ and (not suprisingly) most burglaries seem to take place out of the centre, 
+ it’s still hard to make out any patterns.&lt;/p&gt;
+
+&lt;p&gt;So is there really difference on where the crimes happen? Overlying the four types gets
+ really messy. Below is the same four crime types overlaid. I removed the map entirely as 
+ it’s already so cluttered, and I was mainly interested in how they overlapped.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_4.png&quot;&gt;&lt;img src=&quot;/images/crimes_4.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;A rather messy contour plot of the four crimes densities.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Below is a density map of the 9 most common crimes. Shoplifting seems to be focused on the
+ shopping malls, burglaries have a pretty decent spread. Interestingly, 
+ there isn’t many bikes stolen from West Cambridge.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_5.png&quot;&gt;&lt;img src=&quot;/images/crimes_5.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Nine types of crime as density plots.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Looking at the four most interesting (to me) in detail, below.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_6.png&quot;&gt;&lt;img src=&quot;/images/crimes_6.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Zooming in on just the four most interesting.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Over the last 2 years, and within the bounds of my Cambridge maps, there were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;16,534 ASBOs&lt;/li&gt;
+  &lt;li&gt;2535 burglaries&lt;/li&gt;
+  &lt;li&gt;1502 drug related incidents&lt;/li&gt;
+  &lt;li&gt;1100 bicycle thefts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Before I can use these plots I need to work out how to set the density scale as constant.
+ The scales of a density plot, at least to me, are pretty random (it went up to 2,200) 
+ for the plots above. As far as I can tell from the documentation, in the plot above, 
+ it’s a common scale across each panel of the plot, but if you look at the numbers, 
+ that doesn’t seem to be the case.&lt;/p&gt;
+
+&lt;p&gt;Below is the four plots individually, where the density limits vary. Definitely something
+ I need to figure out before using these plots for real.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/crimes_7.gif&quot;&gt;&lt;img src=&quot;/images/crimes_7.gif&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Cycling through the types.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Below is the script to load up the csv’s, as you get them from
+ &lt;a href=&quot;http://data.police.uk/data/&quot;&gt;the police website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;setwd&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Directoy where the data is saved&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plyr&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# used to read in csvs&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;psych&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# has the describe function&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;################&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# import data  #&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;################&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;# Data is in monthly CSV&amp;#39;s, so loop over them pulling in data&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;# CAREFUL this will get all .csv names in directory&lt;/span&gt;
+  temp_filenames &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; list.files&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;pattern&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;*.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+  
+  &lt;span class=&quot;c1&quot;&gt;#Now we have a list of the csv names, read them into one data frame&lt;/span&gt;
+  crime_data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ldply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temp_filenames&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#could do in full like below, but prefer the shorter method above using plyr&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#crime_data &amp;lt;- do.call(&amp;quot;rbind&amp;quot;, lapply(temp, read.csv, header = TRUE)) &lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;# take a gander!&lt;/span&gt;
+  head&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;crime_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  summary&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;crime_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  describe&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;crime_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  str&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;crime_data&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# so 228, 949 crimes are in the database, &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# seems most the crime ID stuff came in later, and ties into the seperate&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# outcome data. Same with context. For now I&amp;#39;ll focus on location, &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# time and type of crime&lt;/span&gt;
+ 
+  &lt;span class=&quot;c1&quot;&gt;#DATA ISSUES. Time is a factor variable.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;  theme_bare &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;axis.line &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
+                      axis.text.x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
+                      axis.text.y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+                      axis.ticks &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
+                      axis.title.x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
+                      axis.title.y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+                      legend.position &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+cambridge &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Cambridge, UK&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; zoom&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bw&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; source&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;osm&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ 
+CambridgeMap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cambridge&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; baselayer &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Latitude&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                                    data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;crime_data&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+ 
+CambridgeMap &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; stat_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                                   fill&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;..level.. &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;..level.. &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                              data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;crime_data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;geom &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;polygon&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+                              scale_fill_gradient&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;low &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; high &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+                              facet_wrap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; Crime.type&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; theme_bare
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/crime-cambridge/&quot;&gt;Contour mapping cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
