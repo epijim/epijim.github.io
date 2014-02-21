@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-21T08:47:01+00:00</updated>
+	<updated>2014-02-21T08:50:18+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -376,7 +376,7 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
 &lt;figure&gt;
 	&lt;a href=&quot;/images/crimes_1.png&quot;&gt;&lt;img src=&quot;/images/crimes_1.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Crime density accross the county.&lt;/figcaption&gt;
+	&lt;figcaption&gt;Crime density across the county.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Not surprisingly, the majority of crimes take place where the people are.
@@ -491,6 +491,8 @@ library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;psych&lt;span class=&quot;p
  
   &lt;span class=&quot;c1&quot;&gt;#DATA ISSUES. Time is a factor variable.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And now plot it.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;  theme_bare &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;axis.line &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
                       axis.text.x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
