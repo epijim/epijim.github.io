@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://www.epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://www.epijim.co.uk" />
-	<updated>2014-02-21T08:50:18+00:00</updated>
+	<updated>2014-03-09T13:13:04+00:00</updated>
 	<id>http://www.epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,291 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://www.epijim.co.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[3D scatter plot in R]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/3Dscatter/" />
+		<id>http://www.epijim.co.uk/articles/3Dscatter</id>
+		<published>2014-03-10T00:00:00+00:00</published>
+		<updated>2014-03-10T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;h3 id=&quot;get-the-base-map-from-google&quot;&gt;Get the base map from google&lt;/h3&gt;
+
+&lt;p&gt;Just need &lt;em&gt;x&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt; and &lt;em&gt;z&lt;/em&gt; in that order.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rgl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+attach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	plot3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; altitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;On a mac, an XQuartz window will open up with the plot.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_scattergif.gif&quot;&gt;&lt;img src=&quot;/images/ski_scattergif.gif&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[Plotting data from the ski tracks app in R]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/ski-2014/" />
+		<id>http://www.epijim.co.uk/articles/ski-2014</id>
+		<published>2014-03-09T00:00:00+00:00</published>
+		<updated>2014-03-09T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;p&gt;A week ago Tina and went skiing at an Austrian resort called Pitztal. While it’s a pretty small
+ ski field by European standards&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, Pitztal sits on the highest glacier in 
+ Austria, and has incredible snow. Below is a map. We mainly skied on the Pitztal Glacier, and only really went across 
+ to Rifflsee for the last few runs of the day. &lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_1_pitztal.jpg&quot;&gt;&lt;img src=&quot;/images/ski_1_pitztal.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Map of the Pitztal Glacier ski field.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;While there I used an
+ app called &lt;a href=&quot;https://itunes.apple.com/gb/app/ski-tracks-gps-track-recorder/id365724094?mt=8&quot;&gt;Ski Tracks&lt;/a&gt; 
+ to record where, when and how fast I skied.&lt;/p&gt;
+
+&lt;p&gt;The app actually makes really great graphics, and if you’re not an R fanatic there really isn’t
+ a need to pull out the data and re-plot it yourself. Below are two example screens 
+ from within the app.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_0_skitracksapp.png&quot;&gt;&lt;img src=&quot;/images/ski_0_skitracksapp.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Five example screens from the app.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;get-the-data-into-r&quot;&gt;Get the data into R&lt;/h2&gt;
+
+&lt;p&gt;I like the freedom to do what ever I want with the data though, so I pulled it into R.
+ There are ready made functions out there to read a gpx file into a data frame&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, or you 
+ can use an online service to convert it to a csv.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;define-run-direction&quot;&gt;Define run direction&lt;/h2&gt;
+
+&lt;p&gt;As you ski down the hill, and ride a gondola up it, it should be easy to code if you are
+ actually skiing.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# code if going up or down!&lt;/span&gt;
+  updown &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;routes
+                                 &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                          &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+                            ifelse&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;routes&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;elevation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; routes&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;elevation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Up&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Down&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Unfortunately you do go up and down during a run, so I had to do some manual edits after.&lt;/p&gt;
+
+&lt;h2 id=&quot;day-one-skiing&quot;&gt;Day one skiing&lt;/h2&gt;
+
+&lt;p&gt;Below is day one of skiing. The code for this plot &lt;a href=&quot;http://www.epijim.co.uk/articles/pathsinr/&quot;&gt;is here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;half&quot;&gt;
+	&lt;img src=&quot;/images/ski_1_sat.png&quot; /&gt;
+	&lt;img src=&quot;/images/ski_2_ter.png&quot; /&gt;
+	&lt;figcaption&gt;Our first day skiing. On the left the basemap is a satellite photo, on the right it&#39;s a terrain map. Lifts are in red, runs in blue.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;day-one-two-and-three-skiing&quot;&gt;Day one, two and three skiing&lt;/h2&gt;
+
+&lt;p&gt;At Pitztal, you take an underground train from the village up to the glacier. On the second day 
+ we found out it is possible to ski down from the Glacier, all the way through the town, 
+ to the gondola that goes up to the other part of the ski field called Rifflsee. This was 
+ my favourite run on the mountain, as the one run was a vertical drop from 3,440m to 1,674m.&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; Meaning you start 
+ a couple of hundred metres below the height of Mt Cook (NZ’s biggest mountain), and ski a vertical 
+ distance that’s bigger than the distance between the top of Coronet Peak ski field, and sea level.&lt;/p&gt;
+
+&lt;p&gt;The best bit of the run that goes between the ski areas was you have to ski through the gate
+ below at the start of the trail.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_gif.gif&quot;&gt;&lt;img src=&quot;/images/ski_gif.gif&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The photo’s below show day one and three overlaid. The blue line linking the two ski fields
+ is the epic run mentioned above. &lt;/p&gt;
+
+&lt;figure class=&quot;half&quot;&gt;
+	&lt;img src=&quot;/images/ski_4a_1n2_ter.png&quot; /&gt;
+	&lt;img src=&quot;/images/ski_4b_1n2_sat.png&quot; /&gt;
+	&lt;figcaption&gt;First and third day skiing on the same plots. Day one is a lighter blue.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;According to &lt;em&gt;Ski Tracks&lt;/em&gt;, my top speed was over 110 km/hr. Looking at the raw data, there was one
+ part of the run where I was at mid-80’s, before suddenly it jumped up 20 km/hr for 3 data points (&lt;em&gt;which was about a second&lt;/em&gt;). 
+ This is just phone GPS data, and probably full of errors, so I manually subtracted the bonus 20 from those three data points.&lt;/p&gt;
+
+&lt;p&gt;In general the &lt;em&gt;Ski Tracks&lt;/em&gt; app seems to do some sneaky smoothing when it plots the data in-app.
+ The raw data seems to have bigger variations. For one sequence of three data points, my phone claims I went 
+ from 76 km/hr to 85 km/hr to 71 km/hr. In just under a second. Because of this, coupled with the implausible 120 km/hr 
+ speed burst, I decided I should chuck a rolling average over my speed data.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;map_data_2_trunc &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; map_data_2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  map_data_2&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;index &lt;span class=&quot;o&quot;&gt;%in%&lt;/span&gt; names&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;table&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data_2&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;index&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; 
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# make a subset of data with just runs over 10 data points (i.e. at least a minute long).&lt;/span&gt;
+
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;zoo&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# zoo has the rollmean function&lt;/span&gt;
+index &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; unique&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data_2_trunc&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;index&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# only do rolling average within a run&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; index&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  map_data_2_trunc&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; 
+    which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data_2_trunc&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;index&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;speed_roll&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rollmean&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data_2_trunc&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; 
+    which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data_2_trunc&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;index&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;speed&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fill&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Average over 5 points. Note, as at the start of a run you cant&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#				 have a rolling average, so some data points are lost, &lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#                and become NA.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now plotting the runs, colouring by the rolling average speed.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_5_time.png&quot;&gt;&lt;img src=&quot;/images/ski_5_time.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Start and end altitudes of runs on the second day.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The data seemed to be the most unreliable for a handful of the runs. In the next dotplot I
+ tightened up the code to drop any runs with less than 100 data points, and increased the rolling 
+ average to to cover about a 30 seconds of data. I liked how the bits of the run where I 
+ usually slow down start to show up.&lt;/p&gt;
+
+&lt;p&gt;Code for the dotplot is &lt;a href=&quot;http://epijim.co.uk/articles/dotplot/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_6_runs.png&quot;&gt;&lt;img src=&quot;/images/ski_6_runs.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;A dotplot of rolling average speed accross a selected sub sample of runs on the second day.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Finally, a 3D scatter plot of the runs from day two. The 3D scatter plot is super simple to make: 
+code &lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;is here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_scattergif.gif&quot;&gt;&lt;img src=&quot;/images/ski_scattergif.gif&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Pitztal has 40.6 km of runs accross Rifflsee and the Glacier. Arlberg, Kaprun, SkiWelt and Ischgil are all Austrian ski fields with more than 220km of piste. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://plotkml.r-forge.r-project.org/readGPX.html&quot;&gt;readGPX&lt;/a&gt; is an example from CRAN. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;An example of a free service is &lt;a href=&quot;http://www.gpsvisualizer.com/convert_input&quot;&gt;GPS visualiser&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;If you started at the top of the highest gondola at Pitztal. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[Plotting paths in R]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/pathsinr/" />
+		<id>http://www.epijim.co.uk/articles/pathsinr</id>
+		<published>2014-03-09T00:00:00+00:00</published>
+		<updated>2014-03-09T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;h3 id=&quot;get-the-base-map-from-google&quot;&gt;Get the base map from google&lt;/h3&gt;
+
+&lt;p&gt;In the plots below I use the &lt;em&gt;satellite&lt;/em&gt; and &lt;em&gt;terrain&lt;/em&gt; options of &lt;em&gt;maptype&lt;/em&gt;. The &lt;em&gt;day1&lt;/em&gt; object
+ is the centre of the map I want. &lt;em&gt;Zoom&lt;/em&gt; controls the&lt;em&gt;..well..&lt;/em&gt;zoom.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggmap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+day1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;lon&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10.874062&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+          lat&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;46.918028&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# longitude of centre&lt;/span&gt;
+
+basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;day1&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     zoom&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                     source&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;google&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     maptype&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;satellite&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                     &lt;span class=&quot;c1&quot;&gt;#color=&amp;quot;bw&amp;quot;&lt;/span&gt;
+                     &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;plot-ski-run-paths&quot;&gt;Plot ski run paths&lt;/h3&gt;
+
+&lt;p&gt;The code below plots individual paths using the index, &lt;em&gt;run_number&lt;/em&gt;. So that the &lt;em&gt;ups&lt;/em&gt;, and
+ &lt;em&gt;downs&lt;/em&gt;, are a different colour, I cut the data using &lt;em&gt;which&lt;/em&gt;. Usually I could just chuck 
+ up or down into colour, but this makes it easy to just plot runs down.  &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+    geom_path&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                                 group&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;run_number&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                             size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                             color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#0000FF4D&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                             alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                             data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;map_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; 
+                               which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;up&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;down&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                               &lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    geom_path&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;longitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latitude&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                                  group&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;run_number&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                              size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                              color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#FF00004D&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                              alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                              data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;map_data&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; 
+                                which&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;map_data&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;up&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;up&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                &lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And the plots! &lt;/p&gt;
+
+&lt;figure class=&quot;half&quot;&gt;
+	&lt;img src=&quot;/images/ski_1_sat.png&quot; /&gt;
+	&lt;img src=&quot;/images/ski_2_ter.png&quot; /&gt;
+	&lt;figcaption&gt;Our first day skiing. On the left is the basemap is a satellite photo, on the right it&#39;s a terrain map.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[Making a dotplot in R]]></title>
+		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/dotplot/" />
+		<id>http://www.epijim.co.uk/articles/dotplot</id>
+		<published>2014-03-09T00:00:00+00:00</published>
+		<updated>2014-03-09T00:00:00+00:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://www.epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;p&gt;Dot plots have a continuos variable, plotted against a factor. Usually with form of jitter and
+ transparency to make the frequency stand out. Almost like an impressionist box plot.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; altitude..m.&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.factor&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;index&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; colour &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; speed&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;position &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; position_jitter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;w &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; h &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  scale_colour_gradient&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;low&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; high&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_6_runs.png&quot;&gt;&lt;img src=&quot;/images/ski_6_runs.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Restaurant hygiene ratings in Cambridge]]></title>
@@ -358,7 +643,7 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 	</entry>
 	
 	<entry>
-		<title type="html"><![CDATA[Contour mapping cambridge crime]]></title>
+		<title type="html"><![CDATA[Contour mapping Cambridge crime]]></title>
 		<link rel="alternate" type="text/html" href="http://www.epijim.co.uk/articles/crime-cambridge/" />
 		<id>http://www.epijim.co.uk/articles/crime-cambridge</id>
 		<published>2014-02-19T00:00:00+00:00</published>
@@ -385,7 +670,7 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
 &lt;figure&gt;
 	&lt;a href=&quot;/images/crimes_2.png&quot;&gt;&lt;img src=&quot;/images/crimes_2.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Three years of Cambridge crime plotted.&lt;/figcaption&gt;
+	&lt;figcaption&gt;Two years of Cambridge crime plotted.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Below is the same map, focusing on the four types of crimes that looked interesting to me.&lt;/p&gt;
@@ -512,7 +797,7 @@ CambridgeMap &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; stat_density2d&lt;sp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/crime-cambridge/&quot;&gt;Contour mapping cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/crime-cambridge/&quot;&gt;Contour mapping Cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://www.epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://www.epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
@@ -1181,7 +1466,7 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 
 &lt;figure&gt;
 	&lt;a href=&quot;/images/wine.jpg&quot;&gt;&lt;img src=&quot;/images/wine.jpg&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;The well travelled plot mentioned by the ecominist.com (THIS PLOT IS NOT BY ME).&lt;/figcaption&gt;
+	&lt;figcaption&gt;The well travelled plot mentioned by the economist.com (THIS PLOT IS NOT BY ME).&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Below, I took the data from the original plot above, and rendered it as an interactive
@@ -2908,6 +3193,14 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 
 
 
+
+
+
+
+
+
+
+
 	&lt;li&gt;
 		&lt;a href=&quot;http://www.epijim.co.uk/articles/paper4/&quot;&gt;
 			&lt;img src=&quot;http://www.epijim.co.uk/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
@@ -3465,6 +3758,26 @@ out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quo
 
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
 
+	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/3Dscatter/&quot; title=&quot;3D scatter plot in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/ski-2014/&quot; title=&quot;Plotting data from the ski tracks app in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/pathsinr/&quot; title=&quot;Plotting paths in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/dotplot/&quot; title=&quot;Making a dotplot in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/restaurant-hygiene/&quot; title=&quot;Restaurant hygiene ratings in Cambridge&quot;&gt;
 		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
 		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
@@ -3475,7 +3788,7 @@ out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quo
 		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/crime-cambridge/&quot; title=&quot;Contour mapping cambridge crime&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;http://www.epijim.co.uk/articles/crime-cambridge/&quot; title=&quot;Contour mapping Cambridge crime&quot;&gt;
 		&lt;img class=&quot;load&quot; src=&quot;http://www.epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://www.epijim.co.uk/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
 		&lt;noscript&gt;&lt;img src=&quot;http://www.epijim.co.uk/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
