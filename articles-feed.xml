@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-03-09T13:42:27+00:00</updated>
+	<updated>2014-03-09T13:49:07+00:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -59,7 +59,7 @@ detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot
 			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
-		<summary type="text">Plotting data from the ski tracks app using in R, from a recent trip to Pitztal Glacier.</summary>
+		<summary type="text">Plotting data from the ski tracks app using R, from a recent trip to Pitztal Glacier.</summary>
 		<content type="html">&lt;p&gt;A week ago Tina and went skiing at an Austrian resort called Pitztal. While it’s a pretty small
  ski field by European standards&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, Pitztal sits on the highest glacier in 
  Austria, and has incredible snow. Below is a map. We mainly skied on the Pitztal Glacier, and only really went across 
