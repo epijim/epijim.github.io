@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-03-09T13:49:07+00:00</updated>
+	<updated>2014-03-10T07:54:07+00:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -75,7 +75,7 @@ detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot
  to record where, when and how fast I skied.&lt;/p&gt;
 
 &lt;p&gt;The app actually makes really great graphics, and if you’re not an R fanatic there really isn’t
- a need to pull out the data and re-plot it yourself. Below are two example screens 
+ a need to pull out the data and re-plot it yourself. Below are some example screens 
  from within the app.&lt;/p&gt;
 
 &lt;figure&gt;
