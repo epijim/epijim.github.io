@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-03-10T07:54:07+00:00</updated>
+	<updated>2014-03-12T21:15:07+00:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -26,7 +26,7 @@
 			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
-		<content type="html">&lt;h3 id=&quot;get-the-base-map-from-google&quot;&gt;Get the base map from google&lt;/h3&gt;
+		<content type="html">&lt;h3 id=&quot;d-scatter-plot&quot;&gt;3D scatter plot&lt;/h3&gt;
 
 &lt;p&gt;Just need &lt;em&gt;x&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt; and &lt;em&gt;z&lt;/em&gt; in that order.&lt;/p&gt;
 
@@ -41,6 +41,44 @@ detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot
 
 &lt;figure&gt;
 	&lt;a href=&quot;/images/ski_scattergif.gif&quot;&gt;&lt;img src=&quot;/images/ski_scattergif.gif&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;d-density--contour-map&quot;&gt;3D density / contour map&lt;/h3&gt;
+
+&lt;p&gt;And a density/contour plot. The data here is 2004 Tompkins scores for all the colleges
+ at Cambridge against 2013 scores. As you can see, this graph isn’t that useful for looking 
+ at &lt;em&gt;x&lt;/em&gt; vs. &lt;em&gt;y&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Get the data&lt;/span&gt;
+require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;RCurl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# this is due to an issue with https, R and github&lt;/span&gt;
+data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; getURL&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://gist.githubusercontent.com/epijim/8819934/raw/6c76df80eb095065a9ce0fa4b8f94410ad528fed/college_data.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+data &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;stringsAsFactors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Required libraries&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rgl&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# plots it&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;MASS&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# derives the z axis&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Open graph&lt;/span&gt;
+rgl.open&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;# Get the z axis&lt;/span&gt;
+fit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Tompkin_1997&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Tompkin_2013&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+fit &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; na.omit&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fit&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+fit &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; kde2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Tompkin_1997&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;fit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Tompkin_2013&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Plot it&lt;/span&gt;
+rgl.surface&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;fit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;m&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;fit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;z&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+par3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;zoom &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Animate it&lt;/span&gt;
+M &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; par3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;userMatrix&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+play3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;par3dinterp&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;userMatrix &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;M&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rotate3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;M&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pi&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
+                                     rotate3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;M&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; pi&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))),&lt;/span&gt; duration &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/ski_scattergif.gif&quot;&gt;&lt;img src=&quot;/images/scatter3d_scattergif2.gif&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 
@@ -58,9 +96,9 @@ detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plotdata&lt;span class=&quot
 			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
-		<content type="html">&lt;p&gt;A week ago Tina and went skiing at an Austrian resort called Pitztal. While it’s a pretty small
+		<content type="html">&lt;p&gt;A week ago Tina and I went skiing at an Austrian resort called Pitztal. While it’s a pretty small
  ski field by European standards&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, Pitztal sits on the highest glacier in 
- Austria, and has incredible snow. Below is a map. We mainly skied on the Pitztal Glacier, and only really went across 
+ Tyrol, and has incredible snow. Below is a map. We mainly skied on the Pitztal Glacier, and only really went across 
  to Rifflsee for the last few runs of the day. &lt;/p&gt;
 
 &lt;figure&gt;
