@@ -123,7 +123,7 @@
 		</header>
 		<div class="entry-wrapper">
 			<div class="entry-content" itemprop="articleBody">
-				<h3 id="get-the-base-map-from-google">Get the base map from google</h3>
+				<h3 id="d-scatter-plot">3D scatter plot</h3>
 
 <p>Just need <em>x</em>, <em>y</em> and <em>z</em> in that order.</p>
 
@@ -138,6 +138,44 @@ detach<span class="p">(</span>plotdata<span class="p">)</span>
 
 <figure>
 	<a href="/images/ski_scattergif.gif"><img src="/images/ski_scattergif.gif" /></a>
+</figure>
+
+<h3 id="d-density--contour-map">3D density / contour map</h3>
+
+<p>And a density/contour plot. The data here is 2004 Tompkins scores for all the colleges
+ at Cambridge against 2013 scores. As you can see, this graph isn’t that useful for looking 
+ at <em>x</em> vs. <em>y</em>.</p>
+
+<div class="highlight"><pre><code class="r"><span class="c1"># Get the data</span>
+require<span class="p">(</span>RCurl<span class="p">)</span>  <span class="c1"># this is due to an issue with https, R and github</span>
+data <span class="o">&lt;-</span> getURL<span class="p">(</span><span class="s">&quot;https://gist.githubusercontent.com/epijim/8819934/raw/6c76df80eb095065a9ce0fa4b8f94410ad528fed/college_data.csv&quot;</span><span class="p">)</span>
+data <span class="o">&lt;-</span> read.csv<span class="p">(</span>text<span class="o">=</span>data<span class="p">,</span>stringsAsFactors<span class="o">=</span><span class="k-Variable">F</span><span class="p">)</span>
+
+<span class="c1"># Required libraries</span>
+library<span class="p">(</span>rgl<span class="p">)</span> <span class="c1"># plots it</span>
+library<span class="p">(</span>MASS<span class="p">)</span> <span class="c1"># derives the z axis</span>
+
+<span class="c1"># Open graph</span>
+rgl.open<span class="p">()</span> 
+
+<span class="c1"># Get the z axis</span>
+fit <span class="o">&lt;-</span> data<span class="p">[,</span>c<span class="p">(</span><span class="s">&quot;Tompkin_1997&quot;</span><span class="p">,</span><span class="s">&quot;Tompkin_2013&quot;</span><span class="p">)]</span>
+fit <span class="o">&lt;-</span> na.omit<span class="p">(</span>fit<span class="p">)</span>
+fit <span class="o">=</span> kde2d<span class="p">(</span>fit<span class="o">$</span>Tompkin_1997<span class="p">,</span>fit<span class="o">$</span>Tompkin_2013<span class="p">)</span>
+
+<span class="c1"># Plot it</span>
+rgl.surface<span class="p">(</span>fit<span class="o">$</span>x<span class="p">,</span> fit<span class="o">$</span>y<span class="p">,</span>   <span class="m">5000</span><span class="o">*</span>fit<span class="o">$</span>z<span class="p">)</span>
+
+par3d<span class="p">(</span>zoom <span class="o">=</span> <span class="m">0.5</span><span class="p">)</span>
+
+<span class="c1"># Animate it</span>
+M <span class="o">=</span> par3d<span class="p">(</span><span class="s">&quot;userMatrix&quot;</span><span class="p">)</span>
+play3d<span class="p">(</span>par3dinterp<span class="p">(</span>userMatrix <span class="o">=</span> list<span class="p">(</span>M<span class="p">,</span> rotate3d<span class="p">(</span>M<span class="p">,</span> pi<span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> 
+                                     rotate3d<span class="p">(</span>M<span class="p">,</span> pi<span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))),</span> duration <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
+</code></pre></div>
+
+<figure>
+	<a href="/images/ski_scattergif.gif"><img src="/images/scatter3d_scattergif2.gif" /></a>
 </figure>
 
 
