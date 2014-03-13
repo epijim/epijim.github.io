@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-03-13T22:04:01+00:00</updated>
+	<updated>2014-03-13T22:08:11+00:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -3302,6 +3302,64 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
 		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;p&gt;And a list of the tags for all my posts.&lt;/p&gt;
+
+&lt;ul class=&quot;tag-box inline&quot;&gt;
+  
+  
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/papers/&quot;&gt;papers &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/publications/&quot;&gt;publications &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/hrqol/&quot;&gt;HRQoL &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/r/&quot;&gt;R &lt;span&gt;14&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-scholar/&quot;&gt;Google Scholar &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/courses/&quot;&gt;courses &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/geo-coding/&quot;&gt;Geo-coding &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/latex/&quot;&gt;LaTeX &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/sparklines/&quot;&gt;Sparklines &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/python/&quot;&gt;Python &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-data/&quot;&gt;Google data &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/great-circles/&quot;&gt;Great circles &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/facebook/&quot;&gt;Facebook &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/network/&quot;&gt;Network &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/sankey/&quot;&gt;Sankey &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/wine/&quot;&gt;Wine &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/cambridge-university/&quot;&gt;Cambridge University &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/jesus-college-mcr/&quot;&gt;Jesus College MCR &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/map/&quot;&gt;Map &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/cambridge/&quot;&gt;Cambridge &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/dotplot/&quot;&gt;Dotplot &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/skiing/&quot;&gt;Skiing &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/paths/&quot;&gt;Paths &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/gps/&quot;&gt;GPS &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    
+  
 
 &lt;/ul&gt;
 
