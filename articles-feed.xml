@@ -3,27 +3,27 @@
 	<title type="text">James Black &#8211; Articles</title>
 	<subtitle type="html">Epidemiologist</subtitle>
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-	<icon>http://epijim.co.uk/images/icon152.png</icon>
-	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-03-12T21:15:07+00:00</updated>
-	<id>http://epijim.co.uk/</id>
+	<icon>http://0.0.0.0:4000/images/icon152.png</icon>
+	<link rel="alternate" type="text/html" href="http://0.0.0.0:4000" />
+	<updated>2014-03-13T21:53:11+00:00</updated>
+	<id>http://0.0.0.0:4000/</id>
 	<author>
 		<name>James Black</name>
-		<uri>http://epijim.co.uk/</uri>
+		<uri>http://0.0.0.0:4000/</uri>
 		<email>james.black@cantab.net</email>
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
-	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/articles-feed.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/articles-feed.xml" />
 	
 	<entry>
 		<title type="html"><![CDATA[3D scatter plot in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/3Dscatter/" />
-		<id>http://epijim.co.uk/articles/3Dscatter</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/3Dscatter/" />
+		<id>http://0.0.0.0:4000/articles/3Dscatter</id>
 		<published>2014-03-10T00:00:00+00:00</published>
 		<updated>2014-03-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Easy way to plot a 3D scatter plot in R.</summary>
@@ -83,18 +83,18 @@ play3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;par3dinterp&lt;span class=&q
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting data from the ski tracks app in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/ski-2014/" />
-		<id>http://epijim.co.uk/articles/ski-2014</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/ski-2014/" />
+		<id>http://0.0.0.0:4000/articles/ski-2014</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Plotting data from the ski tracks app using R, from a recent trip to Pitztal Glacier.</summary>
@@ -245,18 +245,18 @@ code &lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;is here&l
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting paths in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/pathsinr/" />
-		<id>http://epijim.co.uk/articles/pathsinr</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/pathsinr/" />
+		<id>http://0.0.0.0:4000/articles/pathsinr</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Plotting GPS points over a path in R.</summary>
@@ -311,18 +311,18 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Making a dotplot in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/dotplot/" />
-		<id>http://epijim.co.uk/articles/dotplot</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/dotplot/" />
+		<id>http://0.0.0.0:4000/articles/dotplot</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">How to make a dotplot using ggplot in R.</summary>
@@ -339,18 +339,18 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Restaurant hygiene ratings in Cambridge]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/restaurant-hygiene/" />
-		<id>http://epijim.co.uk/articles/restaurant-hygiene</id>
+		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/restaurant-hygiene/" />
+		<id>http://0.0.0.0:4000/articles/restaurant-hygiene</id>
 		<published>2014-02-19T00:00:00+00:00</published>
 		<updated>2014-02-19T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://0.0.0.0:4000</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Plotting Cambridge restaurant cleanliness using R.</summary>
@@ -517,7 +517,7 @@ ggsave&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
