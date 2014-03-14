@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-03-13T22:08:11+00:00</updated>
+	<updated>2014-03-14T11:30:44+00:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -3553,9 +3553,7 @@ BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
 &lt;h4 id=&quot;diabetes-diagnosis-treatment-and-opportunities&quot;&gt;Diabetes: diagnosis, treatment, and opportunities&lt;/h4&gt;
 
-&lt;p&gt;&lt;em&gt;5 week uncredited online course provided by UCSF (via Coursera.org)&lt;/em&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.coursera.org/course/ucsfdiabetes&quot;&gt;This course&lt;/a&gt;, provides a good introduction to
+&lt;p&gt;&lt;em&gt;5 week uncredited online course provided by UCSF (via Coursera.org)&lt;/em&gt;: &lt;a href=&quot;https://www.coursera.org/course/ucsfdiabetes&quot;&gt;This course&lt;/a&gt;, provides a good introduction to
  diabetes care in practice. It’s not at all intellectual&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, and provides a relatively 
  in depth listing of facts concerning what defines a patient with diabetes, what is current 
  treatment norms, and what are they at risk of.&lt;/p&gt;
@@ -3564,9 +3562,7 @@ BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
 &lt;h4 id=&quot;codeschool---try-r&quot;&gt;Codeschool - Try R&lt;/h4&gt;
 
-&lt;p&gt;&lt;em&gt;Online interactive course&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.codeschool.com/courses/try-r&quot;&gt;This course&lt;/a&gt; is beyond amazing. It’s an introduction
+&lt;p&gt;&lt;em&gt;Online interactive course&lt;/em&gt;: &lt;a href=&quot;https://www.codeschool.com/courses/try-r&quot;&gt;This course&lt;/a&gt; is beyond amazing. It’s an introduction
  to R where you type into your browser, and it responds interactively. The free intro course is short,
  but lots of fun. Definitely the ideal first introduction to R.&lt;/p&gt;
 
@@ -3574,9 +3570,7 @@ BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
 &lt;h4 id=&quot;introduction-to-data-visualisation&quot;&gt;Introduction to data visualisation&lt;/h4&gt;
 
-&lt;p&gt;&lt;em&gt;Evening session at The Guardian&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.theguardian.com/guardian-masterclasses/intorduction-to-data-visualisation-digital-course&quot;&gt;This is a single (paid) session&lt;/a&gt;
+&lt;p&gt;&lt;em&gt;Evening session at The Guardian&lt;/em&gt;: &lt;a href=&quot;http://www.theguardian.com/guardian-masterclasses/intorduction-to-data-visualisation-digital-course&quot;&gt;This is a single (paid) session&lt;/a&gt;
  introducing tools used by the Guardian newspaper for their infographics.
  While the evening was very interesting, it’s also a little disappointing. The Guardian appears 
  to be relatively methodologically inept compared to the data journalists at places like the New York Times and ESPN. 
@@ -3584,9 +3578,7 @@ BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
 &lt;h4 id=&quot;maps-and-the-geo-spatial-revolution&quot;&gt;Maps and the geo-spatial revolution&lt;/h4&gt;
 
-&lt;p&gt;&lt;em&gt;5 week uncredited online course provided by Penn State (via Coursera.org)&lt;/em&gt; &lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.coursera.org/course/maps&quot;&gt;A fun course&lt;/a&gt;, that provides a basic introduction to GIS.
+&lt;p&gt;&lt;em&gt;5 week uncredited online course provided by Penn State (via Coursera.org)&lt;/em&gt;: &lt;a href=&quot;https://www.coursera.org/course/maps&quot;&gt;A fun course&lt;/a&gt;, that provides a basic introduction to GIS.
  I learnt lots of terminology, and some history, of GIS, but this course is targeted at people with no experience. 
  If you know how to plot a path, and a point, with ggmaps in R, you’re already beyond the course content.&lt;/p&gt;
 
