@@ -3,27 +3,27 @@
 	<title type="text">James Black</title>
 	<subtitle type="html">Epidemiologist</subtitle>
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-	<icon>http://0.0.0.0:4000/images/icon152.png</icon>
-	<link rel="alternate" type="text/html" href="http://0.0.0.0:4000" />
-	<updated>2014-04-01T20:15:52+01:00</updated>
-	<id>http://0.0.0.0:4000/</id>
+	<icon>http://epijim.co.uk/images/icon152.png</icon>
+	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
+	<updated>2014-04-01T20:18:04+01:00</updated>
+	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
-		<uri>http://0.0.0.0:4000/</uri>
+		<uri>http://epijim.co.uk/</uri>
 		<email>james.black@cantab.net</email>
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
-	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/atom.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/atom.xml" />
 	
 	<entry>
 		<title type="html"><![CDATA[Bubble tables with R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/bubbletable/" />
-		<id>http://0.0.0.0:4000/articles/bubbletable</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/bubbletable/" />
+		<id>http://epijim.co.uk/articles/bubbletable</id>
 		<published>2014-04-01T00:00:00+01:00</published>
 		<updated>2014-04-01T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;The bubble plot strips the data away from tables to try and show patterns, in a context
@@ -151,18 +151,18 @@ ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata_long&lt;span class=&q
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/bubbletable/&quot;&gt;Bubble tables with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bubbletable/&quot;&gt;Bubble tables with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[3D scatter plot in R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/3Dscatter/" />
-		<id>http://0.0.0.0:4000/articles/3Dscatter</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/3Dscatter/" />
+		<id>http://epijim.co.uk/articles/3Dscatter</id>
 		<published>2014-03-10T00:00:00+00:00</published>
 		<updated>2014-03-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;h3 id=&quot;d-scatter-plot&quot;&gt;3D scatter plot&lt;/h3&gt;
@@ -221,18 +221,18 @@ play3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;par3dinterp&lt;span class=&q
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting data from the ski tracks app in R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/ski-2014/" />
-		<id>http://0.0.0.0:4000/articles/ski-2014</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/ski-2014/" />
+		<id>http://epijim.co.uk/articles/ski-2014</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;A week ago Tina and I went skiing at an Austrian resort called Pitztal. While it’s a pretty small
@@ -382,18 +382,18 @@ code &lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;is here&l
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting paths in R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/pathsinr/" />
-		<id>http://0.0.0.0:4000/articles/pathsinr</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/pathsinr/" />
+		<id>http://epijim.co.uk/articles/pathsinr</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;h3 id=&quot;get-the-base-map-from-google&quot;&gt;Get the base map from google&lt;/h3&gt;
@@ -447,18 +447,18 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Making a dotplot in R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/dotplot/" />
-		<id>http://0.0.0.0:4000/articles/dotplot</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/dotplot/" />
+		<id>http://epijim.co.uk/articles/dotplot</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Dot plots have a continuos variable, plotted against a factor. Usually with form of jitter and
@@ -474,18 +474,18 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Restaurant hygiene ratings in Cambridge]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/restaurant-hygiene/" />
-		<id>http://0.0.0.0:4000/articles/restaurant-hygiene</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/restaurant-hygiene/" />
+		<id>http://epijim.co.uk/articles/restaurant-hygiene</id>
 		<published>2014-02-19T00:00:00+00:00</published>
 		<updated>2014-02-19T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -651,19 +651,19 @@ ggsave&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[How to plot FB network data]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/facebook-howto/" />
-		<id>http://0.0.0.0:4000/articles/facebook-howto</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/facebook-howto/" />
+		<id>http://epijim.co.uk/articles/facebook-howto</id>
 		<updated>2014-02-19T00:00:00-00:00</updated>
 		<published>2014-02-19T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;In an &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;earlier post I showed my facebook friend network&lt;/a&gt;, plotted with R. Below is the code.
@@ -816,18 +816,18 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 	&lt;figcaption&gt;KK: an algorithm for drawing general undirected graphs by Kamada and Kawai.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-howto/&quot;&gt;How to plot FB network data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-howto/&quot;&gt;How to plot FB network data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Contour mapping Cambridge crime]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/crime-cambridge/" />
-		<id>http://0.0.0.0:4000/articles/crime-cambridge</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/crime-cambridge/" />
+		<id>http://epijim.co.uk/articles/crime-cambridge</id>
 		<published>2014-02-19T00:00:00+00:00</published>
 		<updated>2014-02-19T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;The Cambridge Constabulary &lt;a href=&quot;http://data.police.uk/data/&quot;&gt;has location data&lt;/a&gt; on just over 280,000 crimes that have happened
@@ -974,18 +974,18 @@ CambridgeMap &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; stat_density2d&lt;sp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/crime-cambridge/&quot;&gt;Contour mapping Cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/crime-cambridge/&quot;&gt;Contour mapping Cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Jesus College MCR webpage]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/analysing-mcr-page/" />
-		<id>http://0.0.0.0:4000/articles/analysing-mcr-page</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/analysing-mcr-page/" />
+		<id>http://epijim.co.uk/articles/analysing-mcr-page</id>
 		<published>2014-02-16T00:00:00+00:00</published>
 		<updated>2014-02-16T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Throughout 2012 the Jesus MCR webpage was infected by a series of malicious scripts,
@@ -1070,18 +1070,18 @@ a much richer set of data is recorded.&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/analysing-mcr-page/&quot;&gt;Jesus College MCR webpage&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/analysing-mcr-page/&quot;&gt;Jesus College MCR webpage&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linkedin network map]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/linkedin-network/" />
-		<id>http://0.0.0.0:4000/articles/linkedin-network</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/linkedin-network/" />
+		<id>http://epijim.co.uk/articles/linkedin-network</id>
 		<published>2014-02-14T00:00:00+00:00</published>
 		<updated>2014-02-14T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;In an earlier post, I &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;plotted my Facebook network using R&lt;/a&gt;.
@@ -1096,18 +1096,18 @@ a much richer set of data is recorded.&lt;/p&gt;
 	&lt;figcaption&gt;My plot created by the inmaps app.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linear regression with R]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/regression/" />
-		<id>http://0.0.0.0:4000/articles/regression</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/regression/" />
+		<id>http://epijim.co.uk/articles/regression</id>
 		<published>2014-02-11T00:00:00+00:00</published>
 		<updated>2014-02-11T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;html&gt;
@@ -1624,18 +1624,18 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 
 &lt;/html&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Wine spend and academic performance]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/wine-budget/" />
-		<id>http://0.0.0.0:4000/articles/wine-budget</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/wine-budget/" />
+		<id>http://epijim.co.uk/articles/wine-budget</id>
 		<published>2014-02-10T00:00:00+00:00</published>
 		<updated>2014-02-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;About a week ago a good friend of mine, Tim, showed me a link to an economist blog post&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -1865,18 +1865,18 @@ what do the numbers look like if I attempt to adjust out
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Visualising flow with a sankey plot]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/sankey-arrow-plot/" />
-		<id>http://0.0.0.0:4000/articles/sankey-arrow-plot</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/sankey-arrow-plot/" />
+		<id>http://epijim.co.uk/articles/sankey-arrow-plot</id>
 		<published>2014-02-05T00:00:00+00:00</published>
 		<updated>2014-02-05T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -1954,19 +1954,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting my Facebook data]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/facebook-network/" />
-		<id>http://0.0.0.0:4000/articles/facebook-network</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/facebook-network/" />
+		<id>http://epijim.co.uk/articles/facebook-network</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2014-02-05T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -2671,19 +2671,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Facebook friend migrations]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/great-circles/" />
-		<id>http://0.0.0.0:4000/articles/great-circles</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/great-circles/" />
+		<id>http://epijim.co.uk/articles/great-circles</id>
 		<updated>2014-02-13T00:00:00-00:00</updated>
 		<published>2014-01-26T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -2758,19 +2758,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
 	&lt;figcaption&gt;Zoomed into NZ. Once again, hometown is in blue, location now in red.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Mapping my google location data]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/mapping-python/" />
-		<id>http://0.0.0.0:4000/articles/mapping-python</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/mapping-python/" />
+		<id>http://epijim.co.uk/articles/mapping-python</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2013-12-19T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -3145,19 +3145,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[In-text distributions]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/intext-distributions/" />
-		<id>http://0.0.0.0:4000/articles/intext-distributions</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/intext-distributions/" />
+		<id>http://epijim.co.uk/articles/intext-distributions</id>
 		<updated>2013-12-02T00:00:00-00:00</updated>
 		<published>2013-12-02T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -3200,18 +3200,18 @@ Ten-year modelled CVD risk was 27.3 (SD 13.9, histogram
 &lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Distance to the nearest pub]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/pub-distances/" />
-		<id>http://0.0.0.0:4000/articles/pub-distances</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/pub-distances/" />
+		<id>http://epijim.co.uk/articles/pub-distances</id>
 		<published>2013-11-29T00:00:00+00:00</published>
 		<updated>2013-11-29T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;The plot below shows the distance to the nearest bar or pub (in blue), from a grid of
@@ -3313,19 +3313,19 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Gallery of my posts]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/plots/" />
-		<id>http://0.0.0.0:4000/gallery</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/plots/" />
+		<id>http://epijim.co.uk/gallery</id>
 		<updated>2014-01-06T00:00:00-00:00</updated>
 		<published>2013-08-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Below is a gallery of everything I’ve posted to this site. &lt;/p&gt;
@@ -3337,119 +3337,119 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/bubbletable/&quot; title=&quot;Bubble tables with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/bubbletable_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/bubbletable_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bubbletable/&quot; title=&quot;Bubble tables with R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/bubbletable_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/bubbletable_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/3Dscatter/&quot; title=&quot;3D scatter plot in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot; title=&quot;3D scatter plot in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/ski-2014/&quot; title=&quot;Plotting data from the ski tracks app in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/ski-2014/&quot; title=&quot;Plotting data from the ski tracks app in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pathsinr/&quot; title=&quot;Plotting paths in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pathsinr/&quot; title=&quot;Plotting paths in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/dotplot/&quot; title=&quot;Making a dotplot in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/dotplot/&quot; title=&quot;Making a dotplot in R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/restaurant-hygiene/&quot; title=&quot;Restaurant hygiene ratings in Cambridge&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/restaurant-hygiene/&quot; title=&quot;Restaurant hygiene ratings in Cambridge&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-howto/&quot; title=&quot;How to plot FB network data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/network_thumb_code.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/network_thumb_code.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-howto/&quot; title=&quot;How to plot FB network data&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/network_thumb_code.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/network_thumb_code.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/crime-cambridge/&quot; title=&quot;Contour mapping Cambridge crime&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/crime-cambridge/&quot; title=&quot;Contour mapping Cambridge crime&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/analysing-mcr-page/&quot; title=&quot;Jesus College MCR webpage&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/analysing-mcr-page/&quot; title=&quot;Jesus College MCR webpage&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/regression/&quot; title=&quot;Linear regression with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/regression/&quot; title=&quot;Linear regression with R&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/wine-budget/&quot; title=&quot;Wine spend and academic performance&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/wine-budget/&quot; title=&quot;Wine spend and academic performance&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/sankey-arrow-plot/&quot; title=&quot;Visualising flow with a sankey plot&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/sankey-arrow-plot/&quot; title=&quot;Visualising flow with a sankey plot&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/facebook-network/&quot; title=&quot;Plotting my Facebook data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot; title=&quot;Plotting my Facebook data&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/great-circles/&quot; title=&quot;Facebook friend migrations&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/greatcircles_fb_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/greatcircles_fb_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/great-circles/&quot; title=&quot;Facebook friend migrations&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/greatcircles_fb_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/greatcircles_fb_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/mapping-python/&quot; title=&quot;Mapping my google location data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/mapping-python/&quot; title=&quot;Mapping my google location data&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/intext-distributions/&quot; title=&quot;In-text distributions&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/intext-distributions/&quot; title=&quot;In-text distributions&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/pub-distances/&quot; title=&quot;Distance to the nearest pub&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pub-distances/&quot; title=&quot;Distance to the nearest pub&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/scholar/&quot; title=&quot;My google scholar profile&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/scholar/&quot; title=&quot;My google scholar profile&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot; title=&quot;Modelling intensity of treatment after diabetes diagnosis&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper4/&quot; title=&quot;Modelling intensity of treatment after diabetes diagnosis&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot; title=&quot;CVD risk factors after diabetes diagnosis&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper3/&quot; title=&quot;CVD risk factors after diabetes diagnosis&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot; title=&quot;Bariatric surgery in children&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper2/&quot; title=&quot;Bariatric surgery in children&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper1/&quot; title=&quot;Health related quality of life after injury&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://0.0.0.0:4000/images/preload.gif&quot; data-original=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper1/&quot; title=&quot;Health related quality of life after injury&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
 	&lt;/a&gt;&lt;/li&gt;
 
 &lt;/ul&gt;
@@ -3460,73 +3460,73 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
   
   
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/papers/&quot;&gt;Papers &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/papers/&quot;&gt;Papers &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/publications/&quot;&gt;Publications &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/publications/&quot;&gt;Publications &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/hrqol/&quot;&gt;HRQoL &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/hrqol/&quot;&gt;HRQoL &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/r/&quot;&gt;R &lt;span&gt;15&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/r/&quot;&gt;R &lt;span&gt;15&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/google-scholar/&quot;&gt;Google Scholar &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-scholar/&quot;&gt;Google Scholar &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/courses/&quot;&gt;Courses &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/courses/&quot;&gt;Courses &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/geo-coding/&quot;&gt;Geo-coding &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/geo-coding/&quot;&gt;Geo-coding &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/latex/&quot;&gt;LaTeX &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/latex/&quot;&gt;LaTeX &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/sparklines/&quot;&gt;Sparklines &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/sparklines/&quot;&gt;Sparklines &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/python/&quot;&gt;Python &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/python/&quot;&gt;Python &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/google-data/&quot;&gt;Google data &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-data/&quot;&gt;Google data &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/great-circles/&quot;&gt;Great circles &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/great-circles/&quot;&gt;Great circles &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/facebook/&quot;&gt;Facebook &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/facebook/&quot;&gt;Facebook &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/network/&quot;&gt;Network &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/network/&quot;&gt;Network &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/sankey/&quot;&gt;Sankey &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/sankey/&quot;&gt;Sankey &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/wine/&quot;&gt;Wine &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/wine/&quot;&gt;Wine &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/cambridge-university/&quot;&gt;Cambridge University &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/cambridge-university/&quot;&gt;Cambridge University &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/jesus-college-mcr/&quot;&gt;Jesus College MCR &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/jesus-college-mcr/&quot;&gt;Jesus College MCR &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/map/&quot;&gt;Map &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/map/&quot;&gt;Map &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/cambridge/&quot;&gt;Cambridge &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/cambridge/&quot;&gt;Cambridge &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/dotplot/&quot;&gt;Dotplot &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/dotplot/&quot;&gt;Dotplot &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/skiing/&quot;&gt;Skiing &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/skiing/&quot;&gt;Skiing &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/paths/&quot;&gt;Paths &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/paths/&quot;&gt;Paths &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/gps/&quot;&gt;GPS &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/gps/&quot;&gt;GPS &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://0.0.0.0:4000/tag/bubbletable/&quot;&gt;Bubbletable &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/bubbletable/&quot;&gt;Bubbletable &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
     
   
 
 &lt;/ul&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/plots/&quot;&gt;Gallery of my posts&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on August 31, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/plots/&quot;&gt;Gallery of my posts&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on August 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[My papers]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/my-papers/" />
-		<id>http://0.0.0.0:4000/my-papers</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/my-papers/" />
+		<id>http://epijim.co.uk/my-papers</id>
 		<updated>2014-02-09T00:00:00-00:00</updated>
 		<published>2013-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Below is a list of my first authored papers, followed by papers I co-authored.&lt;/p&gt;
@@ -3584,8 +3584,8 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot;&gt;
-			&lt;img src=&quot;http://0.0.0.0:4000/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://epijim.co.uk/articles/paper4/&quot;&gt;
+			&lt;img src=&quot;http://epijim.co.uk/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;1. Modelling intensity of treatment after diabetes diagnosis&lt;/h4&gt;
 			&lt;p&gt;Does early intensive multifactorial therapy reduce modelled cardiovascular risk in individuals with screen-detected diabetes?&lt;/p&gt;
 		&lt;/a&gt;
@@ -3595,8 +3595,8 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot;&gt;
-			&lt;img src=&quot;http://0.0.0.0:4000/images/paper3_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://epijim.co.uk/articles/paper3/&quot;&gt;
+			&lt;img src=&quot;http://epijim.co.uk/images/paper3_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;2. CVD risk factors after diabetes diagnosis&lt;/h4&gt;
 			&lt;p&gt;Change in cardiovascular risk factors following early diagnosis of type 2 diabetes&lt;/p&gt;
 		&lt;/a&gt;
@@ -3606,8 +3606,8 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot;&gt;
-			&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://epijim.co.uk/articles/paper2/&quot;&gt;
+			&lt;img src=&quot;http://epijim.co.uk/images/paper2_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;3. Bariatric surgery in children&lt;/h4&gt;
 			&lt;p&gt;Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis.&lt;/p&gt;
 		&lt;/a&gt;
@@ -3617,8 +3617,8 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 
 	&lt;li&gt;
-		&lt;a href=&quot;http://0.0.0.0:4000/articles/paper1/&quot;&gt;
-			&lt;img src=&quot;http://0.0.0.0:4000/images/paper1_ack.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
+		&lt;a href=&quot;http://epijim.co.uk/articles/paper1/&quot;&gt;
+			&lt;img src=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
 			&lt;h4&gt;4. Health related quality of life after injury&lt;/h4&gt;
 			&lt;p&gt;Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.&lt;/p&gt;
 		&lt;/a&gt;
@@ -3659,19 +3659,19 @@ A181–A181. doi:10.1136/archdischild-2012-301885.424&lt;/p&gt;
 child obesity pathway: study protocol.&lt;/strong&gt; 
 BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/my-papers/&quot;&gt;My papers&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/my-papers/&quot;&gt;My papers&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Courses I liked]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/courses/" />
-		<id>http://0.0.0.0:4000/courses</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/courses/" />
+		<id>http://epijim.co.uk/courses</id>
 		<updated>2014-03-13T00:00:00-00:00</updated>
 		<published>2013-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;As a number of people have asked about courses I recommend, I decided to keep a track of them
@@ -3743,18 +3743,18 @@ BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/courses/&quot;&gt;Courses I liked&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/courses/&quot;&gt;Courses I liked&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[My google scholar profile]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/scholar/" />
-		<id>http://0.0.0.0:4000/articles/scholar</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/scholar/" />
+		<id>http://epijim.co.uk/articles/scholar</id>
 		<published>2013-02-15T00:00:00+00:00</published>
 		<updated>2013-02-15T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -4205,54 +4205,54 @@ out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; googleCite&lt;span class=&quo
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/scholar/&quot;&gt;My google scholar profile&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on February 15, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/scholar/&quot;&gt;My google scholar profile&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 15, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Modelling intensity of treatment after diabetes diagnosis]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper4/" />
-		<id>http://0.0.0.0:4000/articles/paper4</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/paper4/" />
+		<id>http://epijim.co.uk/articles/paper4</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;This paper is currently in press at Diabetic Medicine.&lt;/p&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper4/&quot;&gt;Modelling intensity of treatment after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper4/&quot;&gt;Modelling intensity of treatment after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[CVD risk factors after diabetes diagnosis]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper3/" />
-		<id>http://0.0.0.0:4000/articles/paper3</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/paper3/" />
+		<id>http://epijim.co.uk/articles/paper3</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;This paper is currently in press at the British Journal of General Practice.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper3/&quot;&gt;CVD risk factors after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper3/&quot;&gt;CVD risk factors after diabetes diagnosis&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Bariatric surgery in children]]></title>
-		<link rel="alternate" type="text/html" href="http://0.0.0.0:4000/articles/paper2/" />
-		<id>http://0.0.0.0:4000/articles/paper2</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/paper2/" />
+		<id>http://epijim.co.uk/articles/paper2</id>
 		<updated>2014-01-10T00:00:00-00:00</updated>
 		<published>2011-07-31T00:00:00+01:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://0.0.0.0:4000</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;&lt;em&gt;Black, J. A., White, B., Viner, R. M., &amp;amp; Simmons, R. K.&lt;/em&gt; (2013). 
@@ -4277,7 +4277,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037&lt;/p&gt;
  using a random effects model. &lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;http://0.0.0.0:4000/images/paper2_meta.png&quot; alt=&quot;Metaanalysis&quot; /&gt;
+	&lt;img src=&quot;http://epijim.co.uk/images/paper2_meta.png&quot; alt=&quot;Metaanalysis&quot; /&gt;
 	&lt;figcaption&gt;Meta-analysis of BMI change after bariatric surgery for adolescent obesity, by surgery type and overall. AGB, adjustable gastric banding; BMI, body mass index; BPD, biliopancreatic diversion; CI, confidence interval; RYGB, Roux-en-Y gastric bypass; SG, sleeve gastrectomy.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -4293,7 +4293,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037&lt;/p&gt;
  surgery in children and adolescents.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://0.0.0.0:4000/articles/paper2/&quot;&gt;Bariatric surgery in children&lt;/a&gt; was originally published by &lt;a href=&quot;http://0.0.0.0:4000/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://0.0.0.0:4000&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper2/&quot;&gt;Bariatric surgery in children&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2011.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
