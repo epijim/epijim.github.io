@@ -1,0 +1,366 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="lt-ie9 lt-ie8 no-js" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="lt-ie9 no-js" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Publish or perish - there's a model for that. &#8211; James Black</title>
+	<meta name="description" content="Scraping Google Scholar for publications and predicting an h index.">
+	<meta name="keywords" content="R, Animated">
+	<!-- Twitter Cards -->
+	
+		<meta name="twitter:card" content="summary">
+			<meta name="twitter:image" content="http://epijim.co.uk/images/animate_thumb.gif">
+		
+	
+	<meta name="twitter:title" content="Publish or perish - there's a model for that.">
+	<meta name="twitter:description" content="Scraping Google Scholar for publications and predicting an h index.">
+	<meta name="twitter:site" content="@">
+	<meta name="twitter:creator" content="@">
+	
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Publish or perish - there's a model for that.">
+<meta property="og:description" content="Scraping Google Scholar for publications and predicting an h index.">
+<meta property="og:url" content="http://epijim.co.uk/articles/hindex/">
+<meta property="og:site_name" content="James Black">
+
+	<!-- Webmaster Tools verifications -->
+	
+	
+
+	
+	<link rel="canonical" href="http://epijim.co.uk/articles/hindex/">
+	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
+	<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
+
+	<!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- For all browsers -->
+	<link rel="stylesheet" href="http://epijim.co.uk/css/main.min-92de9747e44e9254411a46b258723e1d.css">
+
+	<!-- Web fonts -->
+	<script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<!-- HTML5 Shiv and Media Query Support -->
+	<!--[if lt IE 9]>
+		<script src="http://epijim.co.uk/js/vendor/html5shiv-5a98a86b5cb48c1506f338463259ce41.js"></script>
+		<script src="http://epijim.co.uk/js/vendor/respond-e5d7fffb3a9f891c926ee1b836d448d8.js"></script>
+	<![endif]-->
+
+	<!-- Icons -->
+	<!-- 16x16 -->
+	<link rel="shortcut icon" href="http://epijim.co.uk/favicon.ico">
+	<!-- 32x32 -->
+	<link rel="shortcut icon" href="http://epijim.co.uk/favicon.png">
+	<!-- non-retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon57.png" sizes="57x57">
+	<!-- non-retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon72.png" sizes="72x72">
+	<!-- non-retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon76.png" sizes="76x76">
+	<!-- retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon114.png" sizes="114x114">
+	<!-- retina iPhone iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon120.png" sizes="120x120">
+	<!-- retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon144.png" sizes="144x144">
+	<!-- retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon152.png" sizes="152x152">
+	
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47906301-1', 'epijim.co.uk');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+<body id="post">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a newer one to better enjoy this site?</a></div><![endif]-->
+<div class="masthead-wrapper">
+	<header id="masthead" itemscope itemtype="http://schema.org/Organization">
+		<a href="http://epijim.co.uk" class="site-logo" rel="home" title="James Black" itemprop="url"><img src="http://epijim.co.uk/images/jimmy_logo.png" width="50" height="50" alt="James Black logo" itemprop="logo"></a>
+		<span class="site-title" itemprop="name"><a href="http://epijim.co.uk">James Black</a></span>
+	</header><!-- /.masthead -->
+	<nav role="navigation" id="site-nav" class="nav">
+		<ul>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/" itemprop="url"><span itemprop="name">Home</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/blog/" itemprop="url"><span itemprop="name">Blog</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/plots/" itemprop="url"><span itemprop="name">Gallery</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/my-papers/" itemprop="url"><span itemprop="name">My papers</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/about/" itemprop="url"><span itemprop="name">About me</span></a></li>
+		
+		</ul>
+	</nav><!-- /#site-nav -->
+</div><!-- /.entry-wrapper -->
+
+<div id="main" role="main">
+		<article class="hentry" itemscope itemtype="http://schema.org/Article">
+		<header class="entry-header">
+		
+			<h1 class="entry-title" itemprop="name">Publish or perish - there's a model for that.</h1>
+		</header>
+		<div class="entry-wrapper">
+			<div class="entry-content" itemprop="articleBody">
+				<p>A rather contentious talking point in academia is the belief that it’s publish or perish.
+ Fanning the flames of this debate are measures like the H-index<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, which attempt to distill 
+ a researchers impact on the body of knowledge into a single metric.</p>
+
+<p>I’ll rely on the quote, below, which was written by Daniel Acuna.</p>
+
+<blockquote>
+  <p>One popular measure of success is physicist Jorge Hirsch’s h-index, which captures the quality (citations) and quantity (number) of papers, thus representing scientific achievements better than either factor alone. A scientist has an h-index of n if he or she has published n articles receiving at least n citations each. Einstein, Darwin and Feynman, for example, have impressive h-indices of 96, 63 and 53, respectively. According to Hirsch, an h-index of 12 for a physicist — meaning 12 papers with at least 12 citations each — could qualify him or her for tenure at a major university.</p>
+</blockquote>
+
+<p>Acuna, and his co-authors, developed a model to predict future H-index<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>, based on
+ publications and citations, to date. Their sample contained 3,085 neuroscientists, 
+ 57 Drosophila researchers and 151 evolutionary scientists. From this population they built, 
+ and published, a model that, in terms of it’s ability to explain variation, is in the same 
+ ballpark as the cardiovascular disease (CVD) risk score that is recommended for use in UK practices. </p>
+
+<p>Unlike a CVD risk score though, there has been no external validations, so we don’t know how
+ well this model performs outside of the 3,000ish neuroscientists…</p>
+
+<p>So with a plethora of caveats in hand - like always - there is an R package to connect this
+ model to people’s Google Scholar profiles.</p>
+
+<p><strong>I should stress now that I consider this model, and the H-index in general, a fun metric to play with. And not a true measure of the relevance and impact of someones research</strong></p>
+
+<p>So first the packages needed to run this analysis. </p>
+
+<div class="highlight"><pre><code class="r">library<span class="p">(</span>devtools<span class="p">)</span> <span class="c1"># get the latest version</span>
+install_github<span class="p">(</span><span class="s">&quot;jkeirstead/scholar&quot;</span><span class="p">)</span> <span class="c1"># google scholar package</span>
+library<span class="p">(</span>xkcd<span class="p">)</span> <span class="c1"># xkcd graphs!</span>
+library<span class="p">(</span>extrafont<span class="p">)</span> <span class="c1"># xkcd fonts</span>
+library<span class="p">(</span>ggplot2<span class="p">)</span> <span class="c1"># best package ever</span>
+</code></pre></div>
+
+<p>And check the connection with google scholar. For the <em>id</em>, it’s the bit after <em>user=</em> in
+ your google scholar profile.</p>
+
+<div class="highlight"><pre><code class="r">id_j <span class="o">&lt;-</span> <span class="s">&#39;-S7V41QAAAAJ&#39;</span>
+james <span class="o">&lt;-</span> get_profile<span class="p">(</span>id_j<span class="p">)</span>
+attach<span class="p">(</span>james<span class="p">)</span>
+  name <span class="c1"># me!</span>
+  total_cites <span class="c1"># 1129 (although only as I&#39;m one of 300 people</span>
+              <span class="c1"># on the WHO Global Burden of Disease paper</span>
+  h_index <span class="c1"># 5</span>
+  i10_index <span class="c1"># 3</span>
+detach<span class="p">(</span>james<span class="p">)</span>
+</code></pre></div>
+
+<p>And now I’ll scrape one of my two supervisors pages.</p>
+
+<div class="highlight"><pre><code class="r">id_s <span class="o">&lt;-</span> <span class="s">&#39;6WC1bewAAAAJ&#39;</span>
+simon <span class="o">&lt;-</span> get_profile<span class="p">(</span>id_s<span class="p">)</span>
+attach<span class="p">(</span>simon<span class="p">)</span>
+  name <span class="c1"># Simon Griffin MBBS MSc DM FRCGP</span>
+  total_cites <span class="c1"># 9673</span>
+  h_index <span class="c1"># 50</span>
+  i10_index <span class="c1"># 118</span>
+detach<span class="p">(</span>simon<span class="p">)</span>
+</code></pre></div>
+
+<p>The google scholar package allows you to compare the citations for different authors over time.
+ In the following code block I pull the citations per year for myself, one of my supervisors, 
+ and a Professor from my university that has one of my dream jobs.</p>
+
+<div class="highlight"><pre><code class="r">ids <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&#39;oz7MFu0AAAAJ&#39;</span><span class="p">,</span> id_s<span class="p">,</span>id_j<span class="p">)</span>
+
+<span class="c1"># Compare their career trajectories, based on year of first citation</span>
+df <span class="o">&lt;-</span> compare_scholar_careers<span class="p">(</span>ids<span class="p">)</span>
+
+xrange <span class="o">&lt;-</span> range<span class="p">(</span>df<span class="o">$</span>career_year<span class="p">)</span>
+yrange <span class="o">&lt;-</span> range<span class="p">(</span>df<span class="o">$</span>cites<span class="p">)</span>
+
+png<span class="p">(</span><span class="s">&quot;hindex_plot1.png&quot;</span><span class="p">,</span>width<span class="o">=</span><span class="m">800</span><span class="p">)</span>
+ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>career_year<span class="p">,</span> y<span class="o">=</span>cites<span class="p">))</span> <span class="o">+</span> 
+  geom_line<span class="p">(</span>aes<span class="p">(</span>linetype<span class="o">=</span>name<span class="p">,</span>colour<span class="o">=</span>name<span class="p">))</span><span class="o">+</span>
+  xkcdaxis<span class="p">(</span>xrange<span class="p">,</span>yrange<span class="p">)</span><span class="o">+</span>
+  ylab<span class="p">(</span><span class="s">&quot;Citations that year&quot;</span><span class="p">)</span> <span class="o">+</span> 
+  xlab<span class="p">(</span><span class="s">&quot;Year since first citation&quot;</span><span class="p">)</span> <span class="o">+</span> 
+  ggtitle<span class="p">(</span>expression<span class="p">(</span>atop<span class="p">(</span><span class="s">&quot;Comparing citations&quot;</span><span class="p">,</span> 
+                          atop<span class="p">(</span>italic<span class="p">(</span><span class="s">&quot;Cam&#39;s Prof of Risk, my supervisor and me&quot;</span><span class="p">),</span> <span class="s">&quot;&quot;</span><span class="p">))))</span><span class="o">+</span>
+  theme<span class="p">(</span>legend.position<span class="o">=</span>c<span class="p">(</span><span class="m">0.3</span><span class="p">,</span> <span class="m">0.85</span><span class="p">))</span>
+dev.off<span class="p">()</span>
+</code></pre></div>
+
+<figure>
+	<a href="/images/hindex_plot1.png"><img src="/images/hindex_plot1.png" /></a>
+	<figcaption>Citations by year.</figcaption>
+</figure>
+
+<p>So my career is quite a bit behind - but as I’m only in the 2nd year of my PhD, I’m also
+ not really an academic yet.</p>
+
+<p>Now to the H-index. The following code will use the google scholar profiles of myself and
+ the two other academics to calculate the predicted trajectories of our H-indexes over 
+ the next 10-years. As I mentioned before - this model has not been validated in Epidemiologists, 
+ so this is just for interest.</p>
+
+<div class="highlight"><pre><code class="r"><span class="c1">## Predict my h-index</span>
+simon_h <span class="o">&lt;-</span> predict_h_index<span class="p">(</span>id_s<span class="p">)</span> 
+  simon_h<span class="o">$</span>name <span class="o">&lt;-</span> <span class="s">&quot;Prof Griffin&quot;</span>
+james_h <span class="o">&lt;-</span> predict_h_index<span class="p">(</span>id_j<span class="p">)</span>
+  james_h<span class="o">$</span>name <span class="o">&lt;-</span> <span class="s">&quot;James Black&quot;</span>
+david_h <span class="o">&lt;-</span> predict_h_index<span class="p">(</span><span class="s">&quot;oz7MFu0AAAAJ&quot;</span><span class="p">)</span>
+  david_h<span class="o">$</span>name <span class="o">&lt;-</span> <span class="s">&quot;Prof Spiegelhalter&quot;</span>
+
+h_index <span class="o">&lt;-</span> rbind<span class="p">(</span>simon_h<span class="p">,</span>james_h<span class="p">)</span>
+h_index <span class="o">&lt;-</span> rbind<span class="p">(</span>h_index<span class="p">,</span>david_h<span class="p">)</span>
+</code></pre></div>
+
+<p>Now I have a dataframe with predicted H-indexes, so I can plot them. Using an XKCD theme
+ of course.</p>
+
+<div class="highlight"><pre><code class="r">xrange <span class="o">&lt;-</span> range<span class="p">(</span>h_index<span class="o">$</span>years_ahead<span class="p">)</span>
+yrange <span class="o">&lt;-</span> range<span class="p">(</span>h_index<span class="o">$</span>h_index<span class="p">)</span>
+
+png<span class="p">(</span><span class="s">&quot;hindex_plot2.png&quot;</span><span class="p">,</span>width<span class="o">=</span><span class="m">800</span><span class="p">)</span>
+ggplot<span class="p">(</span>h_index<span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>years_ahead<span class="p">,</span> y<span class="o">=</span>h_index<span class="p">))</span> <span class="o">+</span> 
+  geom_line<span class="p">(</span>aes<span class="p">(</span>linetype<span class="o">=</span>name<span class="p">,</span>colour<span class="o">=</span>name<span class="p">))</span><span class="o">+</span>
+  xkcdaxis<span class="p">(</span>xrange<span class="p">,</span>yrange<span class="p">)</span><span class="o">+</span>
+  ylab<span class="p">(</span><span class="s">&quot;Predicted H index&quot;</span><span class="p">)</span> <span class="o">+</span> 
+  xlab<span class="p">(</span><span class="s">&quot;Years from 2014&quot;</span><span class="p">)</span> <span class="o">+</span> 
+  ggtitle<span class="p">(</span>expression<span class="p">(</span>atop<span class="p">(</span><span class="s">&quot;Predicting H index over the next 10 years&quot;</span><span class="p">,</span> 
+                          atop<span class="p">(</span>italic<span class="p">(</span><span class="s">&quot;For Cam&#39;s Prof of Risk, my supervisor and me&quot;</span><span class="p">),</span> <span class="s">&quot;&quot;</span><span class="p">))))</span><span class="o">+</span>
+  theme<span class="p">(</span>legend.position<span class="o">=</span>c<span class="p">(</span><span class="m">0.60</span><span class="p">,</span> <span class="m">0.40</span><span class="p">))</span>
+dev.off<span class="p">()</span>
+</code></pre></div>
+
+<figure>
+	<a href="/images/hindex_plot2.png"><img src="/images/hindex_plot2.png" /></a>
+	<figcaption>Predicted H-index from April 2014 onwards.</figcaption>
+</figure>
+
+<p>So according to this model I my H-index should increase from it’s current level of 5, to 16 in 10-years time. As 10-years
+ from now it will be 8.5 years since I submitted my PhD, I would be incredibly stoked 
+ to have 16 papers with more than 16 citations for each. Better yet, it suggests my 
+ current trajectory seems to avoid <em>perish</em>. Sadly, I can’t trust the model to predict 
+ the next 10 years of my career off my handful of papers to date. </p>
+
+<p>I’m also really hoping no-one at a funding
+ body or fellowship board gets carried away with this model. I can see the big winners from 
+ these sorts of scores becoming more important being 
+ the vanity publishers like Hindawi and Dove Press, as it will help attract more and more researchers 
+ desperate to publish, regardless of the quality of the journal.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Hirsch. <em>Proc. Natl Acad. Sci.</em> USA 102, 16569–16572 (<strong>2005</strong>) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Acuna. <em>Nature</em> 489, 201–202 (<strong>2012</strong>) <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+				<div class="entry-related">
+					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.co.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h2>
+					<ul>
+						
+						<li><a href="http://epijim.co.uk/articles/Scatterplots/">Scatter plots with R</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/Scatterplotmatrix/">Scatter plot matrix with R</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/bubbletable/">Bubble tables with R</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/3Dscatter/">3D scatter plot in R</a></li>
+						
+					</ul>
+				</div><!-- /.entry-related -->
+				<hr />
+				<div class="entry-meta">
+					<meta itemprop="keywords" content="R, Animated">
+					<span class="entry-tags"><a href="http://epijim.co.uk/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://epijim.co.uk/tag/animated/" title="Animated" class="tag" rel="tag">Animated</a></span>
+					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://epijim.co.uk/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
+					<span class="entry-date"><time datetime="2014-04-11T00:00:00+01:00" itemprop="datePublished" class="published updated">April 11, 2014</time></span>
+				</div><!-- /.entry-meta -->
+			</div><!-- /.entry-content -->
+			
+			<div id="disqus_thread" class="entry-content"></div><!-- /#disqus_thread -->
+			<noscript><div class="upgrade">Please enable JavaScript to view comments.</div><!-- /.upgrade --></noscript>
+			
+		</div><!-- /.entry-wrapper -->
+	</article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <p>&#169; 2004&#8211;2014 <a href="http://epijim.co.uk/about/">James Black</a>, this site is written in markdown, compiled to html by jekyll, and hosted on github.pages.io. <a href="http://epijim.co.uk/humans.txt">Theme source and credits here</a>.</p>
+		<div class="social-icons">
+			
+			
+			<a href="http://github.com/epijim" title="James Black on Github" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
+			
+			<a href="https://plus.google.com/112022213613617220776/" title="James Black on Google+" target="_blank"><i class="fa fa-google-plus-square fa-fw fa-2x"></i></a>
+			
+			
+		</div><!-- /.social-icons -->
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-cfasync="false"></script>
+<script data-cfasync="false">window.jQuery || document.write('<script src="http://epijim.co.uk/js/vendor/jquery-397754ba49e9e0cf4e7c190da78dda05.js"><\/script>')</script>
+<script src="http://epijim.co.uk/js/main.min-b1c052388578ab3b44858ccabf1f47d6.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+	var _gaq = _gaq || [];
+	var pluginUrl = 
+	'//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	_gaq.push(['_setAccount', '']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<!-- Modernizr -->
+<script src="http://epijim.co.uk/js/vendor/modernizr-ab083e250330742e0b9d2a5548ea8745.js"></script>
+
+
+<!-- Disqus Comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
+    var disqus_title = 'Publish or perish - there's a model for that.';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+</body>
+</html>
