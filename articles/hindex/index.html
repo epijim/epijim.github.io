@@ -127,17 +127,17 @@
  Fanning the flames of this debate are measures like the H-index<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, which attempt to distill 
  a researchers impact on the body of knowledge into a single metric.</p>
 
-<p>I’ll rely on the quote, below, which was written by Daniel Acuna.</p>
+<p>Top explain the H-index, I’ll rely on the quote below, which was written by Daniel Acuna.</p>
 
 <blockquote>
   <p>One popular measure of success is physicist Jorge Hirsch’s h-index, which captures the quality (citations) and quantity (number) of papers, thus representing scientific achievements better than either factor alone. A scientist has an h-index of n if he or she has published n articles receiving at least n citations each. Einstein, Darwin and Feynman, for example, have impressive h-indices of 96, 63 and 53, respectively. According to Hirsch, an h-index of 12 for a physicist — meaning 12 papers with at least 12 citations each — could qualify him or her for tenure at a major university.</p>
 </blockquote>
 
-<p>Acuna, and his co-authors, developed a model to predict future H-index<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>, based on
- publications and citations, to date. Their sample contained 3,085 neuroscientists, 
+<p>Acuna and his co-authors developed a model to predict future H-index<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>, based on
+ previous publications and citations. Their sample contained 3,085 neuroscientists, 
  57 Drosophila researchers and 151 evolutionary scientists. From this population they built, 
- and published, a model that, in terms of it’s ability to explain variation, is in the same 
- ballpark as the cardiovascular disease (CVD) risk score that is recommended for use in UK practices. </p>
+ and published, a model that explains about the same amount of variation in the outcome as 
+ the cardiovascular disease (CVD) risk score that is recommended for use in UK practices. </p>
 
 <p>Unlike a CVD risk score though, there has been no external validations, so we don’t know how
  well this model performs outside of the 3,000ish neuroscientists…</p>
@@ -157,7 +157,7 @@ library<span class="p">(</span>ggplot2<span class="p">)</span> <span class="c1">
 </code></pre></div>
 
 <p>And check the connection with google scholar. For the <em>id</em>, it’s the bit after <em>user=</em> in
- your google scholar profile.</p>
+ your google scholar profile url.</p>
 
 <div class="highlight"><pre><code class="r">id_j <span class="o">&lt;-</span> <span class="s">&#39;-S7V41QAAAAJ&#39;</span>
 james <span class="o">&lt;-</span> get_profile<span class="p">(</span>id_j<span class="p">)</span>
@@ -184,7 +184,8 @@ detach<span class="p">(</span>simon<span class="p">)</span>
 
 <p>The google scholar package allows you to compare the citations for different authors over time.
  In the following code block I pull the citations per year for myself, one of my supervisors, 
- and a Professor from my university that has one of my dream jobs.</p>
+ and the Winston Professor for the Public Understanding of Risk (an academic at Cambridge with 
+ one of my dream jobs).</p>
 
 <div class="highlight"><pre><code class="r">ids <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&#39;oz7MFu0AAAAJ&#39;</span><span class="p">,</span> id_s<span class="p">,</span>id_j<span class="p">)</span>
 
@@ -215,8 +216,8 @@ dev.off<span class="p">()</span>
  not really an academic yet.</p>
 
 <p>Now to the H-index. The following code will use the google scholar profiles of myself and
- the two other academics to calculate the predicted trajectories of our H-indexes over 
- the next 10-years. As I mentioned before - this model has not been validated in Epidemiologists, 
+ the two other people who’s data I pulled to calculate the predicted trajectories of our H-indexes over 
+ the next 10-years. As I mentioned before - this model has not been validated in epidemiologists, 
  so this is just for interest.</p>
 
 <div class="highlight"><pre><code class="r"><span class="c1">## Predict my h-index</span>
@@ -254,17 +255,16 @@ dev.off<span class="p">()</span>
 	<figcaption>Predicted H-index from April 2014 onwards.</figcaption>
 </figure>
 
-<p>So according to this model I my H-index should increase from it’s current level of 5, to 16 in 10-years time. As 10-years
- from now it will be 8.5 years since I submitted my PhD, I would be incredibly stoked 
+<p>So according to this model my H-index should increase from it’s current level of 5, to 16 in 10-years time. 10-years
+ from now it will be 8.5 years since I submitted my PhD. So I would be incredibly stoked 
  to have 16 papers with more than 16 citations for each. Better yet, it suggests my 
- current trajectory seems to avoid <em>perish</em>. Sadly, I can’t trust the model to predict 
- the next 10 years of my career off my handful of papers to date. </p>
+ current trajectory seems to avoid <em>perish</em>. Sadly, I don’t have much faith in the prophetic 
+ abilities of this model, especially as it’s based off only a handful of publications. </p>
 
 <p>I’m also really hoping no-one at a funding
- body or fellowship board gets carried away with this model. I can see the big winners from 
- these sorts of scores becoming more important being 
- the vanity publishers like Hindawi and Dove Press, as it will help them attract more and more researchers 
- desperate to publish, regardless of the quality of the journal.</p>
+ body or fellowship board gets carried away with this model. I’m afraid that the big winners from 
+ these sorts of scores becoming more important would be 
+ the vanity publishers like Hindawi and Dove Press, who will publish anything for a fee. </p>
 
 <div class="footnotes">
   <ol>
@@ -281,13 +281,13 @@ dev.off<span class="p">()</span>
 					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.co.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h2>
 					<ul>
 						
+						<li><a href="http://epijim.co.uk/articles/gifsinr/">Animated plots in R</a></li>
+						
 						<li><a href="http://epijim.co.uk/articles/Scatterplots/">Scatter plots with R</a></li>
 						
 						<li><a href="http://epijim.co.uk/articles/Scatterplotmatrix/">Scatter plot matrix with R</a></li>
 						
 						<li><a href="http://epijim.co.uk/articles/bubbletable/">Bubble tables with R</a></li>
-						
-						<li><a href="http://epijim.co.uk/articles/3Dscatter/">3D scatter plot in R</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->
