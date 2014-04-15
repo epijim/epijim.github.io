@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-04-11T10:43:23+01:00</updated>
+	<updated>2014-04-15T22:12:51+01:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,30 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[GradCon 2014 poster]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/GradCon2014/" />
+		<id>http://epijim.co.uk/articles/GradCon2014</id>
+		<published>2014-04-15T00:00:00+01:00</published>
+		<updated>2014-04-15T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;figure&gt;
+	&lt;a href=&quot;/images/gradcon2014_poster.png&quot;&gt;&lt;img src=&quot;/images/gradcon2014_poster.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;My poster from the Jesus College Graduate Conference 2014.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Above is a copy of my poster from the 2014 Jesus College Graduate conference. It’s the first
+ poster I’ve made in R. It also won the best poster award, so it’s also the first poster that
+ was both fun to make, and financially rewarding.&lt;/p&gt;
+
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Publish or perish - there's a model for that.]]></title>
@@ -9256,6 +9280,11 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
 
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/GradCon2014/&quot; title=&quot;GradCon 2014 poster&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/gradcon2014_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/gradcon2014_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/hindex/&quot; title=&quot;Publish or perish - there&#39;s a model for that.&quot;&gt;
 		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/hindex_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
 		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/hindex_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
@@ -9454,6 +9483,10 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
     	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/scatter-plot-matrix/&quot;&gt;Scatter plot matrix &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
     	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/animated/&quot;&gt;Animated &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/poster/&quot;&gt;Poster &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/diabetes/&quot;&gt;Diabetes &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
     
   
 
@@ -9480,6 +9513,8 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 &lt;h2&gt;First authored papers&lt;/h2&gt;
 &lt;ul class=&quot;unstyled-list&quot;&gt;
+
+
 
 
 
@@ -9613,90 +9648,6 @@ child obesity pathway: study protocol.&lt;/strong&gt;
 BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/my-papers/&quot;&gt;My papers&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[Courses I liked]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/courses/" />
-		<id>http://epijim.co.uk/courses</id>
-		<updated>2014-03-13T00:00:00-00:00</updated>
-		<published>2013-07-31T00:00:00+01:00</published>
-		
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<content type="html">&lt;p&gt;As a number of people have asked about courses I recommend, I decided to keep a track of them
- all here.&lt;/p&gt;
-
-&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
-  &lt;header&gt;
-    &lt;h3&gt;Contents&lt;/h3&gt;
-  &lt;/header&gt;
-&lt;div id=&quot;drawer&quot;&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#diabetes&quot;&gt;Diabetes&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#diabetes-diagnosis-treatment-and-opportunities&quot;&gt;Diabetes: diagnosis, treatment, and opportunities&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#r&quot;&gt;R&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#codeschool---try-r&quot;&gt;Codeschool - Try R&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#general-data-analysis-and-visualisation&quot;&gt;General data analysis and visualisation&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#introduction-to-data-visualisation&quot;&gt;Introduction to data visualisation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#maps-and-the-geo-spatial-revolution&quot;&gt;Maps and the geo-spatial revolution&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;!-- /#table-of-contents --&gt;
-
-&lt;h1 id=&quot;diabetes&quot;&gt;Diabetes&lt;/h1&gt;
-
-&lt;h4 id=&quot;diabetes-diagnosis-treatment-and-opportunities&quot;&gt;Diabetes: diagnosis, treatment, and opportunities&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;5 week uncredited online course provided by UCSF (via Coursera.org)&lt;/em&gt;: &lt;a href=&quot;https://www.coursera.org/course/ucsfdiabetes&quot;&gt;This course&lt;/a&gt;, provides a good introduction to
- diabetes care in practice. It’s not at all intellectual&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, and provides a relatively 
- in depth listing of facts concerning what defines a patient with diabetes, what is current 
- treatment norms, and what are they at risk of.&lt;/p&gt;
-
-&lt;h1 id=&quot;r&quot;&gt;R&lt;/h1&gt;
-
-&lt;h4 id=&quot;codeschool---try-r&quot;&gt;Codeschool - Try R&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;Online interactive course&lt;/em&gt;: &lt;a href=&quot;https://www.codeschool.com/courses/try-r&quot;&gt;This course&lt;/a&gt; is beyond amazing. It’s an introduction
- to R where you type into your browser, and it responds interactively. The free intro course is short,
- but lots of fun. Definitely the ideal first introduction to R.&lt;/p&gt;
-
-&lt;h1 id=&quot;general-data-analysis-and-visualisation&quot;&gt;General data analysis and visualisation&lt;/h1&gt;
-
-&lt;h4 id=&quot;introduction-to-data-visualisation&quot;&gt;Introduction to data visualisation&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;Evening session at The Guardian&lt;/em&gt;: &lt;a href=&quot;http://www.theguardian.com/guardian-masterclasses/intorduction-to-data-visualisation-digital-course&quot;&gt;This is a single (paid) session&lt;/a&gt;
- introducing tools used by the Guardian newspaper for their infographics.
- While the evening was very interesting, it’s also a little disappointing. The Guardian appears 
- to be relatively methodologically inept compared to the data journalists at places like the New York Times and ESPN. 
- So not the place to go if you want to hear how to do things well.&lt;/p&gt;
-
-&lt;h4 id=&quot;maps-and-the-geo-spatial-revolution&quot;&gt;Maps and the geo-spatial revolution&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;5 week uncredited online course provided by Penn State (via Coursera.org)&lt;/em&gt;: &lt;a href=&quot;https://www.coursera.org/course/maps&quot;&gt;A fun course&lt;/a&gt;, that provides a basic introduction to GIS.
- I learnt lots of terminology, and some history, of GIS, but this course is targeted at people with no experience. 
- If you know how to plot a path, and a point, with ggmaps in R, you’re already beyond the course content.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;By ‘not at all intellectual’ I mean the content of the course never asks you to think, it just lists &lt;em&gt;what’s what&lt;/em&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/courses/&quot;&gt;Courses I liked&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
