@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-04-15T22:21:01+01:00</updated>
+	<updated>2014-04-20T09:23:38+01:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,611 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[The barons of bitcoin]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/bitcoin/" />
+		<id>http://epijim.co.uk/articles/bitcoin</id>
+		<published>2014-04-18T00:00:00+01:00</published>
+		<updated>2014-04-18T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;p&gt;Mt. Gox was a bitcoin exchange. In 2013 it was handling about 70% of all bitcoins traded globally.
+ Mt. Gox is actually a truncation of &lt;em&gt;Magic: The Gathering Online Exchange&lt;/em&gt;, as Mt. Gox was 
+ originally set up to help people that wear Trillby’s trade playing cards. From late 2013 users began 
+ to complain that trades weren’t going through, or were delayed. By February 2014 
+ Mt. Gox suspended all trading, and collapsed into bankruptcy. I’m a little hazy on what 
+ actually happened, so below is wikipedia’s take:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Mt. Gox announced that around 850,000 bitcoins belonging to customers and the company were missing and likely stolen, an amount valued at more than $450 million at the time. Although 200,000 bitcoins have since been “found”, the reason(s) for the disappearance—theft, fraud, mismanagement, or a combination of these—are unclear as of March 2014. There has been some speculation of internet hackers being responsible for the missing Bitcoins, but no speculation of such matter has been proven.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In Late 2013 hackers managed to download information on every bitcoin-to-real-money trade that
+ occured between 2011 and 2013. They then released the dataset as a torrent, which is where I 
+ got it from. As a word of caution, all the torrents out there seem to also have viruses, 
+ so I’d avoid the dataset if you’re on windows.&lt;/p&gt;
+
+&lt;p&gt;Stamen, a cartography company, did a cool post where they plotted the trades of the 500
+ most prolific traders using this leaked data. They concluded that there where four types of traders, 
+ and picked out four users that represented those types.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/bitcoin_1_stamen.png&quot;&gt;&lt;img src=&quot;/images/bitcoin_1_stamen.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;The groups identified by Stamen.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Taking a gander at 500 individual plots, seemed like a pretty poor way to derive these
+ latent groups. As I’m going to be doing some latent class trajectory modelling in an 
+ upcoming paper, and I need practice working with bigger datasets, I thought I’d have 
+ have a go seeing if these groups still exist if you let the data talk.&lt;/p&gt;
+
+&lt;p&gt;So what’s in the hacked dataset? (€ and $ trades have been changed to £ at a single, March 2014, rate).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;every transaction between 1st of April 2011 and 30th November 2013, &lt;/li&gt;
+  &lt;li&gt;which includes 8,143,064  transactions&lt;/li&gt;
+  &lt;li&gt;between 127,065 individual user accounts&lt;/li&gt;
+  &lt;li&gt;with a total of £1,554,995,828 exchanged&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Just to see that in rough, monthly terms,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In April 2011, the first month with data, there were
+    &lt;ul&gt;
+      &lt;li&gt;18,341 transactions&lt;/li&gt;
+      &lt;li&gt;between 1,112 individuals&lt;/li&gt;
+      &lt;li&gt;with a total of £634,611 exchanged&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;While in November 2013, the last month with data, there were
+    &lt;ul&gt;
+      &lt;li&gt;741,093 transactions&lt;/li&gt;
+      &lt;li&gt;between 34,115 individuals&lt;/li&gt;
+      &lt;li&gt;with a total of £461,373,689 exchanged (30% of the total trades happened in the last month!)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Looking through the data, I should point out there was one very strange trader,
+ who had a bunch of trades which were blank (no bitcoins were actually transferred) - 
+ more details are in the footnotes.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;So bitcoin had a pretty meteoric rise. The gif below shows the total number of trades (&lt;em&gt;x axis&lt;/em&gt;),
+ against the value of the bitcoin (&lt;em&gt;y axis&lt;/em&gt;), for each month I have data on. You can see the 
+ number of trades each month rises till late 2011, which corresponds with the first time a hacker 
+ managed to steal bitcoins from Mt. Gox. &lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/bitcoin_2b_gif.gif&quot;&gt;&lt;img src=&quot;/images/bitcoin_2b_gif.gif&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Increasing number of trades and value of a bitcoin over time.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The next plot shows the huge increase in value of a bitcoin over time. From April till June, in
+ 2011, the price went from less than a pound, to over £100. After this first bubble burst, 
+ it wasn’t till 2013 till the price recovered - before it promptly went all the way up to 
+ more than £1000 pounds. So a £1 investment in 2011 would net you 
+ a £1000 pounds per coin gain in 2013 - hindsight is 
+ just a bit cruel sometimes.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/bitcoin_2_value.png&quot;&gt;&lt;img src=&quot;/images/bitcoin_2_value.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Increasing value of the bitcoin over time.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So, as time went by, and the value of a bitcoin rose, did the amount of money changing hands
+ in each trade also go up? The following gif plots the median value of each trade against, against 
+ the median value of a bitcoin, at month intervals.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/bitcoin_2a_gif.gif&quot;&gt;&lt;img src=&quot;/images/bitcoin_2a_gif.gif&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Increasing number of trades and value of a bitcoin over time.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So getting back to the Stamen’s idea of their being four types of traders amongst the top 500
+ on Mt. Gox. Looking at 500 separate plots and subjectively making four groups is a little 
+ dubious. Group Based Trajectory Models take the subjective out of grouping trajectories, 
+ and let the data itself drive the groupings. So I decided to use such a model to see if there 
+ are prominent groups of traders amongst the 127,065 traders I had data on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Now this all needs to be taken with a grain of salt. This model is full of outliers, and I’m
+ using pretty contrived proxies as the dependent and independent variables. I didn’t follow the usual process
+ of using BIC and AIC to decide on the number of groups. Instead, I just modelled 4-8 groups, 
+ and took the ones that looked interesting (The BIC suggests I should of made more than six groups). 
+ Even with the 16GB of RAM on my laptop, each model took around 2 hours to converge, which is 
+ why I didn’t spend time fine tuning the model.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So the following results are not intended to be a robust analysis - I’m doing this to get 
+to learn the R packages. I happen to be using the bitcoin dataset just because it’s interesting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So, in the next plot, I’m looking at total monthly balance of their account. I.e, if they brought
+ £10 of coins, and sold £12, that net £2 is what I’m interested in. I did it this way as I want to 
+ see who was holding on to their coins over time. Going in I thought there would be three groups,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Miners, accounts that mainly sell mined bitcoins&lt;/li&gt;
+  &lt;li&gt;Dabblers, people that don’t really trade, or just buy coins for specific purchases, and keep their monthly balance around zero.&lt;/li&gt;
+  &lt;li&gt;Gamblers, people that have brought up coins and sat on them&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The model though identified that there were at least six latent trajectories in the data.&lt;/p&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.oesmith.co.uk/morris-0.4.2.min.css&quot; /&gt;
+    
+    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://cdn.oesmith.co.uk/morris-0.4.2.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 600px;
+      height: 400px;
+    }  
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;chart4cb6355754b3&quot; class=&quot;rChart morris&quot;&gt;&lt;/div&gt;  
+    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    var chartParams = {
+ &quot;element&quot;: &quot;chart4cb6355754b3&quot;,
+&quot;width&quot;:            600,
+&quot;height&quot;:            400,
+&quot;xkey&quot;: &quot;Date&quot;,
+&quot;ykeys&quot;: [
+ &quot;Traj_1&quot;,
+&quot;Traj_2&quot;,
+&quot;Traj_3&quot;,
+&quot;Traj_4&quot;,
+&quot;Traj_5&quot;,
+&quot;Traj_6&quot; 
+],
+&quot;data&quot;: [
+ {
+ &quot;Date&quot;: &quot;2011-04-01&quot;,
+&quot;Traj_1&quot;: 36,
+&quot;Traj_2&quot;: 2,
+&quot;Traj_3&quot;: 8,
+&quot;Traj_4&quot;: 7,
+&quot;Traj_5&quot;: -1,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 1 
+},
+{
+ &quot;Date&quot;: &quot;2011-05-01&quot;,
+&quot;Traj_1&quot;: 15,
+&quot;Traj_2&quot;: 2,
+&quot;Traj_3&quot;: 3,
+&quot;Traj_4&quot;: 7,
+&quot;Traj_5&quot;: 2,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 2 
+},
+{
+ &quot;Date&quot;: &quot;2011-06-01&quot;,
+&quot;Traj_1&quot;: 8,
+&quot;Traj_2&quot;: 3,
+&quot;Traj_3&quot;: 1,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 4,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 3 
+},
+{
+ &quot;Date&quot;: &quot;2011-07-01&quot;,
+&quot;Traj_1&quot;: 5,
+&quot;Traj_2&quot;: 3,
+&quot;Traj_3&quot;: -2,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 7,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 4 
+},
+{
+ &quot;Date&quot;: &quot;2011-08-01&quot;,
+&quot;Traj_1&quot;: 3,
+&quot;Traj_2&quot;: 4,
+&quot;Traj_3&quot;: -3,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 10,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 5 
+},
+{
+ &quot;Date&quot;: &quot;2011-09-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: 4,
+&quot;Traj_3&quot;: -5,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 12,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 6 
+},
+{
+ &quot;Date&quot;: &quot;2011-10-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: 4,
+&quot;Traj_3&quot;: -7,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 12,
+&quot;Traj_6&quot;: 3,
+&quot;X&quot;: 7 
+},
+{
+ &quot;Date&quot;: &quot;2011-11-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: 5,
+&quot;Traj_3&quot;: -9,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 12,
+&quot;Traj_6&quot;: 3,
+&quot;X&quot;: 8 
+},
+{
+ &quot;Date&quot;: &quot;2011-12-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: 5,
+&quot;Traj_3&quot;: -11,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 10,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 9 
+},
+{
+ &quot;Date&quot;: &quot;2012-01-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: 5,
+&quot;Traj_3&quot;: -13,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 7,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 10 
+},
+{
+ &quot;Date&quot;: &quot;2012-02-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: 5,
+&quot;Traj_3&quot;: -14,
+&quot;Traj_4&quot;: 6,
+&quot;Traj_5&quot;: 5,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 11 
+},
+{
+ &quot;Date&quot;: &quot;2012-03-01&quot;,
+&quot;Traj_1&quot;: 3,
+&quot;Traj_2&quot;: 5,
+&quot;Traj_3&quot;: -13,
+&quot;Traj_4&quot;: 7,
+&quot;Traj_5&quot;: 3,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 12 
+},
+{
+ &quot;Date&quot;: &quot;2012-04-01&quot;,
+&quot;Traj_1&quot;: 4,
+&quot;Traj_2&quot;: 5,
+&quot;Traj_3&quot;: -12,
+&quot;Traj_4&quot;: 7,
+&quot;Traj_5&quot;: 2,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 13 
+},
+{
+ &quot;Date&quot;: &quot;2012-05-01&quot;,
+&quot;Traj_1&quot;: 5,
+&quot;Traj_2&quot;: 4,
+&quot;Traj_3&quot;: -11,
+&quot;Traj_4&quot;: 8,
+&quot;Traj_5&quot;: 1,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 14 
+},
+{
+ &quot;Date&quot;: &quot;2012-06-01&quot;,
+&quot;Traj_1&quot;: 6,
+&quot;Traj_2&quot;: 4,
+&quot;Traj_3&quot;: -9,
+&quot;Traj_4&quot;: 9,
+&quot;Traj_5&quot;: -1,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 15 
+},
+{
+ &quot;Date&quot;: &quot;2012-07-01&quot;,
+&quot;Traj_1&quot;: 8,
+&quot;Traj_2&quot;: 4,
+&quot;Traj_3&quot;: -8,
+&quot;Traj_4&quot;: 9,
+&quot;Traj_5&quot;: -2,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 16 
+},
+{
+ &quot;Date&quot;: &quot;2012-08-01&quot;,
+&quot;Traj_1&quot;: 11,
+&quot;Traj_2&quot;: 3,
+&quot;Traj_3&quot;: -6,
+&quot;Traj_4&quot;: 10,
+&quot;Traj_5&quot;: -4,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 17 
+},
+{
+ &quot;Date&quot;: &quot;2012-09-01&quot;,
+&quot;Traj_1&quot;: 14,
+&quot;Traj_2&quot;: 3,
+&quot;Traj_3&quot;: -5,
+&quot;Traj_4&quot;: 11,
+&quot;Traj_5&quot;: -6,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 18 
+},
+{
+ &quot;Date&quot;: &quot;2012-10-01&quot;,
+&quot;Traj_1&quot;: 18,
+&quot;Traj_2&quot;: 2,
+&quot;Traj_3&quot;: -4,
+&quot;Traj_4&quot;: 13,
+&quot;Traj_5&quot;: -9,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 19 
+},
+{
+ &quot;Date&quot;: &quot;2012-11-01&quot;,
+&quot;Traj_1&quot;: 22,
+&quot;Traj_2&quot;: 2,
+&quot;Traj_3&quot;: -3,
+&quot;Traj_4&quot;: 14,
+&quot;Traj_5&quot;: -13,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 20 
+},
+{
+ &quot;Date&quot;: &quot;2012-12-01&quot;,
+&quot;Traj_1&quot;: 25,
+&quot;Traj_2&quot;: 2,
+&quot;Traj_3&quot;: -2,
+&quot;Traj_4&quot;: 16,
+&quot;Traj_5&quot;: -18,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 21 
+},
+{
+ &quot;Date&quot;: &quot;2013-01-01&quot;,
+&quot;Traj_1&quot;: 27,
+&quot;Traj_2&quot;: 1,
+&quot;Traj_3&quot;: -2,
+&quot;Traj_4&quot;: 18,
+&quot;Traj_5&quot;: -21,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 22 
+},
+{
+ &quot;Date&quot;: &quot;2013-02-01&quot;,
+&quot;Traj_1&quot;: 26,
+&quot;Traj_2&quot;: -1,
+&quot;Traj_3&quot;: -2,
+&quot;Traj_4&quot;: 20,
+&quot;Traj_5&quot;: -22,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 23 
+},
+{
+ &quot;Date&quot;: &quot;2013-03-01&quot;,
+&quot;Traj_1&quot;: 24,
+&quot;Traj_2&quot;: -1,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 23,
+&quot;Traj_5&quot;: -21,
+&quot;Traj_6&quot;: 1,
+&quot;X&quot;: 24 
+},
+{
+ &quot;Date&quot;: &quot;2013-04-01&quot;,
+&quot;Traj_1&quot;: 19,
+&quot;Traj_2&quot;: -2,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 26,
+&quot;Traj_5&quot;: -17,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 25 
+},
+{
+ &quot;Date&quot;: &quot;2013-05-01&quot;,
+&quot;Traj_1&quot;: 14,
+&quot;Traj_2&quot;: -3,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 29,
+&quot;Traj_5&quot;: -12,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 26 
+},
+{
+ &quot;Date&quot;: &quot;2013-06-01&quot;,
+&quot;Traj_1&quot;: 9,
+&quot;Traj_2&quot;: -4,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 32,
+&quot;Traj_5&quot;: -7,
+&quot;Traj_6&quot;: 2,
+&quot;X&quot;: 27 
+},
+{
+ &quot;Date&quot;: &quot;2013-07-01&quot;,
+&quot;Traj_1&quot;: 5,
+&quot;Traj_2&quot;: -5,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 37,
+&quot;Traj_5&quot;: -3,
+&quot;Traj_6&quot;: 3,
+&quot;X&quot;: 28 
+},
+{
+ &quot;Date&quot;: &quot;2013-08-01&quot;,
+&quot;Traj_1&quot;: 2,
+&quot;Traj_2&quot;: -7,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 41,
+&quot;Traj_5&quot;: -1,
+&quot;Traj_6&quot;: 4,
+&quot;X&quot;: 29 
+},
+{
+ &quot;Date&quot;: &quot;2013-09-01&quot;,
+&quot;Traj_1&quot;: -1,
+&quot;Traj_2&quot;: -11,
+&quot;Traj_3&quot;: -1,
+&quot;Traj_4&quot;: 46,
+&quot;Traj_5&quot;: 3,
+&quot;Traj_6&quot;: 6,
+&quot;X&quot;: 30 
+},
+{
+ &quot;Date&quot;: &quot;2013-10-01&quot;,
+&quot;Traj_1&quot;: -3,
+&quot;Traj_2&quot;: -16,
+&quot;Traj_3&quot;: -2,
+&quot;Traj_4&quot;: 51,
+&quot;Traj_5&quot;: 12,
+&quot;Traj_6&quot;: 10,
+&quot;X&quot;: 31 
+},
+{
+ &quot;Date&quot;: &quot;2013-11-01&quot;,
+&quot;Traj_1&quot;: -11,
+&quot;Traj_2&quot;: -25,
+&quot;Traj_3&quot;: -2,
+&quot;Traj_4&quot;: 57,
+&quot;Traj_5&quot;: 66,
+&quot;Traj_6&quot;: 16,
+&quot;X&quot;: 32 
+} 
+],
+yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
+&quot;pointSize&quot;:              0,
+&quot;lineWidth&quot;:              1,
+&quot;id&quot;: &quot;chart4cb6355754b3&quot;,
+&quot;labels&quot;: [ &quot;Traj_1 (18%)&quot;, &quot;Traj_2 (5%)&quot;, &quot;Traj_3 (1%)&quot;, &quot;Traj_4 (52%)&quot;, &quot;Traj_5 (3%)&quot;, &quot;Traj_6 (20%)&quot; ] 
+},
+      chartType = &quot;Line&quot;
+    new Morris[chartType](chartParams)
+&lt;/script&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt;
+
+&lt;p&gt;So how many people are in each group? &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;18% in Traj_1, 
+    &lt;ul&gt;
+      &lt;li&gt;hoarders, who brought in early and again as the price rose in early 2013&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;5% in Traj_2, 
+    &lt;ul&gt;
+      &lt;li&gt;silk roaders? This is the group that hung around a monthly balance of zero. They either don’t trade much, or were balancing out their trades, presumably buying and spending bitcoins evenly. &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1% in Traj_3, 
+    &lt;ul&gt;
+      &lt;li&gt;miners, brought in a little at the start, but then consistently only sold bitcoins&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;52% in Traj_4, 
+    &lt;ul&gt;
+      &lt;li&gt;chumps, brought in heavily, particularly right up to the exchange collapsing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;3% in Traj_5, 
+    &lt;ul&gt;
+      &lt;li&gt;the traders, brought when the price was low (2012) sold when it was high (2013). A proportion invested massively in bitcoin just before the dataset ends, which skews this group in the last month.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;20% in Traj_6, 
+    &lt;ul&gt;
+      &lt;li&gt;like the silk roaders, but they had began to amass some coins before the exchange closed&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Which means, there is still more than 1700 people represented by trajectory 3, the smallest group representing 1%!
+ In the plot above, the top 500 of the Stamen post 
+ will be completely drowned out by the 100,000+ traders that, as you can see, tend to trade 
+ relatively small amounts. &lt;em&gt;I should stress, this six group model does not fit well&lt;/em&gt;. Each individual is 
+ assigned a probability of being within each of the six trajectories. A mean probability of &amp;gt;0.7 for 
+ each group is considered the absolute minimum for a model that explains the data well. This 
+ model averages around 0.65. &lt;/p&gt;
+
+&lt;h3 id=&quot;so-what-happens-if-i-look-just-within-the-top-500-like-stamen-did-in-their-post&quot;&gt;So what happens if I look just within the top 500, like Stamen did in their post?&lt;/h3&gt;
+
+&lt;p&gt;Like Stamen, I also subsetted the data so it was just the 500 people that traded the most by volume.
+ As the underlying distributions in the whole sample weren’t ideal, for the top 500 I’ve used a 
+ mediod based clustering approach. So rather than finding trajectories that are similar and grouping 
+ them, this time I can’t taken the following three characteristics, and grouped people based 
+ on who is similar to who,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;total &lt;em&gt;balance&lt;/em&gt;, which gives an indication if they stockpiled bitcoins, sold (maybe mined?) bitcoins, or brought as much as they sold&lt;/li&gt;
+  &lt;li&gt;total number of trades over the years I have data&lt;/li&gt;
+  &lt;li&gt;the median price they paid for a bitcoin, to try and get an indication on wether they brought in when it was cheap, or didn’t start till it was expensive&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The data suggested there are six groups. Below are violin plots showing the distribution
+ of the three characteristics used to make the groups, by the groups that were derived. The 
+ numbers in each grouped were as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;G1, 69 people&lt;/li&gt;
+  &lt;li&gt;G2, 392 people&lt;/li&gt;
+  &lt;li&gt;G3, 121 people&lt;/li&gt;
+  &lt;li&gt;G4, 7 people&lt;/li&gt;
+  &lt;li&gt;G5, 185 people&lt;/li&gt;
+  &lt;li&gt;G6, 201 people&lt;/li&gt;
+  &lt;li&gt;G7, 420 people&lt;/li&gt;
+  &lt;li&gt;G8, 415 people&lt;/li&gt;
+  &lt;li&gt;G9, 459 people&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Looking at the these plots, possible the group “G9” were the unfortunate souls that Stamen
+ suggests brought into bitcoin late. Although, as I’ve seen the model fit, I would probably 
+ conclude that the methods we use to cluster people and trajectories in medical research 
+ don’t cope very well with the chaotic distributions present in financial data, and these 
+ models don’t really tell us much. &lt;/p&gt;
+
+&lt;p&gt;It looks like in this case, Stamen eyeballing some graphs 
+ and coming up with groups is probably outperforming both my group based trajectory model, and 
+ my mediod based take on k-means clustering.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/bitcoin_3_kmeansgroups.png&quot;&gt;&lt;img src=&quot;/images/bitcoin_3_kmeansgroups.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Violin plots characterising the groups.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;It’s important to note that this those not mean £1.5 billion pounds was ever in the exchange. For example, a silk road user may buy bitcoin to buy something, then a day later the seller may recirculate the same bitcoins to get the payment out as cash. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;One trader stands out as rather strange. &lt;em&gt;TIBANNE_LIMITED_HK&lt;/em&gt;, a pretty prolific trader. In 272,007 trades they traded with themselves, although zero coins actually changed hands. I don’t fully understand what’s going on, but I think they are big brokerage for bitcoins, and so these might be automated transfers. I recommend googling &lt;em&gt;“Mt.Gox TIBANNE_LIMITED_HK”&lt;/em&gt; if you’re interested. A surprising number of individuals link this trader to numerous new world order conspiracies, which is also why I didn’t find a site I felt comfortable linking to myself. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bitcoin/&quot;&gt;The barons of bitcoin&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[GradCon 2014 poster]]></title>
@@ -5687,12 +6292,7 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;p&gt;The next plot colours points based on how close other points are to it. This code came out of a
  Stack Overflow question.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Data in a data.frame&lt;/span&gt;
-x1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1E3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-x2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; x1&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1.2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; rnorm&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1E3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-df &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; data.frame&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x1&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;x2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;## Use densCols() output to get density at each point&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Use densCols() output to get density at each point&lt;/span&gt;
 density &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; densCols&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Undergrad_applications&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                     mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Undergrad_acceptances&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                     colramp&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
@@ -9280,6 +9880,11 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
 
 &lt;ul class=&quot;oversized-recent-grid&quot;&gt;
 
+	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bitcoin/&quot; title=&quot;The barons of bitcoin&quot;&gt;
+		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/bitcoin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
+		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/bitcoin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
+	&lt;/a&gt;&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/GradCon2014/&quot; title=&quot;GradCon 2014 poster&quot;&gt;
 		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/gradcon2014_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
 		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/gradcon2014_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
@@ -9434,7 +10039,7 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
      
     	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/hrqol/&quot;&gt;HRQoL &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/r/&quot;&gt;R &lt;span&gt;19&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/r/&quot;&gt;R &lt;span&gt;20&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
     	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-scholar/&quot;&gt;Google Scholar &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
@@ -9487,167 +10092,18 @@ in the top left are tutorials on how to make that plot.&lt;/p&gt;
     	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/poster/&quot;&gt;Poster &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
      
     	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/diabetes/&quot;&gt;Diabetes &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/bitcoin/&quot;&gt;Bitcoin &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/big-data/&quot;&gt;Big data &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+     
+    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/group-based-trajectory-models/&quot;&gt;Group-based trajectory models &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
     
   
 
 &lt;/ul&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/plots/&quot;&gt;Gallery of my posts&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on August 31, 2013.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[My papers]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/my-papers/" />
-		<id>http://epijim.co.uk/my-papers</id>
-		<updated>2014-02-09T00:00:00-00:00</updated>
-		<published>2013-07-31T00:00:00+01:00</published>
-		
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<content type="html">&lt;p&gt;Below is a list of my first authored papers, followed by papers I co-authored.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2&gt;First authored papers&lt;/h2&gt;
-&lt;ul class=&quot;unstyled-list&quot;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	&lt;li&gt;
-		&lt;a href=&quot;http://epijim.co.uk/articles/paper4/&quot;&gt;
-			&lt;img src=&quot;http://epijim.co.uk/images/paper4_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
-			&lt;h4&gt;1. Modelling intensity of treatment after diabetes diagnosis&lt;/h4&gt;
-			&lt;p&gt;Does early intensive multifactorial therapy reduce modelled cardiovascular risk in individuals with screen-detected diabetes?&lt;/p&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-
-
-
-	&lt;li&gt;
-		&lt;a href=&quot;http://epijim.co.uk/articles/paper3/&quot;&gt;
-			&lt;img src=&quot;http://epijim.co.uk/images/paper3_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
-			&lt;h4&gt;2. CVD risk factors after diabetes diagnosis&lt;/h4&gt;
-			&lt;p&gt;Change in cardiovascular risk factors following early diagnosis of type 2 diabetes&lt;/p&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-
-
-
-	&lt;li&gt;
-		&lt;a href=&quot;http://epijim.co.uk/articles/paper2/&quot;&gt;
-			&lt;img src=&quot;http://epijim.co.uk/images/paper2_thumb.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
-			&lt;h4&gt;3. Bariatric surgery in children&lt;/h4&gt;
-			&lt;p&gt;Bariatric surgery for obese children and adolescents: a systematic review and meta-analysis.&lt;/p&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-
-
-
-	&lt;li&gt;
-		&lt;a href=&quot;http://epijim.co.uk/articles/paper1/&quot;&gt;
-			&lt;img src=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; class=&quot;preview&quot; alt=&quot;preview image&quot; /&gt;
-			&lt;h4&gt;4. Health related quality of life after injury&lt;/h4&gt;
-			&lt;p&gt;Recovery after injury: an individual patient data meta-analysis of general health status using the EQ-5D.&lt;/p&gt;
-		&lt;/a&gt;
-	&lt;/li&gt;
-
-
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;other-peer-reviewed-publications&quot;&gt;Other peer-reviewed publications&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Vos, T., Flaxman, A. D., Naghavi, M., Lozano, R., Michaud, C., Ezzati, M., […] Aboyans, V.&lt;/em&gt; 
-(2013). 
-&lt;strong&gt;Years lived with disability (YLDs) for 1160 sequelae of 
-289 diseases and injuries 1990-2010: a systematic analysis for the Global Burden of 
-Disease Study 2010.&lt;/strong&gt; Lancet, 380(9859), 2163–96. doi:10.1016/S0140-6736(12)61729-2&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Murray, C. J. L., Vos, T., Lozano, R., Naghavi, M., Flaxman, A. D., Michaud, C., […] Abdalla, S.&lt;/em&gt; 
-(2013). 
-&lt;strong&gt;Disability-adjusted life years (DALYs) for 291 diseases and injuries in 21 regions, 
-1990-2010: a systematic analysis for the Global Burden of Disease Study 2010.&lt;/strong&gt; 
-Lancet, 380(9859), 2197–223. doi:10.1016/S0140-6736(12)61689-4&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Derrett, S., Black, J. A., &amp;amp; Herbison, G. P.&lt;/em&gt; 
-(2009). 
-&lt;strong&gt;Outcome after injury-a systematic literature search of studies using the EQ-5D.&lt;/strong&gt; 
-The Journal of trauma, 67(4), 883–90. doi:10.1097/TA.0b013e3181ae6409&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Falconer, C. L., Skow, A., Black, J. A., Croker, H., Sovio, U., Kessel, A., … Kinra, S.&lt;/em&gt; 
-(2012). 
-&lt;strong&gt;The majority of parents of overweight and very overweight children underestimate 
-their child’s weight status and weight-related health risk.&lt;/strong&gt; 
-Archives of Disease in Childhood, 97(Suppl 1), 
-A181–A181. doi:10.1136/archdischild-2012-301885.424&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Falconer, Catherine L, Park, M., Skow, A., Black, J. A., Sovio, U., Saxena, S., … Kinra, S.&lt;/em&gt; 
-(2012). 
-&lt;strong&gt;Scoping the impact of the national child measurement programme feedback on the 
-child obesity pathway: study protocol.&lt;/strong&gt; 
-BMC public health, 12(1), 783. doi:10.1186/1471-2458-12-783&lt;/p&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/my-papers/&quot;&gt;My papers&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on July 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>

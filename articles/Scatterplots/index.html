@@ -259,12 +259,7 @@ dev.off<span class="p">()</span>
 <p>The next plot colours points based on how close other points are to it. This code came out of a
  Stack Overflow question.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
 
-<div class="highlight"><pre><code class="r"><span class="c1">## Data in a data.frame</span>
-x1 <span class="o">&lt;-</span> rnorm<span class="p">(</span>n<span class="o">=</span><span class="m">1E3</span><span class="p">,</span> sd<span class="o">=</span><span class="m">2</span><span class="p">)</span>
-x2 <span class="o">&lt;-</span> x1<span class="o">*</span><span class="m">1.2</span> <span class="o">+</span> rnorm<span class="p">(</span>n<span class="o">=</span><span class="m">1E3</span><span class="p">,</span> sd<span class="o">=</span><span class="m">2</span><span class="p">)</span>
-df <span class="o">&lt;-</span> data.frame<span class="p">(</span>x1<span class="p">,</span>x2<span class="p">)</span>
-
-<span class="c1">## Use densCols() output to get density at each point</span>
+<div class="highlight"><pre><code class="r"><span class="c1">## Use densCols() output to get density at each point</span>
 density <span class="o">&lt;-</span> densCols<span class="p">(</span>mydata_naomit<span class="o">$</span>Undergrad_applications<span class="p">,</span>
                     mydata_naomit<span class="o">$</span>Undergrad_acceptances<span class="p">,</span>
                     colramp<span class="o">=</span>colorRampPalette<span class="p">(</span>c<span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">,</span> <span class="s">&quot;white&quot;</span><span class="p">)))</span>
@@ -488,11 +483,11 @@ code <a href="/articles/3Dscatter/">is here</a>.</p>
 						
 						<li><a href="http://epijim.co.uk/articles/3Dscatter/">3D scatter plot in R</a></li>
 						
+						<li><a href="http://epijim.co.uk/articles/bitcoin/">The barons of bitcoin</a></li>
+						
 						<li><a href="http://epijim.co.uk/articles/gifsinr/">Animated plots in R</a></li>
 						
 						<li><a href="http://epijim.co.uk/articles/hindex/">Publish or perish - there's a model for that.</a></li>
-						
-						<li><a href="http://epijim.co.uk/articles/Scatterplotmatrix/">Scatter plot matrix with R</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->

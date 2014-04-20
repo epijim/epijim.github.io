@@ -1,0 +1,803 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="lt-ie9 lt-ie8 no-js" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="lt-ie9 no-js" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>The barons of bitcoin &#8211; James Black</title>
+	<meta name="description" content="Looking closely at the hacked Mt.Gox exchange, to see if there are distinct types of traders.">
+	<meta name="keywords" content="R, Bitcoin, Big data, Group-based trajectory models">
+	<!-- Twitter Cards -->
+	
+		<meta name="twitter:card" content="summary">
+			<meta name="twitter:image" content="http://epijim.co.uk/images/bitcoin_thumb.png">
+		
+	
+	<meta name="twitter:title" content="The barons of bitcoin">
+	<meta name="twitter:description" content="Looking closely at the hacked Mt.Gox exchange, to see if there are distinct types of traders.">
+	<meta name="twitter:site" content="@">
+	<meta name="twitter:creator" content="@">
+	
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The barons of bitcoin">
+<meta property="og:description" content="Looking closely at the hacked Mt.Gox exchange, to see if there are distinct types of traders.">
+<meta property="og:url" content="http://epijim.co.uk/articles/bitcoin/">
+<meta property="og:site_name" content="James Black">
+
+	<!-- Webmaster Tools verifications -->
+	
+	
+
+	
+	<link rel="canonical" href="http://epijim.co.uk/articles/bitcoin/">
+	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
+	<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
+
+	<!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- For all browsers -->
+	<link rel="stylesheet" href="http://epijim.co.uk/css/main.min-92de9747e44e9254411a46b258723e1d.css">
+
+	<!-- Web fonts -->
+	<script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<!-- HTML5 Shiv and Media Query Support -->
+	<!--[if lt IE 9]>
+		<script src="http://epijim.co.uk/js/vendor/html5shiv-5a98a86b5cb48c1506f338463259ce41.js"></script>
+		<script src="http://epijim.co.uk/js/vendor/respond-e5d7fffb3a9f891c926ee1b836d448d8.js"></script>
+	<![endif]-->
+
+	<!-- Icons -->
+	<!-- 16x16 -->
+	<link rel="shortcut icon" href="http://epijim.co.uk/favicon.ico">
+	<!-- 32x32 -->
+	<link rel="shortcut icon" href="http://epijim.co.uk/favicon.png">
+	<!-- non-retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon57.png" sizes="57x57">
+	<!-- non-retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon72.png" sizes="72x72">
+	<!-- non-retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon76.png" sizes="76x76">
+	<!-- retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon114.png" sizes="114x114">
+	<!-- retina iPhone iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon120.png" sizes="120x120">
+	<!-- retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon144.png" sizes="144x144">
+	<!-- retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon152.png" sizes="152x152">
+	
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47906301-1', 'epijim.co.uk');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+<body id="post">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a newer one to better enjoy this site?</a></div><![endif]-->
+<div class="masthead-wrapper">
+	<header id="masthead" itemscope itemtype="http://schema.org/Organization">
+		<a href="http://epijim.co.uk" class="site-logo" rel="home" title="James Black" itemprop="url"><img src="http://epijim.co.uk/images/jimmy_logo.png" width="50" height="50" alt="James Black logo" itemprop="logo"></a>
+		<span class="site-title" itemprop="name"><a href="http://epijim.co.uk">James Black</a></span>
+	</header><!-- /.masthead -->
+	<nav role="navigation" id="site-nav" class="nav">
+		<ul>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/" itemprop="url"><span itemprop="name">Home</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/blog/" itemprop="url"><span itemprop="name">Blog</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/plots/" itemprop="url"><span itemprop="name">Gallery</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/my-papers/" itemprop="url"><span itemprop="name">My papers</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/about/" itemprop="url"><span itemprop="name">About me</span></a></li>
+		
+		</ul>
+	</nav><!-- /#site-nav -->
+</div><!-- /.entry-wrapper -->
+
+<div id="main" role="main">
+		<article class="hentry" itemscope itemtype="http://schema.org/Article">
+		<header class="entry-header">
+		
+			<h1 class="entry-title" itemprop="name">The barons of bitcoin</h1>
+		</header>
+		<div class="entry-wrapper">
+			<div class="entry-content" itemprop="articleBody">
+				<p>Mt. Gox was a bitcoin exchange. In 2013 it was handling about 70% of all bitcoins traded globally.
+ Mt. Gox is actually a truncation of <em>Magic: The Gathering Online Exchange</em>, as Mt. Gox was 
+ originally set up to help people that wear Trillby’s trade playing cards. From late 2013 users began 
+ to complain that trades weren’t going through, or were delayed. By February 2014 
+ Mt. Gox suspended all trading, and collapsed into bankruptcy. I’m a little hazy on what 
+ actually happened, so below is wikipedia’s take:</p>
+
+<blockquote>
+  <p>Mt. Gox announced that around 850,000 bitcoins belonging to customers and the company were missing and likely stolen, an amount valued at more than $450 million at the time. Although 200,000 bitcoins have since been “found”, the reason(s) for the disappearance—theft, fraud, mismanagement, or a combination of these—are unclear as of March 2014. There has been some speculation of internet hackers being responsible for the missing Bitcoins, but no speculation of such matter has been proven.</p>
+</blockquote>
+
+<p>In Late 2013 hackers managed to download information on every bitcoin-to-real-money trade that
+ occured between 2011 and 2013. They then released the dataset as a torrent, which is where I 
+ got it from. As a word of caution, all the torrents out there seem to also have viruses, 
+ so I’d avoid the dataset if you’re on windows.</p>
+
+<p>Stamen, a cartography company, did a cool post where they plotted the trades of the 500
+ most prolific traders using this leaked data. They concluded that there where four types of traders, 
+ and picked out four users that represented those types.</p>
+
+<figure>
+	<a href="/images/bitcoin_1_stamen.png"><img src="/images/bitcoin_1_stamen.png" /></a>
+	<figcaption>The groups identified by Stamen.</figcaption>
+</figure>
+
+<p>Taking a gander at 500 individual plots, seemed like a pretty poor way to derive these
+ latent groups. As I’m going to be doing some latent class trajectory modelling in an 
+ upcoming paper, and I need practice working with bigger datasets, I thought I’d have 
+ have a go seeing if these groups still exist if you let the data talk.</p>
+
+<p>So what’s in the hacked dataset? (€ and $ trades have been changed to £ at a single, March 2014, rate).</p>
+
+<ul>
+  <li>every transaction between 1st of April 2011 and 30th November 2013, </li>
+  <li>which includes 8,143,064  transactions</li>
+  <li>between 127,065 individual user accounts</li>
+  <li>with a total of £1,554,995,828 exchanged<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
+</ul>
+
+<p>Just to see that in rough, monthly terms,</p>
+
+<ul>
+  <li>In April 2011, the first month with data, there were
+    <ul>
+      <li>18,341 transactions</li>
+      <li>between 1,112 individuals</li>
+      <li>with a total of £634,611 exchanged</li>
+    </ul>
+  </li>
+  <li>While in November 2013, the last month with data, there were
+    <ul>
+      <li>741,093 transactions</li>
+      <li>between 34,115 individuals</li>
+      <li>with a total of £461,373,689 exchanged (30% of the total trades happened in the last month!)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Looking through the data, I should point out there was one very strange trader,
+ who had a bunch of trades which were blank (no bitcoins were actually transferred) - 
+ more details are in the footnotes.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<p>So bitcoin had a pretty meteoric rise. The gif below shows the total number of trades (<em>x axis</em>),
+ against the value of the bitcoin (<em>y axis</em>), for each month I have data on. You can see the 
+ number of trades each month rises till late 2011, which corresponds with the first time a hacker 
+ managed to steal bitcoins from Mt. Gox. </p>
+
+<figure>
+	<a href="/images/bitcoin_2b_gif.gif"><img src="/images/bitcoin_2b_gif.gif" /></a>
+	<figcaption>Increasing number of trades and value of a bitcoin over time.</figcaption>
+</figure>
+
+<p>The next plot shows the huge increase in value of a bitcoin over time. From April till June, in
+ 2011, the price went from less than a pound, to over £100. After this first bubble burst, 
+ it wasn’t till 2013 till the price recovered - before it promptly went all the way up to 
+ more than £1000 pounds. So a £1 investment in 2011 would net you 
+ a £1000 pounds per coin gain in 2013 - hindsight is 
+ just a bit cruel sometimes.</p>
+
+<figure>
+	<a href="/images/bitcoin_2_value.png"><img src="/images/bitcoin_2_value.png" /></a>
+	<figcaption>Increasing value of the bitcoin over time.</figcaption>
+</figure>
+
+<p>So, as time went by, and the value of a bitcoin rose, did the amount of money changing hands
+ in each trade also go up? The following gif plots the median value of each trade against, against 
+ the median value of a bitcoin, at month intervals.</p>
+
+<figure>
+	<a href="/images/bitcoin_2a_gif.gif"><img src="/images/bitcoin_2a_gif.gif" /></a>
+	<figcaption>Increasing number of trades and value of a bitcoin over time.</figcaption>
+</figure>
+
+<p>So getting back to the Stamen’s idea of their being four types of traders amongst the top 500
+ on Mt. Gox. Looking at 500 separate plots and subjectively making four groups is a little 
+ dubious. Group Based Trajectory Models take the subjective out of grouping trajectories, 
+ and let the data itself drive the groupings. So I decided to use such a model to see if there 
+ are prominent groups of traders amongst the 127,065 traders I had data on.</p>
+
+<p><strong>Now this all needs to be taken with a grain of salt. This model is full of outliers, and I’m
+ using pretty contrived proxies as the dependent and independent variables. I didn’t follow the usual process
+ of using BIC and AIC to decide on the number of groups. Instead, I just modelled 4-8 groups, 
+ and took the ones that looked interesting (The BIC suggests I should of made more than six groups). 
+ Even with the 16GB of RAM on my laptop, each model took around 2 hours to converge, which is 
+ why I didn’t spend time fine tuning the model.</strong></p>
+
+<p><strong>So the following results are not intended to be a robust analysis - I’m doing this to get 
+to learn the R packages. I happen to be using the bitcoin dataset just because it’s interesting</strong></p>
+
+<p>So, in the next plot, I’m looking at total monthly balance of their account. I.e, if they brought
+ £10 of coins, and sold £12, that net £2 is what I’m interested in. I did it this way as I want to 
+ see who was holding on to their coins over time. Going in I thought there would be three groups,</p>
+
+<ol>
+  <li>Miners, accounts that mainly sell mined bitcoins</li>
+  <li>Dabblers, people that don’t really trade, or just buy coins for specific purchases, and keep their monthly balance around zero.</li>
+  <li>Gamblers, people that have brought up coins and sat on them</li>
+</ol>
+
+<p>The model though identified that there were at least six latent trajectories in the data.</p>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.2.min.css" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js" type="text/javascript"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.2.min.js" type="text/javascript"></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 600px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id="chart4cb6355754b3" class="rChart morris"></div>  
+    
+    <script type="text/javascript">
+    var chartParams = {
+ "element": "chart4cb6355754b3",
+"width":            600,
+"height":            400,
+"xkey": "Date",
+"ykeys": [
+ "Traj_1",
+"Traj_2",
+"Traj_3",
+"Traj_4",
+"Traj_5",
+"Traj_6" 
+],
+"data": [
+ {
+ "Date": "2011-04-01",
+"Traj_1": 36,
+"Traj_2": 2,
+"Traj_3": 8,
+"Traj_4": 7,
+"Traj_5": -1,
+"Traj_6": 1,
+"X": 1 
+},
+{
+ "Date": "2011-05-01",
+"Traj_1": 15,
+"Traj_2": 2,
+"Traj_3": 3,
+"Traj_4": 7,
+"Traj_5": 2,
+"Traj_6": 1,
+"X": 2 
+},
+{
+ "Date": "2011-06-01",
+"Traj_1": 8,
+"Traj_2": 3,
+"Traj_3": 1,
+"Traj_4": 6,
+"Traj_5": 4,
+"Traj_6": 2,
+"X": 3 
+},
+{
+ "Date": "2011-07-01",
+"Traj_1": 5,
+"Traj_2": 3,
+"Traj_3": -2,
+"Traj_4": 6,
+"Traj_5": 7,
+"Traj_6": 2,
+"X": 4 
+},
+{
+ "Date": "2011-08-01",
+"Traj_1": 3,
+"Traj_2": 4,
+"Traj_3": -3,
+"Traj_4": 6,
+"Traj_5": 10,
+"Traj_6": 2,
+"X": 5 
+},
+{
+ "Date": "2011-09-01",
+"Traj_1": 2,
+"Traj_2": 4,
+"Traj_3": -5,
+"Traj_4": 6,
+"Traj_5": 12,
+"Traj_6": 2,
+"X": 6 
+},
+{
+ "Date": "2011-10-01",
+"Traj_1": 2,
+"Traj_2": 4,
+"Traj_3": -7,
+"Traj_4": 6,
+"Traj_5": 12,
+"Traj_6": 3,
+"X": 7 
+},
+{
+ "Date": "2011-11-01",
+"Traj_1": 2,
+"Traj_2": 5,
+"Traj_3": -9,
+"Traj_4": 6,
+"Traj_5": 12,
+"Traj_6": 3,
+"X": 8 
+},
+{
+ "Date": "2011-12-01",
+"Traj_1": 2,
+"Traj_2": 5,
+"Traj_3": -11,
+"Traj_4": 6,
+"Traj_5": 10,
+"Traj_6": 2,
+"X": 9 
+},
+{
+ "Date": "2012-01-01",
+"Traj_1": 2,
+"Traj_2": 5,
+"Traj_3": -13,
+"Traj_4": 6,
+"Traj_5": 7,
+"Traj_6": 2,
+"X": 10 
+},
+{
+ "Date": "2012-02-01",
+"Traj_1": 2,
+"Traj_2": 5,
+"Traj_3": -14,
+"Traj_4": 6,
+"Traj_5": 5,
+"Traj_6": 2,
+"X": 11 
+},
+{
+ "Date": "2012-03-01",
+"Traj_1": 3,
+"Traj_2": 5,
+"Traj_3": -13,
+"Traj_4": 7,
+"Traj_5": 3,
+"Traj_6": 2,
+"X": 12 
+},
+{
+ "Date": "2012-04-01",
+"Traj_1": 4,
+"Traj_2": 5,
+"Traj_3": -12,
+"Traj_4": 7,
+"Traj_5": 2,
+"Traj_6": 2,
+"X": 13 
+},
+{
+ "Date": "2012-05-01",
+"Traj_1": 5,
+"Traj_2": 4,
+"Traj_3": -11,
+"Traj_4": 8,
+"Traj_5": 1,
+"Traj_6": 2,
+"X": 14 
+},
+{
+ "Date": "2012-06-01",
+"Traj_1": 6,
+"Traj_2": 4,
+"Traj_3": -9,
+"Traj_4": 9,
+"Traj_5": -1,
+"Traj_6": 2,
+"X": 15 
+},
+{
+ "Date": "2012-07-01",
+"Traj_1": 8,
+"Traj_2": 4,
+"Traj_3": -8,
+"Traj_4": 9,
+"Traj_5": -2,
+"Traj_6": 2,
+"X": 16 
+},
+{
+ "Date": "2012-08-01",
+"Traj_1": 11,
+"Traj_2": 3,
+"Traj_3": -6,
+"Traj_4": 10,
+"Traj_5": -4,
+"Traj_6": 1,
+"X": 17 
+},
+{
+ "Date": "2012-09-01",
+"Traj_1": 14,
+"Traj_2": 3,
+"Traj_3": -5,
+"Traj_4": 11,
+"Traj_5": -6,
+"Traj_6": 1,
+"X": 18 
+},
+{
+ "Date": "2012-10-01",
+"Traj_1": 18,
+"Traj_2": 2,
+"Traj_3": -4,
+"Traj_4": 13,
+"Traj_5": -9,
+"Traj_6": 1,
+"X": 19 
+},
+{
+ "Date": "2012-11-01",
+"Traj_1": 22,
+"Traj_2": 2,
+"Traj_3": -3,
+"Traj_4": 14,
+"Traj_5": -13,
+"Traj_6": 1,
+"X": 20 
+},
+{
+ "Date": "2012-12-01",
+"Traj_1": 25,
+"Traj_2": 2,
+"Traj_3": -2,
+"Traj_4": 16,
+"Traj_5": -18,
+"Traj_6": 1,
+"X": 21 
+},
+{
+ "Date": "2013-01-01",
+"Traj_1": 27,
+"Traj_2": 1,
+"Traj_3": -2,
+"Traj_4": 18,
+"Traj_5": -21,
+"Traj_6": 1,
+"X": 22 
+},
+{
+ "Date": "2013-02-01",
+"Traj_1": 26,
+"Traj_2": -1,
+"Traj_3": -2,
+"Traj_4": 20,
+"Traj_5": -22,
+"Traj_6": 1,
+"X": 23 
+},
+{
+ "Date": "2013-03-01",
+"Traj_1": 24,
+"Traj_2": -1,
+"Traj_3": -1,
+"Traj_4": 23,
+"Traj_5": -21,
+"Traj_6": 1,
+"X": 24 
+},
+{
+ "Date": "2013-04-01",
+"Traj_1": 19,
+"Traj_2": -2,
+"Traj_3": -1,
+"Traj_4": 26,
+"Traj_5": -17,
+"Traj_6": 2,
+"X": 25 
+},
+{
+ "Date": "2013-05-01",
+"Traj_1": 14,
+"Traj_2": -3,
+"Traj_3": -1,
+"Traj_4": 29,
+"Traj_5": -12,
+"Traj_6": 2,
+"X": 26 
+},
+{
+ "Date": "2013-06-01",
+"Traj_1": 9,
+"Traj_2": -4,
+"Traj_3": -1,
+"Traj_4": 32,
+"Traj_5": -7,
+"Traj_6": 2,
+"X": 27 
+},
+{
+ "Date": "2013-07-01",
+"Traj_1": 5,
+"Traj_2": -5,
+"Traj_3": -1,
+"Traj_4": 37,
+"Traj_5": -3,
+"Traj_6": 3,
+"X": 28 
+},
+{
+ "Date": "2013-08-01",
+"Traj_1": 2,
+"Traj_2": -7,
+"Traj_3": -1,
+"Traj_4": 41,
+"Traj_5": -1,
+"Traj_6": 4,
+"X": 29 
+},
+{
+ "Date": "2013-09-01",
+"Traj_1": -1,
+"Traj_2": -11,
+"Traj_3": -1,
+"Traj_4": 46,
+"Traj_5": 3,
+"Traj_6": 6,
+"X": 30 
+},
+{
+ "Date": "2013-10-01",
+"Traj_1": -3,
+"Traj_2": -16,
+"Traj_3": -2,
+"Traj_4": 51,
+"Traj_5": 12,
+"Traj_6": 10,
+"X": 31 
+},
+{
+ "Date": "2013-11-01",
+"Traj_1": -11,
+"Traj_2": -25,
+"Traj_3": -2,
+"Traj_4": 57,
+"Traj_5": 66,
+"Traj_6": 16,
+"X": 32 
+} 
+],
+yLabelFormat: function (y) { return y.toString() + ' pounds'; },
+"pointSize":              0,
+"lineWidth":              1,
+"id": "chart4cb6355754b3",
+"labels": [ "Traj_1 (18%)", "Traj_2 (5%)", "Traj_3 (1%)", "Traj_4 (52%)", "Traj_5 (3%)", "Traj_6 (20%)" ] 
+},
+      chartType = "Line"
+    new Morris[chartType](chartParams)
+</script>
+    
+  </body>
+</html>
+
+<p>So how many people are in each group? </p>
+
+<ul>
+  <li>18% in Traj_1, 
+    <ul>
+      <li>hoarders, who brought in early and again as the price rose in early 2013</li>
+    </ul>
+  </li>
+  <li>5% in Traj_2, 
+    <ul>
+      <li>silk roaders? This is the group that hung around a monthly balance of zero. They either don’t trade much, or were balancing out their trades, presumably buying and spending bitcoins evenly. </li>
+    </ul>
+  </li>
+  <li>1% in Traj_3, 
+    <ul>
+      <li>miners, brought in a little at the start, but then consistently only sold bitcoins</li>
+    </ul>
+  </li>
+  <li>52% in Traj_4, 
+    <ul>
+      <li>chumps, brought in heavily, particularly right up to the exchange collapsing</li>
+    </ul>
+  </li>
+  <li>3% in Traj_5, 
+    <ul>
+      <li>the traders, brought when the price was low (2012) sold when it was high (2013). A proportion invested massively in bitcoin just before the dataset ends, which skews this group in the last month.</li>
+    </ul>
+  </li>
+  <li>20% in Traj_6, 
+    <ul>
+      <li>like the silk roaders, but they had began to amass some coins before the exchange closed</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Which means, there is still more than 1700 people represented by trajectory 3, the smallest group representing 1%!
+ In the plot above, the top 500 of the Stamen post 
+ will be completely drowned out by the 100,000+ traders that, as you can see, tend to trade 
+ relatively small amounts. <em>I should stress, this six group model does not fit well</em>. Each individual is 
+ assigned a probability of being within each of the six trajectories. A mean probability of &gt;0.7 for 
+ each group is considered the absolute minimum for a model that explains the data well. This 
+ model averages around 0.65. </p>
+
+<h3 id="so-what-happens-if-i-look-just-within-the-top-500-like-stamen-did-in-their-post">So what happens if I look just within the top 500, like Stamen did in their post?</h3>
+
+<p>Like Stamen, I also subsetted the data so it was just the 500 people that traded the most by volume.
+ As the underlying distributions in the whole sample weren’t ideal, for the top 500 I’ve used a 
+ mediod based clustering approach. So rather than finding trajectories that are similar and grouping 
+ them, this time I can’t taken the following three characteristics, and grouped people based 
+ on who is similar to who,</p>
+
+<ol>
+  <li>total <em>balance</em>, which gives an indication if they stockpiled bitcoins, sold (maybe mined?) bitcoins, or brought as much as they sold</li>
+  <li>total number of trades over the years I have data</li>
+  <li>the median price they paid for a bitcoin, to try and get an indication on wether they brought in when it was cheap, or didn’t start till it was expensive</li>
+</ol>
+
+<p>The data suggested there are six groups. Below are violin plots showing the distribution
+ of the three characteristics used to make the groups, by the groups that were derived. The 
+ numbers in each grouped were as follows:</p>
+
+<ul>
+  <li>G1, 69 people</li>
+  <li>G2, 392 people</li>
+  <li>G3, 121 people</li>
+  <li>G4, 7 people</li>
+  <li>G5, 185 people</li>
+  <li>G6, 201 people</li>
+  <li>G7, 420 people</li>
+  <li>G8, 415 people</li>
+  <li>G9, 459 people</li>
+</ul>
+
+<p>Looking at the these plots, possible the group “G9” were the unfortunate souls that Stamen
+ suggests brought into bitcoin late. Although, as I’ve seen the model fit, I would probably 
+ conclude that the methods we use to cluster people and trajectories in medical research 
+ don’t cope very well with the chaotic distributions present in financial data, and these 
+ models don’t really tell us much. </p>
+
+<p>It looks like in this case, Stamen eyeballing some graphs 
+ and coming up with groups is probably outperforming both my group based trajectory model, and 
+ my mediod based take on k-means clustering.</p>
+
+<figure>
+	<a href="/images/bitcoin_3_kmeansgroups.png"><img src="/images/bitcoin_3_kmeansgroups.png" /></a>
+	<figcaption>Violin plots characterising the groups.</figcaption>
+</figure>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>It’s important to note that this those not mean £1.5 billion pounds was ever in the exchange. For example, a silk road user may buy bitcoin to buy something, then a day later the seller may recirculate the same bitcoins to get the payment out as cash. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>One trader stands out as rather strange. <em>TIBANNE_LIMITED_HK</em>, a pretty prolific trader. In 272,007 trades they traded with themselves, although zero coins actually changed hands. I don’t fully understand what’s going on, but I think they are big brokerage for bitcoins, and so these might be automated transfers. I recommend googling <em>“Mt.Gox TIBANNE_LIMITED_HK”</em> if you’re interested. A surprising number of individuals link this trader to numerous new world order conspiracies, which is also why I didn’t find a site I felt comfortable linking to myself. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+				<div class="entry-related">
+					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.co.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h2>
+					<ul>
+						
+						<li><a href="http://epijim.co.uk/articles/hindex/">Publish or perish - there's a model for that.</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/gifsinr/">Animated plots in R</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/Scatterplotmatrix/">Scatter plot matrix with R</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/Scatterplots/">Scatter plots with R</a></li>
+						
+					</ul>
+				</div><!-- /.entry-related -->
+				<hr />
+				<div class="entry-meta">
+					<meta itemprop="keywords" content="R, Bitcoin, Big data, Group-based trajectory models">
+					<span class="entry-tags"><a href="http://epijim.co.uk/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://epijim.co.uk/tag/bitcoin/" title="Bitcoin" class="tag" rel="tag">Bitcoin</a><a href="http://epijim.co.uk/tag/big-data/" title="Big data" class="tag" rel="tag">Big data</a><a href="http://epijim.co.uk/tag/group-based-trajectory-models/" title="Group-based trajectory models" class="tag" rel="tag">Group-based trajectory models</a></span>
+					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://epijim.co.uk/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
+					<span class="entry-date"><time datetime="2014-04-18T00:00:00+01:00" itemprop="datePublished" class="published updated">April 18, 2014</time></span>
+				</div><!-- /.entry-meta -->
+			</div><!-- /.entry-content -->
+			
+			<div id="disqus_thread" class="entry-content"></div><!-- /#disqus_thread -->
+			<noscript><div class="upgrade">Please enable JavaScript to view comments.</div><!-- /.upgrade --></noscript>
+			
+		</div><!-- /.entry-wrapper -->
+	</article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <p>&#169; 2004&#8211;2014 <a href="http://epijim.co.uk/about/">James Black</a>, this site is written in markdown, compiled to html by jekyll, and hosted on github.pages.io. <a href="http://epijim.co.uk/humans.txt">Theme source and credits here</a>.</p>
+		<div class="social-icons">
+			
+			
+			<a href="http://github.com/epijim" title="James Black on Github" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
+			
+			<a href="https://plus.google.com/112022213613617220776/" title="James Black on Google+" target="_blank"><i class="fa fa-google-plus-square fa-fw fa-2x"></i></a>
+			
+			
+		</div><!-- /.social-icons -->
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-cfasync="false"></script>
+<script data-cfasync="false">window.jQuery || document.write('<script src="http://epijim.co.uk/js/vendor/jquery-397754ba49e9e0cf4e7c190da78dda05.js"><\/script>')</script>
+<script src="http://epijim.co.uk/js/main.min-b1c052388578ab3b44858ccabf1f47d6.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+	var _gaq = _gaq || [];
+	var pluginUrl = 
+	'//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	_gaq.push(['_setAccount', '']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<!-- Modernizr -->
+<script src="http://epijim.co.uk/js/vendor/modernizr-ab083e250330742e0b9d2a5548ea8745.js"></script>
+
+
+<!-- Disqus Comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
+    var disqus_title = 'The barons of bitcoin';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+</body>
+</html>
