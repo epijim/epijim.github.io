@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-04-20T09:23:38+01:00</updated>
+	<updated>2014-04-29T22:35:02+01:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,81 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/articles-feed.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[Simpson's paradox in diabetes (via javascript)]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/simpsons/" />
+		<id>http://epijim.co.uk/articles/simpsons</id>
+		<published>2014-04-29T00:00:00+01:00</published>
+		<updated>2014-04-29T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Using the D3 javascript library to visualise Simpson's paradox.</summary>
+		<content type="html">&lt;p&gt;For the month of July (2014) I’ll be teaching medical science for a summer school in my college.
+ Over the last week I’ve started to put together the slides I’ll be using. To help explain 
+ the concept of Simpson’s paradox I played around with rejigging somebody else’s code 
+ to fit the context of diabetes (my research area). The code used to make 
+ the plots below was originally written by the &lt;a href=&quot;http://vudlab.com/simpsons/&quot;&gt;Vudlab at UC Berkeley&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ll let wikipedia give an introduction to the Simpson’s paradox,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Simpson’s paradox, or the Yule–Simpson effect, is a paradox in which a trend that appears in different groups of data disappears when these groups are combined, and the reverse trend appears for the aggregate data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;David Spiegelhalter, an academic who’s work I admire, contributed ideas
+ to a paper on Simpson’s paradox that was published in the BMJ.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; One of the examples used 
+ in the paper was from the Poole diabetes cohort. The researchers broke a group of people with diabetes 
+ into two groups. One required insulin (usually type 1 diabetes), the other sub-group didn’t (type 2 diabetes).&lt;/p&gt;
+
+&lt;p&gt;They followed the two groups, and found that those with insulin dependent diabetes were 31% &lt;strong&gt;less&lt;/strong&gt;
+ likely (95%CI 46% to 13%) to have died during the follow up. Yet when the adjusted for 
+ age, the association flipped and those with insulin dependent diabetes were 15% &lt;strong&gt;more&lt;/strong&gt; likely 
+ to have died (&lt;em&gt;statistically non-significant&lt;/em&gt;, 95%CI -9% to 46%).&lt;/p&gt;
+
+&lt;p&gt;Below, each dot represents an individual from the study. Blue have type
+ insulin dependent diabetes. Red have non-insulin dependent diabetes.&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;260&quot; src=&quot;http://epijim.co.uk/simpsons/all.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In the next plot is just the people with insulin dependent diabetes. In this group 29% of
+ people died (those that died are the red dots). &lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;260&quot; src=&quot;http://epijim.co.uk/simpsons/insulin.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;And in the next plot is the people with non-insulin dependent diabetes. In this group 40% died
+ during follow up. So it looks like people are more likely to die with non-insulin dependent 
+ diabetes! This really doesn’t make sense, as insulin dependent diabetes is usually assumed 
+ to be a more serious manifestation of the disease (insulin is a last resort in type 2 diabetes).&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;260&quot; src=&quot;http://epijim.co.uk/simpsons/noninsulin.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The last plot below shows how the variable age helps explain what is happening. &lt;em&gt;Hitting the green
+ button will make the individuals move between groups.&lt;/em&gt; &lt;/p&gt;
+
+&lt;p&gt;This paradox occurs because people are more
+ more likely to get type 2 diabetes later in life. People are also more likely to die later in 
+ in life. So not accounting for the age difference in the people with the two conditions 
+ means you can come to the wrong conclusions.&lt;/p&gt;
+
+&lt;iframe width=&quot;600&quot; height=&quot;500&quot; src=&quot;http://epijim.co.uk/simpsons/index.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I’m planning on including these plots in my slides (the joy of HTML5 slides is being able to
+ to bring in amazing plot libraries like D3).&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;BMJ 1994;309:1480 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/simpsons/&quot;&gt;Simpson's paradox in diabetes (via javascript)&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[The barons of bitcoin]]></title>
@@ -6147,375 +6222,6 @@ graphname &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span c
 &lt;/div&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/gifsinr/&quot;&gt;Animated plots in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[Scatter plots with R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/Scatterplots/" />
-		<id>http://epijim.co.uk/articles/Scatterplots</id>
-		<published>2014-04-10T00:00:00+01:00</published>
-		<updated>2014-04-10T00:00:00+01:00</updated>
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<summary type="text">Making useful scatter plots with R.</summary>
-		<content type="html">&lt;p&gt;After the histogram, scatter plots are pretty much always the first plot I make when
- exploring a dataset. The code for the plots below mainly come from two sites. Which 
- are both brilliant sources for info on using R.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;R for public health&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;Quick R&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I’ve only made small changes to fit my data, and to include themes, custom titles, etc.&lt;/p&gt;
-
-&lt;h2 id=&quot;data-im-using&quot;&gt;Data I’m using&lt;/h2&gt;
-
-&lt;p&gt;To make it easily to replicate I put the data I’m using in a gist. &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;temporaryFile &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; tempfile&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-download.file&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://gist.githubusercontent.com/epijim/8819934/raw/6c76df80eb095065a9ce0fa4b8f94410ad528fed/college_data.csv&amp;quot;&lt;/span&gt;
-              &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;destfile&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;temporaryFile&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; method&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;curl&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-mydata &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;temporaryFile&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# convert wine budget to thousands&lt;/span&gt;
-mydata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Wine_budget &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; mydata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Wine_budget&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;
-
-options&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;scipen&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;999&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# no scientific notation&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Just in case, I&amp;#39;ll duplicate college as a string variable.&lt;/span&gt;
-mydata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;College_char &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; as.character&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;College&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;scatter-plot-with-rug&quot;&gt;Scatter plot with rug&lt;/h2&gt;
-
-&lt;p&gt;A scatter plot with a rug plot on each axis.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;scatterplot_1_rug.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Founded&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;Wine_budget&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-    geom_point&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-    geom_rug&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;darkred&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme_bw&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Year college was founded&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Wine budget in thousands&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  ggtitle&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Scatter of year Cambridge college founded and wine budget&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/scatterplot_1_rug.png&quot;&gt;&lt;img src=&quot;/images/scatterplot_1_rug.png&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;scatter-plot-with-histograms&quot;&gt;Scatter plot with histograms&lt;/h2&gt;
-
-&lt;p&gt;Scatter plot with histograms on each axis.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggplot2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gridExtra&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#placeholder plot - prints nothing at all&lt;/span&gt;
-empty &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;                              
-    plot.background &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
-    panel.grid.major &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
-    panel.grid.minor &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
-    panel.border &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; 
-    panel.background &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-    axis.title.x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-    axis.title.y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-    axis.text.x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-    axis.text.y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
-    axis.ticks &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#scatterplot of x and y variables&lt;/span&gt;
-scatter &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Founded&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Wine_budget&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Rating&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  scale_color_manual&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;values &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;orange&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;purple&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  theme_bw&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;legend.justification&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Year college was founded&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Wine budget in thousands of £&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#marginal density of x - plot on top&lt;/span&gt;
-plot_top &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Founded&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fill&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Rating&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  geom_density&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  scale_fill_manual&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;values &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;orange&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;purple&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  theme_bw&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;axis.title.x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# removes density x&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#marginal density of y - plot on the right&lt;/span&gt;
-plot_right &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Wine_budget&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fill&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Rating&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  geom_density&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  coord_flip&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  scale_fill_manual&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;values &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;orange&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;purple&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  theme_bw&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;axis.title.y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; element_blank&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# removes density y &lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#arrange the plots together, with appropriate height and width for each row and column&lt;/span&gt;
-png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;scatterplot_2_hist.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-grid.arrange&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;plot_top&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; empty&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; scatter&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; plot_right&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-             ncol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; nrow&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; widths&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; heights&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-             main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Scatter of year Cambridge college founded and wine budget \nby A/B/C Board of Graduate Studies college grading&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/scatterplot_2_hist.png&quot;&gt;&lt;img src=&quot;/images/scatterplot_2_hist.png&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;dealing-with-large-datasets&quot;&gt;Dealing with large datasets&lt;/h2&gt;
-
-&lt;p&gt;When you have lots of points, it becomes hard to see the outliers in a scatter plot. A
- super simple solution is just to make the points a bit transparent. Although that can hide 
- the outliers.&lt;/p&gt;
-
-&lt;p&gt;In the plot below there are more than 16,000,000 data points. As it’s financial data, on 
- the price paid for bitcoins, it’s all very closely clustered in one spot. This makes it 
- hard to see the outliers, where trades occurred that were well below or above the market 
- value of a bitcoin. The hexbin plot allows you to see this data.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;hexbin&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;scatter_2_hexbin.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  bin&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;hexbin&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;bitcoin&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;When&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bitcoin&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;priceperbitcoin_log&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xbins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-  plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;bin&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-       main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Price per bitcoin over time in 16,748,682 Mt.Gox transactions&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       xlab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Days since Jan 1st 1970&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       ylab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Log10 of price per bitcoin&amp;quot;&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/scatter_2_hexbin.png&quot;&gt;&lt;img src=&quot;/images/scatter_2_hexbin.png&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;scatter-heat-maps&quot;&gt;Scatter heat maps&lt;/h2&gt;
-
-&lt;p&gt;The next plot colours points based on how close other points are to it. This code came out of a
- Stack Overflow question.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Use densCols() output to get density at each point&lt;/span&gt;
-density &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; densCols&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Undergrad_applications&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                    mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;Undergrad_acceptances&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                    colramp&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;black&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;density &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; col2rgb&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;density&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1L&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;## Map densities to colors&lt;/span&gt;
-colours &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;  colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#000099&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#00FEFF&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#45FE4F&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                            &lt;span class=&quot;s&quot;&gt;&amp;quot;#FCFF00&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#FF9400&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#FF3100&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;256&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;colours &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colours&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;density&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;## Plot it, reordering rows so that densest points are plotted on top&lt;/span&gt;
-png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;scatter_3_heatmap.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Undergrad_acceptances&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;Undergrad_applications&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-     data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mydata_naomit&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;order&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata_naomit&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;density&lt;span class=&quot;p&quot;&gt;),],&lt;/span&gt; 
-     pch&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;colours&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-     xlab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Undergraduate applications&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-     ylab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Undergraduate acceptances&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/scatter_3_heatmap.png&quot;&gt;&lt;img src=&quot;/images/scatter_3_heatmap.png&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;scatter-contour-plots&quot;&gt;Scatter contour plots&lt;/h2&gt;
-
-&lt;p&gt;And a scatter plot with a coloured contour line around the points.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;scatter_3_contour.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata_naomit&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-     xlab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Undergraduate applications&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-     ylab&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Undergraduate acceptances&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-     pch&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cex&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-contour&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;z&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; drawlabels&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; nlevels&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;levels&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;colours&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; add&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/scatter_3_contour.png&quot;&gt;&lt;img src=&quot;/images/scatter_3_contour.png&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;interactive-scatter-plots&quot;&gt;Interactive scatter plots&lt;/h2&gt;
-
-&lt;p&gt;The rCharts package allows you to make awesome, interactive charts. There are are a number
- of libraries available, and each does things slightly differently. None of it seems well 
- documented, and it’s often confusing if you try and relate the documentation from the 
- original libraries back to the rCharts plots. I found it easier to either edit the charts 
- once they are in html, or to use &lt;em&gt;str()&lt;/em&gt; on a plot environment to get a rough idea of 
- what’s editable.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#require(devtools)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#install_github(&amp;#39;rCharts&amp;#39;, &amp;#39;ramnathv&amp;#39;)&lt;/span&gt;
-
-require&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;rCharts&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-selectedfactor &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mydata&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;College
-
-rchart &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rPlot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Firsts_2013 &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt; Wine_budget &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-            data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mydata&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-            type &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;point&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-            width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;College_char&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-rchart&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;guides&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;min &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-rchart&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;guides&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;min &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; max &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;400000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-rchart&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;guides&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    numticks &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; length&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; selectedfactor &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; as.character&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; levels&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; selectedfactor &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-  y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;title&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;% with firsts&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-  x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;title&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Yearly wine budget in thousands (£)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-rchart&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;set&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;550&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-rchart&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;set&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;height &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;460&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-
-rchart&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;save&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cdn&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k-Variable&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Most of above is pretty self explanatory - except maybe &lt;em&gt;cdn&lt;/em&gt;. If you know you’ll have
- internet access, set it as true. If you have no internet, or don’t want to rely on the rCharts site, 
- set it as false and put the javascript that runs the plot on your computer/server.&lt;/p&gt;
-
-&lt;html&gt;
-  &lt;head&gt;
-    
-    &lt;script src=&quot;/jamesscripts/polychart2.standalone.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
-    
-    &lt;style&gt;
-    .rChart {
-      display: block;
-      margin-left: auto; 
-      margin-right: auto;
-      width: 550px;
-      height: 460px;
-    }  
-    &lt;/style&gt;
-    
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id=&quot;charteba1c84cbc4&quot; class=&quot;rChart polycharts&quot;&gt;&lt;/div&gt;  
-    
-    &lt;script type=&quot;text/javascript&quot;&gt;
-    var chartParams = {
- &quot;dom&quot;: &quot;charteba1c84cbc4&quot;,
-&quot;width&quot;:    550,
-&quot;height&quot;:    460,
-&quot;layers&quot;: [
- {
- &quot;x&quot;: &quot;Wine_budget&quot;,
-&quot;y&quot;: &quot;Firsts_2013&quot;,
-&quot;data&quot;: {
- &quot;College&quot;: [ &quot;Christ&#39;s&quot;, &quot;Churchill&quot;, &quot;Clare&quot;, &quot;Clare Hall&quot;, &quot;Corpus Christi&quot;, &quot;Darwin&quot;, &quot;Downing&quot;, &quot;Emma&quot;, &quot;Fitzwilliam&quot;, &quot;Girton&quot;, &quot;Caius&quot;, &quot;Homerton&quot;, &quot;Hughes Hall&quot;, &quot;Jesus&quot;, &quot;King&#39;s&quot;, &quot;Lucy Cavendish&quot;, &quot;Magdalene&quot;, &quot;Murray Edwards&quot;, &quot;Newnham&quot;, &quot;Pembroke&quot;, &quot;Peterhouse&quot;, &quot;Queens&quot;, &quot;Robinson&quot;, &quot;Selwyn&quot;, &quot;Sidney&quot;, &quot;St Catharine&#39;s&quot;, &quot;St Edmund&#39;s&quot;, &quot;St John&#39;s&quot;, &quot;Trinity&quot;, &quot;Trinity Hall&quot;, &quot;Wolfson&quot; ],
-&quot;Grad_coll&quot;: [ false, false, false, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ],
-&quot;Wine_budget&quot;: [ 71055, 87685, 79989, 17400, 79254, 17510, 77798, 131127, 23028, 30051, 96994, 27975, 14034, 212256, 338559, null, 68192, 32917, 27263, 141692, 82133, 111113, 44722, 49498, 97507, 62432, 19304, 260064, 223292, 127186, 39647 ],
-&quot;Fellows&quot;: [ 84, 165, 120, 67, 54, 68, 65, 87, 56, 118, 114, 90, 53, 85, 132, 40, 83, 58, 70, 102, 41, 84, 82, 58, 67, 60, 98, 149, 185, 75, 271 ],
-&quot;Students&quot;: [ 617, 770, 816, 181, 483, 633, 696, 650, 780, 722, 775, 1324, 600, 800, 685, 370, 526, 548, 644, 704, 441, 1007, 558, 577, 597, 650, 565, 897, 1060, 638, 711 ],
-&quot;Grads&quot;: [ 208, 290, 312, 181, 223, 633, 271, 220, 288, 220, 253, 695, 500, 335, 282, 226, 206, 188, 264, 260, 162, 496, 172, 200, 249, 220, 443, 354, 364, 258, 576 ],
-&quot;PhD&quot;: [ 127, 190, 190, 96, 145, 421, 151, 121, 151, 102, 161, 144, 200, 200, 202, 77, 105, 109, 127, 168, 117, 272, 51, 124, 135, 123, 65, 265, 288, 185, 342 ],
-&quot;Other&quot;: [ 81, 100, 122, 85, 78, 212, 120, 99, 137, 118, 92, 551, 300, 132, 80, 149, 101, 79, 137, 92, 45, 224, 121, 76, 104, 97, 378, 89, 76, 78, 234 ],
-&quot;Rating&quot;: [ &quot;B&quot;, &quot;B&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;C&quot;, &quot;B&quot;, &quot;A&quot;, &quot;C&quot;, &quot;B&quot;, &quot;B&quot;, &quot;A&quot;, &quot;C&quot;, &quot;A&quot;, &quot;A&quot;, &quot;C&quot;, &quot;B&quot;, &quot;C&quot;, &quot;C&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;C&quot;, &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, &quot;C&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;C&quot; ],
-&quot;Part_time&quot;: [ &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;No&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;No&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;No&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;Yes&quot; ],
-&quot;Undergrad_applications&quot;: [ 451, 350, 573, null, 200, null, 548, 503, 260, 261, 393, 196, 32, 554, 417, 39, 237, 120, 167, 505, 155, 412, 222, 333, 306, 378, 25, 383, 383, 288, 29 ],
-&quot;Undergrad_acceptances&quot;: [ 99, 89, 134, null, 68, null, 97, 126, 95, 119, 134, 119, 7, 127, 88, 9, 77, 77, 79, 98, 56, 106, 97, 100, 86, 103, 4, 117, 128, 90, 13 ],
-&quot;Undergrad_acceptRate&quot;: [ 22, 25, 23, null, 34, null, 18, 25, 37, 46, 34, 61, 22, 23, 21, 23, 32, 64, 47, 19, 36, 26, 44, 30, 28, 27, 16, 31, 33, 31, 45 ],
-&quot;Founded&quot;: [ 1505, 1960, 1326, 1965, 1352, 1964, 1800, 1584, 1966, 1869, 1348, 1976, 1885, 1496, 1441, 1965, 1428, 1954, 1871, 1347, 1284, 1448, 1977, 1882, 1596, 1473, 1896, 1511, 1546, 1350, 1965 ],
-&quot;Percent_male&quot;: [ 58, 71, 52, 47, 60, 54, 66, 51, 63, 53, 60, 37, 61, 57, 57, 0, 54, 0, 0, 53, 57, 57, 60, 70, 63, 52, 69, 59, 63, 54, 64 ],
-&quot;Percent_female&quot;: [ 42, 29, 48, 53, 40, 46, 34, 49, 37, 47, 40, 63, 39, 43, 43, 100, 46, 100, 100, 47, 43, 43, 40, 30, 37, 48, 31, 41, 37, 46, 36 ],
-&quot;Fixed_assets&quot;: [ 66602000, 105978346, 70707000, 10579203, 191233087, 33160032, 86798000, 152640692, 43509000, 64000000, 159332000, 123453808, 18483546, 242995403, 155618000, 24323000, 73763845, 52852893, 90287969, 103991180, 171887000, 57310511, 24863000, 69992285, 64952747, 68797000, 8381224, 653359000, 892529000, 208176916, 47307000 ],
-&quot;Tompkin_1997&quot;: [ 3, 15, 11, null, 23, null, 12, 7, 13, 22, 8, null, null, 20, 14, null, 17, 24, 18, 5, 19, 3, 21, 16, 4, 9, null, 10, 1, 6, null ],
-&quot;Tompkin_1998&quot;: [ 2, 13, 6, null, 18, null, 11, 5, 12, 21, 4, null, null, 16, 10, null, 22, 24, 20, 9, 23, 2, 19, 15, 17, 14, null, 8, 1, 7, null ],
-&quot;Tompkin_1999&quot;: [ 1, 20, 15, null, 8, null, 16, 5, 19, 21, 6, null, null, 11, 13, null, 23, 22, 24, 14, 17, 3, 9, 7, 4, 10, null, 12, 2, 18, null ],
-&quot;Tompkin_2000&quot;: [ 1, 15, 9, null, 10, null, 8, 3, 21, 18, 12, null, null, 13, 20, null, 22, 16, 24, 6, 14, 5, 19, 7, 23, 11, null, 4, 2, 17, null ],
-&quot;Tompkin_2001&quot;: [ 1, 9, 6, null, 20, null, 10, 2, 13, 17, 8, null, null, 11, 21, null, 22, 23, 24, 7, 19, 5, 14, 12, 16, 18, null, 4, 3, 15, null ],
-&quot;Tompkin_2002&quot;: [ 4, 10, 3, null, 18, null, 8, 2, 20, 16, 7, null, null, 9, 14, null, 15, 24, 22, 1, 23, 5, 21, 13, 19, 12, null, 11, 6, 17, null ],
-&quot;Tompkin_2003&quot;: [ 2, 9, 6, null, 7, null, 12, 1, 20, 17, 4, 25, 27, 10, 16, 26, 18, 24, 21, 3, 22, 5, 23, 14, 15, 11, 29, 13, 8, 19, 28 ],
-&quot;Tompkin_2004&quot;: [ 2, 19, 4, null, 10, null, 17, 1, 15, 25, 5, 24, 27, 9, 20, 26, 22, 23, 13, 6, 21, 8, 16, 11, 18, 7, 29, 14, 3, 12, 28 ],
-&quot;Tompkin_2005&quot;: [ 4, 18, 9, null, 16, null, 15, 5, 13, 24, 2, 26, 29, 7, 10, 27, 20, 25, 21, 6, 22, 8, 11, 19, 14, 1, 28, 12, 3, 17, 23 ],
-&quot;Tompkin_2006&quot;: [ 6, 13, 12, null, 8, null, 11, 1, 19, 22, 2, 25, 29, 10, 17, 26, 20, 24, 23, 4, 21, 14, 18, 7, 9, 3, 28, 15, 5, 16, 27 ],
-&quot;Tompkin_2007&quot;: [ 2, 15, 17, null, 8, null, 3, 1, 14, 21, 10, 26, 29, 9, 18, 24, 13, 23, 22, 7, 25, 11, 20, 4, 12, 5, 28, 19, 6, 16, 27 ],
-&quot;Tompkin_2008&quot;: [ 8, 6, 13, null, 9, null, 12, 2, 21, 22, 4, 25, 26, 7, 19, 28, 5, 23, 24, 10, 18, 16, 17, 1, 14, 11, 29, 20, 3, 15, 27 ],
-&quot;Tompkin_2009&quot;: [ 13, 7, 18, null, 10, null, 15, 2, 21, 20, 4, 25, 26, 11, 17, 29, 8, 23, 24, 6, 16, 12, 19, 3, 22, 5, 28, 14, 1, 9, 27 ],
-&quot;Tompkin_2010&quot;: [ 12, 3, 8, null, 13, null, 15, 1, 22, 21, 11, 26, 27, 16, 14, 29, 5, 23, 25, 10, 7, 17, 19, 6, 18, 9, 28, 20, 2, 4, 24 ],
-&quot;Tompkin_2011&quot;: [ 6, 10, 4, null, 12, null, 17, 2, 21, 23, 13, 26, 27, 8, 20, 29, 9, 22, 24, 5, 18, 14, 19, 7, 16, 11, 28, 15, 1, 3, 25 ],
-&quot;Tompkin_2012&quot;: [ 9, 5, 11, null, 3, null, 20, 2, 19, 22, 16, 27, 26, 7, 13, 29, 15, 24, 23, 4, 18, 12, 21, 6, 17, 10, 28, 14, 1, 8, 25 ],
-&quot;Tompkin_2013&quot;: [ 8, 5, 11, null, 16, null, 12, 4, 20, 21, 17, 26, 27, 6, 14, 28, 15, 24, 23, 2, 10, 7, 22, 18, 19, 9, 29, 13, 1, 3, 25 ],
-&quot;Tompkin_Mean09to13&quot;: [    4.9,   11.3,    9.6, null,   12.3, null,   12.6,    2.7,   17.8,   20.8,    7.8,   25.5,   27.3,   10.6,   15.9,   27.4,   15.9,     23,   22.1,    6.2,   18.4,    8.6,   18.1,    9.8,   15.1,    9.2,   28.4,   12.8,    2.9,   11.9,     26 ],
-&quot;TompkinsScore_2013&quot;: [  66.76,  68.17,  66.08, null,  64.94, null,  66.05,  68.72,  64.16,  62.92,  64.85,  60.33,  57.92,  67.47,  65.49,  57.43,     65,  60.74,  60.92,  70.85,  66.41,  66.89,  61.95,  64.59,  64.37,  66.51,  56.35,  65.84,  73.66,  68.94,  60.51 ],
-&quot;Firsts_2013&quot;: [   24.7,   28.3,   25.3, null,   23.9, null,     23,   30.5,   21.4,   18.5,   21.1,     16,   13.2,   27.1,   25.9,   13.4,   22.8,   13.9,   15.8,   33.7,   27.8,   26.3,   16.2,   21.6,   19.8,   26.9,   13.4,   25.1,   41.7,   28.1,   18.9 ],
-&quot;College_char&quot;: [ &quot;Christ&#39;s&quot;, &quot;Churchill&quot;, &quot;Clare&quot;, &quot;Clare Hall&quot;, &quot;Corpus Christi&quot;, &quot;Darwin&quot;, &quot;Downing&quot;, &quot;Emma&quot;, &quot;Fitzwilliam&quot;, &quot;Girton&quot;, &quot;Caius&quot;, &quot;Homerton&quot;, &quot;Hughes Hall&quot;, &quot;Jesus&quot;, &quot;King&#39;s&quot;, &quot;Lucy Cavendish&quot;, &quot;Magdalene&quot;, &quot;Murray Edwards&quot;, &quot;Newnham&quot;, &quot;Pembroke&quot;, &quot;Peterhouse&quot;, &quot;Queens&quot;, &quot;Robinson&quot;, &quot;Selwyn&quot;, &quot;Sidney&quot;, &quot;St Catharine&#39;s&quot;, &quot;St Edmund&#39;s&quot;, &quot;St John&#39;s&quot;, &quot;Trinity&quot;, &quot;Trinity Hall&quot;, &quot;Wolfson&quot; ] 
-},
-&quot;facet&quot;: null,
-&quot;type&quot;: &quot;point&quot;,
-&quot;width&quot;:    500,
-&quot;color&quot;: &quot;College_char&quot; 
-} 
-],
-&quot;facet&quot;: [],
-&quot;guides&quot;: {
- &quot;y&quot;: {
- &quot;min&quot;:      0,
-&quot;max&quot;:     40,
-&quot;title&quot;: &quot;% with firsts&quot; 
-},
-&quot;x&quot;: {
- &quot;min&quot;:      0,
-&quot;max&quot;:  4e+05,
-&quot;title&quot;: &quot;Yearly wine budget in thousands (£)&quot; 
-},
-&quot;color&quot;: {
- &quot;numticks&quot;: 31,
-&quot;labels&quot;: [ &quot;Caius&quot;, &quot;Christ&#39;s&quot;, &quot;Churchill&quot;, &quot;Clare&quot;, &quot;Clare Hall&quot;, &quot;Corpus Christi&quot;, &quot;Darwin&quot;, &quot;Downing&quot;, &quot;Emma&quot;, &quot;Fitzwilliam&quot;, &quot;Girton&quot;, &quot;Homerton&quot;, &quot;Hughes Hall&quot;, &quot;Jesus&quot;, &quot;King&#39;s&quot;, &quot;Lucy Cavendish&quot;, &quot;Magdalene&quot;, &quot;Murray Edwards&quot;, &quot;Newnham&quot;, &quot;Pembroke&quot;, &quot;Peterhouse&quot;, &quot;Queens&quot;, &quot;Robinson&quot;, &quot;Selwyn&quot;, &quot;Sidney&quot;, &quot;St Catharine&#39;s&quot;, &quot;St Edmund&#39;s&quot;, &quot;St John&#39;s&quot;, &quot;Trinity&quot;, &quot;Trinity Hall&quot;, &quot;Wolfson&quot; ] 
-} 
-},
-&quot;coord&quot;: [],
-&quot;id&quot;: &quot;charteba1c84cbc4&quot; 
-}
-    _.each(chartParams.layers, function(el){
-        el.data = polyjs.data(el.data)
-    })
-    var graph_charteba1c84cbc4 = polyjs.chart(chartParams);
-&lt;/script&gt;
-    
-  &lt;/body&gt;
-&lt;/html&gt;
-
-&lt;h2 id=&quot;d-scatter-plots&quot;&gt;3D scatter plots&lt;/h2&gt;
-
-&lt;p&gt;A 3D scatter plot from &lt;a href=&quot;/articles/ski-2014/&quot;&gt;my post about mapping ski data&lt;/a&gt;. The 3D scatter plot is super simple to make: 
-code &lt;a href=&quot;/articles/3Dscatter/&quot;&gt;is here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/ski_scattergif.gif&quot;&gt;&lt;img src=&quot;/images/ski_scattergif.gif&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;scatter-plot-matrixs&quot;&gt;Scatter plot matrix’s&lt;/h2&gt;
-
-&lt;p&gt;Code for these are on my page on the scatter plot matrix, &lt;a href=&quot;/articles/Scatterplotmatrix/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure class=&quot;half&quot;&gt;
-	&lt;img src=&quot;/images/wine_1_scattermatrix.png&quot; /&gt;
-	&lt;img src=&quot;/images/wine_2_scattermatrix_corrgram.png&quot; /&gt;
-	&lt;figcaption&gt;Two types of scatter plot matrix.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Part of a the ggplot series on: &lt;a href=&quot;http://rforpublichealth.blogspot.co.uk&quot;&gt;http://rforpublichealth.blogspot.co.uk&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Quick R has a dedicated page on pretty much every simple type of plot: &lt;a href=&quot;http://www.statmethods.net&quot;&gt;http://www.statmethods.net&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;The original question is here: &lt;a href=&quot;http://stackoverflow.com/questions/7073315/how-do-i-create-a-continuous-density-heatmap-of-2d-scatter-data-in-r&quot;&gt;http://stackoverflow.com/questions/7073315/how-do-i-create-a-continuous-density-heatmap-of-2d-scatter-data-in-r&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/Scatterplots/&quot;&gt;Scatter plots with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>

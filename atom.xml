@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-04-20T09:23:38+01:00</updated>
+	<updated>2014-04-29T22:35:02+01:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,80 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[Simpson's paradox in diabetes (via javascript)]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/simpsons/" />
+		<id>http://epijim.co.uk/articles/simpsons</id>
+		<published>2014-04-29T00:00:00+01:00</published>
+		<updated>2014-04-29T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.co.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;p&gt;For the month of July (2014) I’ll be teaching medical science for a summer school in my college.
+ Over the last week I’ve started to put together the slides I’ll be using. To help explain 
+ the concept of Simpson’s paradox I played around with rejigging somebody else’s code 
+ to fit the context of diabetes (my research area). The code used to make 
+ the plots below was originally written by the &lt;a href=&quot;http://vudlab.com/simpsons/&quot;&gt;Vudlab at UC Berkeley&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ll let wikipedia give an introduction to the Simpson’s paradox,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Simpson’s paradox, or the Yule–Simpson effect, is a paradox in which a trend that appears in different groups of data disappears when these groups are combined, and the reverse trend appears for the aggregate data.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;David Spiegelhalter, an academic who’s work I admire, contributed ideas
+ to a paper on Simpson’s paradox that was published in the BMJ.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; One of the examples used 
+ in the paper was from the Poole diabetes cohort. The researchers broke a group of people with diabetes 
+ into two groups. One required insulin (usually type 1 diabetes), the other sub-group didn’t (type 2 diabetes).&lt;/p&gt;
+
+&lt;p&gt;They followed the two groups, and found that those with insulin dependent diabetes were 31% &lt;strong&gt;less&lt;/strong&gt;
+ likely (95%CI 46% to 13%) to have died during the follow up. Yet when the adjusted for 
+ age, the association flipped and those with insulin dependent diabetes were 15% &lt;strong&gt;more&lt;/strong&gt; likely 
+ to have died (&lt;em&gt;statistically non-significant&lt;/em&gt;, 95%CI -9% to 46%).&lt;/p&gt;
+
+&lt;p&gt;Below, each dot represents an individual from the study. Blue have type
+ insulin dependent diabetes. Red have non-insulin dependent diabetes.&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;260&quot; src=&quot;http://epijim.co.uk/simpsons/all.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;In the next plot is just the people with insulin dependent diabetes. In this group 29% of
+ people died (those that died are the red dots). &lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;260&quot; src=&quot;http://epijim.co.uk/simpsons/insulin.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;And in the next plot is the people with non-insulin dependent diabetes. In this group 40% died
+ during follow up. So it looks like people are more likely to die with non-insulin dependent 
+ diabetes! This really doesn’t make sense, as insulin dependent diabetes is usually assumed 
+ to be a more serious manifestation of the disease (insulin is a last resort in type 2 diabetes).&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;260&quot; src=&quot;http://epijim.co.uk/simpsons/noninsulin.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The last plot below shows how the variable age helps explain what is happening. &lt;em&gt;Hitting the green
+ button will make the individuals move between groups.&lt;/em&gt; &lt;/p&gt;
+
+&lt;p&gt;This paradox occurs because people are more
+ more likely to get type 2 diabetes later in life. People are also more likely to die later in 
+ in life. So not accounting for the age difference in the people with the two conditions 
+ means you can come to the wrong conclusions.&lt;/p&gt;
+
+&lt;iframe width=&quot;600&quot; height=&quot;500&quot; src=&quot;http://epijim.co.uk/simpsons/index.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I’m planning on including these plots in my slides (the joy of HTML5 slides is being able to
+ to bring in amazing plot libraries like D3).&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;BMJ 1994;309:1480 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/simpsons/&quot;&gt;Simpson's paradox in diabetes (via javascript)&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[The barons of bitcoin]]></title>
@@ -9857,253 +9931,6 @@ ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p
 &lt;/div&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[Gallery of my posts]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/plots/" />
-		<id>http://epijim.co.uk/gallery</id>
-		<updated>2014-01-06T00:00:00-00:00</updated>
-		<published>2013-08-31T00:00:00+01:00</published>
-		
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<content type="html">&lt;p&gt;Below is a gallery of everything I’ve posted to this site. &lt;/p&gt;
-
-&lt;p&gt;Icons with a &lt;img src=&quot;/images/CODE_inline.png&quot; align=&quot;top&quot; /&gt; 
-in the top left are tutorials on how to make that plot.&lt;/p&gt;
-
-&lt;p&gt;Click an icon to see more.&lt;/p&gt;
-
-&lt;ul class=&quot;oversized-recent-grid&quot;&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bitcoin/&quot; title=&quot;The barons of bitcoin&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/bitcoin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/bitcoin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/GradCon2014/&quot; title=&quot;GradCon 2014 poster&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/gradcon2014_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/gradcon2014_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/hindex/&quot; title=&quot;Publish or perish - there&#39;s a model for that.&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/hindex_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/hindex_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/gifsinr/&quot; title=&quot;Animated plots in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/animate_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/animate_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/Scatterplots/&quot; title=&quot;Scatter plots with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/scatter_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/scatter_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/Scatterplotmatrix/&quot; title=&quot;Scatter plot matrix with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/scattermatrix_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/scattermatrix_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bubbletable/&quot; title=&quot;Bubble tables with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/bubbletable_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/bubbletable_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot; title=&quot;3D scatter plot in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/3Dscatter_thumb.gif&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/ski-2014/&quot; title=&quot;Plotting data from the ski tracks app in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/ski_thumb.jpeg&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pathsinr/&quot; title=&quot;Plotting paths in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/pathsinr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/dotplot/&quot; title=&quot;Making a dotplot in R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/dotplot_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/restaurant-hygiene/&quot; title=&quot;Restaurant hygiene ratings in Cambridge&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/hygiene_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-howto/&quot; title=&quot;How to plot FB network data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/network_thumb_code.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/network_thumb_code.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/crime-cambridge/&quot; title=&quot;Contour mapping Cambridge crime&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/crimes_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/analysing-mcr-page/&quot; title=&quot;Jesus College MCR webpage&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/mcr_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/linkedin-network/&quot; title=&quot;Linkedin network map&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/linkedin_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/regression/&quot; title=&quot;Linear regression with R&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/regression_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/wine-budget/&quot; title=&quot;Wine spend and academic performance&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/wine_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/sankey-arrow-plot/&quot; title=&quot;Visualising flow with a sankey plot&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/sankey_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot; title=&quot;Plotting my Facebook data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/network_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/great-circles/&quot; title=&quot;Facebook friend migrations&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/greatcircles_fb_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/greatcircles_fb_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/mapping-python/&quot; title=&quot;Mapping my google location data&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/mappython_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/intext-distributions/&quot; title=&quot;In-text distributions&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/intextdistributions_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pub-distances/&quot; title=&quot;Distance to the nearest pub&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/pub_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/scholar/&quot; title=&quot;My google scholar profile&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/scholar_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper4/&quot; title=&quot;Modelling intensity of treatment after diabetes diagnosis&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper4_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper3/&quot; title=&quot;CVD risk factors after diabetes diagnosis&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper3_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper2/&quot; title=&quot;Bariatric surgery in children&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper2_thumb.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/articles/paper1/&quot; title=&quot;Health related quality of life after injury&quot;&gt;
-		&lt;img class=&quot;load&quot; src=&quot;http://epijim.co.uk/images/preload.gif&quot; data-original=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;
-		&lt;noscript&gt;&lt;img src=&quot;http://epijim.co.uk/images/paper1_ack.png&quot; alt=&quot;&quot; width=&quot;106&quot; height=&quot;106&quot; /&gt;&lt;/noscript&gt;
-	&lt;/a&gt;&lt;/li&gt;
-
-&lt;/ul&gt;
-
-&lt;p&gt;And a list of the tags for all my posts.&lt;/p&gt;
-
-&lt;ul class=&quot;tag-box inline&quot;&gt;
-  
-  
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/papers/&quot;&gt;Papers &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/publications/&quot;&gt;Publications &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/hrqol/&quot;&gt;HRQoL &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/r/&quot;&gt;R &lt;span&gt;20&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-scholar/&quot;&gt;Google Scholar &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/courses/&quot;&gt;Courses &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/geo-coding/&quot;&gt;Geo-coding &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/latex/&quot;&gt;LaTeX &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/sparklines/&quot;&gt;Sparklines &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/python/&quot;&gt;Python &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/google-data/&quot;&gt;Google data &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/great-circles/&quot;&gt;Great circles &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/facebook/&quot;&gt;Facebook &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/network/&quot;&gt;Network &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/sankey/&quot;&gt;Sankey &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/wine/&quot;&gt;Wine &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/cambridge-university/&quot;&gt;Cambridge University &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/jesus-college-mcr/&quot;&gt;Jesus College MCR &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/map/&quot;&gt;Map &lt;span&gt;5&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/cambridge/&quot;&gt;Cambridge &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/dotplot/&quot;&gt;Dotplot &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/skiing/&quot;&gt;Skiing &lt;span&gt;4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/paths/&quot;&gt;Paths &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/gps/&quot;&gt;GPS &lt;span&gt;3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/scatter-plot/&quot;&gt;Scatter plot &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/bubbletable/&quot;&gt;Bubbletable &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/scatter-plot-matrix/&quot;&gt;Scatter plot matrix &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/animated/&quot;&gt;Animated &lt;span&gt;2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/poster/&quot;&gt;Poster &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/diabetes/&quot;&gt;Diabetes &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/bitcoin/&quot;&gt;Bitcoin &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/big-data/&quot;&gt;Big data &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-     
-    	&lt;li&gt;&lt;a href=&quot;http://epijim.co.uk/tag/group-based-trajectory-models/&quot;&gt;Group-based trajectory models &lt;span&gt;1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    
-  
-
-&lt;/ul&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/plots/&quot;&gt;Gallery of my posts&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on August 31, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>

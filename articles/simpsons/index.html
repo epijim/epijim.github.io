@@ -1,0 +1,264 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7 no-js" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="lt-ie9 lt-ie8 no-js" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="lt-ie9 no-js" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Simpson's paradox in diabetes (via javascript) &#8211; James Black</title>
+	<meta name="description" content="Using the D3 javascript library to visualise Simpson's paradox.">
+	<meta name="keywords" content="Javascript, D3, Simpson's paradox">
+	<!-- Twitter Cards -->
+	
+		<meta name="twitter:card" content="summary">
+			<meta name="twitter:image" content="http://epijim.co.uk/images/simpsons_thumb.png">
+		
+	
+	<meta name="twitter:title" content="Simpson's paradox in diabetes (via javascript)">
+	<meta name="twitter:description" content="Using the D3 javascript library to visualise Simpson's paradox.">
+	<meta name="twitter:site" content="@">
+	<meta name="twitter:creator" content="@">
+	
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Simpson's paradox in diabetes (via javascript)">
+<meta property="og:description" content="Using the D3 javascript library to visualise Simpson's paradox.">
+<meta property="og:url" content="http://epijim.co.uk/articles/simpsons/">
+<meta property="og:site_name" content="James Black">
+
+	<!-- Webmaster Tools verifications -->
+	
+	
+
+	
+	<link rel="canonical" href="http://epijim.co.uk/articles/simpsons/">
+	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
+	<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
+
+	<!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- For all browsers -->
+	<link rel="stylesheet" href="http://epijim.co.uk/css/main.min-92de9747e44e9254411a46b258723e1d.css">
+
+	<!-- Web fonts -->
+	<script src="//use.edgefonts.net/lato:n3,i3,n4,i4,n7.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<!-- HTML5 Shiv and Media Query Support -->
+	<!--[if lt IE 9]>
+		<script src="http://epijim.co.uk/js/vendor/html5shiv-5a98a86b5cb48c1506f338463259ce41.js"></script>
+		<script src="http://epijim.co.uk/js/vendor/respond-e5d7fffb3a9f891c926ee1b836d448d8.js"></script>
+	<![endif]-->
+
+	<!-- Icons -->
+	<!-- 16x16 -->
+	<link rel="shortcut icon" href="http://epijim.co.uk/favicon.ico">
+	<!-- 32x32 -->
+	<link rel="shortcut icon" href="http://epijim.co.uk/favicon.png">
+	<!-- non-retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon57.png" sizes="57x57">
+	<!-- non-retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon72.png" sizes="72x72">
+	<!-- non-retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon76.png" sizes="76x76">
+	<!-- retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon114.png" sizes="114x114">
+	<!-- retina iPhone iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon120.png" sizes="120x120">
+	<!-- retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon-precomposed" href="http://epijim.co.uk/images/icon144.png" sizes="144x144">
+	<!-- retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="http://epijim.co.uk/images/icon152.png" sizes="152x152">
+	
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47906301-1', 'epijim.co.uk');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+<body id="post">
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a newer one to better enjoy this site?</a></div><![endif]-->
+<div class="masthead-wrapper">
+	<header id="masthead" itemscope itemtype="http://schema.org/Organization">
+		<a href="http://epijim.co.uk" class="site-logo" rel="home" title="James Black" itemprop="url"><img src="http://epijim.co.uk/images/jimmy_logo.png" width="50" height="50" alt="James Black logo" itemprop="logo"></a>
+		<span class="site-title" itemprop="name"><a href="http://epijim.co.uk">James Black</a></span>
+	</header><!-- /.masthead -->
+	<nav role="navigation" id="site-nav" class="nav">
+		<ul>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/" itemprop="url"><span itemprop="name">Home</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/blog/" itemprop="url"><span itemprop="name">Blog</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/plots/" itemprop="url"><span itemprop="name">Gallery</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/my-papers/" itemprop="url"><span itemprop="name">My papers</span></a></li>
+		
+			<li itemscope itemtype="http://schema.org/SiteNavigationElement"><a href="http://epijim.co.uk/about/" itemprop="url"><span itemprop="name">About me</span></a></li>
+		
+		</ul>
+	</nav><!-- /#site-nav -->
+</div><!-- /.entry-wrapper -->
+
+<div id="main" role="main">
+		<article class="hentry" itemscope itemtype="http://schema.org/Article">
+		<header class="entry-header">
+		
+			<h1 class="entry-title" itemprop="name">Simpson's paradox in diabetes (via javascript)</h1>
+		</header>
+		<div class="entry-wrapper">
+			<div class="entry-content" itemprop="articleBody">
+				<p>For the month of July (2014) I’ll be teaching medical science for a summer school in my college.
+ Over the last week I’ve started to put together the slides I’ll be using. To help explain 
+ the concept of Simpson’s paradox I played around with rejigging somebody else’s code 
+ to fit the context of diabetes (my research area). The code used to make 
+ the plots below was originally written by the <a href="http://vudlab.com/simpsons/">Vudlab at UC Berkeley</a>.</p>
+
+<p>I’ll let wikipedia give an introduction to the Simpson’s paradox,</p>
+
+<blockquote>
+  <p>Simpson’s paradox, or the Yule–Simpson effect, is a paradox in which a trend that appears in different groups of data disappears when these groups are combined, and the reverse trend appears for the aggregate data.</p>
+</blockquote>
+
+<p>David Spiegelhalter, an academic who’s work I admire, contributed ideas
+ to a paper on Simpson’s paradox that was published in the BMJ.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> One of the examples used 
+ in the paper was from the Poole diabetes cohort. The researchers broke a group of people with diabetes 
+ into two groups. One required insulin (usually type 1 diabetes), the other sub-group didn’t (type 2 diabetes).</p>
+
+<p>They followed the two groups, and found that those with insulin dependent diabetes were 31% <strong>less</strong>
+ likely (95%CI 46% to 13%) to have died during the follow up. Yet when the adjusted for 
+ age, the association flipped and those with insulin dependent diabetes were 15% <strong>more</strong> likely 
+ to have died (<em>statistically non-significant</em>, 95%CI -9% to 46%).</p>
+
+<p>Below, each dot represents an individual from the study. Blue have type
+ insulin dependent diabetes. Red have non-insulin dependent diabetes.</p>
+
+<iframe width="650" height="260" src="http://epijim.co.uk/simpsons/all.html" frameborder="0"></iframe>
+
+<p>In the next plot is just the people with insulin dependent diabetes. In this group 29% of
+ people died (those that died are the red dots). </p>
+
+<iframe width="650" height="260" src="http://epijim.co.uk/simpsons/insulin.html" frameborder="0"></iframe>
+
+<p>And in the next plot is the people with non-insulin dependent diabetes. In this group 40% died
+ during follow up. So it looks like people are more likely to die with non-insulin dependent 
+ diabetes! This really doesn’t make sense, as insulin dependent diabetes is usually assumed 
+ to be a more serious manifestation of the disease (insulin is a last resort in type 2 diabetes).</p>
+
+<iframe width="650" height="260" src="http://epijim.co.uk/simpsons/noninsulin.html" frameborder="0"></iframe>
+
+<p>The last plot below shows how the variable age helps explain what is happening. <em>Hitting the green
+ button will make the individuals move between groups.</em> </p>
+
+<p>This paradox occurs because people are more
+ more likely to get type 2 diabetes later in life. People are also more likely to die later in 
+ in life. So not accounting for the age difference in the people with the two conditions 
+ means you can come to the wrong conclusions.</p>
+
+<iframe width="600" height="500" src="http://epijim.co.uk/simpsons/index.html" frameborder="0"></iframe>
+
+<p>I’m planning on including these plots in my slides (the joy of HTML5 slides is being able to
+ to bring in amazing plot libraries like D3).</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>BMJ 1994;309:1480 <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+				<div class="entry-related">
+					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.co.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h2>
+					<ul>
+						
+					</ul>
+				</div><!-- /.entry-related -->
+				<hr />
+				<div class="entry-meta">
+					<meta itemprop="keywords" content="Javascript, D3, Simpson's paradox">
+					<span class="entry-tags"><a href="http://epijim.co.uk/tag/javascript/" title="Javascript" class="tag" rel="tag">Javascript</a><a href="http://epijim.co.uk/tag/d3/" title="D3" class="tag" rel="tag">D3</a><a href="http://epijim.co.uk/tag/simpson's-paradox/" title="Simpson's paradox" class="tag" rel="tag">Simpson's paradox</a></span>
+					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://epijim.co.uk/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
+					<span class="entry-date"><time datetime="2014-04-29T00:00:00+01:00" itemprop="datePublished" class="published updated">April 29, 2014</time></span>
+				</div><!-- /.entry-meta -->
+			</div><!-- /.entry-content -->
+			
+			<div id="disqus_thread" class="entry-content"></div><!-- /#disqus_thread -->
+			<noscript><div class="upgrade">Please enable JavaScript to view comments.</div><!-- /.upgrade --></noscript>
+			
+		</div><!-- /.entry-wrapper -->
+	</article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <p>&#169; 2004&#8211;2014 <a href="http://epijim.co.uk/about/">James Black</a>, this site is written in markdown, compiled to html by jekyll, and hosted on github.pages.io. <a href="http://epijim.co.uk/humans.txt">Theme source and credits here</a>.</p>
+		<div class="social-icons">
+			
+			
+			<a href="http://github.com/epijim" title="James Black on Github" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
+			
+			<a href="https://plus.google.com/112022213613617220776/" title="James Black on Google+" target="_blank"><i class="fa fa-google-plus-square fa-fw fa-2x"></i></a>
+			
+			
+		</div><!-- /.social-icons -->
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" data-cfasync="false"></script>
+<script data-cfasync="false">window.jQuery || document.write('<script src="http://epijim.co.uk/js/vendor/jquery-397754ba49e9e0cf4e7c190da78dda05.js"><\/script>')</script>
+<script src="http://epijim.co.uk/js/main.min-b1c052388578ab3b44858ccabf1f47d6.js"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+	var _gaq = _gaq || [];
+	var pluginUrl = 
+	'//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	_gaq.push(['_setAccount', '']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<!-- Modernizr -->
+<script src="http://epijim.co.uk/js/vendor/modernizr-ab083e250330742e0b9d2a5548ea8745.js"></script>
+
+
+<!-- Disqus Comments -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
+    var disqus_title = 'Simpson's paradox in diabetes (via javascript)';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+</body>
+</html>
