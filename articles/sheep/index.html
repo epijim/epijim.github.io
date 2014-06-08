@@ -6,27 +6,27 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Visualising flow with a sankey plot &#8211; James Black</title>
-	<meta name="description" content="Showing how to make a sankey plot using R.">
-	<meta name="keywords" content="R, Sankey">
+	<title>New Zealand and sheep &#8211; James Black</title>
+	<meta name="description" content="How many sheep are there in New Zealand.">
+	<meta name="keywords" content="R, NZ">
 	<!-- Twitter Cards -->
 	
 		<meta name="twitter:card" content="summary">
-			<meta name="twitter:image" content="http://epijim.co.uk/images/sankey_thumb.png">
+			<meta name="twitter:image" content="http://epijim.co.uk/images/sheep_thumb.png">
 		
 	
-	<meta name="twitter:title" content="Visualising flow with a sankey plot">
-	<meta name="twitter:description" content="Showing how to make a sankey plot using R.">
+	<meta name="twitter:title" content="New Zealand and sheep">
+	<meta name="twitter:description" content="How many sheep are there in New Zealand.">
 	<meta name="twitter:site" content="@">
 	<meta name="twitter:creator" content="@">
 	
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Visualising flow with a sankey plot">
-<meta property="og:description" content="Showing how to make a sankey plot using R.">
-<meta property="og:url" content="http://epijim.co.uk/articles/sankey-arrow-plot/">
-<meta property="og:image" content="http://epijim.co.uk/images/sankey_thumb.png">
+<meta property="og:title" content="New Zealand and sheep">
+<meta property="og:description" content="How many sheep are there in New Zealand.">
+<meta property="og:url" content="http://epijim.co.uk/articles/sheep/">
+<meta property="og:image" content="http://epijim.co.uk/images/sheep_thumb.png">
 <meta property="og:site_name" content="James Black">
 
 	<!-- Webmaster Tools verifications -->
@@ -34,7 +34,7 @@
 	
 
 	
-	<link rel="canonical" href="http://epijim.co.uk/articles/sankey-arrow-plot/">
+	<link rel="canonical" href="http://epijim.co.uk/articles/sheep/">
 	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
 	<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
 
@@ -120,81 +120,108 @@
 		<article class="hentry" itemscope itemtype="http://schema.org/Article">
 		<header class="entry-header">
 		
-			<h1 class="entry-title" itemprop="name">Visualising flow with a sankey plot</h1>
+			<h1 class="entry-title" itemprop="name">New Zealand and sheep</h1>
 		</header>
 		<div class="entry-wrapper">
 			<div class="entry-content" itemprop="articleBody">
-				<figure>
-	<a href="/images/sankey_example.png"><img src="/images/sankey_example.png" /></a>
-	<figcaption>An example of the function output, taken from my thesis.</figcaption>
-</figure>
+				<p>When I say I grew up in New Zealand, a sheep joke often rears it’s head. I’ve always wondered
+ well that stereotype fit modern NZ. I remember the
+ number of 60,000,000 sheep coming up fairly frequently, but I had no idea if that was close to the 
+ contemporary population. Thankfully, Stats NZ provides the numbers. Below I’ve 
+ plotted the numbers I got from their website.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
 
-<p>Above is a Sankey plot that takes the number of individuals given the option of being
- screened for diabetes, and how individuals left the screening programme,
- till a fraction of the original number were diagnosed with diabetes.
- I’m using this figure in my PhD, and the numbers behind it come from a paper<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> describing 
- a diabetes screening trial that was run by my supervisors.</p>
+<h1 id="so-how-many-sheep-are-there">So how many sheep are there?</h1>
 
-<p>The original Sankey diagram visualised the efficiency of a steam engine, 
-but a more famous example is probably Minard’s picture of Napoleon’s disastrous Russian 
-campaign (below). The general idea behind these plots is that the width of the arrows is 
-to scale, so you can see the flow much more instinctively than a standard flow chart. 
-Although Minard took it a step further by plotting it over a map, and also plotting the temperatures.</p>
+<p>So at one point, there were 70,301,461 sheep in New Zealand. That was back in 1982 though.
+ The number of sheep in 2013 was 30,904,714. Now I’m assuming this is sheep declared to the 
+ tax man (I’m hazy on where Stats NZ got such an exact number from), but I doubt it’s too much higher 
+ in reality.</p>
+
+<p>To put the numbers in context, in 2012 there were 10.8 million sheep in the UK<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> and 74.4 million
+ in Australia<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>. </p>
 
 <figure>
-	<a href="/images/sankey_minard.png"><img src="/images/sankey_minard.png" /></a>
-	<figcaption>Minard's summary of the failed Russian Campaign.</figcaption>
+	<a href="/images/sheep_1_sheep.jpeg"><img src="/images/sheep_1_sheep.jpeg" /></a>
 </figure>
 
-<p>The code is super simple to run. First the setup. We set the working directory, then set up
- a function to pull other functions and their dependencies from a Gist (an online repository).</p>
+<h1 id="and-the-number-per-person">And the number per person?</h1>
 
-<div class="highlight"><pre><code class="r">setwd<span class="p">(</span><span class="s">&quot;~/Dropbox/Personal/fun with code/sankey_arrow&quot;</span><span class="p">)</span>
- 
-sourc.https     <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>url<span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># install and load the RCurl package </span>
-  <span class="kr">if</span> <span class="p">(</span>match<span class="p">(</span><span class="s">&#39;RCurl&#39;</span><span class="p">,</span> nomatch<span class="o">=</span><span class="m">0</span><span class="p">,</span> installed.packages<span class="p">()[,</span><span class="m">1</span><span class="p">])</span><span class="o">==</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-    install.packages<span class="p">(</span>c<span class="p">(</span><span class="s">&quot;RCurl&quot;</span><span class="p">),</span> dependencies <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-    require<span class="p">(</span>RCurl<span class="p">)</span>  
-  <span class="p">}</span> <span class="kr">else</span> require<span class="p">(</span>RCurl<span class="p">)</span>    
-  
-  <span class="c1"># parse and evaluate each .R script</span>
-  sapply<span class="p">(</span>c<span class="p">(</span>url<span class="p">,</span> <span class="kc">...</span><span class="p">),</span> <span class="kr">function</span><span class="p">(</span>u<span class="p">)</span> <span class="p">{</span>
-    eval<span class="p">(</span>parse<span class="p">(</span>text <span class="o">=</span> getURL<span class="p">(</span>u<span class="p">,</span> followlocation <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
-                             cainfo  <span class="o">=</span> system.file<span class="p">(</span><span class="s">&quot;CurlSSL&quot;</span><span class="p">,</span> <span class="s">&quot;cacert.pem&quot;</span><span class="p">,</span> 
-                                                   package <span class="o">=</span> <span class="s">&quot;RCurl&quot;</span><span class="p">))),</span> envir <span class="o">=</span> .GlobalEnv<span class="p">)</span>
-  <span class="p">}</span> <span class="p">)</span>
- 
-<span class="c1"># from https://gist.github.com/1423501</span>
-sourc.https<span class="p">(</span><span class="s">&quot;https://gist.github.com/epijim/8832627/raw/91f8fb601a483a6e60c6cbc7eeea939e010cf7ce/Sankey.R&quot;</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
+<p>So in 2013 there were 30,904,714 sheep and 4,504,600 people. So that’s 6.86 sheep to every
+ person. Back in 1981 though, there 21.79 sheep to every person in New Zealand. </p>
 
-<p>The last line of the previous code snippet read in the function to make the Sankey plot.
- I’m pulling it from my own Gist, rather than the official one, as I edited two lines that 
- effect how the text is written.</p>
+<p>In 2012 in the UK, there were 0.2 sheep per person, and 3.3 per person in Australia.<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup> So
+ compared to the British and Australians we’re the bigger sheep lovers. After the Kiwi’s, it’s 
+ the Welsh that tend to bare the brunt of the sheep jokes. In Wales there are 2.8 sheep to 
+ every person - so looks like the jokes are best directed at the Kiwi’s after all.</p>
 
-<p>Then we just need to give the function the numbers that go in (inputs) and the numbers that
- go out. Then the labels in the same order. It’s crazy simple!</p>
+<figure>
+	<a href="/images/sheep_2_sheep.jpeg"><img src="/images/sheep_2_sheep.jpeg" /></a>
+</figure>
 
-<div class="highlight"><pre><code class="r">inputs <span class="o">=</span> c<span class="p">(</span><span class="m">35297</span><span class="p">)</span>
-losses <span class="o">=</span> c<span class="p">(</span><span class="m">1758</span><span class="p">,</span><span class="m">8885</span><span class="p">,</span><span class="m">23787</span><span class="p">,</span><span class="m">867</span><span class="p">)</span>
-unit <span class="o">=</span> <span class="s">&quot;n =&quot;</span>
- 
-labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;At high diabetes risk&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not meet criteria&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not attend screening&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Did not have diabetes&quot;</span><span class="p">,</span>
-           <span class="s">&quot;Diagnosed with diabetes&quot;</span><span class="p">)</span>
-  pdf<span class="p">(</span><span class="s">&quot;Sankey.pdf&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">12</span><span class="p">,</span> height<span class="o">=</span><span class="m">10</span><span class="p">)</span>
-    SankeyR<span class="p">(</span>inputs<span class="p">,</span>losses<span class="p">,</span>unit<span class="p">,</span>labels<span class="p">)</span>
-  dev.off<span class="p">()</span>
-</code></pre></div>
+<h1 id="and-how-much-is-farm-land">And how much is farm land?</h1>
+
+<p>New Zealand’s fertile lands gave it the nickname “Britain’s Breadbasket”<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup> and, historically at least,
+ huge swathes of the country were farmland. </p>
+
+<p>I’d love to know what happened in the 70’s and 80’s. 
+ I’m guessing the abrupt change may have had something to do with forestry, or it could be as 
+ mundane as a change in the way land was classified. The Stat NZ site doesn’t have detailed 
+ breakdowns from back then but the answer must be somewhere in the data.</p>
+
+<figure>
+	<a href="/images/sheep_3_sheep.jpeg"><img src="/images/sheep_3_sheep.jpeg" /></a>
+</figure>
+
+<p>A forestry report<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup> I found claims that in 2010 land use was supposedly broken down like below 
+ (I’ve replotted the reports pie graph as a bar chart, although I haven’t been fully converted 
+ to being a pie-chart zealot by Tufte yet<sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>). While the UK was about 69% farmland and 9% forest in 2010.<sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup> </p>
+
+<p>Despite NZ having the reputation of being greener, a greater of proportion of the UK is farmland. This doesn’t seem to make sense, and there may
+ be some difference in how land use is measured, but it’s also due to the fact that around 
+ 30% of NZ is currently a national park<sup id="fnref:9"><a href="#fn:9" class="footnote">9</a></sup>, while the proportion is only around 9% in the UK<sup id="fnref:10"><a href="#fn:10" class="footnote">10</a></sup>.</p>
+
+<figure>
+	<a href="/images/sheep_4_sheep.png"><img src="/images/sheep_4_sheep.png" /></a>
+</figure>
+
+<p>While I was looking for the number of sheep in Australia I stumbled across
+ a page on the Stats NZ site were they had already answered my first question.<sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup> They’ve gone 
+ and explored a bunch of other myths about NZ as well, and the page is well worth a gander.</p>
 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p><a href="http://www.ncbi.nlm.nih.gov/pubmed/19435491">Echouffo-Tcheugui et al(2009) BMC Public Health, 9:136</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>Stats NZ site http://www.stats.govt.nz/tools_and_services.aspx <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Eblex report http://www.eblex.org.uk/market-intelligence-news/uk-sheep-numbers-regional-breakdown/ <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Meat and Livestock Australia http://www.mla.com.au/Cattle-sheep-and-goat-industries/Industry-overview/Sheep <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>I just used wikipedia’s 2012 population estimates for the two countries. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>http://en.wikipedia.org/wiki/Breadbasket#New_Zealand <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Ministry for Primary Industries report http://www.mpi.govt.nz/portals/0/documents/forestry/statistics/forestry-stats/facts-figures-11-12.pdf <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>Edward Tufte gives the pie chart a more succinct and decisive treatment in “The Visual Display of Quantitative Information” https://news.ycombinator.com/item?id=2991062 <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Not from the most reliable source… hccmpw.org.uk/index.php/tools/required/files/download?fID=2086 <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>http://en.wikipedia.org/wiki/Protected_areas_of_New_Zealand <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>http://en.wikipedia.org/wiki/National_parks_of_England_and_Wales <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:11">
+      <p>Mythbusters site http://www.stats.govt.nz/browse_for_stats/population/mythbusters.aspx <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -203,22 +230,22 @@ labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;A
 					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.co.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h2>
 					<ul>
 						
-						<li><a href="http://epijim.co.uk/articles/sheep/">New Zealand and sheep</a></li>
-						
 						<li><a href="http://epijim.co.uk/articles/bitcoin/">The barons of bitcoin</a></li>
+						
+						<li><a href="http://epijim.co.uk/articles/hindex/">Publish or perish - there's a model for that.</a></li>
 						
 						<li><a href="http://epijim.co.uk/articles/gifsinr/">Animated plots in R</a></li>
 						
-						<li><a href="http://epijim.co.uk/articles/hindex/">Publish or perish - there's a model for that.</a></li>
+						<li><a href="http://epijim.co.uk/articles/Scatterplotmatrix/">Scatter plot matrix with R</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->
 				<hr />
 				<div class="entry-meta">
-					<meta itemprop="keywords" content="R, Sankey">
-					<span class="entry-tags"><a href="http://epijim.co.uk/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://epijim.co.uk/tag/sankey/" title="Sankey" class="tag" rel="tag">Sankey</a></span>
+					<meta itemprop="keywords" content="R, NZ">
+					<span class="entry-tags"><a href="http://epijim.co.uk/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://epijim.co.uk/tag/nz/" title="NZ" class="tag" rel="tag">NZ</a></span>
 					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://epijim.co.uk/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
-					<span class="entry-date"><time datetime="2014-02-05T00:00:00+00:00" itemprop="datePublished" class="published updated">February 05, 2014</time></span>
+					<span class="entry-date"><time datetime="2014-06-08T00:00:00+01:00" itemprop="datePublished" class="published updated">June 08, 2014</time></span>
 				</div><!-- /.entry-meta -->
 			</div><!-- /.entry-content -->
 			
@@ -273,7 +300,7 @@ labels <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;A
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
-    var disqus_title = 'Visualising flow with a sankey plot';
+    var disqus_title = 'New Zealand and sheep';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
