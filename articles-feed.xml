@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-06-08T21:51:50+01:00</updated>
+	<updated>2014-06-09T18:06:18+01:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -28,14 +28,14 @@
 		</author>
 		<summary type="text">Does New Zealand still deserve the sheep jokes?</summary>
 		<content type="html">&lt;p&gt;When I say I grew up in New Zealand, a sheep joke often rears it’s head. I’ve always wondered
- well that stereotype fit modern NZ. I remember the
- number of 60,000,000 sheep coming up fairly frequently, but I had no idea if that was close to the 
- contemporary population. Thankfully, Stats NZ provides the numbers. Below I’ve 
+ how well that stereotype actually fit modern New Zealand. The claim we have 60,000,000 sheep 
+ comes up fairly frequently, but I had no idea if that was close to the 
+ contemporary population. Thankfully, Stats NZ provides the numbers, and below I’ve 
  plotted the numbers I got from their website.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;so-how-many-sheep-are-there&quot;&gt;So how many sheep are there?&lt;/h1&gt;
 
-&lt;p&gt;So at one point, there were 70,301,461 sheep in New Zealand. That was back in 1982 though.
+&lt;p&gt;So at one point there were 70,301,461 sheep in New Zealand. That was back in 1982 though.
  The number of sheep in 2013 was 30,904,714. Now I’m assuming this is sheep declared to the 
  tax man (I’m hazy on where Stats NZ got such an exact number from), but I doubt it’s too much higher 
  in reality.&lt;/p&gt;
