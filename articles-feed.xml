@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.co.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-06-09T18:06:18+01:00</updated>
+	<updated>2014-06-09T21:02:44+01:00</updated>
 	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -90,6 +90,20 @@
 &lt;p&gt;While I was looking for the number of sheep in Australia I stumbled across
  a page on the Stats NZ site were they had already answered my first question.&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; They’ve gone 
  and explored a bunch of other myths about NZ as well, and the page is well worth a gander.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;EDIT:&lt;/em&gt;: my cousin mentioned she’d like to see how the cow population has changed. Below
+ I plotted the number of dairy cows, against beef cows, with deer and pigs thrown in. This data only 
+ starts in the 70’s, unlike the sheep data which starts in the 30’s.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_5_cows.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_5_cows.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;And finally, to put the plot above in context, with sheep as well.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_6_withsheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_6_withsheep.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
