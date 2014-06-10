@@ -3,27 +3,27 @@
 	<title type="text">James Black &#8211; Articles</title>
 	<subtitle type="html">Epidemiologist</subtitle>
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-	<icon>http://epijim.uk/images/icon152.png</icon>
-	<link rel="alternate" type="text/html" href="http://epijim.uk" />
-	<updated>2014-06-10T10:50:45+01:00</updated>
-	<id>http://epijim.uk/</id>
+	<icon>http://epijim.co.uk/images/icon152.png</icon>
+	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
+	<updated>2014-06-09T21:02:44+01:00</updated>
+	<id>http://epijim.co.uk/</id>
 	<author>
 		<name>James Black</name>
-		<uri>http://epijim.uk/</uri>
+		<uri>http://epijim.co.uk/</uri>
 		<email>james.black@cantab.net</email>
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
-	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.uk/articles-feed.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/articles-feed.xml" />
 	
 	<entry>
 		<title type="html"><![CDATA[New Zealand and sheep]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/sheep/" />
-		<id>http://epijim.uk/articles/sheep</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/sheep/" />
+		<id>http://epijim.co.uk/articles/sheep</id>
 		<published>2014-06-08T00:00:00+01:00</published>
 		<updated>2014-06-08T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Does New Zealand still deserve the sheep jokes?</summary>
@@ -143,18 +143,18 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/sheep/&quot;&gt;New Zealand and sheep&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/sheep/&quot;&gt;New Zealand and sheep&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Simpson's paradox in diabetes (via javascript)]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/simpsons/" />
-		<id>http://epijim.uk/articles/simpsons</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/simpsons/" />
+		<id>http://epijim.co.uk/articles/simpsons</id>
 		<published>2014-04-29T00:00:00+01:00</published>
 		<updated>2014-04-29T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Using the D3 javascript library to visualise Simpson's paradox.</summary>
@@ -218,18 +218,18 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/simpsons/&quot;&gt;Simpson's paradox in diabetes (via javascript)&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/simpsons/&quot;&gt;Simpson's paradox in diabetes (via javascript)&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[The barons of bitcoin]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/bitcoin/" />
-		<id>http://epijim.uk/articles/bitcoin</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/bitcoin/" />
+		<id>http://epijim.co.uk/articles/bitcoin</id>
 		<published>2014-04-18T00:00:00+01:00</published>
 		<updated>2014-04-18T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Looking closely at the hacked Mt.Gox exchange, to see if there are distinct types of traders.</summary>
@@ -824,18 +824,18 @@ yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/bitcoin/&quot;&gt;The barons of bitcoin&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bitcoin/&quot;&gt;The barons of bitcoin&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[GradCon 2014 poster]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/GradCon2014/" />
-		<id>http://epijim.uk/articles/GradCon2014</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/GradCon2014/" />
+		<id>http://epijim.co.uk/articles/GradCon2014</id>
 		<published>2014-04-15T00:00:00+01:00</published>
 		<updated>2014-04-15T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">My poster from the Jesus College Graduate Conference 2014.</summary>
@@ -849,18 +849,18 @@ yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
  was both fun to make, and financially rewarding.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Publish or perish - there's a model for that.]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/hindex/" />
-		<id>http://epijim.uk/articles/hindex</id>
+		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/hindex/" />
+		<id>http://epijim.co.uk/articles/hindex</id>
 		<published>2014-04-11T00:00:00+01:00</published>
 		<updated>2014-04-11T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
+			<uri>http://epijim.co.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<summary type="text">Scraping Google Scholar for publications and predicting an h index.</summary>
@@ -1018,7 +1018,7 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/hindex/&quot;&gt;Publish or perish - there's a model for that.&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/hindex/&quot;&gt;Publish or perish - there's a model for that.&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
