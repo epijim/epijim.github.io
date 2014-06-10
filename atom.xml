@@ -3,27 +3,27 @@
 	<title type="text">James Black</title>
 	<subtitle type="html">Epidemiologist</subtitle>
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-	<icon>http://epijim.co.uk/images/icon152.png</icon>
-	<link rel="alternate" type="text/html" href="http://epijim.co.uk" />
-	<updated>2014-06-09T21:02:44+01:00</updated>
-	<id>http://epijim.co.uk/</id>
+	<icon>http://epijim.uk/images/icon152.png</icon>
+	<link rel="alternate" type="text/html" href="http://epijim.uk" />
+	<updated>2014-06-10T10:50:45+01:00</updated>
+	<id>http://epijim.uk/</id>
 	<author>
 		<name>James Black</name>
-		<uri>http://epijim.co.uk/</uri>
+		<uri>http://epijim.uk/</uri>
 		<email>james.black@cantab.net</email>
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
-	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.co.uk/atom.xml" />
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.uk/atom.xml" />
 	
 	<entry>
 		<title type="html"><![CDATA[New Zealand and sheep]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/sheep/" />
-		<id>http://epijim.co.uk/articles/sheep</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/sheep/" />
+		<id>http://epijim.uk/articles/sheep</id>
 		<published>2014-06-08T00:00:00+01:00</published>
 		<updated>2014-06-08T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;When I say I grew up in New Zealand, a sheep joke often rears it’s head. I’ve always wondered
@@ -142,18 +142,18 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/sheep/&quot;&gt;New Zealand and sheep&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/sheep/&quot;&gt;New Zealand and sheep&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Simpson's paradox in diabetes (via javascript)]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/simpsons/" />
-		<id>http://epijim.co.uk/articles/simpsons</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/simpsons/" />
+		<id>http://epijim.uk/articles/simpsons</id>
 		<published>2014-04-29T00:00:00+01:00</published>
 		<updated>2014-04-29T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;For the month of July (2014) I’ll be teaching medical science for a summer school in my college.
@@ -216,18 +216,18 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/simpsons/&quot;&gt;Simpson's paradox in diabetes (via javascript)&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/simpsons/&quot;&gt;Simpson's paradox in diabetes (via javascript)&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 29, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[The barons of bitcoin]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/bitcoin/" />
-		<id>http://epijim.co.uk/articles/bitcoin</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/bitcoin/" />
+		<id>http://epijim.uk/articles/bitcoin</id>
 		<published>2014-04-18T00:00:00+01:00</published>
 		<updated>2014-04-18T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Mt. Gox was a bitcoin exchange. In 2013 it was handling about 70% of all bitcoins traded globally.
@@ -821,18 +821,18 @@ yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bitcoin/&quot;&gt;The barons of bitcoin&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/bitcoin/&quot;&gt;The barons of bitcoin&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 18, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[GradCon 2014 poster]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/GradCon2014/" />
-		<id>http://epijim.co.uk/articles/GradCon2014</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/GradCon2014/" />
+		<id>http://epijim.uk/articles/GradCon2014</id>
 		<published>2014-04-15T00:00:00+01:00</published>
 		<updated>2014-04-15T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -845,18 +845,18 @@ yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
  was both fun to make, and financially rewarding.&lt;/p&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Publish or perish - there's a model for that.]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/hindex/" />
-		<id>http://epijim.co.uk/articles/hindex</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/hindex/" />
+		<id>http://epijim.uk/articles/hindex</id>
 		<published>2014-04-11T00:00:00+01:00</published>
 		<updated>2014-04-11T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;A rather contentious talking point in academia is the belief that it’s publish or perish.
@@ -1013,18 +1013,18 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/hindex/&quot;&gt;Publish or perish - there's a model for that.&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/hindex/&quot;&gt;Publish or perish - there's a model for that.&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Animated plots in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/gifsinr/" />
-		<id>http://epijim.co.uk/articles/gifsinr</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/gifsinr/" />
+		<id>http://epijim.uk/articles/gifsinr</id>
 		<published>2014-04-11T00:00:00+01:00</published>
 		<updated>2014-04-11T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;In my post on bitcoins, I wanted to show 2 dimensions of data, which lends itself to a scatter
@@ -6346,18 +6346,18 @@ graphname &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span c
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/gifsinr/&quot;&gt;Animated plots in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/gifsinr/&quot;&gt;Animated plots in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Scatter plots with R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/Scatterplots/" />
-		<id>http://epijim.co.uk/articles/Scatterplots</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/Scatterplots/" />
+		<id>http://epijim.uk/articles/Scatterplots</id>
 		<published>2014-04-10T00:00:00+01:00</published>
 		<updated>2014-04-10T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;After the histogram, scatter plots are pretty much always the first plot I make when
@@ -6714,18 +6714,18 @@ code &lt;a href=&quot;/articles/3Dscatter/&quot;&gt;is here&lt;/a&gt;.&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/Scatterplots/&quot;&gt;Scatter plots with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/Scatterplots/&quot;&gt;Scatter plots with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Scatter plot matrix with R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/Scatterplotmatrix/" />
-		<id>http://epijim.co.uk/articles/Scatterplotmatrix</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/Scatterplotmatrix/" />
+		<id>http://epijim.uk/articles/Scatterplotmatrix</id>
 		<published>2014-04-10T00:00:00+01:00</published>
 		<updated>2014-04-10T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Scatter plot matrices tend to be something I always run, but never present. So I don’t bother
@@ -6760,18 +6760,18 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/Scatterplotmatrix/&quot;&gt;Scatter plot matrix with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/Scatterplotmatrix/&quot;&gt;Scatter plot matrix with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Bubble tables with R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/bubbletable/" />
-		<id>http://epijim.co.uk/articles/bubbletable</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/bubbletable/" />
+		<id>http://epijim.uk/articles/bubbletable</id>
 		<published>2014-04-01T00:00:00+01:00</published>
 		<updated>2014-04-01T00:00:00+01:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;The bubble plot strips the data away from tables to try and show patterns, in a context
@@ -6899,18 +6899,18 @@ ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata_long&lt;span class=&q
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/bubbletable/&quot;&gt;Bubble tables with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/bubbletable/&quot;&gt;Bubble tables with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 01, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[3D scatter plot in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/3Dscatter/" />
-		<id>http://epijim.co.uk/articles/3Dscatter</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/3Dscatter/" />
+		<id>http://epijim.uk/articles/3Dscatter</id>
 		<published>2014-03-10T00:00:00+00:00</published>
 		<updated>2014-03-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;h3 id=&quot;d-scatter-plot&quot;&gt;3D scatter plot&lt;/h3&gt;
@@ -6969,18 +6969,18 @@ play3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;par3dinterp&lt;span class=&q
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/3Dscatter/&quot;&gt;3D scatter plot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on March 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting data from the ski tracks app in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/ski-2014/" />
-		<id>http://epijim.co.uk/articles/ski-2014</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/ski-2014/" />
+		<id>http://epijim.uk/articles/ski-2014</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;A week ago Tina and I went skiing at an Austrian resort called Pitztal. While it’s a pretty small
@@ -7130,18 +7130,18 @@ code &lt;a href=&quot;http://epijim.co.uk/articles/3Dscatter/&quot;&gt;is here&l
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/ski-2014/&quot;&gt;Plotting data from the ski tracks app in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting paths in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/pathsinr/" />
-		<id>http://epijim.co.uk/articles/pathsinr</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/pathsinr/" />
+		<id>http://epijim.uk/articles/pathsinr</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;h3 id=&quot;get-the-base-map-from-google&quot;&gt;Get the base map from google&lt;/h3&gt;
@@ -7195,18 +7195,18 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/pathsinr/&quot;&gt;Plotting paths in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Making a dotplot in R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/dotplot/" />
-		<id>http://epijim.co.uk/articles/dotplot</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/dotplot/" />
+		<id>http://epijim.uk/articles/dotplot</id>
 		<published>2014-03-09T00:00:00+00:00</published>
 		<updated>2014-03-09T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Dot plots have a continuos variable, plotted against a factor. Usually with form of jitter and
@@ -7222,18 +7222,18 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 &lt;/figure&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/dotplot/&quot;&gt;Making a dotplot in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on March 09, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Restaurant hygiene ratings in Cambridge]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/restaurant-hygiene/" />
-		<id>http://epijim.co.uk/articles/restaurant-hygiene</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/restaurant-hygiene/" />
+		<id>http://epijim.uk/articles/restaurant-hygiene</id>
 		<published>2014-02-19T00:00:00+00:00</published>
 		<updated>2014-02-19T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -7399,19 +7399,19 @@ ggsave&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/restaurant-hygiene/&quot;&gt;Restaurant hygiene ratings in Cambridge&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[How to plot FB network data]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/facebook-howto/" />
-		<id>http://epijim.co.uk/articles/facebook-howto</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/facebook-howto/" />
+		<id>http://epijim.uk/articles/facebook-howto</id>
 		<updated>2014-02-19T00:00:00-00:00</updated>
 		<published>2014-02-19T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;In an &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;earlier post I showed my facebook friend network&lt;/a&gt;, plotted with R. Below is the code.
@@ -7564,18 +7564,18 @@ dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 	&lt;figcaption&gt;KK: an algorithm for drawing general undirected graphs by Kamada and Kawai.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-howto/&quot;&gt;How to plot FB network data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/facebook-howto/&quot;&gt;How to plot FB network data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Contour mapping Cambridge crime]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/crime-cambridge/" />
-		<id>http://epijim.co.uk/articles/crime-cambridge</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/crime-cambridge/" />
+		<id>http://epijim.uk/articles/crime-cambridge</id>
 		<published>2014-02-19T00:00:00+00:00</published>
 		<updated>2014-02-19T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;The Cambridge Constabulary &lt;a href=&quot;http://data.police.uk/data/&quot;&gt;has location data&lt;/a&gt; on just over 280,000 crimes that have happened
@@ -7722,18 +7722,18 @@ CambridgeMap &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; stat_density2d&lt;sp
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/crime-cambridge/&quot;&gt;Contour mapping Cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/crime-cambridge/&quot;&gt;Contour mapping Cambridge crime&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 19, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Jesus College MCR webpage]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/analysing-mcr-page/" />
-		<id>http://epijim.co.uk/articles/analysing-mcr-page</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/analysing-mcr-page/" />
+		<id>http://epijim.uk/articles/analysing-mcr-page</id>
 		<published>2014-02-16T00:00:00+00:00</published>
 		<updated>2014-02-16T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;Throughout 2012 the Jesus MCR webpage was infected by a series of malicious scripts,
@@ -7818,18 +7818,18 @@ a much richer set of data is recorded.&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/analysing-mcr-page/&quot;&gt;Jesus College MCR webpage&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/analysing-mcr-page/&quot;&gt;Jesus College MCR webpage&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 16, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linkedin network map]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/linkedin-network/" />
-		<id>http://epijim.co.uk/articles/linkedin-network</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/linkedin-network/" />
+		<id>http://epijim.uk/articles/linkedin-network</id>
 		<published>2014-02-14T00:00:00+00:00</published>
 		<updated>2014-02-14T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;In an earlier post, I &lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;plotted my Facebook network using R&lt;/a&gt;.
@@ -7844,18 +7844,18 @@ a much richer set of data is recorded.&lt;/p&gt;
 	&lt;figcaption&gt;My plot created by the inmaps app.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/linkedin-network/&quot;&gt;Linkedin network map&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 14, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Linear regression with R]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/regression/" />
-		<id>http://epijim.co.uk/articles/regression</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/regression/" />
+		<id>http://epijim.uk/articles/regression</id>
 		<published>2014-02-11T00:00:00+00:00</published>
 		<updated>2014-02-11T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;html&gt;
@@ -8372,18 +8372,18 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 
 &lt;/html&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/regression/&quot;&gt;Linear regression with R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Wine spend and academic performance]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/wine-budget/" />
-		<id>http://epijim.co.uk/articles/wine-budget</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/wine-budget/" />
+		<id>http://epijim.uk/articles/wine-budget</id>
 		<published>2014-02-10T00:00:00+00:00</published>
 		<updated>2014-02-10T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;p&gt;About a week ago a good friend of mine, Tim, showed me a link to an economist blog post&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
@@ -8613,18 +8613,18 @@ what do the numbers look like if I attempt to adjust out
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/wine-budget/&quot;&gt;Wine spend and academic performance&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Visualising flow with a sankey plot]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/sankey-arrow-plot/" />
-		<id>http://epijim.co.uk/articles/sankey-arrow-plot</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/sankey-arrow-plot/" />
+		<id>http://epijim.uk/articles/sankey-arrow-plot</id>
 		<published>2014-02-05T00:00:00+00:00</published>
 		<updated>2014-02-05T00:00:00+00:00</updated>
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -8702,19 +8702,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/sankey-arrow-plot/&quot;&gt;Visualising flow with a sankey plot&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Plotting my Facebook data]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/facebook-network/" />
-		<id>http://epijim.co.uk/articles/facebook-network</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/facebook-network/" />
+		<id>http://epijim.uk/articles/facebook-network</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2014-02-05T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -9419,19 +9419,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Facebook friend migrations]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/great-circles/" />
-		<id>http://epijim.co.uk/articles/great-circles</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/great-circles/" />
+		<id>http://epijim.uk/articles/great-circles</id>
 		<updated>2014-02-13T00:00:00-00:00</updated>
 		<published>2014-01-26T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -9505,19 +9505,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
 	&lt;figcaption&gt;Zoomed into NZ. Once again, hometown is in blue, location now in red.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Mapping my google location data]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/mapping-python/" />
-		<id>http://epijim.co.uk/articles/mapping-python</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/mapping-python/" />
+		<id>http://epijim.uk/articles/mapping-python</id>
 		<updated>2014-02-11T00:00:00-00:00</updated>
 		<published>2013-12-19T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -9892,19 +9892,19 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
   &lt;/ol&gt;
 &lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/mapping-python/&quot;&gt;Mapping my google location data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on December 19, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[In-text distributions]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.co.uk/articles/intext-distributions/" />
-		<id>http://epijim.co.uk/articles/intext-distributions</id>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/intext-distributions/" />
+		<id>http://epijim.uk/articles/intext-distributions</id>
 		<updated>2013-12-02T00:00:00-00:00</updated>
 		<published>2013-12-02T00:00:00+00:00</published>
 		
 		<author>
 			<name>James Black</name>
-			<uri>http://epijim.co.uk</uri>
+			<uri>http://epijim.uk</uri>
 			<email>james.black@cantab.net</email>
 		</author>
 		<content type="html">&lt;figure&gt;
@@ -9947,7 +9947,7 @@ Ten-year modelled CVD risk was 27.3 (SD 13.9, histogram
 &lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-		&lt;p&gt;&lt;a href=&quot;http://epijim.co.uk/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.co.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.co.uk&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
