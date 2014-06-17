@@ -242,12 +242,11 @@ library<span class="p">(</span>psych<span class="p">)</span> <span class="c1"># 
   <span class="c1"># outcome data. Same with context. For now I&#39;ll focus on location, </span>
   <span class="c1"># time and type of crime</span>
  
-  <span class="c1">#DATA ISSUES. Time is a factor variable.</span>
-</code></pre></div>
+  <span class="c1">#DATA ISSUES. Time is a factor variable.</span></code></pre></div>
 
 <p>And now plot it.</p>
 
-<div class="highlight"><pre><code class="r">  theme_bare <span class="o">&lt;-</span> theme<span class="p">(</span>axis.line <span class="o">=</span> element_blank<span class="p">(),</span> 
+<div class="highlight"><pre><code class="r">theme_bare <span class="o">&lt;-</span> theme<span class="p">(</span>axis.line <span class="o">=</span> element_blank<span class="p">(),</span> 
                       axis.text.x <span class="o">=</span> element_blank<span class="p">(),</span> 
                       axis.text.y <span class="o">=</span> element_blank<span class="p">(),</span>
                       axis.ticks <span class="o">=</span> element_blank<span class="p">(),</span> 
@@ -264,8 +263,7 @@ CambridgeMap <span class="o">+</span> stat_density2d<span class="p">(</span>aes<
                                    fill<span class="o">=</span>..level.. <span class="p">,</span> alpha<span class="o">=</span>..level.. <span class="p">),</span> 
                               data<span class="o">=</span>crime_data<span class="p">,</span> bins<span class="o">=</span><span class="m">6</span> <span class="p">,</span>geom <span class="o">=</span> <span class="s">&quot;polygon&quot;</span> <span class="p">)</span> <span class="o">+</span> 
                               scale_fill_gradient<span class="p">(</span>low <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span> high <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">)</span> <span class="o">+</span> 
-                              facet_wrap<span class="p">(</span><span class="o">~</span> Crime.type<span class="p">)</span> <span class="o">+</span> theme_bare
-</code></pre></div>
+                              facet_wrap<span class="p">(</span><span class="o">~</span> Crime.type<span class="p">)</span> <span class="o">+</span> theme_bare</code></pre></div>
 
 
 				<div class="entry-related">

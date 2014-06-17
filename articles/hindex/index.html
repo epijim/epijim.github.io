@@ -154,8 +154,7 @@
 install_github<span class="p">(</span><span class="s">&quot;jkeirstead/scholar&quot;</span><span class="p">)</span> <span class="c1"># google scholar package</span>
 library<span class="p">(</span>xkcd<span class="p">)</span> <span class="c1"># xkcd graphs!</span>
 library<span class="p">(</span>extrafont<span class="p">)</span> <span class="c1"># xkcd fonts</span>
-library<span class="p">(</span>ggplot2<span class="p">)</span> <span class="c1"># best package ever</span>
-</code></pre></div>
+library<span class="p">(</span>ggplot2<span class="p">)</span> <span class="c1"># best package ever</span></code></pre></div>
 
 <p>And check the connection with google scholar. For the <em>id</em>, it’s the bit after <em>user=</em> in
  your google scholar profile url.</p>
@@ -168,8 +167,7 @@ attach<span class="p">(</span>james<span class="p">)</span>
               <span class="c1"># on the WHO Global Burden of Disease paper</span>
   h_index <span class="c1"># 5</span>
   i10_index <span class="c1"># 3</span>
-detach<span class="p">(</span>james<span class="p">)</span>
-</code></pre></div>
+detach<span class="p">(</span>james<span class="p">)</span></code></pre></div>
 
 <p>And now I’ll scrape one of my two supervisors pages.</p>
 
@@ -180,8 +178,7 @@ attach<span class="p">(</span>simon<span class="p">)</span>
   total_cites <span class="c1"># 9673</span>
   h_index <span class="c1"># 50</span>
   i10_index <span class="c1"># 118</span>
-detach<span class="p">(</span>simon<span class="p">)</span>
-</code></pre></div>
+detach<span class="p">(</span>simon<span class="p">)</span></code></pre></div>
 
 <p>The google scholar package allows you to compare the citations for different authors over time.
  In the following code block I pull the citations per year for myself, one of my supervisors, 
@@ -205,8 +202,7 @@ ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</s
   ggtitle<span class="p">(</span>expression<span class="p">(</span>atop<span class="p">(</span><span class="s">&quot;Comparing citations&quot;</span><span class="p">,</span> 
                           atop<span class="p">(</span>italic<span class="p">(</span><span class="s">&quot;Cam&#39;s Prof of Risk, my supervisor and me&quot;</span><span class="p">),</span> <span class="s">&quot;&quot;</span><span class="p">))))</span><span class="o">+</span>
   theme<span class="p">(</span>legend.position<span class="o">=</span>c<span class="p">(</span><span class="m">0.3</span><span class="p">,</span> <span class="m">0.85</span><span class="p">))</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/hindex_plot1.png"><img src="/images/hindex_plot1.png" /></a>
@@ -230,8 +226,7 @@ david_h <span class="o">&lt;-</span> predict_h_index<span class="p">(</span><spa
   david_h<span class="o">$</span>name <span class="o">&lt;-</span> <span class="s">&quot;Prof Spiegelhalter&quot;</span>
 
 h_index <span class="o">&lt;-</span> rbind<span class="p">(</span>simon_h<span class="p">,</span>james_h<span class="p">)</span>
-h_index <span class="o">&lt;-</span> rbind<span class="p">(</span>h_index<span class="p">,</span>david_h<span class="p">)</span>
-</code></pre></div>
+h_index <span class="o">&lt;-</span> rbind<span class="p">(</span>h_index<span class="p">,</span>david_h<span class="p">)</span></code></pre></div>
 
 <p>Now I have a dataframe with predicted H-indexes, so I can plot them. Using an XKCD theme
  of course.</p>
@@ -248,8 +243,7 @@ ggplot<span class="p">(</span>h_index<span class="p">,</span> aes<span class="p"
   ggtitle<span class="p">(</span>expression<span class="p">(</span>atop<span class="p">(</span><span class="s">&quot;Predicting H index over the next 10 years&quot;</span><span class="p">,</span> 
                           atop<span class="p">(</span>italic<span class="p">(</span><span class="s">&quot;For Cam&#39;s Prof of Risk, my supervisor and me&quot;</span><span class="p">),</span> <span class="s">&quot;&quot;</span><span class="p">))))</span><span class="o">+</span>
   theme<span class="p">(</span>legend.position<span class="o">=</span>c<span class="p">(</span><span class="m">0.60</span><span class="p">,</span> <span class="m">0.40</span><span class="p">))</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/hindex_plot2.png"><img src="/images/hindex_plot2.png" /></a>

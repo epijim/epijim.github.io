@@ -150,8 +150,7 @@ mydata<span class="o">$</span>Wine_budget <span class="o">&lt;-</span> mydata<sp
 options<span class="p">(</span>scipen<span class="o">=</span><span class="m">999</span><span class="p">)</span> <span class="c1"># no scientific notation</span>
 
 <span class="c1"># Just in case, I&#39;ll duplicate college as a string variable.</span>
-mydata<span class="o">$</span>College_char <span class="o">&lt;-</span> as.character<span class="p">(</span>mydata<span class="o">$</span>College<span class="p">)</span>
-</code></pre></div>
+mydata<span class="o">$</span>College_char <span class="o">&lt;-</span> as.character<span class="p">(</span>mydata<span class="o">$</span>College<span class="p">)</span></code></pre></div>
 
 <h2 id="scatter-plot-with-rug">Scatter plot with rug</h2>
 
@@ -165,8 +164,7 @@ mydata<span class="o">$</span>College_char <span class="o">&lt;-</span> as.chara
   xlab<span class="p">(</span><span class="s">&quot;Year college was founded&quot;</span><span class="p">)</span><span class="o">+</span>
   ylab<span class="p">(</span><span class="s">&quot;Wine budget in thousands&quot;</span><span class="p">)</span><span class="o">+</span>
   ggtitle<span class="p">(</span><span class="s">&quot;Scatter of year Cambridge college founded and wine budget&quot;</span><span class="p">)</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/scatterplot_1_rug.png"><img src="/images/scatterplot_1_rug.png" /></a>
@@ -222,8 +220,7 @@ png<span class="p">(</span><span class="s">&quot;scatterplot_2_hist.png&quot;</s
 grid.arrange<span class="p">(</span>plot_top<span class="p">,</span> empty<span class="p">,</span> scatter<span class="p">,</span> plot_right<span class="p">,</span> 
              ncol<span class="o">=</span><span class="m">2</span><span class="p">,</span> nrow<span class="o">=</span><span class="m">2</span><span class="p">,</span> widths<span class="o">=</span>c<span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> heights<span class="o">=</span>c<span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span>
              main<span class="o">=</span><span class="s">&quot;Scatter of year Cambridge college founded and wine budget \nby A/B/C Board of Graduate Studies college grading&quot;</span><span class="p">)</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/scatterplot_2_hist.png"><img src="/images/scatterplot_2_hist.png" /></a>
@@ -248,8 +245,7 @@ png<span class="p">(</span><span class="s">&quot;scatter_2_hexbin.png&quot;</spa
        xlab<span class="o">=</span><span class="s">&quot;Days since Jan 1st 1970&quot;</span><span class="p">,</span>
        ylab<span class="o">=</span><span class="s">&quot;Log10 of price per bitcoin&quot;</span>
        <span class="p">)</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/scatter_2_hexbin.png"><img src="/images/scatter_2_hexbin.png" /></a>
@@ -278,8 +274,7 @@ plot<span class="p">(</span>Undergrad_acceptances<span class="o">~</span>Undergr
      pch<span class="o">=</span><span class="m">20</span><span class="p">,</span> col<span class="o">=</span>colours<span class="p">,</span> cex<span class="o">=</span><span class="m">2</span><span class="p">,</span>
      xlab<span class="o">=</span><span class="s">&quot;Undergraduate applications&quot;</span><span class="p">,</span> 
      ylab<span class="o">=</span><span class="s">&quot;Undergraduate acceptances&quot;</span><span class="p">)</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/scatter_3_heatmap.png"><img src="/images/scatter_3_heatmap.png" /></a>
@@ -295,8 +290,7 @@ plot<span class="p">(</span>mydata_naomit<span class="p">,</span>
      ylab<span class="o">=</span><span class="s">&quot;Undergraduate acceptances&quot;</span><span class="p">,</span> 
      pch<span class="o">=</span><span class="m">1</span><span class="p">,</span> cex<span class="o">=</span><span class="m">.4</span><span class="p">)</span>
 contour<span class="p">(</span>z<span class="p">,</span> drawlabels<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> nlevels<span class="o">=</span>levels<span class="p">,</span> col<span class="o">=</span>colours<span class="p">,</span> add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/scatter_3_contour.png"><img src="/images/scatter_3_contour.png" /></a>
@@ -335,8 +329,7 @@ rchart<span class="o">$</span>guides<span class="p">(</span>
 rchart<span class="o">$</span>set<span class="p">(</span>width <span class="o">=</span> <span class="m">550</span><span class="p">)</span> 
 rchart<span class="o">$</span>set<span class="p">(</span>height <span class="o">=</span> <span class="m">460</span><span class="p">)</span> 
 
-rchart<span class="o">$</span>save<span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> cdn<span class="o">=</span><span class="k-Variable">F</span><span class="p">)</span>
-</code></pre></div>
+rchart<span class="o">$</span>save<span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> cdn<span class="o">=</span><span class="k-Variable">F</span><span class="p">)</span></code></pre></div>
 
 <p>Most of above is pretty self explanatory - except maybe <em>cdn</em>. If you know you’ll have
  internet access, set it as true. If you have no internet, or don’t want to rely on the rCharts site, 

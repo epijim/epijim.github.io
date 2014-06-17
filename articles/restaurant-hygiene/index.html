@@ -146,25 +146,22 @@ library<span class="p">(</span>RColorBrewer<span class="p">)</span> <span class=
 
 setwd<span class="p">(</span><span class="s">&quot;folder to output to&quot;</span><span class="p">)</span>
 
-cam_restaurants <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;cam_restaurants.csv&quot;</span><span class="p">)</span> <span class="c1"># load data </span>
-</code></pre></div>
+cam_restaurants <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&quot;cam_restaurants.csv&quot;</span><span class="p">)</span> <span class="c1"># load data</span></code></pre></div>
 
 <p>Now places like newsagents that sell food also get rated, so I’m going to subset out just the
  the kinda joints I’m really interested in.</p>
 
-<div class="highlight"><pre><code class="r">  selected<span class="o">&lt;-</span>c<span class="p">(</span><span class="s">&quot;Mobile caterer&quot;</span><span class="p">,</span>
+<div class="highlight"><pre><code class="r">selected<span class="o">&lt;-</span>c<span class="p">(</span><span class="s">&quot;Mobile caterer&quot;</span><span class="p">,</span>
               <span class="s">&quot;Pub/bar/nightclub&quot;</span><span class="p">,</span>
               <span class="s">&quot;Restaurant/Cafe/Canteen&quot;</span><span class="p">,</span>
               <span class="s">&quot;Takeaway/sandwich shop&quot;</span><span class="p">)</span>
-  cam_clip <span class="o">&lt;-</span> cam_restaurants<span class="p">[</span>cam_restaurants<span class="o">$</span>BusinessType <span class="o">%in%</span> selected<span class="p">,]</span>
-</code></pre></div>
+  cam_clip <span class="o">&lt;-</span> cam_restaurants<span class="p">[</span>cam_restaurants<span class="o">$</span>BusinessType <span class="o">%in%</span> selected<span class="p">,]</span></code></pre></div>
 
 <p>I’ll also need to get three maps of Cambridge at different magnifications.</p>
 
 <div class="highlight"><pre><code class="r">cam <span class="o">=</span> get_map<span class="p">(</span><span class="s">&#39;Cambridge, UK&#39;</span><span class="p">,</span><span class="m">13</span><span class="p">,</span>scale<span class="o">=</span><span class="m">4</span><span class="p">,</span> color<span class="o">=</span><span class="s">&quot;bw&quot;</span><span class="p">)</span>
 cam_mid <span class="o">=</span> get_map<span class="p">(</span><span class="s">&#39;Cambridge, UK&#39;</span><span class="p">,</span><span class="m">14</span><span class="p">,</span>scale<span class="o">=</span><span class="m">4</span><span class="p">,</span> color<span class="o">=</span><span class="s">&quot;bw&quot;</span><span class="p">)</span>
-cam_zoom <span class="o">=</span> get_map<span class="p">(</span><span class="s">&#39;Cambridge, UK&#39;</span><span class="p">,</span><span class="m">15</span><span class="p">,</span>scale<span class="o">=</span><span class="m">4</span><span class="p">,</span> color<span class="o">=</span><span class="s">&quot;bw&quot;</span><span class="p">)</span>
-</code></pre></div>
+cam_zoom <span class="o">=</span> get_map<span class="p">(</span><span class="s">&#39;Cambridge, UK&#39;</span><span class="p">,</span><span class="m">15</span><span class="p">,</span>scale<span class="o">=</span><span class="m">4</span><span class="p">,</span> color<span class="o">=</span><span class="s">&quot;bw&quot;</span><span class="p">)</span></code></pre></div>
 
 <p>And the first plot - where the food selling places are, and which of the four categories they are.</p>
 
@@ -176,8 +173,7 @@ ggmap<span class="p">(</span>cam<span class="p">)</span> <span class="o">+</span
                         size<span class="o">=</span><span class="m">2</span><span class="p">,</span>
                         alpha<span class="o">=</span><span class="m">0.5</span><span class="p">,</span>
                         shape<span class="o">=</span><span class="m">19</span><span class="p">)</span> 
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/hygiene_1.png"><img src="/images/hygiene_2.png" /></a>
@@ -192,8 +188,7 @@ dev.off<span class="p">()</span>
   combine1 <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">,</span> <span class="s">&quot;2&quot;</span><span class="p">)</span>
     levels<span class="p">(</span>cam_cut<span class="o">$</span>RatingValue<span class="p">)[</span>levels<span class="p">(</span>cam_cut<span class="o">$</span>RatingValue<span class="p">)</span> <span class="o">%in%</span> combine1<span class="p">]</span> <span class="o">&lt;-</span> paste<span class="p">(</span>abbreviate<span class="p">(</span>combine1<span class="p">,</span> <span class="m">5</span><span class="p">),</span> collapse <span class="o">=</span> <span class="s">&quot;&amp;&quot;</span><span class="p">)</span>
   combine2 <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">,</span><span class="s">&quot;3&quot;</span><span class="p">,</span> <span class="s">&quot;4&quot;</span><span class="p">,</span><span class="s">&quot;5&quot;</span><span class="p">,</span><span class="s">&quot;Exempt&quot;</span><span class="p">)</span>
-    levels<span class="p">(</span>cam_cut<span class="o">$</span>RatingValue<span class="p">)[</span>levels<span class="p">(</span>cam_cut<span class="o">$</span>RatingValue<span class="p">)</span> <span class="o">%in%</span> combine2<span class="p">]</span> <span class="o">&lt;-</span> paste<span class="p">(</span>abbreviate<span class="p">(</span>combine2<span class="p">,</span> <span class="m">5</span><span class="p">),</span> collapse <span class="o">=</span> <span class="s">&quot;&amp;&quot;</span><span class="p">)</span>
-</code></pre></div>
+    levels<span class="p">(</span>cam_cut<span class="o">$</span>RatingValue<span class="p">)[</span>levels<span class="p">(</span>cam_cut<span class="o">$</span>RatingValue<span class="p">)</span> <span class="o">%in%</span> combine2<span class="p">]</span> <span class="o">&lt;-</span> paste<span class="p">(</span>abbreviate<span class="p">(</span>combine2<span class="p">,</span> <span class="m">5</span><span class="p">),</span> collapse <span class="o">=</span> <span class="s">&quot;&amp;&quot;</span><span class="p">)</span></code></pre></div>
 
 <p>And now I plot the dirty (1-2) against the clean (3-5 and exempt). If you run this code, you’ll
  see the <em>extant</em> options makes sure my contour plot isn’t constrained. Which also meant I had
@@ -235,8 +230,7 @@ ggmap<span class="p">(</span>cam_mid<span class="p">,</span> extent <span class=
              alpha<span class="o">=</span><span class="m">1</span><span class="p">,</span>
              shape<span class="o">=</span><span class="m">19</span><span class="p">,</span>
              size<span class="o">=</span><span class="m">1</span><span class="p">)</span>
-dev.off<span class="p">()</span>
-</code></pre></div>
+dev.off<span class="p">()</span></code></pre></div>
 
 <figure>
 	<a href="/images/hygiene_3.png"><img src="/images/hygiene_3.png" /></a>
@@ -271,8 +265,7 @@ p <span class="o">&lt;-</span> p <span class="o">+</span> geom_text<span class="
                        <span class="p">),</span> 
                    size <span class="o">=</span> <span class="m">3</span><span class="p">,</span> vjust <span class="o">=</span> <span class="m">0</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">-0.5</span><span class="p">)</span>
 p
-ggsave<span class="p">(</span><span class="s">&quot;dodgey_name.pdf&quot;</span><span class="p">)</span>
-</code></pre></div>
+ggsave<span class="p">(</span><span class="s">&quot;dodgey_name.pdf&quot;</span><span class="p">)</span></code></pre></div>
 
 <figure>
 	<a href="/images/hygiene_1.png"><img src="/images/hygiene_1.png" /></a>

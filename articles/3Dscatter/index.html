@@ -132,8 +132,7 @@
 
 attach<span class="p">(</span>plotdata<span class="p">)</span>
 	plot3d<span class="p">(</span>latitude<span class="p">,</span> longitude<span class="p">,</span> altitude<span class="p">,</span> col<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> size<span class="o">=</span><span class="m">1</span><span class="p">)</span>
-detach<span class="p">(</span>plotdata<span class="p">)</span>
-</code></pre></div>
+detach<span class="p">(</span>plotdata<span class="p">)</span></code></pre></div>
 
 <p>On a mac, an XQuartz window will open up with the plot.</p>
 
@@ -172,8 +171,7 @@ par3d<span class="p">(</span>zoom <span class="o">=</span> <span class="m">0.5</
 <span class="c1"># Animate it</span>
 M <span class="o">=</span> par3d<span class="p">(</span><span class="s">&quot;userMatrix&quot;</span><span class="p">)</span>
 play3d<span class="p">(</span>par3dinterp<span class="p">(</span>userMatrix <span class="o">=</span> list<span class="p">(</span>M<span class="p">,</span> rotate3d<span class="p">(</span>M<span class="p">,</span> pi<span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> 
-                                     rotate3d<span class="p">(</span>M<span class="p">,</span> pi<span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))),</span> duration <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
-</code></pre></div>
+                                     rotate3d<span class="p">(</span>M<span class="p">,</span> pi<span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))),</span> duration <span class="o">=</span> <span class="m">5</span><span class="p">)</span></code></pre></div>
 
 <figure>
 	<a href="/images/ski_scattergif.gif"><img src="/images/scatter3d_scattergif2.gif" /></a>

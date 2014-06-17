@@ -162,8 +162,7 @@
   updown <span class="o">&lt;-</span> sapply<span class="p">(</span><span class="m">1</span><span class="o">:</span>nrow<span class="p">(</span>routes
                                  <span class="p">),</span>
                           <span class="kr">function</span><span class="p">(</span>i<span class="p">)</span> <span class="p">(</span>
-                            ifelse<span class="p">((</span>routes<span class="p">[</span>i<span class="p">,</span><span class="s">&quot;elevation&quot;</span><span class="p">]</span> <span class="o">-</span> routes<span class="p">[</span>i<span class="m">-1</span><span class="p">,</span><span class="s">&quot;elevation&quot;</span><span class="p">])</span><span class="o">&gt;</span><span class="m">0</span><span class="p">,</span><span class="s">&quot;Up&quot;</span><span class="p">,</span><span class="s">&quot;Down&quot;</span><span class="p">)))</span>
-</code></pre></div>
+                            ifelse<span class="p">((</span>routes<span class="p">[</span>i<span class="p">,</span><span class="s">&quot;elevation&quot;</span><span class="p">]</span> <span class="o">-</span> routes<span class="p">[</span>i<span class="m">-1</span><span class="p">,</span><span class="s">&quot;elevation&quot;</span><span class="p">])</span><span class="o">&gt;</span><span class="m">0</span><span class="p">,</span><span class="s">&quot;Up&quot;</span><span class="p">,</span><span class="s">&quot;Down&quot;</span><span class="p">)))</span></code></pre></div>
 
 <p>Unfortunately you do go up and down during a run, so I had to do some manual edits after.</p>
 
@@ -225,8 +224,7 @@ index <span class="o">&lt;-</span> unique<span class="p">(</span>map_data_2_trun
     <span class="p">],</span><span class="m">5</span><span class="p">,</span> fill<span class="o">=</span><span class="kc">NA</span><span class="p">)</span> <span class="c1"># Average over 5 points. Note, as at the start of a run you cant</span>
     <span class="c1">#				 have a rolling average, so some data points are lost, </span>
     <span class="c1">#                and become NA.</span>
-<span class="p">}</span>
-</code></pre></div>
+<span class="p">}</span></code></pre></div>
 
 <p>Now plotting the runs, colouring by the rolling average speed.</p>
 
