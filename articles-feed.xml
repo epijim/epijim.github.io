@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.uk" />
-	<updated>2014-06-17T20:57:09+01:00</updated>
+	<updated>2014-06-18T22:32:36+01:00</updated>
 	<id>http://epijim.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,341 +14,6 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.uk/articles-feed.xml" />
-	
-	<entry>
-		<title type="html"><![CDATA[Train times with D3]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/trains/" />
-		<id>http://epijim.uk/articles/trains</id>
-		<published>2014-06-14T00:00:00+01:00</published>
-		<updated>2014-06-14T00:00:00+01:00</updated>
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<summary type="text">Visualising train times with D3 (javascript).</summary>
-		<content type="html">&lt;p&gt;http://bl.ocks.org/mbostock/5544008&lt;/p&gt;
-
-&lt;iframe width=&quot;1200&quot; height=&quot;500&quot; src=&quot;http://epijim.uk/Trains&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;In the next plot is just the people with insulin dependent diabetes. In this group 29% of
- people died (those that died are the red dots). &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;charset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;px&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sans&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;axis&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;axis&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rendering&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;crispEdges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ddd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dasharray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rendering&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;crispEdges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;anchor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;circle&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;777&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/style&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://d3js.org/d3.v3.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stations&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// lazily loaded&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formatTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%I:%M%p&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;960&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parseTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;7:00PM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;parseTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1:45AM&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;002&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;purple&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;orange&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;interpolate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;interpolateLab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xAxis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ticks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tickFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;formatTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;height&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;translate(&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;defs&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;clipPath&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;clip&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;rect&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;height&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;top&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tsv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;schedule.tsv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;trains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;domain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;station&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;translate(0,&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;dy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;.35em&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;line&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;x2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;x top axis&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;orient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;top&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;x bottom axis&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;translate(0,&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xAxis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;orient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;bottom&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;train&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;clip-path&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;url(#clip)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/[NLB]/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;g&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;line&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;line&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;x1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;x2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;y1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;y2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;stroke&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;circle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;circle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;translate(&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// Extract the stations from the &amp;quot;stop|*&amp;quot; columns.&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/^stop\|/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;|&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;stations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;distance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;zone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;stops&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stations&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;station&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;parseTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])};&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;parseTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formatTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getHours&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;direction&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;London&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Finsbury&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Park&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;260&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Potters&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Bar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1380&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hatfield&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1970&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Welwyn&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2270&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Welwyn&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;North&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Knebworth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2890&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Stevenage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3180&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hitchin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3710&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Letchword&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3980&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Baldock&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4170&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Ashwell&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Morden&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4630&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Royston&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5060&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Meldreth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5440&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Shepreth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5610&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Foxton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5750&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Cambridge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6420&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;00&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;59&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pm&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;L&lt;/span&gt;	&lt;span class=&quot;nx&quot;&gt;S&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;41&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;	&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;am&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/trains/&quot;&gt;Train times with D3&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on June 14, 2014.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[New Zealand and sheep]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/sheep/" />
-		<id>http://epijim.uk/articles/sheep</id>
-		<published>2014-06-08T00:00:00+01:00</published>
-		<updated>2014-06-08T00:00:00+01:00</updated>
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<summary type="text">Does New Zealand still deserve the sheep jokes?</summary>
-		<content type="html">&lt;p&gt;When I say I grew up in New Zealand, a sheep joke often rears it’s head. I’ve always wondered
- how well that stereotype actually fit modern New Zealand. The claim we have 60,000,000 sheep 
- comes up fairly frequently, but I had no idea if that was close to the 
- contemporary population. Thankfully, Stats NZ provides the numbers, and below I’ve 
- plotted the numbers I got from their website.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;so-how-many-sheep-are-there&quot;&gt;So how many sheep are there?&lt;/h1&gt;
-
-&lt;p&gt;So at one point there were 70,301,461 sheep in New Zealand. That was back in 1982 though.
- The number of sheep in 2013 was 30,904,714. Now I’m assuming this is sheep declared to the 
- tax man (I’m hazy on where Stats NZ got such an exact number from), but I doubt it’s too much higher 
- in reality.&lt;/p&gt;
-
-&lt;p&gt;To put the numbers in context, in 2012 there were 10.8 million sheep in the UK&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and 74.4 million
- in Australia&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. &lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/sheep_1_sheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_1_sheep.jpeg&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&quot;and-the-number-per-person&quot;&gt;And the number per person?&lt;/h1&gt;
-
-&lt;p&gt;So in 2013 there were 30,904,714 sheep and 4,504,600 people. So that’s 6.86 sheep to every
- person. Back in 1981 though, there 21.79 sheep to every person in New Zealand. &lt;/p&gt;
-
-&lt;p&gt;In 2012 in the UK, there were 0.2 sheep per person, and 3.3 per person in Australia.&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; So
- compared to the British and Australians we’re the bigger sheep lovers. After the Kiwi’s, it’s 
- the Welsh that tend to bare the brunt of the sheep jokes. In Wales there are 2.8 sheep to 
- every person - so looks like the jokes are best directed at the Kiwi’s after all.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/sheep_2_sheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_2_sheep.jpeg&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&quot;and-how-much-is-farm-land&quot;&gt;And how much is farm land?&lt;/h1&gt;
-
-&lt;p&gt;New Zealand’s fertile lands gave it the nickname “Britain’s Breadbasket”&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; and, historically at least,
- huge swathes of the country were farmland. &lt;/p&gt;
-
-&lt;p&gt;I’d love to know what happened in the 70’s and 80’s. 
- I’m guessing the abrupt change may have had something to do with forestry, or it could be as 
- mundane as a change in the way land was classified. The Stat NZ site doesn’t have detailed 
- breakdowns from back then but the answer must be somewhere in the data.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/sheep_3_sheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_3_sheep.jpeg&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;A forestry report&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; I found claims that in 2010 land use was supposedly broken down like below 
- (I’ve replotted the reports pie graph as a bar chart, although I haven’t been fully converted 
- to being a pie-chart zealot by Tufte yet&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;). While the UK was about 69% farmland and 9% forest in 2010.&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
-
-&lt;p&gt;Despite NZ having the reputation of being greener, a greater of proportion of the UK is farmland. This doesn’t seem to make sense, and there may
- be some difference in how land use is measured, but it’s also due to the fact that around 
- 30% of NZ is currently a national park&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;, while the proportion is only around 9% in the UK&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/sheep_4_sheep.png&quot;&gt;&lt;img src=&quot;/images/sheep_4_sheep.png&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;While I was looking for the number of sheep in Australia I stumbled across
- a page on the Stats NZ site were they had already answered my first question.&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; They’ve gone 
- and explored a bunch of other myths about NZ as well, and the page is well worth a gander.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;EDIT:&lt;/em&gt;: my cousin mentioned she’d like to see how the cow population has changed. Below
- I plotted the number of dairy cows, against beef cows, with deer and pigs thrown in. This data only 
- starts in the 70’s, unlike the sheep data which starts in the 30’s.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/sheep_5_cows.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_5_cows.jpeg&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;And finally, to put the plot above in context, with sheep as well.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/sheep_6_withsheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_6_withsheep.jpeg&quot; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Stats NZ site http://www.stats.govt.nz/tools_and_services.aspx &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Eblex report http://www.eblex.org.uk/market-intelligence-news/uk-sheep-numbers-regional-breakdown/ &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Meat and Livestock Australia http://www.mla.com.au/Cattle-sheep-and-goat-industries/Industry-overview/Sheep &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;I just used wikipedia’s 2012 population estimates for the two countries. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;http://en.wikipedia.org/wiki/Breadbasket#New_Zealand &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot;&gt;
-      &lt;p&gt;Ministry for Primary Industries report http://www.mpi.govt.nz/portals/0/documents/forestry/statistics/forestry-stats/facts-figures-11-12.pdf &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:7&quot;&gt;
-      &lt;p&gt;Edward Tufte gives the pie chart a more succinct and decisive treatment in “The Visual Display of Quantitative Information” https://news.ycombinator.com/item?id=2991062 &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:8&quot;&gt;
-      &lt;p&gt;Not from the most reliable source… hccmpw.org.uk/index.php/tools/required/files/download?fID=2086 &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:9&quot;&gt;
-      &lt;p&gt;http://en.wikipedia.org/wiki/Protected_areas_of_New_Zealand &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:10&quot;&gt;
-      &lt;p&gt;http://en.wikipedia.org/wiki/National_parks_of_England_and_Wales &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:11&quot;&gt;
-      &lt;p&gt;Mythbusters site http://www.stats.govt.nz/browse_for_stats/population/mythbusters.aspx &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/sheep/&quot;&gt;New Zealand and sheep&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
-	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Simpson's paradox in diabetes (via javascript)]]></title>
@@ -1054,6 +719,5501 @@ yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
 
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[Publish or perish - there's a model for that.]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/hindex/" />
+		<id>http://epijim.uk/articles/hindex</id>
+		<published>2014-04-11T00:00:00+01:00</published>
+		<updated>2014-04-11T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Scraping Google Scholar for publications and predicting an h index.</summary>
+		<content type="html">&lt;p&gt;A rather contentious talking point in academia is the belief that it’s publish or perish.
+ Fanning the flames of this debate are measures like the H-index&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, which attempt to distill 
+ a researchers impact on the body of knowledge into a single metric.&lt;/p&gt;
+
+&lt;p&gt;Top explain the H-index, I’ll rely on the quote below, which was written by Daniel Acuna.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;One popular measure of success is physicist Jorge Hirsch’s h-index, which captures the quality (citations) and quantity (number) of papers, thus representing scientific achievements better than either factor alone. A scientist has an h-index of n if he or she has published n articles receiving at least n citations each. Einstein, Darwin and Feynman, for example, have impressive h-indices of 96, 63 and 53, respectively. According to Hirsch, an h-index of 12 for a physicist — meaning 12 papers with at least 12 citations each — could qualify him or her for tenure at a major university.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Acuna and his co-authors developed a model to predict future H-index&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, based on
+ previous publications and citations. Their sample contained 3,085 neuroscientists, 
+ 57 Drosophila researchers and 151 evolutionary scientists. From this population they built, 
+ and published, a model that explains about the same amount of variation in the outcome as 
+ the cardiovascular disease (CVD) risk score that is recommended for use in UK practices. &lt;/p&gt;
+
+&lt;p&gt;Unlike a CVD risk score though, there has been no external validations, so we don’t know how
+ well this model performs outside of the 3,000ish neuroscientists…&lt;/p&gt;
+
+&lt;p&gt;So with a plethora of caveats in hand - like always - there is an R package to connect this
+ model to people’s Google Scholar profiles.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I should stress now that I consider this model, and the H-index in general, a fun metric to play with. And not a true measure of the relevance and impact of someones research&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So first the packages needed to run this analysis. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;devtools&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# get the latest version&lt;/span&gt;
+install_github&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jkeirstead/scholar&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# google scholar package&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xkcd&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# xkcd graphs!&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;extrafont&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# xkcd fonts&lt;/span&gt;
+library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggplot2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# best package ever&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And check the connection with google scholar. For the &lt;em&gt;id&lt;/em&gt;, it’s the bit after &lt;em&gt;user=&lt;/em&gt; in
+ your google scholar profile url.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;id_j &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;-S7V41QAAAAJ&amp;#39;&lt;/span&gt;
+james &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_profile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_j&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+attach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;james&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  name &lt;span class=&quot;c1&quot;&gt;# me!&lt;/span&gt;
+  total_cites &lt;span class=&quot;c1&quot;&gt;# 1129 (although only as I&amp;#39;m one of 300 people&lt;/span&gt;
+              &lt;span class=&quot;c1&quot;&gt;# on the WHO Global Burden of Disease paper&lt;/span&gt;
+  h_index &lt;span class=&quot;c1&quot;&gt;# 5&lt;/span&gt;
+  i10_index &lt;span class=&quot;c1&quot;&gt;# 3&lt;/span&gt;
+detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;james&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And now I’ll scrape one of my two supervisors pages.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;id_s &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;6WC1bewAAAAJ&amp;#39;&lt;/span&gt;
+simon &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_profile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_s&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+attach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  name &lt;span class=&quot;c1&quot;&gt;# Simon Griffin MBBS MSc DM FRCGP&lt;/span&gt;
+  total_cites &lt;span class=&quot;c1&quot;&gt;# 9673&lt;/span&gt;
+  h_index &lt;span class=&quot;c1&quot;&gt;# 50&lt;/span&gt;
+  i10_index &lt;span class=&quot;c1&quot;&gt;# 118&lt;/span&gt;
+detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The google scholar package allows you to compare the citations for different authors over time.
+ In the following code block I pull the citations per year for myself, one of my supervisors, 
+ and the Winston Professor for the Public Understanding of Risk (an academic at Cambridge with 
+ one of my dream jobs).&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;ids &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;oz7MFu0AAAAJ&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; id_s&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;id_j&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Compare their career trajectories, based on year of first citation&lt;/span&gt;
+df &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; compare_scholar_careers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ids&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+xrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;career_year&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+yrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hindex_plot1.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;career_year&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;linetype&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  xkcdaxis&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xrange&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;yrange&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Citations that year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Year since first citation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  ggtitle&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;expression&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Comparing citations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                          atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;italic&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Cam&amp;#39;s Prof of Risk, my supervisor and me&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/hindex_plot1.png&quot;&gt;&lt;img src=&quot;/images/hindex_plot1.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Citations by year.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So my career is quite a bit behind - but as I’m only in the 2nd year of my PhD, I’m also
+ not really an academic yet.&lt;/p&gt;
+
+&lt;p&gt;Now to the H-index. The following code will use the google scholar profiles of myself and
+ the two other people who’s data I pulled to calculate the predicted trajectories of our H-indexes over 
+ the next 10-years. As I mentioned before - this model has not been validated in epidemiologists, 
+ so this is just for interest.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Predict my h-index&lt;/span&gt;
+simon_h &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; predict_h_index&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_s&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+  simon_h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Prof Griffin&amp;quot;&lt;/span&gt;
+james_h &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; predict_h_index&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_j&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  james_h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;James Black&amp;quot;&lt;/span&gt;
+david_h &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; predict_h_index&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;oz7MFu0AAAAJ&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  david_h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Prof Spiegelhalter&amp;quot;&lt;/span&gt;
+
+h_index &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simon_h&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;james_h&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+h_index &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;david_h&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I have a dataframe with predicted H-indexes, so I can plot them. Using an XKCD theme
+ of course.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;xrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;years_ahead&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+yrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hindex_plot2.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;years_ahead&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;linetype&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  xkcdaxis&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xrange&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;yrange&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Predicted H index&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Years from 2014&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+  ggtitle&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;expression&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Predicting H index over the next 10 years&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                          atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;italic&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;For Cam&amp;#39;s Prof of Risk, my supervisor and me&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/hindex_plot2.png&quot;&gt;&lt;img src=&quot;/images/hindex_plot2.png&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Predicted H-index from April 2014 onwards.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So according to this model my H-index should increase from it’s current level of 5, to 16 in 10-years time. 10-years
+ from now it will be 8.5 years since I submitted my PhD. So I would be incredibly stoked 
+ to have 16 papers with more than 16 citations for each. Better yet, it suggests my 
+ current trajectory seems to avoid &lt;em&gt;perish&lt;/em&gt;. Sadly, I don’t have much faith in the prophetic 
+ abilities of this model, especially as it’s based off only a handful of publications. &lt;/p&gt;
+
+&lt;p&gt;I’m also really hoping no-one at a funding
+ body or fellowship board gets carried away with this model. I’m afraid that the big winners from 
+ these sorts of scores becoming more important would be 
+ the vanity publishers like Hindawi and Dove Press, who will publish anything for a fee. &lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Hirsch. &lt;em&gt;Proc. Natl Acad. Sci.&lt;/em&gt; USA 102, 16569–16572 (&lt;strong&gt;2005&lt;/strong&gt;) &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Acuna. &lt;em&gt;Nature&lt;/em&gt; 489, 201–202 (&lt;strong&gt;2012&lt;/strong&gt;) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/hindex/&quot;&gt;Publish or perish - there's a model for that.&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
+	</entry>
+	
+	<entry>
+		<title type="html"><![CDATA[Animated plots in R]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/gifsinr/" />
+		<id>http://epijim.uk/articles/gifsinr</id>
+		<published>2014-04-11T00:00:00+01:00</published>
+		<updated>2014-04-11T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Making an animated scatter plot in R.</summary>
+		<content type="html">&lt;p&gt;In my post on bitcoins, I wanted to show 2 dimensions of data, which lends itself to a scatter
+ plot, but over time. There are easy ways to do that in r.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GoogleVis package
+    &lt;ul&gt;
+      &lt;li&gt;Makes Hans Rosling style motion charts using google API&lt;/li&gt;
+      &lt;li&gt;Allows interaction, where the user can change which components are plotted&lt;/li&gt;
+      &lt;li&gt;Expects time to be on the x-axis&lt;/li&gt;
+      &lt;li&gt;End product is an html snippet&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Manually using a loop to make each frame
+    &lt;ul&gt;
+      &lt;li&gt;A bit more effort than googleVis&lt;/li&gt;
+      &lt;li&gt;Gives you complete freedom to do anything you want&lt;/li&gt;
+      &lt;li&gt;Final product is a self contained gif with no dependencies&lt;/li&gt;
+      &lt;li&gt;End product is a gif&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below, I’ll give an example using both methods.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-googlevis-package&quot;&gt;The googleVis package&lt;/h1&gt;
+
+&lt;p&gt;Super easy to use, the data just needs to be in long format. The time format has to be
+ years or dates. In the dataset I’m feeding in the time interval is actually 30 seconds. 
+ So ignore the time scale in this plot, I didn’t really take years to ski down the mountain.&lt;/p&gt;
+
+&lt;p&gt;The data is from day one of my recent trip to Austria for skiing. If you hit play, you can
+ see the lift rides heading up, and the ski runs are when the bubbles descend. Distance is 
+ sum of how far I had travelled over the whole day.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;googleVis&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Open the googleVis package&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Create graph&lt;/span&gt;
+Motion_plot &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; gvisMotionChart&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;skidata_collapsed&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                               idvar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;run&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                               timevar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                               xvar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;distance.km&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                               yvar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;altitude.m&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                               sizevar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;speed.kmhr&amp;quot;&lt;/span&gt;
+                               &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Take a gander at it&lt;/span&gt;
+	plot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Motion_plot&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	
+&lt;span class=&quot;c1&quot;&gt;# Print HTML file&lt;/span&gt;
+	print&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;Motion_plot&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;gvisplot.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;title&gt;Example motion chart with ill suited data&lt;/title&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;!-- MotionChart generated in R 3.0.2 by googleVis 0.4.7 package --&gt;
+&lt;!-- Fri Apr 11 10:39:58 2014 --&gt;
+
+
+&lt;!-- jsHeader --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ 
+// jsData 
+function gvisDataMotionChartID24753f6d5f93 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ &quot;Run 1&quot;,
+0,
+0.0127,
+2840.6,
+-8.7,
+7.4 
+],
+[
+ &quot;Run 1&quot;,
+0.5,
+0.0776,
+2834.8,
+-7.8,
+11.8 
+],
+[
+ &quot;Run 1&quot;,
+1,
+0.1444,
+2830.5,
+-5,
+7.8 
+],
+[
+ &quot;Run 1&quot;,
+1.5,
+0.2117,
+2827.1,
+-7.3,
+14 
+],
+[
+ &quot;Run 1&quot;,
+2,
+0.336,
+2807.45,
+-20.55,
+24.2 
+],
+[
+ &quot;Run 1&quot;,
+2.5,
+0.471,
+2779.6,
+-18.35,
+23.8 
+],
+[
+ &quot;Run 1&quot;,
+3,
+0.51975,
+2768.8,
+-23.1,
+6.95 
+],
+[
+ &quot;Run 1&quot;,
+3.5,
+0.5982,
+2750.9,
+-19.25,
+23.65 
+],
+[
+ &quot;Run 1&quot;,
+4,
+0.7838,
+2726.15,
+-9.8,
+24.75 
+],
+[
+ &quot;Run 1&quot;,
+4.5,
+0.95425,
+2700.75,
+-17.95,
+23.35 
+],
+[
+ &quot;Run 1&quot;,
+5,
+1.043,
+2685.6,
+-11.8,
+1 
+],
+[
+ &quot;Run 1&quot;,
+6.5,
+1.0615,
+2682.9,
+-2.1,
+0.9 
+],
+[
+ &quot;Run 2&quot;,
+0,
+1.0773,
+2685.65,
+15.85,
+2.8 
+],
+[
+ &quot;Run 2&quot;,
+0.5,
+1.1014,
+2689.8,
+17.85,
+7.2 
+],
+[
+ &quot;Run 2&quot;,
+1,
+1.1725,
+2700.6,
+13.4,
+12.85 
+],
+[
+ &quot;Run 2&quot;,
+1.5,
+1.2581,
+2714,
+23.8,
+12.7 
+],
+[
+ &quot;Run 2&quot;,
+2,
+1.3487,
+2736.05,
+28.1,
+12.35 
+],
+[
+ &quot;Run 2&quot;,
+2.5,
+1.43495,
+2764.85,
+38.4,
+11.8 
+],
+[
+ &quot;Run 2&quot;,
+3,
+1.51875,
+2794.1,
+29.7,
+10.55 
+],
+[
+ &quot;Run 2&quot;,
+3.5,
+1.5957,
+2815.5,
+25.6,
+11.4 
+],
+[
+ &quot;Run 2&quot;,
+4,
+1.6789,
+2831.2,
+13.6,
+13 
+],
+[
+ &quot;Run 2&quot;,
+4.5,
+1.7433,
+2835.8,
+3.9,
+11.8 
+],
+[
+ &quot;Run 3&quot;,
+0,
+1.7839,
+2836.05,
+-1.3,
+12.45 
+],
+[
+ &quot;Run 3&quot;,
+0.5,
+1.8246,
+2833.8,
+-8,
+12.5 
+],
+[
+ &quot;Run 4&quot;,
+0,
+1.8596,
+2833.4,
+3.9,
+8.3 
+],
+[
+ &quot;Run 4&quot;,
+0.5,
+1.9144,
+2835,
+3.35,
+11.9 
+],
+[
+ &quot;Run 4&quot;,
+1,
+1.966,
+2836.5,
+0.4,
+5.2 
+],
+[
+ &quot;Run 4&quot;,
+1.5,
+1.9864,
+2836.5,
+0.5,
+2.5 
+],
+[
+ &quot;Run 4&quot;,
+2,
+1.9966,
+2836.7,
+1.5,
+3.7 
+],
+[
+ &quot;Run 5&quot;,
+0,
+2.0071,
+2836.8,
+-2.4,
+2.5 
+],
+[
+ &quot;Run 5&quot;,
+0.5,
+2.0175,
+2836.2,
+-1,
+1.7 
+],
+[
+ &quot;Run 6&quot;,
+0,
+2.03425,
+2836.8,
+4.1,
+4.6 
+],
+[
+ &quot;Run 6&quot;,
+0.5,
+2.083,
+2843.3,
+19.3,
+10.7 
+],
+[
+ &quot;Run 6&quot;,
+1,
+2.16005,
+2858.85,
+22.15,
+10 
+],
+[
+ &quot;Run 6&quot;,
+1.5,
+2.2331,
+2875.2,
+22.5,
+11.3 
+],
+[
+ &quot;Run 6&quot;,
+2,
+2.30655,
+2893.35,
+26.25,
+9.9 
+],
+[
+ &quot;Run 6&quot;,
+2.5,
+2.3865,
+2914.2,
+25.5,
+13.4 
+],
+[
+ &quot;Run 6&quot;,
+3,
+2.4668,
+2934.3,
+23.9,
+11.4 
+],
+[
+ &quot;Run 6&quot;,
+3.5,
+2.54075,
+2948.65,
+13.2,
+9.15 
+],
+[
+ &quot;Run 6&quot;,
+4,
+2.60925,
+2956.35,
+10.05,
+10.3 
+],
+[
+ &quot;Run 6&quot;,
+4.5,
+2.6898,
+2968.3,
+17.1,
+10.5 
+],
+[
+ &quot;Run 6&quot;,
+5,
+2.7613,
+2977.6,
+12.4,
+8.7 
+],
+[
+ &quot;Run 6&quot;,
+5.5,
+2.8406,
+2991,
+19.8,
+15.5 
+],
+[
+ &quot;Run 6&quot;,
+6,
+2.92675,
+3006.8,
+12.3,
+9.85 
+],
+[
+ &quot;Run 6&quot;,
+6.5,
+2.9994,
+3018.6,
+18.5,
+10.3 
+],
+[
+ &quot;Run 6&quot;,
+7,
+3.07605,
+3033.5,
+19.85,
+11.45 
+],
+[
+ &quot;Run 6&quot;,
+7.5,
+3.1545,
+3047.8,
+19,
+10.9 
+],
+[
+ &quot;Run 6&quot;,
+8,
+3.23215,
+3066.6,
+24.65,
+10.45 
+],
+[
+ &quot;Run 6&quot;,
+8.5,
+3.30205,
+3083.3,
+21.9,
+9.35 
+],
+[
+ &quot;Run 6&quot;,
+9,
+3.3726,
+3099.25,
+28.95,
+10.05 
+],
+[
+ &quot;Run 6&quot;,
+9.5,
+3.4478,
+3121.3,
+24.3,
+12 
+],
+[
+ &quot;Run 6&quot;,
+10,
+3.5186,
+3137.95,
+22.5,
+8.8 
+],
+[
+ &quot;Run 6&quot;,
+10.5,
+3.5819,
+3152.8,
+25.2,
+8.7 
+],
+[
+ &quot;Run 6&quot;,
+11,
+3.64745,
+3168.9,
+23.1,
+9.15 
+],
+[
+ &quot;Run 6&quot;,
+11.5,
+3.7033,
+3182.35,
+28.2,
+7.05 
+],
+[
+ &quot;Run 6&quot;,
+12,
+3.7439,
+3193.6,
+26.5,
+9 
+],
+[
+ &quot;Run 7&quot;,
+0,
+3.7819,
+3200.9,
+-5.6,
+13 
+],
+[
+ &quot;Run 8&quot;,
+0,
+3.7971,
+3198.8,
+10.5,
+2 
+],
+[
+ &quot;Run 8&quot;,
+1.5,
+3.82875,
+3206.7,
+24.55,
+2.25 
+],
+[
+ &quot;Run 8&quot;,
+2,
+3.8491,
+3211.3,
+20.5,
+1.95 
+],
+[
+ &quot;Run 9&quot;,
+0,
+3.8653,
+3214.2,
+-8.9,
+1.1 
+],
+[
+ &quot;Run 9&quot;,
+1,
+3.91,
+3208.35,
+-19.5,
+21.2 
+],
+[
+ &quot;Run 9&quot;,
+1.5,
+4.0834,
+3166.85,
+-23.15,
+33.8 
+],
+[
+ &quot;Run 9&quot;,
+2,
+4.21995,
+3136.25,
+-21.05,
+27.55 
+],
+[
+ &quot;Run 9&quot;,
+2.5,
+4.3121,
+3118.25,
+-21.55,
+34.6 
+],
+[
+ &quot;Run 9&quot;,
+3,
+4.5403,
+3066.1,
+-21.8,
+38.9 
+],
+[
+ &quot;Run 9&quot;,
+3.5,
+4.74395,
+3024.4,
+-16.95,
+27.3 
+],
+[
+ &quot;Run 9&quot;,
+4,
+4.929,
+2992.1,
+-17.3,
+32.5 
+],
+[
+ &quot;Run 9&quot;,
+4.5,
+5.1091,
+2962.5,
+-15.9,
+33.5 
+],
+[
+ &quot;Run 9&quot;,
+5,
+5.2484,
+2939.1,
+-16.95,
+25.8 
+],
+[
+ &quot;Run 9&quot;,
+5.5,
+5.42155,
+2899.05,
+-25.6,
+40.55 
+],
+[
+ &quot;Run 9&quot;,
+6,
+5.5484,
+2878.3,
+-11,
+19.4 
+],
+[
+ &quot;Run 9&quot;,
+6.5,
+5.7057,
+2857.4,
+-13.8,
+23.5 
+],
+[
+ &quot;Run 9&quot;,
+7,
+5.8312,
+2844.1,
+-8.95,
+21.2 
+],
+[
+ &quot;Run 9&quot;,
+7.5,
+5.9216,
+2837.8,
+-5.3,
+23.8 
+],
+[
+ &quot;Run 9&quot;,
+8,
+5.9771,
+2833.7,
+-9.5,
+1.7 
+],
+[
+ &quot;Run 9&quot;,
+8.5,
+5.9881,
+2832.7,
+-5.5,
+1.3 
+],
+[
+ &quot;Run 10&quot;,
+0,
+6.0277,
+2833.6,
+8,
+14.4 
+],
+[
+ &quot;Run 10&quot;,
+0.5,
+6.10865,
+2846.4,
+28.1,
+13.8 
+],
+[
+ &quot;Run 10&quot;,
+1,
+6.2095,
+2871.1,
+14.9,
+14 
+],
+[
+ &quot;Run 11&quot;,
+0,
+6.2836,
+2876.9,
+-1.9,
+16 
+],
+[
+ &quot;Run 12&quot;,
+0,
+6.3342,
+2877.1,
+2.9,
+16 
+],
+[
+ &quot;Run 12&quot;,
+0.5,
+6.41865,
+2887.3,
+14.95,
+13.55 
+],
+[
+ &quot;Run 12&quot;,
+1,
+6.5112,
+2901.4,
+27.7,
+14.15 
+],
+[
+ &quot;Run 12&quot;,
+1.5,
+6.6137,
+2933,
+24.6,
+14 
+],
+[
+ &quot;Run 12&quot;,
+2,
+6.71595,
+2953.4,
+14.25,
+14.2 
+],
+[
+ &quot;Run 12&quot;,
+2.5,
+6.819,
+2966.9,
+18.7,
+14.2 
+],
+[
+ &quot;Run 12&quot;,
+3,
+6.9168,
+2994.1,
+36.85,
+13.35 
+],
+[
+ &quot;Run 12&quot;,
+3.5,
+7.0129,
+3024.2,
+27.25,
+13.6 
+],
+[
+ &quot;Run 12&quot;,
+4,
+7.1125,
+3058.6,
+40.2,
+13.6 
+],
+[
+ &quot;Run 12&quot;,
+4.5,
+7.20835,
+3095.3,
+44.3,
+13.75 
+],
+[
+ &quot;Run 12&quot;,
+5,
+7.30545,
+3139.15,
+41.7,
+12.55 
+],
+[
+ &quot;Run 12&quot;,
+5.5,
+7.39735,
+3177.1,
+40.45,
+14.1 
+],
+[
+ &quot;Run 12&quot;,
+6,
+7.49735,
+3223.9,
+38.45,
+14.95 
+],
+[
+ &quot;Run 12&quot;,
+6.5,
+7.5999,
+3253,
+21.2,
+13.2 
+],
+[
+ &quot;Run 12&quot;,
+7,
+7.69335,
+3265.4,
+27.55,
+12.85 
+],
+[
+ &quot;Run 12&quot;,
+7.5,
+7.78255,
+3300.65,
+46.5,
+12.7 
+],
+[
+ &quot;Run 12&quot;,
+8,
+7.87445,
+3349.9,
+51.2,
+13.65 
+],
+[
+ &quot;Run 12&quot;,
+8.5,
+7.93225,
+3380.75,
+38.05,
+7.25 
+],
+[
+ &quot;Run 13&quot;,
+0,
+7.958,
+3380.05,
+-12.9,
+4.45 
+],
+[
+ &quot;Run 14&quot;,
+0,
+7.9733,
+3379.4,
+4.3,
+5.4 
+],
+[
+ &quot;Run 15&quot;,
+0,
+7.9842,
+3380.2,
+-0.5,
+1.3 
+],
+[
+ &quot;Run 15&quot;,
+1,
+8.008,
+3377.9,
+-10.2,
+8 
+],
+[
+ &quot;Run 15&quot;,
+1.5,
+8.0642,
+3371.05,
+-11.85,
+20.55 
+],
+[
+ &quot;Run 16&quot;,
+0,
+8.1255,
+3369.65,
+6.3,
+25.2 
+],
+[
+ &quot;Run 17&quot;,
+0,
+8.20585,
+3361.3,
+-14.35,
+38.5 
+],
+[
+ &quot;Run 18&quot;,
+0,
+8.28225,
+3358.6,
+15.15,
+15.85 
+],
+[
+ &quot;Run 19&quot;,
+0,
+8.33265,
+3359.9,
+-16.55,
+13.3 
+],
+[
+ &quot;Run 19&quot;,
+0.5,
+8.4668,
+3333.8,
+-24.7,
+30.7 
+],
+[
+ &quot;Run 20&quot;,
+0,
+8.6104,
+3307.5,
+27.1,
+18.6 
+],
+[
+ &quot;Run 20&quot;,
+0.5,
+8.6603,
+3329.3,
+33.3,
+11.6 
+],
+[
+ &quot;Run 21&quot;,
+0,
+8.77435,
+3281.8,
+-44.15,
+34.95 
+],
+[
+ &quot;Run 21&quot;,
+0.5,
+8.9724,
+3219.95,
+-25.85,
+43.25 
+],
+[
+ &quot;Run 21&quot;,
+1,
+9.1485,
+3194.2,
+-17.2,
+23.2 
+],
+[
+ &quot;Run 21&quot;,
+1.5,
+9.27425,
+3152.35,
+-41.75,
+23.85 
+],
+[
+ &quot;Run 21&quot;,
+2,
+9.4153,
+3095.7,
+-32.4,
+34.4 
+],
+[
+ &quot;Run 21&quot;,
+2.5,
+9.46245,
+3082.55,
+-26.35,
+16.85 
+],
+[
+ &quot;Run 21&quot;,
+3,
+9.6794,
+3030.9,
+-14.05,
+54.1 
+],
+[
+ &quot;Run 21&quot;,
+3.5,
+9.93255,
+3008.8,
+-10.1,
+42.75 
+],
+[
+ &quot;Run 21&quot;,
+4,
+10.1018,
+2984.3,
+-14.4,
+32.9 
+],
+[
+ &quot;Run 21&quot;,
+4.5,
+10.2905,
+2956.45,
+-16.25,
+33.45 
+],
+[
+ &quot;Run 21&quot;,
+5,
+10.52245,
+2914.3,
+-21.7,
+40.3 
+],
+[
+ &quot;Run 21&quot;,
+5.5,
+10.7559,
+2872.3,
+-11.9,
+32 
+],
+[
+ &quot;Run 21&quot;,
+6,
+10.9607,
+2846,
+-9.1,
+33.4 
+],
+[
+ &quot;Run 21&quot;,
+6.5,
+11.0487,
+2838.8,
+-6.2,
+10.8 
+],
+[
+ &quot;Run 21&quot;,
+7,
+11.0923,
+2837,
+-5.5,
+15.1 
+],
+[
+ &quot;Run 21&quot;,
+9,
+11.1453,
+2833.9,
+-4.2,
+1.5 
+],
+[
+ &quot;Run 22&quot;,
+0,
+11.1876,
+2835.3,
+9.5,
+15.6 
+],
+[
+ &quot;Run 22&quot;,
+0.5,
+11.2667,
+2850.9,
+27.05,
+14.15 
+],
+[
+ &quot;Run 22&quot;,
+1,
+11.3642,
+2872.7,
+13.2,
+14.3 
+],
+[
+ &quot;Run 22&quot;,
+1.5,
+11.4653,
+2876.8,
+1.3,
+14.7 
+],
+[
+ &quot;Run 22&quot;,
+2,
+11.5743,
+2889.2,
+16.4,
+14.2 
+],
+[
+ &quot;Run 22&quot;,
+2.5,
+11.6751,
+2909.6,
+29.4,
+14.15 
+],
+[
+ &quot;Run 22&quot;,
+3,
+11.7745,
+2937.6,
+22.4,
+13.9 
+],
+[
+ &quot;Run 22&quot;,
+3.5,
+11.87465,
+2956.25,
+14.9,
+14.1 
+],
+[
+ &quot;Run 22&quot;,
+4,
+11.9738,
+2970.7,
+19.9,
+13.8 
+],
+[
+ &quot;Run 22&quot;,
+4.5,
+12.0692,
+2999.85,
+36.3,
+12.75 
+],
+[
+ &quot;Run 22&quot;,
+5,
+12.16855,
+3028.4,
+30.4,
+13.85 
+],
+[
+ &quot;Run 22&quot;,
+5.5,
+12.26255,
+3063.35,
+40.65,
+12.7 
+],
+[
+ &quot;Run 22&quot;,
+6,
+12.3618,
+3102.9,
+42.6,
+14.4 
+],
+[
+ &quot;Run 22&quot;,
+6.5,
+12.4576,
+3145.1,
+43.75,
+12.8 
+],
+[
+ &quot;Run 22&quot;,
+7,
+12.5513,
+3182.4,
+43,
+13.2 
+],
+[
+ &quot;Run 22&quot;,
+7.5,
+12.65015,
+3227.85,
+34.35,
+13.6 
+],
+[
+ &quot;Run 22&quot;,
+8,
+12.7468,
+3253.4,
+17.6,
+13.7 
+],
+[
+ &quot;Run 22&quot;,
+8.5,
+12.84315,
+3269.05,
+33.25,
+12.8 
+],
+[
+ &quot;Run 22&quot;,
+9,
+12.9342,
+3306.8,
+51.7,
+13.1 
+],
+[
+ &quot;Run 22&quot;,
+9.5,
+13.03,
+3356.2,
+50.6,
+11.9 
+],
+[
+ &quot;Run 22&quot;,
+10,
+13.0773,
+3384.3,
+33.9,
+2.4 
+],
+[
+ &quot;Run 23&quot;,
+0,
+13.0989,
+3383.7,
+-1.4,
+2.3 
+],
+[
+ &quot;Run 23&quot;,
+1,
+13.1206,
+3383.8,
+-1.4,
+1.4 
+],
+[
+ &quot;Run 23&quot;,
+1.5,
+13.1309,
+3383.4,
+-7.2,
+2.1 
+],
+[
+ &quot;Run 23&quot;,
+2,
+13.14765,
+3381.4,
+-14,
+1.15 
+],
+[
+ &quot;Run 23&quot;,
+4,
+13.1653,
+3378.7,
+5,
+0.3 
+],
+[
+ &quot;Run 23&quot;,
+9.5,
+13.1877,
+3382.2,
+14.2,
+0.4 
+],
+[
+ &quot;Run 23&quot;,
+10,
+13.2038,
+3383.55,
+-2.5,
+2.25 
+],
+[
+ &quot;Run 23&quot;,
+11,
+13.2195,
+3380.9,
+-22,
+1 
+],
+[
+ &quot;Run 23&quot;,
+11.5,
+13.23555,
+3378.35,
+-14.25,
+4.6 
+],
+[
+ &quot;Run 23&quot;,
+12,
+13.33355,
+3370.1,
+-10.75,
+27.6 
+],
+[
+ &quot;Run 23&quot;,
+12.5,
+13.4815,
+3359.5,
+-1.15,
+30.25 
+],
+[
+ &quot;Run 23&quot;,
+13,
+13.59105,
+3359.95,
+-6.45,
+26.15 
+],
+[
+ &quot;Run 23&quot;,
+13.5,
+13.73985,
+3324.75,
+-40.05,
+30.1 
+],
+[
+ &quot;Run 23&quot;,
+14,
+13.983,
+3227.5,
+-28.4,
+39.7 
+],
+[
+ &quot;Run 23&quot;,
+14.5,
+14.1325,
+3190.8,
+-29.3,
+22.6 
+],
+[
+ &quot;Run 23&quot;,
+15,
+14.28555,
+3141.8,
+-31.3,
+34.7 
+],
+[
+ &quot;Run 23&quot;,
+15.5,
+14.5853,
+3052.8,
+-26.3,
+50.4 
+],
+[
+ &quot;Run 23&quot;,
+16,
+14.92065,
+2992.9,
+-11.15,
+61.4 
+],
+[
+ &quot;Run 23&quot;,
+16.5,
+15.1247,
+2963.3,
+-15.6,
+34.9 
+],
+[
+ &quot;Run 23&quot;,
+17,
+15.27575,
+2938.6,
+-20.3,
+29.7 
+],
+[
+ &quot;Run 23&quot;,
+17.5,
+15.4481,
+2895.5,
+-29.7,
+36.5 
+],
+[
+ &quot;Run 23&quot;,
+18,
+15.71565,
+2827.7,
+-20.35,
+42.75 
+],
+[
+ &quot;Run 23&quot;,
+18.5,
+15.9342,
+2787.35,
+-15.7,
+23.8 
+],
+[
+ &quot;Run 23&quot;,
+19,
+16.1005,
+2763.7,
+-14.8,
+29.4 
+],
+[
+ &quot;Run 23&quot;,
+19.5,
+16.3125,
+2734.1,
+-12.7,
+39.9 
+],
+[
+ &quot;Run 23&quot;,
+20,
+16.59305,
+2708.1,
+-13.15,
+32.1 
+],
+[
+ &quot;Run 23&quot;,
+20.5,
+16.7308,
+2689.6,
+-12.9,
+28.5 
+],
+[
+ &quot;Run 23&quot;,
+21,
+16.7603,
+2684.1,
+-13.6,
+0.7 
+],
+[
+ &quot;Run 24&quot;,
+0,
+16.7958,
+2688.6,
+19.4,
+17.3 
+],
+[
+ &quot;Run 24&quot;,
+0.5,
+16.8852,
+2705.5,
+15.9,
+16.7 
+],
+[
+ &quot;Run 24&quot;,
+1,
+17.0039,
+2718.6,
+8.4,
+16.7 
+],
+[
+ &quot;Run 24&quot;,
+1.5,
+17.1243,
+2725.2,
+8.6,
+15.8 
+],
+[
+ &quot;Run 24&quot;,
+2,
+17.24905,
+2740.1,
+21.75,
+16.85 
+],
+[
+ &quot;Run 24&quot;,
+2.5,
+17.3653,
+2767.5,
+20.1,
+16.2 
+],
+[
+ &quot;Run 24&quot;,
+3,
+17.4812,
+2786.2,
+20.2,
+15.8 
+],
+[
+ &quot;Run 24&quot;,
+3.5,
+17.5993,
+2834.4,
+62.5,
+14.5 
+],
+[
+ &quot;Run 24&quot;,
+4,
+17.71635,
+2900.55,
+49.3,
+15.55 
+],
+[
+ &quot;Run 24&quot;,
+4.5,
+17.81735,
+2937.45,
+18.7,
+13.2 
+],
+[
+ &quot;Run 24&quot;,
+5,
+17.8697,
+2945.8,
+17.6,
+1.6 
+],
+[
+ &quot;Run 24&quot;,
+5.5,
+17.8816,
+2947.6,
+10.3,
+2.2 
+],
+[
+ &quot;Run 24&quot;,
+6,
+17.92345,
+2949.45,
+6.4,
+18.05 
+],
+[
+ &quot;Run 24&quot;,
+6.5,
+18.0244,
+2962.5,
+15.6,
+16.5 
+],
+[
+ &quot;Run 24&quot;,
+7,
+18.1346,
+2979.4,
+12.3,
+15.7 
+],
+[
+ &quot;Run 24&quot;,
+7.5,
+18.2532,
+2996.7,
+19.1,
+17 
+],
+[
+ &quot;Run 24&quot;,
+8,
+18.3784,
+3021.5,
+16.1,
+16.1 
+],
+[
+ &quot;Run 24&quot;,
+8.5,
+18.4992,
+3039.95,
+13.4,
+16.1 
+],
+[
+ &quot;Run 24&quot;,
+9,
+18.6138,
+3059.7,
+24.7,
+16 
+],
+[
+ &quot;Run 24&quot;,
+9.5,
+18.7259,
+3091.5,
+23.9,
+16.2 
+],
+[
+ &quot;Run 24&quot;,
+10,
+18.8383,
+3115.7,
+27.3,
+16 
+],
+[
+ &quot;Run 24&quot;,
+10.5,
+18.95475,
+3160.05,
+47.45,
+17.85 
+],
+[
+ &quot;Run 24&quot;,
+11,
+19.073,
+3228.9,
+51.2,
+15.3 
+],
+[
+ &quot;Run 24&quot;,
+11.5,
+19.1454,
+3253.2,
+21.7,
+8.5 
+],
+[
+ &quot;Run 24&quot;,
+16,
+19.1876,
+3264.3,
+29.4,
+0.6 
+],
+[
+ &quot;Run 24&quot;,
+16.5,
+19.2504,
+3270.5,
+10.3,
+18.8 
+],
+[
+ &quot;Run 25&quot;,
+0,
+19.3376,
+3278.4,
+-25.6,
+13.1 
+],
+[
+ &quot;Run 25&quot;,
+0.5,
+19.3852,
+3260.4,
+-31.7,
+19.8 
+],
+[
+ &quot;Run 25&quot;,
+1,
+19.5048,
+3228.6,
+-25.8,
+27.65 
+],
+[
+ &quot;Run 25&quot;,
+1.5,
+19.6747,
+3194,
+-16,
+37 
+],
+[
+ &quot;Run 25&quot;,
+2.5,
+19.8213,
+3166.3,
+-22.8,
+40 
+],
+[
+ &quot;Run 25&quot;,
+3,
+20.03255,
+3131.9,
+-17.9,
+44.1 
+],
+[
+ &quot;Run 25&quot;,
+3.5,
+20.28115,
+3086.55,
+-17.15,
+29.7 
+],
+[
+ &quot;Run 25&quot;,
+4,
+20.55865,
+3051.2,
+-13.25,
+50 
+],
+[
+ &quot;Run 25&quot;,
+4.5,
+20.833,
+2997.8,
+-25.3,
+36.45 
+],
+[
+ &quot;Run 25&quot;,
+5,
+20.9814,
+2948.6,
+-38.7,
+27.6 
+],
+[
+ &quot;Run 25&quot;,
+5.5,
+21.1053,
+2921.6,
+-15.4,
+32.5 
+],
+[
+ &quot;Run 25&quot;,
+6,
+21.2434,
+2882.5,
+-32.2,
+38.6 
+],
+[
+ &quot;Run 25&quot;,
+6.5,
+21.4784,
+2806.8,
+-32.3,
+45.5 
+],
+[
+ &quot;Run 25&quot;,
+7,
+21.6832,
+2770.5,
+-7.15,
+36.85 
+],
+[
+ &quot;Run 25&quot;,
+7.5,
+21.7677,
+2767,
+-6.8,
+7.2 
+],
+[
+ &quot;Run 25&quot;,
+8,
+21.8786,
+2752.6,
+-14.2,
+22.3 
+],
+[
+ &quot;Run 25&quot;,
+8.5,
+22.0785,
+2729.2,
+-8.5,
+31.1 
+],
+[
+ &quot;Run 25&quot;,
+9,
+22.2263,
+2720.1,
+-10.4,
+13 
+],
+[
+ &quot;Run 25&quot;,
+9.5,
+22.3605,
+2701.1,
+-13.3,
+26.4 
+],
+[
+ &quot;Run 25&quot;,
+10,
+22.4689,
+2687.4,
+-19.7,
+5.4 
+],
+[
+ &quot;Run 25&quot;,
+11,
+22.4908,
+2683.1,
+-1.4,
+1.2 
+],
+[
+ &quot;Run 26&quot;,
+0,
+22.5014,
+2684.3,
+14.7,
+2.7 
+],
+[
+ &quot;Run 26&quot;,
+0.5,
+22.5562,
+2694,
+16,
+15.3 
+],
+[
+ &quot;Run 26&quot;,
+1,
+22.6451,
+2705.8,
+13.1,
+13.3 
+],
+[
+ &quot;Run 26&quot;,
+1.5,
+22.73785,
+2726.2,
+25.95,
+13.6 
+],
+[
+ &quot;Run 26&quot;,
+2,
+22.8358,
+2753.7,
+34.9,
+12.9 
+],
+[
+ &quot;Run 26&quot;,
+2.5,
+22.9312,
+2788.6,
+29.8,
+11.8 
+],
+[
+ &quot;Run 26&quot;,
+3,
+23.0226,
+2813.35,
+25.05,
+13.25 
+],
+[
+ &quot;Run 26&quot;,
+3.5,
+23.11815,
+2832.05,
+12.7,
+13.7 
+],
+[
+ &quot;Run 26&quot;,
+4,
+23.2157,
+2835.1,
+-2.2,
+13.7 
+],
+[
+ &quot;Run 26&quot;,
+4.5,
+23.3081,
+2834.2,
+1.7,
+11.8 
+],
+[
+ &quot;Run 26&quot;,
+5,
+23.3736,
+2834.45,
+-2.75,
+8.4 
+],
+[
+ &quot;Run 26&quot;,
+6.5,
+23.4027,
+2833.1,
+-4.6,
+0.6 
+],
+[
+ &quot;Run 26&quot;,
+7.5,
+23.4263,
+2832.7,
+2.7,
+7.5 
+],
+[
+ &quot;Run 26&quot;,
+8,
+23.4988,
+2840.4,
+16.4,
+13.5 
+],
+[
+ &quot;Run 26&quot;,
+8.5,
+23.598,
+2866.9,
+20.7,
+13.2 
+],
+[
+ &quot;Run 26&quot;,
+9,
+23.6985,
+2876.4,
+0.4,
+14 
+],
+[
+ &quot;Run 26&quot;,
+9.5,
+23.79755,
+2880.2,
+14.5,
+14.1 
+],
+[
+ &quot;Run 26&quot;,
+10,
+23.8972,
+2896.9,
+17.5,
+14.2 
+],
+[
+ &quot;Run 26&quot;,
+10.5,
+24.0031,
+2926.2,
+25.8,
+13.9 
+],
+[
+ &quot;Run 26&quot;,
+11,
+24.10245,
+2949.35,
+17,
+13.9 
+],
+[
+ &quot;Run 26&quot;,
+11.5,
+24.2021,
+2963,
+16,
+13.9 
+],
+[
+ &quot;Run 26&quot;,
+12,
+24.3055,
+2985.4,
+33.7,
+13.7 
+],
+[
+ &quot;Run 26&quot;,
+12.5,
+24.4019,
+3019,
+30.5,
+13.4 
+],
+[
+ &quot;Run 26&quot;,
+13,
+24.49925,
+3049.15,
+41.15,
+14.1 
+],
+[
+ &quot;Run 26&quot;,
+13.5,
+24.5973,
+3085.7,
+37.4,
+12.7 
+],
+[
+ &quot;Run 26&quot;,
+14,
+24.6926,
+3129.35,
+43.65,
+13 
+],
+[
+ &quot;Run 26&quot;,
+14.5,
+24.78645,
+3169.35,
+39.65,
+13.1 
+],
+[
+ &quot;Run 26&quot;,
+15,
+24.8815,
+3210.6,
+46.9,
+13.5 
+],
+[
+ &quot;Run 26&quot;,
+15.5,
+24.97685,
+3243.95,
+25.8,
+13.5 
+],
+[
+ &quot;Run 26&quot;,
+16,
+25.0722,
+3259.6,
+17,
+13 
+],
+[
+ &quot;Run 26&quot;,
+16.5,
+25.17215,
+3292.1,
+43.15,
+13.05 
+],
+[
+ &quot;Run 26&quot;,
+17,
+25.25995,
+3338.95,
+54.75,
+12.5 
+],
+[
+ &quot;Run 26&quot;,
+17.5,
+25.32935,
+3372.65,
+56.55,
+11.3 
+],
+[
+ &quot;Run 27&quot;,
+0,
+25.3593,
+3385.3,
+-1.8,
+2.6 
+],
+[
+ &quot;Run 27&quot;,
+0.5,
+25.3808,
+3382.9,
+-11.1,
+2.7 
+],
+[
+ &quot;Run 27&quot;,
+1,
+25.3977,
+3380.8,
+-14.4,
+1.1 
+],
+[
+ &quot;Run 27&quot;,
+9.5,
+25.4297,
+3376,
+-13.65,
+5.2 
+],
+[
+ &quot;Run 27&quot;,
+10,
+25.5313,
+3369.5,
+-11.3,
+28 
+],
+[
+ &quot;Run 27&quot;,
+10.5,
+25.7223,
+3357.4,
+-9.65,
+22.7 
+],
+[
+ &quot;Run 27&quot;,
+11,
+25.8247,
+3347.35,
+-19.1,
+15.8 
+],
+[
+ &quot;Run 27&quot;,
+11.5,
+25.9576,
+3298.1,
+-43.85,
+28.85 
+],
+[
+ &quot;Run 27&quot;,
+12,
+26.1908,
+3208.1,
+-26.7,
+56 
+],
+[
+ &quot;Run 27&quot;,
+12.5,
+26.3891,
+3177.5,
+-29.4,
+20.3 
+],
+[
+ &quot;Run 27&quot;,
+13,
+26.5612,
+3109.4,
+-33.9,
+37.5 
+],
+[
+ &quot;Run 27&quot;,
+13.5,
+26.90655,
+3028.05,
+-11.6,
+54.95 
+],
+[
+ &quot;Run 27&quot;,
+14,
+27.1337,
+3007.75,
+-8.95,
+40.45 
+],
+[
+ &quot;Run 27&quot;,
+14.5,
+27.2567,
+2993.6,
+-15.2,
+24.6 
+],
+[
+ &quot;Run 27&quot;,
+15,
+27.46985,
+2962.45,
+-15.85,
+36.45 
+],
+[
+ &quot;Run 27&quot;,
+15.5,
+27.7149,
+2916.9,
+-22.2,
+48.8 
+],
+[
+ &quot;Run 27&quot;,
+16,
+27.8358,
+2892.4,
+-17.3,
+2.7 
+],
+[
+ &quot;Run 27&quot;,
+16.5,
+27.8996,
+2880.1,
+-14.4,
+17 
+],
+[
+ &quot;Run 27&quot;,
+17,
+27.9535,
+2874.7,
+-11.4,
+2.7 
+],
+[
+ &quot;Run 27&quot;,
+17.5,
+28.08495,
+2855.3,
+-13.8,
+36.4 
+],
+[
+ &quot;Run 27&quot;,
+18,
+28.2631,
+2838,
+-6.7,
+31.1 
+],
+[
+ &quot;Run 27&quot;,
+19,
+28.3404,
+2833.8,
+-7.3,
+1 
+],
+[
+ &quot;Run 27&quot;,
+19.5,
+28.3506,
+2832.8,
+-6,
+1.6 
+],
+[
+ &quot;Run 28&quot;,
+0,
+28.3931,
+2833.6,
+8.9,
+16.2 
+],
+[
+ &quot;Run 28&quot;,
+0.5,
+28.4735,
+2847.4,
+27.4,
+13.5 
+],
+[
+ &quot;Run 28&quot;,
+1,
+28.57335,
+2871.45,
+14.6,
+13.35 
+],
+[
+ &quot;Run 28&quot;,
+1.5,
+28.6739,
+2877.4,
+2.1,
+15.1 
+],
+[
+ &quot;Run 28&quot;,
+2,
+28.7783,
+2887.55,
+15.3,
+13.8 
+],
+[
+ &quot;Run 28&quot;,
+2.5,
+28.8799,
+2905.4,
+29.7,
+14.1 
+],
+[
+ &quot;Run 28&quot;,
+3,
+28.9837,
+2936.15,
+26.3,
+13.8 
+],
+[
+ &quot;Run 28&quot;,
+3.5,
+29.087,
+2955.5,
+15,
+15.2 
+],
+[
+ &quot;Run 28&quot;,
+4,
+29.1919,
+2972.6,
+19.2,
+13.45 
+],
+[
+ &quot;Run 28&quot;,
+4.5,
+29.2882,
+3002,
+34.4,
+12.8 
+],
+[
+ &quot;Run 28&quot;,
+5,
+29.3817,
+3027.9,
+28.4,
+14.65 
+],
+[
+ &quot;Run 28&quot;,
+5.5,
+29.47895,
+3064.25,
+40.55,
+13.05 
+],
+[
+ &quot;Run 28&quot;,
+6,
+29.5631,
+3095.5,
+43.8,
+11.6 
+],
+[
+ &quot;Run 28&quot;,
+6.5,
+29.6602,
+3137.2,
+43.5,
+14.8 
+],
+[
+ &quot;Run 28&quot;,
+7,
+29.75705,
+3176.1,
+36.55,
+12.7 
+],
+[
+ &quot;Run 28&quot;,
+7.5,
+29.849,
+3217.9,
+44.1,
+14.6 
+],
+[
+ &quot;Run 28&quot;,
+8,
+29.95695,
+3249.35,
+19.65,
+12.15 
+],
+[
+ &quot;Run 28&quot;,
+8.5,
+30.046,
+3263.5,
+23.3,
+12.9 
+],
+[
+ &quot;Run 28&quot;,
+9,
+30.1391,
+3299.1,
+45.6,
+13 
+],
+[
+ &quot;Run 28&quot;,
+9.5,
+30.2375,
+3351.3,
+55.6,
+13.4 
+],
+[
+ &quot;Run 28&quot;,
+10,
+30.2998,
+3383.25,
+30.15,
+7.05 
+],
+[
+ &quot;Run 29&quot;,
+0,
+30.318,
+3384,
+-9.6,
+3.9 
+],
+[
+ &quot;Run 29&quot;,
+0.5,
+30.34505,
+3381.1,
+-13.4,
+2.55 
+],
+[
+ &quot;Run 29&quot;,
+2.5,
+30.398,
+3373.4,
+-12.7,
+16.5 
+],
+[
+ &quot;Run 29&quot;,
+3,
+30.5478,
+3362.8,
+-3.1,
+28.4 
+],
+[
+ &quot;Run 29&quot;,
+3.5,
+30.6554,
+3364.5,
+7.6,
+1.1 
+],
+[
+ &quot;Run 29&quot;,
+5,
+30.7783,
+3346.5,
+-21.9,
+32.9 
+],
+[
+ &quot;Run 29&quot;,
+5.5,
+31.01225,
+3302.15,
+3.4,
+36.25 
+],
+[
+ &quot;Run 29&quot;,
+6,
+31.1472,
+3306.15,
+-31.6,
+14.35 
+],
+[
+ &quot;Run 29&quot;,
+6.5,
+31.3461,
+3242.05,
+-29.55,
+48.2 
+],
+[
+ &quot;Run 29&quot;,
+7,
+31.6491,
+3169.3,
+-30.5,
+35.1 
+],
+[
+ &quot;Run 29&quot;,
+7.5,
+31.9148,
+3073.8,
+-30.8,
+45.2 
+],
+[
+ &quot;Run 29&quot;,
+8,
+32.29795,
+3015,
+-9.05,
+48.85 
+],
+[
+ &quot;Run 29&quot;,
+8.5,
+32.46015,
+2999.05,
+-18.1,
+9.3 
+],
+[
+ &quot;Run 29&quot;,
+9,
+32.5805,
+2980.2,
+-14.4,
+35.3 
+],
+[
+ &quot;Run 29&quot;,
+9.5,
+32.8524,
+2937.35,
+-17.9,
+42.1 
+],
+[
+ &quot;Run 29&quot;,
+10,
+33.1699,
+2871.1,
+-16,
+44.5 
+],
+[
+ &quot;Run 29&quot;,
+10.5,
+33.38065,
+2844.6,
+-7.4,
+31.1 
+],
+[
+ &quot;Run 29&quot;,
+11,
+33.5042,
+2836.8,
+-5.7,
+17.8 
+],
+[
+ &quot;Run 29&quot;,
+11.5,
+33.5584,
+2833.3,
+-3.7,
+3.35 
+],
+[
+ &quot;Run 29&quot;,
+12,
+33.5869,
+2832.5,
+-0.1,
+2.8 
+],
+[
+ &quot;Run 30&quot;,
+0,
+33.67485,
+2834.9,
+6.4,
+10.3 
+],
+[
+ &quot;Run 30&quot;,
+0.5,
+33.75985,
+2849.45,
+28.1,
+14.55 
+],
+[
+ &quot;Run 30&quot;,
+1,
+33.8628,
+2873.4,
+14.5,
+14.5 
+],
+[
+ &quot;Run 30&quot;,
+1.5,
+33.9641,
+2877.25,
+0.45,
+13.35 
+],
+[
+ &quot;Run 30&quot;,
+2,
+34.0653,
+2886.4,
+16.2,
+14.1 
+],
+[
+ &quot;Run 30&quot;,
+2.5,
+34.1675,
+2906.5,
+29.7,
+13.1 
+],
+[
+ &quot;Run 30&quot;,
+3,
+34.26635,
+2935.1,
+25.5,
+14.5 
+],
+[
+ &quot;Run 30&quot;,
+3.5,
+34.3683,
+2955.3,
+15.1,
+14.2 
+],
+[
+ &quot;Run 30&quot;,
+4,
+34.4701,
+2971.5,
+21.8,
+14.05 
+],
+[
+ &quot;Run 30&quot;,
+4.5,
+34.56465,
+2999.75,
+33.35,
+13.05 
+],
+[
+ &quot;Run 30&quot;,
+5,
+34.6663,
+3027.4,
+29.7,
+14.3 
+],
+[
+ &quot;Run 30&quot;,
+5.5,
+34.7639,
+3065.1,
+39.75,
+13.1 
+],
+[
+ &quot;Run 30&quot;,
+6,
+34.8554,
+3099.85,
+43.8,
+13.8 
+],
+[
+ &quot;Run 30&quot;,
+6.5,
+34.94905,
+3142.1,
+41.4,
+12.45 
+],
+[
+ &quot;Run 30&quot;,
+7,
+35.0418,
+3179.2,
+40.2,
+13.55 
+],
+[
+ &quot;Run 30&quot;,
+7.5,
+35.1423,
+3226,
+35,
+13.6 
+],
+[
+ &quot;Run 30&quot;,
+8,
+35.244,
+3252.9,
+19.9,
+13.4 
+],
+[
+ &quot;Run 30&quot;,
+8.5,
+35.341,
+3269.15,
+33.3,
+12.5 
+],
+[
+ &quot;Run 30&quot;,
+9,
+35.42735,
+3305.1,
+49.55,
+13 
+],
+[
+ &quot;Run 30&quot;,
+9.5,
+35.5247,
+3356.3,
+52.6,
+13.8 
+],
+[
+ &quot;Run 30&quot;,
+10,
+35.5801,
+3384.8,
+3.7,
+2.3 
+],
+[
+ &quot;Run 31&quot;,
+0,
+35.5982,
+3382.45,
+-5.45,
+3.65 
+],
+[
+ &quot;Run 31&quot;,
+0.5,
+35.62,
+3381.75,
+-9.5,
+2 
+],
+[
+ &quot;Run 31&quot;,
+1.5,
+35.6425,
+3378.35,
+-17.1,
+3.35 
+],
+[
+ &quot;Run 31&quot;,
+2,
+35.7215,
+3372,
+-10.15,
+27.4 
+],
+[
+ &quot;Run 31&quot;,
+2.5,
+35.87185,
+3360.35,
+-4.55,
+38.75 
+],
+[
+ &quot;Run 31&quot;,
+3,
+35.9877,
+3360.8,
+-7.4,
+26.5 
+],
+[
+ &quot;Run 31&quot;,
+3.5,
+36.1158,
+3335.1,
+-36.2,
+40.2 
+],
+[
+ &quot;Run 31&quot;,
+4,
+36.3054,
+3252.1,
+-32.8,
+38.3 
+],
+[
+ &quot;Run 31&quot;,
+4.5,
+36.53945,
+3186.95,
+-26.15,
+26.65 
+],
+[
+ &quot;Run 31&quot;,
+5,
+36.7227,
+3129,
+-32.4,
+31.8 
+],
+[
+ &quot;Run 31&quot;,
+5.5,
+36.85815,
+3088.9,
+-26.25,
+35.85 
+],
+[
+ &quot;Run 31&quot;,
+6,
+37.0505,
+3032.2,
+-21.1,
+60.1 
+],
+[
+ &quot;Run 31&quot;,
+6.5,
+37.3721,
+2986.3,
+-13.9,
+36.3 
+],
+[
+ &quot;Run 31&quot;,
+7,
+37.5845,
+2953.4,
+-13,
+32 
+],
+[
+ &quot;Run 31&quot;,
+7.5,
+37.7201,
+2930.2,
+-18.7,
+19.9 
+],
+[
+ &quot;Run 31&quot;,
+8,
+37.9309,
+2885.3,
+-17.6,
+46.6 
+],
+[
+ &quot;Run 31&quot;,
+8.5,
+38.1675,
+2848.7,
+-19.8,
+33.6 
+],
+[
+ &quot;Run 31&quot;,
+9,
+38.4219,
+2790.75,
+-18.85,
+39.45 
+],
+[
+ &quot;Run 31&quot;,
+9.5,
+38.65125,
+2748.2,
+-18.55,
+41.1 
+],
+[
+ &quot;Run 31&quot;,
+10,
+38.845,
+2724.8,
+-10.4,
+36.2 
+],
+[
+ &quot;Run 31&quot;,
+10.5,
+39.04715,
+2693.55,
+-17.5,
+33.9 
+],
+[
+ &quot;Run 31&quot;,
+11,
+39.1174,
+2683,
+-9.2,
+1 
+],
+[
+ &quot;Run 31&quot;,
+12.5,
+39.1277,
+2682.9,
+-1.5,
+1.1 
+],
+[
+ &quot;Run 32&quot;,
+0,
+39.1378,
+2682.7,
+0.5,
+2.2 
+],
+[
+ &quot;Run 32&quot;,
+0.5,
+39.1941,
+2691.3,
+16.8,
+16.7 
+],
+[
+ &quot;Run 32&quot;,
+1,
+39.28155,
+2703.95,
+13.4,
+14.3 
+],
+[
+ &quot;Run 32&quot;,
+1.5,
+39.3792,
+2724.3,
+25.9,
+13.9 
+],
+[
+ &quot;Run 32&quot;,
+2,
+39.4884,
+2754.6,
+36.1,
+14.1 
+],
+[
+ &quot;Run 32&quot;,
+2.5,
+39.58565,
+2790.95,
+29.95,
+13.5 
+],
+[
+ &quot;Run 32&quot;,
+3,
+39.685,
+2818,
+24.3,
+14.2 
+],
+[
+ &quot;Run 32&quot;,
+3.5,
+39.7843,
+2833.2,
+7.8,
+14.3 
+],
+[
+ &quot;Run 32&quot;,
+4,
+39.8472,
+2836.25,
+1.15,
+14.95 
+],
+[
+ &quot;Run 33&quot;,
+0,
+39.8876,
+2835.2,
+-5.6,
+14.9 
+],
+[
+ &quot;Run 34&quot;,
+0,
+39.94575,
+2833.65,
+3.85,
+11.75 
+],
+[
+ &quot;Run 34&quot;,
+0.5,
+39.9848,
+2835.4,
+5.3,
+3.7 
+],
+[
+ &quot;Run 34&quot;,
+2,
+40.0052,
+2836.5,
+7.2,
+0.8 
+],
+[
+ &quot;Run 34&quot;,
+2.5,
+40.0208,
+2837.65,
+4.75,
+3.65 
+],
+[
+ &quot;Run 34&quot;,
+3,
+40.0377,
+2838,
+2.7,
+4.2 
+],
+[
+ &quot;Run 36&quot;,
+0,
+41.07835,
+2684.75,
+13.8,
+4.5 
+],
+[
+ &quot;Run 36&quot;,
+0.5,
+41.15555,
+2698.05,
+17.85,
+17 
+],
+[
+ &quot;Run 36&quot;,
+1,
+41.2802,
+2715.1,
+10.4,
+18.3 
+],
+[
+ &quot;Run 36&quot;,
+1.5,
+41.4072,
+2722.6,
+7.6,
+18.5 
+],
+[
+ &quot;Run 36&quot;,
+2,
+41.53895,
+2736.15,
+18.75,
+18.75 
+],
+[
+ &quot;Run 36&quot;,
+2.5,
+41.6678,
+2766.2,
+21,
+16.4 
+],
+[
+ &quot;Run 36&quot;,
+3,
+41.79565,
+2787.55,
+21,
+18.65 
+],
+[
+ &quot;Run 36&quot;,
+3.5,
+41.9272,
+2845.6,
+62,
+16.2 
+],
+[
+ &quot;Run 36&quot;,
+4,
+42.0401,
+2906,
+48,
+16.4 
+],
+[
+ &quot;Run 36&quot;,
+4.5,
+42.1463,
+2940.2,
+15.7,
+16.8 
+],
+[
+ &quot;Run 36&quot;,
+5.5,
+42.2047,
+2946.5,
+4.4,
+5 
+],
+[
+ &quot;Run 36&quot;,
+6,
+42.29365,
+2955.7,
+15.7,
+19.35 
+],
+[
+ &quot;Run 36&quot;,
+6.5,
+42.4237,
+2977.5,
+14.8,
+17.65 
+],
+[
+ &quot;Run 36&quot;,
+7,
+42.5464,
+2993.7,
+17.8,
+18 
+],
+[
+ &quot;Run 36&quot;,
+7.5,
+42.679,
+3019.4,
+15.3,
+18.3 
+],
+[
+ &quot;Run 36&quot;,
+8,
+42.80915,
+3039.6,
+13.65,
+17.75 
+],
+[
+ &quot;Run 36&quot;,
+8.5,
+42.9371,
+3062.7,
+27.7,
+17.45 
+],
+[
+ &quot;Run 36&quot;,
+9,
+43.06625,
+3097.75,
+21.65,
+17.5 
+],
+[
+ &quot;Run 36&quot;,
+9.5,
+43.1945,
+3132.3,
+40.45,
+17.65 
+],
+[
+ &quot;Run 36&quot;,
+10,
+43.3323,
+3199.75,
+57.95,
+17.4 
+],
+[
+ &quot;Run 36&quot;,
+10.5,
+43.4304,
+3251.3,
+30.4,
+15.3 
+],
+[
+ &quot;Run 36&quot;,
+11.5,
+43.4736,
+3259.2,
+29.4,
+0.9 
+],
+[
+ &quot;Run 36&quot;,
+12.5,
+43.4839,
+3262.3,
+25.3,
+0.8 
+],
+[
+ &quot;Run 36&quot;,
+13.5,
+43.5231,
+3268.7,
+13.75,
+13 
+],
+[
+ &quot;Run 36&quot;,
+14,
+43.58405,
+3278.7,
+22.35,
+29.6 
+],
+[
+ &quot;Run 37&quot;,
+0,
+43.6352,
+3275.6,
+-23.6,
+22.9 
+],
+[
+ &quot;Run 37&quot;,
+0.5,
+43.7018,
+3261.5,
+-5.2,
+21.2 
+],
+[
+ &quot;Run 37&quot;,
+1,
+43.753,
+3257.7,
+-36.7,
+7 
+],
+[
+ &quot;Run 37&quot;,
+1.5,
+43.8429,
+3239.2,
+-21.4,
+18.7 
+],
+[
+ &quot;Run 37&quot;,
+2,
+43.9877,
+3206.8,
+-16.1,
+25.9 
+],
+[
+ &quot;Run 37&quot;,
+2.5,
+44.2429,
+3161.2,
+-16.4,
+52.6 
+],
+[
+ &quot;Run 37&quot;,
+3,
+44.5839,
+3114.85,
+-11.6,
+52.85 
+],
+[
+ &quot;Run 37&quot;,
+3.5,
+44.79365,
+3091.5,
+-10.35,
+16.5 
+],
+[
+ &quot;Run 37&quot;,
+4,
+44.8825,
+3079.4,
+-15.2,
+36.95 
+],
+[
+ &quot;Run 37&quot;,
+4.5,
+45.11115,
+3043.65,
+-15.7,
+42.95 
+],
+[
+ &quot;Run 37&quot;,
+5,
+45.3898,
+2999.95,
+-11.9,
+54.15 
+],
+[
+ &quot;Run 37&quot;,
+6,
+45.5263,
+2985.75,
+-14.05,
+26.2 
+],
+[
+ &quot;Run 37&quot;,
+6.5,
+45.65785,
+2965.6,
+-15.25,
+25.1 
+],
+[
+ &quot;Run 37&quot;,
+7,
+45.84925,
+2935.35,
+-17.6,
+30.8 
+],
+[
+ &quot;Run 37&quot;,
+7.5,
+46.0622,
+2871.3,
+-32.4,
+25.8 
+],
+[
+ &quot;Run 37&quot;,
+8,
+46.175,
+2840.7,
+-26.1,
+19.1 
+],
+[
+ &quot;Run 37&quot;,
+8.5,
+46.2289,
+2821.1,
+-37.6,
+47 
+],
+[
+ &quot;Run 37&quot;,
+9,
+46.3315,
+2785.7,
+-31.4,
+39.1 
+],
+[
+ &quot;Run 37&quot;,
+22,
+46.5424,
+2761.1,
+-1.1,
+0.8 
+],
+[
+ &quot;Run 38&quot;,
+0,
+46.5955,
+2771.1,
+17.7,
+19.4 
+],
+[
+ &quot;Run 38&quot;,
+0.5,
+46.6974,
+2788,
+22.7,
+18.8 
+],
+[
+ &quot;Run 38&quot;,
+1,
+46.82205,
+2842.15,
+61.15,
+17.95 
+],
+[
+ &quot;Run 38&quot;,
+1.5,
+46.9403,
+2905.2,
+47.6,
+16.2 
+],
+[
+ &quot;Run 38&quot;,
+2,
+47.0312,
+2936.8,
+17.2,
+14.55 
+],
+[
+ &quot;Run 38&quot;,
+2.5,
+47.0711,
+2943.4,
+19.5,
+1.6 
+],
+[
+ &quot;Run 38&quot;,
+3,
+47.0963,
+2946.7,
+7.7,
+7.5 
+],
+[
+ &quot;Run 38&quot;,
+3.5,
+47.1851,
+2954.8,
+15.2,
+19.3 
+],
+[
+ &quot;Run 38&quot;,
+4,
+47.3096,
+2975,
+13.5,
+17.8 
+],
+[
+ &quot;Run 38&quot;,
+4.5,
+47.44185,
+2993.55,
+18.3,
+18.7 
+],
+[
+ &quot;Run 38&quot;,
+5,
+47.5663,
+3019,
+17.55,
+17.8 
+],
+[
+ &quot;Run 38&quot;,
+5.5,
+47.6971,
+3039.4,
+13.8,
+17.7 
+],
+[
+ &quot;Run 38&quot;,
+6,
+47.8221,
+3060.3,
+25.6,
+17.6 
+],
+[
+ &quot;Run 38&quot;,
+6.5,
+47.9454,
+3094.1,
+22.1,
+17.9 
+],
+[
+ &quot;Run 38&quot;,
+7,
+48.08085,
+3128.75,
+37.95,
+17.3 
+],
+[
+ &quot;Run 38&quot;,
+7.5,
+48.20215,
+3184.7,
+58.15,
+17.2 
+],
+[
+ &quot;Run 38&quot;,
+8,
+48.32455,
+3249.75,
+32.1,
+17.6 
+],
+[
+ &quot;Run 38&quot;,
+9,
+48.37105,
+3258.6,
+20.9,
+1.55 
+],
+[
+ &quot;Run 38&quot;,
+10,
+48.4074,
+3268,
+22.4,
+6.8 
+],
+[
+ &quot;Run 38&quot;,
+10.5,
+48.4627,
+3276.2,
+19.6,
+12.6 
+],
+[
+ &quot;Run 39&quot;,
+0,
+48.5305,
+3279,
+-23.5,
+21.4 
+],
+[
+ &quot;Run 39&quot;,
+0.5,
+48.6684,
+3246,
+-23.7,
+26.5 
+],
+[
+ &quot;Run 39&quot;,
+1,
+48.8548,
+3199.6,
+-19.8,
+32.4 
+],
+[
+ &quot;Run 39&quot;,
+1.5,
+48.99105,
+3183.55,
+-17.15,
+16.4 
+],
+[
+ &quot;Run 39&quot;,
+2,
+49.1804,
+3143.55,
+-18.15,
+47.45 
+],
+[
+ &quot;Run 39&quot;,
+2.5,
+49.4429,
+3105.4,
+-15.2,
+46.3 
+],
+[
+ &quot;Run 39&quot;,
+3,
+49.6339,
+3078.65,
+-15.4,
+34.4 
+],
+[
+ &quot;Run 39&quot;,
+3.5,
+49.85735,
+3043.65,
+-15.85,
+44.75 
+],
+[
+ &quot;Run 39&quot;,
+4,
+50.1877,
+2993.9,
+-11.95,
+46.55 
+],
+[
+ &quot;Run 39&quot;,
+4.5,
+50.39035,
+2968.8,
+-14.55,
+29.9 
+],
+[
+ &quot;Run 39&quot;,
+5,
+50.5751,
+2939.4,
+-19.3,
+34.1 
+],
+[
+ &quot;Run 39&quot;,
+5.5,
+50.8074,
+2874.3,
+-31,
+27.8 
+],
+[
+ &quot;Run 39&quot;,
+6,
+50.9281,
+2841.2,
+-24,
+24.8 
+],
+[
+ &quot;Run 39&quot;,
+6.5,
+51.01815,
+2809.8,
+-36.8,
+31.75 
+],
+[
+ &quot;Run 39&quot;,
+7,
+51.2908,
+2740.3,
+-17.3,
+52 
+],
+[
+ &quot;Run 39&quot;,
+7.5,
+51.56995,
+2708.85,
+-10.85,
+25.2 
+],
+[
+ &quot;Run 39&quot;,
+8,
+51.7022,
+2692,
+-14.6,
+27.6 
+],
+[
+ &quot;Run 40&quot;,
+0,
+51.7489,
+2683.7,
+6.5,
+0.9 
+],
+[
+ &quot;Run 40&quot;,
+3,
+51.7832,
+2689.9,
+18.1,
+1 
+],
+[
+ &quot;Run 40&quot;,
+3.5,
+51.8722,
+2705.8,
+16.2,
+22.4 
+],
+[
+ &quot;Run 40&quot;,
+4,
+52.0263,
+2720.2,
+7,
+21.2 
+],
+[
+ &quot;Run 40&quot;,
+4.5,
+52.17715,
+2731.2,
+9.85,
+20.7 
+],
+[
+ &quot;Run 40&quot;,
+5,
+52.2667,
+2748.3,
+24.1,
+15.4 
+],
+[
+ &quot;Run 40&quot;,
+5.5,
+52.3037,
+2757.15,
+23.75,
+8.2 
+],
+[
+ &quot;Run 40&quot;,
+6,
+52.3689,
+2770.8,
+17.4,
+14.8 
+],
+[
+ &quot;Run 40&quot;,
+6.5,
+52.4821,
+2790.5,
+24.6,
+22.3 
+],
+[
+ &quot;Run 40&quot;,
+7,
+52.632,
+2870,
+63.7,
+20.1 
+],
+[
+ &quot;Run 40&quot;,
+7.5,
+52.7704,
+2934.8,
+23.5,
+18.7 
+],
+[
+ &quot;Run 40&quot;,
+8,
+52.8629,
+2945,
+15.6,
+12.4 
+],
+[
+ &quot;Run 40&quot;,
+9,
+52.9687,
+2951.6,
+10.5,
+20.95 
+],
+[
+ &quot;Run 40&quot;,
+9.5,
+53.10915,
+2973.4,
+13.6,
+20.1 
+],
+[
+ &quot;Run 40&quot;,
+10,
+53.2601,
+2995.4,
+18.7,
+21 
+],
+[
+ &quot;Run 40&quot;,
+10.5,
+53.4094,
+3023,
+16.8,
+20.4 
+],
+[
+ &quot;Run 40&quot;,
+11,
+53.5521,
+3044.6,
+15.2,
+20 
+],
+[
+ &quot;Run 40&quot;,
+11.5,
+53.6969,
+3079.8,
+27.6,
+20.5 
+],
+[
+ &quot;Run 40&quot;,
+12,
+53.8558,
+3119.1,
+28.1,
+21.8 
+],
+[
+ &quot;Run 40&quot;,
+12.5,
+54.0011,
+3178.7,
+51,
+18.6 
+],
+[
+ &quot;Run 40&quot;,
+13,
+54.1255,
+3248.7,
+38.7,
+14.1 
+],
+[
+ &quot;Run 40&quot;,
+13.5,
+54.1769,
+3257.8,
+27.3,
+1.2 
+],
+[
+ &quot;Run 40&quot;,
+15,
+54.1993,
+3264.8,
+31.1,
+1.3 
+],
+[
+ &quot;Run 40&quot;,
+15.5,
+54.27075,
+3276.55,
+16.7,
+20.3 
+],
+[
+ &quot;Run 41&quot;,
+0,
+54.3462,
+3288.9,
+-5.8,
+5.6 
+],
+[
+ &quot;Run 41&quot;,
+0.5,
+54.3698,
+3284.6,
+-18.3,
+4.5 
+],
+[
+ &quot;Run 41&quot;,
+2.5,
+54.3921,
+3285.9,
+41.2,
+0.7 
+],
+[
+ &quot;Run 41&quot;,
+3,
+54.4032,
+3291.4,
+1.7,
+0.8 
+],
+[
+ &quot;Run 41&quot;,
+5,
+54.5089,
+3251.35,
+-28.55,
+23.15 
+],
+[
+ &quot;Run 41&quot;,
+5.5,
+54.6691,
+3210.5,
+-22.2,
+27.5 
+],
+[
+ &quot;Run 41&quot;,
+6,
+54.79305,
+3187.05,
+-21.3,
+14.1 
+],
+[
+ &quot;Run 41&quot;,
+7.5,
+54.8666,
+3175.2,
+-20.95,
+19.75 
+],
+[
+ &quot;Run 41&quot;,
+8,
+55.0762,
+3134.6,
+-15.7,
+44.9 
+],
+[
+ &quot;Run 41&quot;,
+8.5,
+55.3344,
+3089.3,
+-15.1,
+37.4 
+],
+[
+ &quot;Run 41&quot;,
+9,
+55.6156,
+3053.4,
+-13.1,
+44.8 
+],
+[
+ &quot;Run 41&quot;,
+9.5,
+55.82585,
+3014.8,
+-20.65,
+27 
+],
+[
+ &quot;Run 41&quot;,
+10,
+55.97175,
+2980.15,
+-29.35,
+24.5 
+],
+[
+ &quot;Run 41&quot;,
+10.5,
+56.0643,
+2948.2,
+-30.6,
+0.9 
+],
+[
+ &quot;Run 41&quot;,
+13,
+56.0918,
+2940.5,
+-28.5,
+1 
+],
+[
+ &quot;Run 41&quot;,
+13.5,
+56.1988,
+2923.65,
+-17.85,
+25.45 
+],
+[
+ &quot;Run 41&quot;,
+14,
+56.379,
+2872.9,
+-32.4,
+47.4 
+],
+[
+ &quot;Run 41&quot;,
+15,
+56.5158,
+2828.7,
+-31.1,
+21.5 
+],
+[
+ &quot;Run 41&quot;,
+15.5,
+56.7219,
+2774,
+-10.6,
+44.7 
+],
+[
+ &quot;Run 41&quot;,
+16,
+57.0476,
+2745.7,
+-12.4,
+45.2 
+],
+[
+ &quot;Run 41&quot;,
+16.5,
+57.2974,
+2724.9,
+-7.9,
+25.1 
+],
+[
+ &quot;Run 41&quot;,
+17,
+57.4655,
+2704.2,
+-14.7,
+22.6 
+],
+[
+ &quot;Run 41&quot;,
+17.5,
+57.5731,
+2689.2,
+-19.3,
+8.7 
+],
+[
+ &quot;Run 42&quot;,
+0,
+57.60675,
+2685.25,
+12.5,
+3.75 
+],
+[
+ &quot;Run 42&quot;,
+0.5,
+57.67,
+2695.75,
+13.45,
+15.5 
+],
+[
+ &quot;Run 42&quot;,
+1,
+57.7846,
+2712.05,
+22.85,
+14.05 
+],
+[
+ &quot;Run 42&quot;,
+1.5,
+57.8842,
+2737.2,
+29.1,
+14.2 
+],
+[
+ &quot;Run 42&quot;,
+2,
+57.98505,
+2772.45,
+37.8,
+13.4 
+],
+[
+ &quot;Run 42&quot;,
+2.5,
+58.0827,
+2803.45,
+28.3,
+13.95 
+],
+[
+ &quot;Run 42&quot;,
+3,
+58.17885,
+2826.1,
+15.9,
+13.15 
+],
+[
+ &quot;Run 42&quot;,
+3.5,
+58.2556,
+2834.95,
+3.7,
+14.35 
+],
+[
+ &quot;Run 43&quot;,
+0,
+58.3127,
+2835.3,
+-0.8,
+15.2 
+],
+[
+ &quot;Run 43&quot;,
+0.5,
+58.3571,
+2833.05,
+-7.65,
+13.6 
+],
+[
+ &quot;Run 44&quot;,
+0,
+58.3849,
+2832.7,
+4.9,
+13.2 
+],
+[
+ &quot;Run 44&quot;,
+0.5,
+58.4101,
+2834.1,
+1.9,
+14.4 
+],
+[
+ &quot;Run 45&quot;,
+0,
+58.45485,
+2834.2,
+-0.4,
+10.1 
+],
+[
+ &quot;Run 45&quot;,
+0.5,
+58.4899,
+2834.05,
+-3,
+3.5 
+],
+[
+ &quot;Run 45&quot;,
+1.5,
+58.5108,
+2832.5,
+-7.25,
+1.55 
+],
+[
+ &quot;Run 46&quot;,
+0,
+58.53495,
+2832.2,
+4.45,
+3.3 
+],
+[
+ &quot;Run 46&quot;,
+0.5,
+58.59865,
+2839.1,
+15.45,
+14.2 
+],
+[
+ &quot;Run 46&quot;,
+1,
+58.6948,
+2864.7,
+23.2,
+13.6 
+],
+[
+ &quot;Run 46&quot;,
+1.5,
+58.7578,
+2874.8,
+13.8,
+13.55 
+],
+[
+ &quot;Run 47&quot;,
+0,
+58.80675,
+2876.55,
+-1.65,
+14.5 
+],
+[
+ &quot;Run 48&quot;,
+0,
+58.8574,
+2876.8,
+4.8,
+13.9 
+],
+[
+ &quot;Run 48&quot;,
+0.5,
+58.9388,
+2885.55,
+18.1,
+13.6 
+],
+[
+ &quot;Run 48&quot;,
+1,
+59.0332,
+2902.8,
+27.1,
+13.8 
+],
+[
+ &quot;Run 48&quot;,
+1.5,
+59.1394,
+2933.5,
+25.3,
+13.8 
+],
+[
+ &quot;Run 48&quot;,
+2,
+59.23935,
+2954.05,
+14.5,
+14.8 
+],
+[
+ &quot;Run 48&quot;,
+2.5,
+59.337,
+2967.7,
+18.8,
+13.1 
+],
+[
+ &quot;Run 48&quot;,
+3,
+59.4351,
+2994.75,
+35.95,
+13.5 
+],
+[
+ &quot;Run 48&quot;,
+3.5,
+59.5325,
+3024.85,
+27.45,
+12.9 
+],
+[
+ &quot;Run 48&quot;,
+4,
+59.62645,
+3058.9,
+39.55,
+14.15 
+],
+[
+ &quot;Run 48&quot;,
+4.5,
+59.73055,
+3096.9,
+41.7,
+13.75 
+],
+[
+ &quot;Run 48&quot;,
+5,
+59.82235,
+3138.85,
+42.6,
+12.9 
+],
+[
+ &quot;Run 48&quot;,
+5.5,
+59.9194,
+3178.1,
+39.5,
+13.3 
+],
+[
+ &quot;Run 48&quot;,
+6,
+60.0193,
+3224.75,
+38.95,
+13.55 
+],
+[
+ &quot;Run 48&quot;,
+6.5,
+60.1107,
+3249.05,
+20.35,
+13.15 
+],
+[
+ &quot;Run 48&quot;,
+7,
+60.1985,
+3262.7,
+21.1,
+11.1 
+],
+[
+ &quot;Run 48&quot;,
+7.5,
+60.2819,
+3293.5,
+45.2,
+11.8 
+],
+[
+ &quot;Run 48&quot;,
+8,
+60.3801,
+3346.2,
+55.5,
+18.9 
+],
+[
+ &quot;Run 48&quot;,
+8.5,
+60.4525,
+3382.2,
+38.1,
+7.7 
+],
+[
+ &quot;Run 49&quot;,
+0,
+60.4711,
+3383.8,
+-9.4,
+5.4 
+],
+[
+ &quot;Run 49&quot;,
+0.5,
+60.4869,
+3382,
+-10.5,
+1.9 
+],
+[
+ &quot;Run 49&quot;,
+1,
+60.5075,
+3380.2,
+-9.2,
+1.1 
+],
+[
+ &quot;Run 49&quot;,
+2.5,
+60.5403,
+3375.9,
+-12.6,
+6.3 
+],
+[
+ &quot;Run 49&quot;,
+3,
+60.5778,
+3371.2,
+-12.1,
+2.1 
+],
+[
+ &quot;Run 49&quot;,
+3.5,
+60.5934,
+3369,
+-16.15,
+2.3 
+],
+[
+ &quot;Run 49&quot;,
+4,
+60.6089,
+3366.5,
+8.6,
+0.3 
+],
+[
+ &quot;Run 49&quot;,
+14.5,
+60.642,
+3371.7,
+8.3,
+0.3 
+],
+[
+ &quot;Run 49&quot;,
+16,
+60.70875,
+3369.65,
+-3.55,
+24.05 
+],
+[
+ &quot;Run 49&quot;,
+16.5,
+60.83965,
+3360.5,
+-11.2,
+28.25 
+],
+[
+ &quot;Run 49&quot;,
+17,
+60.95275,
+3354.25,
+-14,
+14.6 
+],
+[
+ &quot;Run 49&quot;,
+17.5,
+61.0862,
+3323,
+-28,
+33.85 
+],
+[
+ &quot;Run 50&quot;,
+0,
+61.1911,
+3306.3,
+11.6,
+23.5 
+],
+[
+ &quot;Run 51&quot;,
+0,
+61.23305,
+3307,
+-6.8,
+21.1 
+],
+[
+ &quot;Run 52&quot;,
+0,
+61.2814,
+3311,
+12.3,
+37.9 
+],
+[
+ &quot;Run 53&quot;,
+0,
+61.3889,
+3294.7,
+-33,
+39 
+],
+[
+ &quot;Run 53&quot;,
+0.5,
+61.5765,
+3236.2,
+-27.4,
+34.5 
+],
+[
+ &quot;Run 53&quot;,
+1,
+61.7728,
+3198.15,
+-14.1,
+28.65 
+],
+[
+ &quot;Run 53&quot;,
+1.5,
+61.8487,
+3186.9,
+-25.2,
+4 
+],
+[
+ &quot;Run 53&quot;,
+2,
+61.9438,
+3157.6,
+-32.05,
+19.8 
+],
+[
+ &quot;Run 53&quot;,
+2.5,
+62.1439,
+3091.85,
+-29.95,
+41.2 
+],
+[
+ &quot;Run 53&quot;,
+3,
+62.5167,
+3020.6,
+-9.8,
+58.4 
+],
+[
+ &quot;Run 53&quot;,
+3.5,
+62.7134,
+3002.6,
+-14.3,
+9.8 
+],
+[
+ &quot;Run 53&quot;,
+4,
+62.74305,
+2997.7,
+-18.1,
+4.2 
+],
+[
+ &quot;Run 53&quot;,
+4.5,
+62.8033,
+2986.8,
+-15.7,
+33.55 
+],
+[
+ &quot;Run 53&quot;,
+5,
+62.97135,
+2964.4,
+-15.85,
+36.9 
+],
+[
+ &quot;Run 53&quot;,
+5.5,
+63.26045,
+2908.95,
+-19.05,
+40.7 
+],
+[
+ &quot;Run 53&quot;,
+6,
+63.56985,
+2857.25,
+-12.05,
+41.75 
+],
+[
+ &quot;Run 53&quot;,
+6.5,
+63.765,
+2838.1,
+-5.1,
+39.5 
+],
+[
+ &quot;Run 53&quot;,
+7,
+63.8401,
+2833.9,
+-5.1,
+1.2 
+],
+[
+ &quot;Run 53&quot;,
+8,
+63.85795,
+2833.25,
+-1.9,
+4.15 
+],
+[
+ &quot;Run 54&quot;,
+0,
+63.8873,
+2833.9,
+7.6,
+7.7 
+],
+[
+ &quot;Run 54&quot;,
+0.5,
+63.9454,
+2840,
+15.9,
+12.4 
+],
+[
+ &quot;Run 54&quot;,
+1,
+64.03405,
+2864.35,
+23.3,
+13.35 
+],
+[
+ &quot;Run 54&quot;,
+1.5,
+64.13085,
+2876.4,
+1.4,
+15.4 
+],
+[
+ &quot;Run 54&quot;,
+2,
+64.2374,
+2878.2,
+6.9,
+14.8 
+],
+[
+ &quot;Run 54&quot;,
+2.5,
+64.3371,
+2895.35,
+17.5,
+12.95 
+],
+[
+ &quot;Run 54&quot;,
+3,
+64.4392,
+2922.6,
+28.8,
+14.3 
+],
+[
+ &quot;Run 54&quot;,
+3.5,
+64.5424,
+2948,
+19.75,
+13.5 
+],
+[
+ &quot;Run 54&quot;,
+4,
+64.6437,
+2960.9,
+12,
+15.1 
+],
+[
+ &quot;Run 54&quot;,
+4.5,
+64.7438,
+2979.45,
+35.35,
+13.1 
+],
+[
+ &quot;Run 54&quot;,
+5,
+64.8419,
+3016.7,
+29.9,
+13.75 
+],
+[
+ &quot;Run 54&quot;,
+5.5,
+64.9395,
+3044.9,
+37.3,
+13.6 
+],
+[
+ &quot;Run 54&quot;,
+6,
+65.03695,
+3082.35,
+39,
+13.55 
+],
+[
+ &quot;Run 54&quot;,
+6.5,
+65.13645,
+3128.4,
+41,
+13.05 
+],
+[
+ &quot;Run 54&quot;,
+7,
+65.2242,
+3165.8,
+38.5,
+12.5 
+],
+[
+ &quot;Run 54&quot;,
+7.5,
+65.3151,
+3203.75,
+47.45,
+13.9 
+],
+[
+ &quot;Run 54&quot;,
+8,
+65.4137,
+3241.6,
+25.6,
+14.1 
+],
+[
+ &quot;Run 54&quot;,
+8.5,
+65.519,
+3259.3,
+16.5,
+13.4 
+],
+[
+ &quot;Run 54&quot;,
+9,
+65.6097,
+3288.65,
+42.7,
+12.8 
+],
+[
+ &quot;Run 54&quot;,
+9.5,
+65.7017,
+3335,
+54.3,
+13.2 
+],
+[
+ &quot;Run 54&quot;,
+10,
+65.78895,
+3379.4,
+43.65,
+11.6 
+],
+[
+ &quot;Run 55&quot;,
+0,
+65.8281,
+3384.7,
+-16.2,
+1.4 
+],
+[
+ &quot;Run 55&quot;,
+1.5,
+65.8549,
+3380.35,
+-16.2,
+1.85 
+],
+[
+ &quot;Run 55&quot;,
+2,
+65.8822,
+3375.5,
+-15.2,
+7.3 
+],
+[
+ &quot;Run 55&quot;,
+2.5,
+65.9945,
+3369.4,
+-8.6,
+25.6 
+],
+[
+ &quot;Run 55&quot;,
+3,
+66.1599,
+3358.8,
+-5,
+17.4 
+],
+[
+ &quot;Run 55&quot;,
+3.5,
+66.26445,
+3348.95,
+-23.15,
+20.5 
+],
+[
+ &quot;Run 55&quot;,
+4,
+66.4108,
+3294,
+-43.95,
+25 
+],
+[
+ &quot;Run 55&quot;,
+4.5,
+66.6636,
+3206.6,
+-20.6,
+46.8 
+],
+[
+ &quot;Run 55&quot;,
+5,
+66.8354,
+3178.4,
+-33.2,
+8.8 
+],
+[
+ &quot;Run 55&quot;,
+5.5,
+66.9105,
+3160.9,
+-23.9,
+20.2 
+],
+[
+ &quot;Run 55&quot;,
+6,
+67.0825,
+3111.95,
+-27.75,
+35.45 
+],
+[
+ &quot;Run 55&quot;,
+6.5,
+67.34325,
+3039.85,
+-27.55,
+51.15 
+],
+[
+ &quot;Run 55&quot;,
+7,
+67.6445,
+2989.4,
+-12.4,
+57.2 
+],
+[
+ &quot;Run 55&quot;,
+7.5,
+67.8598,
+2959.6,
+-15.2,
+34.2 
+],
+[
+ &quot;Run 55&quot;,
+8,
+68.0826,
+2920.85,
+-22.9,
+31.25 
+],
+[
+ &quot;Run 55&quot;,
+8.5,
+68.3706,
+2844.4,
+-24,
+54.4 
+],
+[
+ &quot;Run 55&quot;,
+9,
+68.7242,
+2779.9,
+-15,
+46.5 
+],
+[
+ &quot;Run 55&quot;,
+9.5,
+69.09285,
+2728.65,
+-11.8,
+48.85 
+],
+[
+ &quot;Run 55&quot;,
+10,
+69.35215,
+2705.35,
+-12.85,
+32.15 
+],
+[
+ &quot;Run 55&quot;,
+10.5,
+69.4787,
+2690.1,
+-19.5,
+8.3 
+],
+[
+ &quot;Run 55&quot;,
+11,
+69.5164,
+2681.7,
+-4,
+1 
+],
+[
+ &quot;Run 56&quot;,
+0,
+69.5317,
+2683.5,
+14.5,
+1.4 
+],
+[
+ &quot;Run 56&quot;,
+1,
+69.5537,
+2687.6,
+20.4,
+1.8 
+],
+[
+ &quot;Run 56&quot;,
+1.5,
+69.6174,
+2697.75,
+13.75,
+14.75 
+],
+[
+ &quot;Run 56&quot;,
+2,
+69.7175,
+2711.7,
+21,
+12.45 
+],
+[
+ &quot;Run 56&quot;,
+2.5,
+69.7722,
+2725.9,
+16.1,
+2.1 
+],
+[
+ &quot;Run 56&quot;,
+3,
+69.79,
+2727.6,
+15.6,
+5.65 
+],
+[
+ &quot;Run 56&quot;,
+3.5,
+69.85105,
+2743.45,
+31.35,
+13.5 
+],
+[
+ &quot;Run 56&quot;,
+4,
+69.95475,
+2781.6,
+31.15,
+12.5 
+],
+[
+ &quot;Run 56&quot;,
+4.5,
+70.04855,
+2808.25,
+29.4,
+15 
+],
+[
+ &quot;Run 56&quot;,
+5,
+70.1485,
+2829.95,
+15.3,
+13.9 
+],
+[
+ &quot;Run 56&quot;,
+5.5,
+70.2286,
+2837.1,
+6.1,
+13.6 
+],
+[
+ &quot;Run 57&quot;,
+0,
+70.2948,
+2837.3,
+-10.9,
+16.8 
+],
+[
+ &quot;Run 57&quot;,
+0.5,
+70.3339,
+2833.3,
+-1.7,
+14.4 
+],
+[
+ &quot;Run 58&quot;,
+0,
+70.3555,
+2834.5,
+3.7,
+9.7 
+],
+[
+ &quot;Run 58&quot;,
+0.5,
+70.3932,
+2836.4,
+7.8,
+5.8 
+],
+[
+ &quot;Run 58&quot;,
+2,
+70.4175,
+2838.3,
+7.4,
+0.6 
+] 
+];
+data.addColumn(&#39;string&#39;,&#39;run&#39;);
+data.addColumn(&#39;number&#39;,&#39;time&#39;);
+data.addColumn(&#39;number&#39;,&#39;distance.km&#39;);
+data.addColumn(&#39;number&#39;,&#39;altitude.m&#39;);
+data.addColumn(&#39;number&#39;,&#39;slope.angle&#39;);
+data.addColumn(&#39;number&#39;,&#39;speed.kmhr&#39;);
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID24753f6d5f93() {
+var data = gvisDataMotionChartID24753f6d5f93();
+var options = {};
+options[&quot;width&quot;] =    600;
+options[&quot;height&quot;] =    500;
+
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById(&#39;MotionChartID24753f6d5f93&#39;)
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = &quot;motionchart&quot;;
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage &amp;&amp; i &lt; pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID24753f6d5f93);
+})();
+function displayChartMotionChartID24753f6d5f93() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load(&quot;visualization&quot;, &quot;1&quot;, { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length &gt; 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+&lt;/script&gt;
+ 
+&lt;!-- jsChart --&gt;  
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.google.com/jsapi?callback=displayChartMotionChartID24753f6d5f93&quot;&gt;&lt;/script&gt;
+ 
+&lt;!-- divChart --&gt;
+  
+&lt;div id=&quot;MotionChartID24753f6d5f93&quot; style=&quot;width: 600px; height: 500px;&quot;&gt;
+&lt;/div&gt;
+ &lt;div&gt;&lt;span&gt;Data: skidata_collapsed &amp;#8226; Chart ID: &lt;a href=&quot;Chart_MotionChartID24753f6d5f93.html&quot;&gt;MotionChartID24753f6d5f93&lt;/a&gt;&lt;/span&gt;&lt;br /&gt; 
+&lt;!-- htmlFooter --&gt;
+&lt;span&gt; 
+  R version 3.0.2 (2013-09-25) &amp;#8226; &lt;a href=&quot;http://code.google.com/p/google-motion-charts-with-r/&quot;&gt;googleVis-0.4.7&lt;/a&gt;
+  &amp;#8226; &lt;a href=&quot;https://developers.google.com/terms/&quot;&gt;Google Terms of Use&lt;/a&gt; &amp;#8226; &lt;a href=&quot;https://google-developers.appspot.com/chart/interactive/docs/gallery/motionchart.html#Data_Policy&quot;&gt;Data Policy&lt;/a&gt;
+&lt;/span&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;h1 id=&quot;manually-create-frames-of-the-animation&quot;&gt;Manually create frames of the animation&lt;/h1&gt;
+
+&lt;p&gt;So to manually animate the graph there are two steps,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Make the frame of the animation&lt;/li&gt;
+  &lt;li&gt;Stitch them together&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The first step is relatively easy. Make a loop that iterates over subsets of your data,
+ spitting out a frame at each step. If you have ImageMagick installed, you can skip the second 
+ step and go straight to a gif by using &lt;em&gt;saveGIF&lt;/em&gt;, rather than opening a png device.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Names for each frame of the animation&lt;/span&gt;
+graphname &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; paste&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;manualplot_&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;order&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;sep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Load up the data&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# The torrent is pretty big, so no data dump in a gist this time&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Set up loop to run through each row of the dataset&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;nrow&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Get name of graph, set width&lt;/span&gt;
+  	png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;graphname&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Open ggplot2 object and subset to all data till that point of the loop&lt;/span&gt;
+  g &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,],&lt;/span&gt;
+              aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; count_trades_log&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                  y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; priceperbitcoin_log&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+                  &lt;span class=&quot;c1&quot;&gt;#colour = as.numeric(month_num)&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Plot past points and path as faded&lt;/span&gt;
+    geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
+    geom_path&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# I dislike the default ggplot2 theme&lt;/span&gt;
+    theme_bw&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# My colouring is a bit superflous - don&amp;#39;t bother with the legend&lt;/span&gt;
+    theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    ggtitle&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Relationship between bitcoin value &amp;amp; number traded, by month&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Write which month we are currently up to in the loop&lt;/span&gt;
+    annotate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+             label &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mydata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;month&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+             x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+             size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# This needs to be adjusted to your data, as limits and labels will differ&lt;/span&gt;
+    scale_x_continuous&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Number of trades over the month&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                       limits&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                       labels&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;10,000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;32,000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;100,000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;320,000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1,000,000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    scale_y_continuous&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Median value of a Bitcoin (£)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                       labels&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1,000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                       limits&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Make the point we are up to stant out. Note I had to reaffirm the data being used,&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#	as now I just want the current date.&lt;/span&gt;
+    geom_point&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;count_trades_log&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                   y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;priceperbitcoin_log&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+               colour &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; size &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+               data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mydata&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;p&quot;&gt;,])&lt;/span&gt;
+  print&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;g&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After running this code, you’ll have a series of pngs that are the frames of your animation. If you’ve
+ installed stuff via terminal before, I’d recommend installing ImageMagick via Homebrew or 
+ some other package manager (It may have been my incompetency, but I found it a nightmare to 
+ install). The easy option though is one of the countless online services to stich the gif 
+ together, or GIMP&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Rather than 
+ risking screwing up something your OS depends on.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/bitcoin_2a_gif.gif&quot;&gt;&lt;img src=&quot;/images/bitcoin_2a_gif.gif&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;Increasing number of trades and value of a bitcoin over time.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Saving an image in GIMP that has layers as a gif will result in a pop up box asking if this is an animation. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/gifsinr/&quot;&gt;Animated plots in R&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
