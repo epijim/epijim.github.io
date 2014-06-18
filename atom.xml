@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.uk" />
-	<updated>2014-06-18T22:32:36+01:00</updated>
+	<updated>2014-06-18T22:37:23+01:00</updated>
 	<id>http://epijim.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,136 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[New Zealand and sheep]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/sheep/" />
+		<id>http://epijim.uk/articles/sheep</id>
+		<published>2014-06-08T00:00:00+01:00</published>
+		<updated>2014-06-08T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;p&gt;When I say I grew up in New Zealand, a sheep joke often rears it’s head. I’ve always wondered
+ how well that stereotype actually fit modern New Zealand. The claim we have 60,000,000 sheep 
+ comes up fairly frequently, but I had no idea if that was close to the 
+ contemporary population. Thankfully, Stats NZ provides the numbers, and below I’ve 
+ plotted the numbers I got from their website.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;so-how-many-sheep-are-there&quot;&gt;So how many sheep are there?&lt;/h1&gt;
+
+&lt;p&gt;So at one point there were 70,301,461 sheep in New Zealand. That was back in 1982 though.
+ The number of sheep in 2013 was 30,904,714. Now I’m assuming this is sheep declared to the 
+ tax man (I’m hazy on where Stats NZ got such an exact number from), but I doubt it’s too much higher 
+ in reality.&lt;/p&gt;
+
+&lt;p&gt;To put the numbers in context, in 2012 there were 10.8 million sheep in the UK&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; and 74.4 million
+ in Australia&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. &lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_1_sheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_1_sheep.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;and-the-number-per-person&quot;&gt;And the number per person?&lt;/h1&gt;
+
+&lt;p&gt;So in 2013 there were 30,904,714 sheep and 4,504,600 people. So that’s 6.86 sheep to every
+ person. Back in 1981 though, there 21.79 sheep to every person in New Zealand. &lt;/p&gt;
+
+&lt;p&gt;In 2012 in the UK, there were 0.2 sheep per person, and 3.3 per person in Australia.&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; So
+ compared to the British and Australians we’re the bigger sheep lovers. After the Kiwi’s, it’s 
+ the Welsh that tend to bare the brunt of the sheep jokes. In Wales there are 2.8 sheep to 
+ every person - so looks like the jokes are best directed at the Kiwi’s after all.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_2_sheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_2_sheep.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;and-how-much-is-farm-land&quot;&gt;And how much is farm land?&lt;/h1&gt;
+
+&lt;p&gt;New Zealand’s fertile lands gave it the nickname “Britain’s Breadbasket”&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; and, historically at least,
+ huge swathes of the country were farmland. &lt;/p&gt;
+
+&lt;p&gt;I’d love to know what happened in the 70’s and 80’s. 
+ I’m guessing the abrupt change may have had something to do with forestry, or it could be as 
+ mundane as a change in the way land was classified. The Stat NZ site doesn’t have detailed 
+ breakdowns from back then but the answer must be somewhere in the data.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_3_sheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_3_sheep.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A forestry report&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; I found claims that in 2010 land use was supposedly broken down like below 
+ (I’ve replotted the reports pie graph as a bar chart, although I haven’t been fully converted 
+ to being a pie-chart zealot by Tufte yet&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;). While the UK was about 69% farmland and 9% forest in 2010.&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+
+&lt;p&gt;Despite NZ having the reputation of being greener, a greater of proportion of the UK is farmland. This doesn’t seem to make sense, and there may
+ be some difference in how land use is measured, but it’s also due to the fact that around 
+ 30% of NZ is currently a national park&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;, while the proportion is only around 9% in the UK&lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_4_sheep.png&quot;&gt;&lt;img src=&quot;/images/sheep_4_sheep.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;While I was looking for the number of sheep in Australia I stumbled across
+ a page on the Stats NZ site were they had already answered my first question.&lt;sup id=&quot;fnref:11&quot;&gt;&lt;a href=&quot;#fn:11&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; They’ve gone 
+ and explored a bunch of other myths about NZ as well, and the page is well worth a gander.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;EDIT:&lt;/em&gt;: my cousin mentioned she’d like to see how the cow population has changed. Below
+ I plotted the number of dairy cows, against beef cows, with deer and pigs thrown in. This data only 
+ starts in the 70’s, unlike the sheep data which starts in the 30’s.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_5_cows.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_5_cows.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;And finally, to put the plot above in context, with sheep as well.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/sheep_6_withsheep.jpeg&quot;&gt;&lt;img src=&quot;/images/sheep_6_withsheep.jpeg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Stats NZ site http://www.stats.govt.nz/tools_and_services.aspx &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Eblex report http://www.eblex.org.uk/market-intelligence-news/uk-sheep-numbers-regional-breakdown/ &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Meat and Livestock Australia http://www.mla.com.au/Cattle-sheep-and-goat-industries/Industry-overview/Sheep &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;I just used wikipedia’s 2012 population estimates for the two countries. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;http://en.wikipedia.org/wiki/Breadbasket#New_Zealand &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Ministry for Primary Industries report http://www.mpi.govt.nz/portals/0/documents/forestry/statistics/forestry-stats/facts-figures-11-12.pdf &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;Edward Tufte gives the pie chart a more succinct and decisive treatment in “The Visual Display of Quantitative Information” https://news.ycombinator.com/item?id=2991062 &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;Not from the most reliable source… hccmpw.org.uk/index.php/tools/required/files/download?fID=2086 &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;http://en.wikipedia.org/wiki/Protected_areas_of_New_Zealand &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;http://en.wikipedia.org/wiki/National_parks_of_England_and_Wales &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:11&quot;&gt;
+      &lt;p&gt;Mythbusters site http://www.stats.govt.nz/browse_for_stats/population/mythbusters.aspx &lt;a href=&quot;#fnref:11&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/sheep/&quot;&gt;New Zealand and sheep&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on June 08, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Simpson's paradox in diabetes (via javascript)]]></title>
@@ -9769,118 +9899,6 @@ Ten-year modelled CVD risk was 27.3 (SD 13.9, histogram
 &lt;span class=&quot;k&quot;&gt;\end&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;{&lt;/span&gt;document&lt;span class=&quot;nb&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/intext-distributions/&quot;&gt;In-text distributions&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on December 02, 2013.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[Distance to the nearest pub]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/pub-distances/" />
-		<id>http://epijim.uk/articles/pub-distances</id>
-		<published>2013-11-29T00:00:00+00:00</published>
-		<updated>2013-11-29T00:00:00+00:00</updated>
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<content type="html">&lt;p&gt;The plot below shows the distance to the nearest bar or pub (in blue), from a grid of
- spots in Cambridge. Starting in the top left of the green box, I ran a python script that calls 
- the Google Places API to ask where the nearest “bar” is. It then moves 100m right, 
- and asks again. When it hits the far side of the green box, it drops down 100m and 
- makes a new call every 100m. Distances are coloured based on the distance google maps 
- claims it is from points on the grid, to the nearest bar. The plot is then put together 
- using ggmap in R.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/pub_1_pub.png&quot;&gt;&lt;img src=&quot;/images/pub_1_pub.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Distance to the nearest pub from a grid of points in Cambridge.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Nathan Yau wrote a brilliant book called Datapoints&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, where he introduces this style of
- map, and it is from there that I picked up the code to handle the geo-coding.&lt;/p&gt;
-
-&lt;p&gt;Google has all the listed businesses in Cambridge coded into types (e.g.
- restaurant, dentist, mall, etc). Unfortunately – google map’s hasn’t got the “types” 
- coded very reliably. So this map should be taken with a grain of salt.&lt;/p&gt;
-
-&lt;p&gt;The map itself becomes easier to read when looking at a less common places around
- Cambridge. Below is a plot of distances to the nearest “&lt;em&gt;grocery_or_supermarket&lt;/em&gt;” in 
- Cambridge. Approach this with extra caution though, as things like the King Street 
- off licence are included in this category. Here you can see the South East is very 
- well served, while there is hardly anywhere to buy a 4-pack of fosters and a potato 
- in West Cambridge. I found it quite interesting how distance as the crow flies to the 
- nearest off licence or supermarket was quite often not the fastest by google maps.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/pub_2_groc.png&quot;&gt;&lt;img src=&quot;/images/pub_2_groc.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Distance to the nearest grocery store from a grid of points in Cambridge.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Seeing as I had the data out of google already, I thought I’d chuck in a line and filled
- contour map as well. Below are two plots. First is a normal line map of restaurant 
- density in Cambridge, then a filled contour map of the same data.&lt;/p&gt;
-
-&lt;figure class=&quot;half&quot;&gt;
-	&lt;img src=&quot;/images/pub_3_a.png&quot; alt=&quot;&quot; /&gt;
-	&lt;img src=&quot;/images/pub_3_b.png&quot; alt=&quot;&quot; /&gt;
-	&lt;figcaption&gt;Restaurant density in Cambridge.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggmap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-getLineColor &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;val&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;c1&quot;&gt;#pal &amp;lt;- colorRampPalette(c(&amp;quot;#333333&amp;quot;, &amp;quot;#ffffff&amp;quot;, &amp;quot;#b5310c&amp;quot;))&lt;/span&gt;
-	pal &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-	colors &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	val.log &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; log&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;val&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	
-	&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;val &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		col &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colors&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		colindex &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; max&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; round&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; val &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		col &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colors&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;colindex&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	
-	&lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;col&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-distance &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nearest-rest.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-&lt;span class=&quot;c1&quot;&gt;# Calculate colors&lt;/span&gt;
-pts0 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; mapproject&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;distance&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;lng&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;distance&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;lat&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-pts1 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; mapproject&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;distance&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;lngnear&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; unlist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;distance&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;latnear&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-seg.colors &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; sapply&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;distance&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;dist_miles&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; FUN&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;getLineColor&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Map It&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
- 
-cam &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nearest-rest.csv&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-&lt;span class=&quot;c1&quot;&gt;# The box that the data points are within, just top left (lat and long) and bottom right are fed in&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# This box will be taken from google maps. You can also use other mapping sites - see ggmap help for full list.&lt;/span&gt;
-bbox &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.104994&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;52.215382&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.149626&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;52.195868&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#get the map from google&lt;/span&gt;
-basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bbox&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; zoom&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; source&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;google&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; maptype&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;terrain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;bw&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
- 
- 
-&lt;span class=&quot;c1&quot;&gt;#distance to line map&lt;/span&gt;
-ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; geom_segment&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lng&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; xend&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lngnear&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; yend&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latnear&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;dist_miles&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cam&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; scale_colour_gradient&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;low&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; high&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; limits&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
- 
-&lt;span class=&quot;c1&quot;&gt;#contour map&lt;/span&gt;
-ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; stat_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lngnear&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latnear&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cam&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
- 
-&lt;span class=&quot;c1&quot;&gt;#density map&lt;/span&gt;
-ggmap&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;basemap&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; stat_density2d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lngnear&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;latnear&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; fill&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;..level.. &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;..level.. &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cam&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; bins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;alpha&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; geom &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;polygon&amp;quot;&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Nathan Yau (&lt;strong&gt;2013&lt;/strong&gt;) &lt;em&gt;Data Points: Visualization That Means Something&lt;/em&gt;, ISBN: 978-1-118-46219-5 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/pub-distances/&quot;&gt;Distance to the nearest pub&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on November 29, 2013.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>
