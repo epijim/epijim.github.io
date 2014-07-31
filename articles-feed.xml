@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.uk" />
-	<updated>2014-06-20T08:13:15+01:00</updated>
+	<updated>2014-07-31T19:24:21+01:00</updated>
 	<id>http://epijim.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,25 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.uk/articles-feed.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[Does Redbull give you wings?]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/CamTrad2014/" />
+		<id>http://epijim.uk/articles/CamTrad2014</id>
+		<published>2014-08-09T00:00:00+01:00</published>
+		<updated>2014-08-09T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<summary type="text">Caffeine RCT by students from my Cambridge Tradition class.</summary>
+		<content type="html">&lt;p&gt;The following paper was written by students I had the pleasure of teaching during the 2014 summer. They were all high school kids.&lt;/p&gt;
+
+&lt;iframe width=&quot;650&quot; height=&quot;4500&quot; src=&quot;http://epijim.uk/CamTrad2014/index.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/CamTrad2014/&quot;&gt;Does Redbull give you wings?&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on August 09, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[New Zealand and sheep]]></title>
@@ -850,169 +869,6 @@ yLabelFormat: function (y) { return y.toString() + &#39; pounds&#39;; },
 
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/GradCon2014/&quot;&gt;GradCon 2014 poster&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 15, 2014.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[Publish or perish - there's a model for that.]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/hindex/" />
-		<id>http://epijim.uk/articles/hindex</id>
-		<published>2014-04-11T00:00:00+01:00</published>
-		<updated>2014-04-11T00:00:00+01:00</updated>
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<summary type="text">Scraping Google Scholar for publications and predicting an h index.</summary>
-		<content type="html">&lt;p&gt;A rather contentious talking point in academia is the belief that it’s publish or perish.
- Fanning the flames of this debate are measures like the H-index&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, which attempt to distill 
- a researchers impact on the body of knowledge into a single metric.&lt;/p&gt;
-
-&lt;p&gt;Top explain the H-index, I’ll rely on the quote below, which was written by Daniel Acuna.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;One popular measure of success is physicist Jorge Hirsch’s h-index, which captures the quality (citations) and quantity (number) of papers, thus representing scientific achievements better than either factor alone. A scientist has an h-index of n if he or she has published n articles receiving at least n citations each. Einstein, Darwin and Feynman, for example, have impressive h-indices of 96, 63 and 53, respectively. According to Hirsch, an h-index of 12 for a physicist — meaning 12 papers with at least 12 citations each — could qualify him or her for tenure at a major university.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Acuna and his co-authors developed a model to predict future H-index&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, based on
- previous publications and citations. Their sample contained 3,085 neuroscientists, 
- 57 Drosophila researchers and 151 evolutionary scientists. From this population they built, 
- and published, a model that explains about the same amount of variation in the outcome as 
- the cardiovascular disease (CVD) risk score that is recommended for use in UK practices. &lt;/p&gt;
-
-&lt;p&gt;Unlike a CVD risk score though, there has been no external validations, so we don’t know how
- well this model performs outside of the 3,000ish neuroscientists…&lt;/p&gt;
-
-&lt;p&gt;So with a plethora of caveats in hand - like always - there is an R package to connect this
- model to people’s Google Scholar profiles.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;I should stress now that I consider this model, and the H-index in general, a fun metric to play with. And not a true measure of the relevance and impact of someones research&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;So first the packages needed to run this analysis. &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;devtools&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# get the latest version&lt;/span&gt;
-install_github&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jkeirstead/scholar&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# google scholar package&lt;/span&gt;
-library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xkcd&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# xkcd graphs!&lt;/span&gt;
-library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;extrafont&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# xkcd fonts&lt;/span&gt;
-library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ggplot2&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# best package ever&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And check the connection with google scholar. For the &lt;em&gt;id&lt;/em&gt;, it’s the bit after &lt;em&gt;user=&lt;/em&gt; in
- your google scholar profile url.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;id_j &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;-S7V41QAAAAJ&amp;#39;&lt;/span&gt;
-james &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_profile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_j&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-attach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;james&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  name &lt;span class=&quot;c1&quot;&gt;# me!&lt;/span&gt;
-  total_cites &lt;span class=&quot;c1&quot;&gt;# 1129 (although only as I&amp;#39;m one of 300 people&lt;/span&gt;
-              &lt;span class=&quot;c1&quot;&gt;# on the WHO Global Burden of Disease paper&lt;/span&gt;
-  h_index &lt;span class=&quot;c1&quot;&gt;# 5&lt;/span&gt;
-  i10_index &lt;span class=&quot;c1&quot;&gt;# 3&lt;/span&gt;
-detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;james&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And now I’ll scrape one of my two supervisors pages.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;id_s &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;6WC1bewAAAAJ&amp;#39;&lt;/span&gt;
-simon &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_profile&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_s&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-attach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  name &lt;span class=&quot;c1&quot;&gt;# Simon Griffin MBBS MSc DM FRCGP&lt;/span&gt;
-  total_cites &lt;span class=&quot;c1&quot;&gt;# 9673&lt;/span&gt;
-  h_index &lt;span class=&quot;c1&quot;&gt;# 50&lt;/span&gt;
-  i10_index &lt;span class=&quot;c1&quot;&gt;# 118&lt;/span&gt;
-detach&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simon&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The google scholar package allows you to compare the citations for different authors over time.
- In the following code block I pull the citations per year for myself, one of my supervisors, 
- and the Winston Professor for the Public Understanding of Risk (an academic at Cambridge with 
- one of my dream jobs).&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;ids &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;oz7MFu0AAAAJ&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; id_s&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;id_j&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Compare their career trajectories, based on year of first citation&lt;/span&gt;
-df &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; compare_scholar_careers&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;ids&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-xrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;career_year&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-yrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hindex_plot1.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;df&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;career_year&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cites&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;linetype&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  xkcdaxis&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xrange&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;yrange&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Citations that year&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Year since first citation&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  ggtitle&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;expression&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Comparing citations&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                          atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;italic&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Cam&amp;#39;s Prof of Risk, my supervisor and me&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/hindex_plot1.png&quot;&gt;&lt;img src=&quot;/images/hindex_plot1.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Citations by year.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;So my career is quite a bit behind - but as I’m only in the 2nd year of my PhD, I’m also
- not really an academic yet.&lt;/p&gt;
-
-&lt;p&gt;Now to the H-index. The following code will use the google scholar profiles of myself and
- the two other people who’s data I pulled to calculate the predicted trajectories of our H-indexes over 
- the next 10-years. As I mentioned before - this model has not been validated in epidemiologists, 
- so this is just for interest.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## Predict my h-index&lt;/span&gt;
-simon_h &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; predict_h_index&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_s&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-  simon_h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Prof Griffin&amp;quot;&lt;/span&gt;
-james_h &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; predict_h_index&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;id_j&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  james_h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;James Black&amp;quot;&lt;/span&gt;
-david_h &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; predict_h_index&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;oz7MFu0AAAAJ&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  david_h&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;name &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Prof Spiegelhalter&amp;quot;&lt;/span&gt;
-
-h_index &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;simon_h&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;james_h&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-h_index &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; rbind&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;david_h&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Now I have a dataframe with predicted H-indexes, so I can plot them. Using an XKCD theme
- of course.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r&quot;&gt;xrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;years_ahead&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-yrange &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; range&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-png&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hindex_plot2.png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;width&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-ggplot&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;years_ahead&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; y&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;h_index&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  geom_line&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;aes&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;linetype&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;colour&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;name&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  xkcdaxis&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;xrange&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;yrange&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  ylab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Predicted H index&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  xlab&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Years from 2014&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; 
-  ggtitle&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;expression&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Predicting H index over the next 10 years&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-                          atop&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;italic&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;For Cam&amp;#39;s Prof of Risk, my supervisor and me&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-  theme&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;legend.position&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-dev.off&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/hindex_plot2.png&quot;&gt;&lt;img src=&quot;/images/hindex_plot2.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Predicted H-index from April 2014 onwards.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;So according to this model my H-index should increase from it’s current level of 5, to 16 in 10-years time. 10-years
- from now it will be 8.5 years since I submitted my PhD. So I would be incredibly stoked 
- to have 16 papers with more than 16 citations for each. Better yet, it suggests my 
- current trajectory seems to avoid &lt;em&gt;perish&lt;/em&gt;. Sadly, I don’t have much faith in the prophetic 
- abilities of this model, especially as it’s based off only a handful of publications. &lt;/p&gt;
-
-&lt;p&gt;I’m also really hoping no-one at a funding
- body or fellowship board gets carried away with this model. I’m afraid that the big winners from 
- these sorts of scores becoming more important would be 
- the vanity publishers like Hindawi and Dove Press, who will publish anything for a fee. &lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Hirsch. &lt;em&gt;Proc. Natl Acad. Sci.&lt;/em&gt; USA 102, 16569–16572 (&lt;strong&gt;2005&lt;/strong&gt;) &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Acuna. &lt;em&gt;Nature&lt;/em&gt; 489, 201–202 (&lt;strong&gt;2012&lt;/strong&gt;) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/hindex/&quot;&gt;Publish or perish - there's a model for that.&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on April 11, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>

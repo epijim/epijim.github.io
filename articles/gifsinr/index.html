@@ -5374,7 +5374,11 @@ callbacks.shift()();
  spitting out a frame at each step. If you have ImageMagick installed, you can skip the second 
  step and go straight to a gif by using <em>saveGIF</em>, rather than opening a png device.</p>
 
-<div class="highlight"><pre><code class="r"><span class="c1"># Names for each frame of the animation</span>
+<div class="highlight"><pre><code class="r">mydata <span class="o">&lt;-</span> mydata<span class="p">[</span>order<span class="p">(</span>mydata<span class="o">$</span>month_num<span class="p">)</span> <span class="p">,</span> <span class="p">]</span>
+  order <span class="o">&lt;-</span> c<span class="p">(</span><span class="m">1</span><span class="o">:</span>nrow<span class="p">(</span>mydata<span class="p">))</span>
+  mydata <span class="o">&lt;-</span>cbind<span class="p">(</span>mydata<span class="p">,</span> order<span class="p">)</span>
+  
+<span class="c1"># Names for each frame of the animation</span>
 graphname <span class="o">&lt;-</span> paste<span class="p">(</span><span class="s">&quot;manualplot_&quot;</span><span class="p">,</span>order<span class="p">,</span><span class="s">&quot;.png&quot;</span><span class="p">,</span>sep<span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># Load up the data</span>
@@ -5447,11 +5451,11 @@ graphname <span class="o">&lt;-</span> paste<span class="p">(</span><span class=
 						
 						<li><a href="http://epijim.uk/articles/hindex/">Publish or perish - there's a model for that.</a></li>
 						
+						<li><a href="http://epijim.uk/articles/CamTrad2014/">Does Redbull give you wings?</a></li>
+						
 						<li><a href="http://epijim.uk/articles/sheep/">New Zealand and sheep</a></li>
 						
 						<li><a href="http://epijim.uk/articles/bitcoin/">The barons of bitcoin</a></li>
-						
-						<li><a href="http://epijim.uk/articles/Scatterplotmatrix/">Scatter plot matrix with R</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->
