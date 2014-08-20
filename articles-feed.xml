@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.uk" />
-	<updated>2014-08-20T19:39:54+01:00</updated>
+	<updated>2014-08-20T19:43:48+01:00</updated>
 	<id>http://epijim.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -54066,8 +54066,8 @@ return &#39;&lt;h3&gt;&#39; + key + &#39;&lt;/h3&gt;&#39; +
 
 
 
-The script I used to make this plot is [here](http://rpubs.com/epijim_nz/worldcup2014), and
- the data is [here](https://github.com/fivethirtyeight/data).
+The script I used to make this plot is at *http://rpubs.com/epijim_nz/worldcup2014*, and
+ the data is is on the FiveThirtyEight repo: *https://github.com/fivethirtyeight/data*.
 &lt;/body&gt;&lt;/html&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/worldcup14/&quot;&gt;Changing fate of the German football team&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on August 20, 2014.&lt;/p&gt;</content>
