@@ -5,7 +5,7 @@
 	<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 	<icon>http://epijim.uk/images/icon152.png</icon>
 	<link rel="alternate" type="text/html" href="http://epijim.uk" />
-	<updated>2014-08-20T19:45:38+01:00</updated>
+	<updated>2014-09-15T19:56:12+01:00</updated>
 	<id>http://epijim.uk/</id>
 	<author>
 		<name>James Black</name>
@@ -14,6 +14,83 @@
 	</author>
 	<rights>Unless otherwise noted, all content is published under a Creative Commons Attribution-Noncommercial-NoDerivs 3.0 United States License.</rights>
 	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/atom+xml" href="http://epijim.uk/atom.xml" />
+	
+	<entry>
+		<title type="html"><![CDATA[Scottish independence polls]]></title>
+		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/independence/" />
+		<id>http://epijim.uk/articles/independence</id>
+		<published>2014-09-15T00:00:00+01:00</published>
+		<updated>2014-09-15T00:00:00+01:00</updated>
+		<author>
+			<name>James Black</name>
+			<uri>http://epijim.uk</uri>
+			<email>james.black@cantab.net</email>
+		</author>
+		<content type="html">&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
+&lt;/script&gt;
+
+&lt;p&gt;I’m currently doing an online course focusing on data management.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; As part of that course
+ I’m learning how to scrape information from websites, using R, when they don’t give you an API 
+ for easy access. To practice what I learnt, I had a go at scraping the data from the BBC’s 
+ Scottish independence poll tracker. After checking the page source, I saw the data in a javascript 
+ file.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;As it took me over an hour to figure out how to read that file, I thought I should probably
+ plot the hard won data.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-raw-data&quot;&gt;The raw data&lt;/h1&gt;
+
+&lt;p&gt;Below is the data I pulled from that file. It contains 58 polls taken by six different companies.
+ The first plot is just the raw data as a line graph.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/independence_1_diff.png&quot;&gt;&lt;img src=&quot;/images/independence_1_diff.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;simply-smoothed&quot;&gt;Simply smoothed&lt;/h1&gt;
+
+&lt;p&gt;Again, the raw data, but this time smoothing the lines using locally weighted regression.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/independence_2_smooth.png&quot;&gt;&lt;img src=&quot;/images/independence_2_smooth.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;treating-the-polls-as-not-independent&quot;&gt;Treating the polls as not independent&lt;/h1&gt;
+
+&lt;p&gt;For this last figure, I’ve assumed that the polls are related to each other using a
+ multilevel model. As these polls are quite different in their methodology, I’ve let the slopes 
+ and intercepts vary for survey companies. Days till the vote is treated as something that 
+ is constant across the companies (I didn’t look into whether this is actually true). 
+ As the slopes don’t look linear, I’ve transformed the time variable in the 
+ model. The residuals get quite iffy when you get close to the voting day, so the model shouldn’t 
+ be taken seriously (having said that - the model suggests that 6 days out the &lt;em&gt;‘better together’&lt;/em&gt; group 
+ have a lead of 1.1%).&lt;/p&gt;
+
+&lt;p&gt;The model:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(No-Yes)_{ij} = \beta _{0} + \beta_{1}Company_{ij}+\beta_{2}DaysTillVote_{ij} + u_{0j} + u_{1j}Company_{ij}+e_{ij}&lt;/script&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/independence_3_model.png&quot;&gt;&lt;img src=&quot;/images/independence_3_model.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;the-data-source&quot;&gt;The data source&lt;/h1&gt;
+
+&lt;p&gt;This data was pulled from the .js file that runs the &lt;a href=&quot;http://www.bbc.co.uk/news/events/scotland-decides/poll-tracker&quot;&gt;BBC poll tracker, which is here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;The course https://www.coursera.org/course/getdata &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;The js file I was practicing my parsing skills on http://news.bbcimg.co.uk/news/special/2014/newsspec_7419/english/js/data/polls.js &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/independence/&quot;&gt;Scottish independence polls&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on September 15, 2014.&lt;/p&gt;</content>
+	</entry>
 	
 	<entry>
 		<title type="html"><![CDATA[Changing fate of the German football team]]></title>
@@ -63452,92 +63529,6 @@ labels &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&qu
 &lt;/div&gt;
 
 		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/facebook-network/&quot;&gt;Plotting my Facebook data&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on February 05, 2014.&lt;/p&gt;</content>
-	</entry>
-	
-	<entry>
-		<title type="html"><![CDATA[Facebook friend migrations]]></title>
-		<link rel="alternate" type="text/html" href="http://epijim.uk/articles/great-circles/" />
-		<id>http://epijim.uk/articles/great-circles</id>
-		<updated>2014-02-13T00:00:00-00:00</updated>
-		<published>2014-01-26T00:00:00+00:00</published>
-		
-		<author>
-			<name>James Black</name>
-			<uri>http://epijim.uk</uri>
-			<email>james.black@cantab.net</email>
-		</author>
-		<content type="html">&lt;figure&gt;
-	&lt;a href=&quot;/images/greatcircles_1_final.png&quot;&gt;&lt;img src=&quot;/images/greatcircles_1_final.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Great circles plot of my facebook friend&#39;s migrations.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Facebook users are asked to fill in their hometown, and where they live now (although
- only about 60%ish of my friends actually filled this data in). This data is all up for 
- grabs using the Facebook API, as I detailed in an earlier post. In the plot above, the 
- blue dot is my Facebook friends hometown and the red is where they live now. I have put 
- a black line connecting hometown to current location.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately this map only highlights outliers – the vast majority of my friends are
- clustered in a few cities. I played around a bit with the transparency of the points and 
- lines to try and get a sense of numbers involved, but this graph still doesn’t convey 
- the fact that a big portion of my friends currently live in Cambridge, and their 
- hometown was London, Wellington or Auckland.&lt;/p&gt;
-
-&lt;p&gt;The lines connecting hometown to current location are drawn as ‘great circles’, using
- the geosphere package. The site Flowing data gives a good tutorial on how to 
- use the package. One thing it doesn’t help with though, is what to do when a connecting 
- line crosses the international dateline. The problem is that the command spits out a 
- matrix giving the path between two points, but if someone crosses the date line it 
- spits out a list of two matrices. One matrix for each side of the datelie. &lt;/p&gt;
-
-&lt;p&gt;The plot above also suggests the fastest way between London and New Zealand is by
- skirting the North Pole. This surprised me – so in case you don’t believe the plot 
- above, the picture below is a screenshot of the shortest distance between Auckland 
- and London, according to the website Maptools.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/greatcircles_2_profile.png&quot;&gt;&lt;img src=&quot;/images/greatcircles_2_profile.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Screenshot of a great circle according to www.freemaptools.com.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Here’s the plot again without the lines. I think my next plan is to find a way to plot
- the latitude and longitudes into a country level chloropleth. I played around with 
- hexbinning, but the data is too clumped for that style of plot.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/greatcircles_3_point.png&quot;&gt;&lt;img src=&quot;/images/greatcircles_3_point.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;First plot, without the great circle lines.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;I was pretty surprised by the spread of my friends migrations. A lot more than I thought
- were still within a few thousand KMs of their hometown. As not all my friends filled in 
- the hometown and current location fields in Facebook, I’m assuming there is a bias where 
- the friends that migrate are also less likely to share their data on Facebook.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/greatcircles_4_hist.png&quot;&gt;&lt;img src=&quot;/images/greatcircles_4_hist.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Histograph of the distance my FB friends are from home.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;With the caveat that the data has holes, and as it is just my Facebook friends is
- completely unrepresentative, the plot below (raw data points in red over a box plot) 
- separates my friends into those with a hometown in NZ, and those with a hometown 
- anywhere else. You can see the clusters of Kiwis that have moved to Melbourne, and the 
- cluster in Europe.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/greatcircles_5_swarm.png&quot;&gt;&lt;img src=&quot;/images/greatcircles_5_swarm.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Swarm plot comparing Kiwi&#39;s to other friends.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;This last plot is zoomed into New Zealand.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;/images/greatcircles_6_NZ.png&quot;&gt;&lt;img src=&quot;/images/greatcircles_6_NZ.png&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Zoomed into NZ. Once again, hometown is in blue, location now in red.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-		&lt;p&gt;&lt;a href=&quot;http://epijim.uk/articles/great-circles/&quot;&gt;Facebook friend migrations&lt;/a&gt; was originally published by &lt;a href=&quot;http://epijim.uk/about/&quot;&gt;James Black&lt;/a&gt; at &lt;a href=&quot;http://epijim.uk&quot;&gt;James Black&lt;/a&gt; on January 26, 2014.&lt;/p&gt;</content>
 	</entry>
 	
 </feed>

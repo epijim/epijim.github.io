@@ -6,27 +6,27 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Scatter plot matrix with R &#8211; James Black</title>
-	<meta name="description" content="Making two types of scatter plot matrix with R.">
-	<meta name="keywords" content="R, Scatter plot matrix">
+	<title>Scottish independence polls &#8211; James Black</title>
+	<meta name="description" content="Smoothing six Scottish independence polls">
+	<meta name="keywords" content="R, Scotland, Multilevel models">
 	<!-- Twitter Cards -->
 	
 		<meta name="twitter:card" content="summary">
-			<meta name="twitter:image" content="http://epijim.uk/images/scattermatrix_thumb.png">
+			<meta name="twitter:image" content="http://epijim.uk/images/independence_thumb.png">
 		
 	
-	<meta name="twitter:title" content="Scatter plot matrix with R">
-	<meta name="twitter:description" content="Making two types of scatter plot matrix with R.">
+	<meta name="twitter:title" content="Scottish independence polls">
+	<meta name="twitter:description" content="Smoothing six Scottish independence polls">
 	<meta name="twitter:site" content="@">
 	<meta name="twitter:creator" content="@">
 	
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scatter plot matrix with R">
-<meta property="og:description" content="Making two types of scatter plot matrix with R.">
-<meta property="og:url" content="http://epijim.uk/articles/Scatterplotmatrix/">
-<meta property="og:image" content="http://epijim.uk/images/scattermatrix_thumb.png">
+<meta property="og:title" content="Scottish independence polls">
+<meta property="og:description" content="Smoothing six Scottish independence polls">
+<meta property="og:url" content="http://epijim.uk/articles/independence/">
+<meta property="og:image" content="http://epijim.uk/images/independence_thumb.png">
 <meta property="og:site_name" content="James Black">
 
 	<!-- Webmaster Tools verifications -->
@@ -34,7 +34,7 @@
 	
 
 	
-	<link rel="canonical" href="http://epijim.uk/articles/Scatterplotmatrix/">
+	<link rel="canonical" href="http://epijim.uk/articles/independence/">
 	<link href="http://feeds.feedburner.com/epijim" type="application/atom+xml" rel="alternate" title="James Black &#8211; Everything Feed">
 	<link rel="author" href="https://plus.google.com/112022213613617220776/?rel=author">
 
@@ -120,45 +120,76 @@
 		<article class="hentry" itemscope itemtype="http://schema.org/Article">
 		<header class="entry-header">
 		
-			<h1 class="entry-title" itemprop="name">Scatter plot matrix with R</h1>
+			<h1 class="entry-title" itemprop="name">Scottish independence polls</h1>
 		</header>
 		<div class="entry-wrapper">
 			<div class="entry-content" itemprop="articleBody">
-				<p>Scatter plot matrices tend to be something I always run, but never present. So I don’t bother
- with making them pretty. My two favourite functions are <em>ggpairs</em>, and <em>corrgram</em>.</p>
+				<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-<div class="highlight"><pre><code class="r">png<span class="p">(</span><span class="s">&quot;scattermatrix.png&quot;</span><span class="p">)</span>
-ggpairs<span class="p">(</span>mydata<span class="p">,</span>
-        <span class="c1">#axisLabels = &quot;none&quot;</span>
-<span class="p">)</span>
-dev.off<span class="p">()</span></code></pre></div>
+<p>I’m currently doing an online course focusing on data management.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> As part of that course
+ I’m learning how to scrape information from websites, using R, when they don’t give you an API 
+ for easy access. To practice what I learnt, I had a go at scraping the data from the BBC’s 
+ Scottish independence poll tracker. After checking the page source, I saw the data in a javascript 
+ file.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
 
-<figure>
-	<a href="/images/wine_1_scattermatrix.png"><img src="/images/wine_1_scattermatrix.png" /></a>
-	<figcaption>Scatterplot matrix of pairwise correlations. Plot type is defined by data in each pair.</figcaption>
-</figure>
+<p>As it took me over an hour to figure out how to read that file, I thought I should probably
+ plot the hard won data.</p>
 
-<p>This second plot type doesn’t handle discrete variables, so is good when you just want
- continuous vs. continuous pairs.</p>
+<h1 id="the-raw-data">The raw data</h1>
 
-<div class="highlight"><pre><code class="r">png<span class="p">(</span><span class="s">&quot;scattermatrix_corrgram.png&quot;</span><span class="p">)</span>
-corrgram<span class="p">(</span>mydata<span class="p">,</span>
-         order<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> lower.panel<span class="o">=</span>panel.pts<span class="p">,</span>
-         upper.panel<span class="o">=</span>panel.ellipse<span class="p">,</span> text.panel<span class="o">=</span>panel.txt<span class="p">,</span>
-         diag.panel<span class="o">=</span>panel.minmax<span class="p">)</span>
-dev.off<span class="p">()</span></code></pre></div>
+<p>Below is the data I pulled from that file. It contains 58 polls taken by six different companies.
+ The first plot is just the raw data as a line graph.</p>
 
 <figure>
-	<a href="/images/wine_2_scattermatrix_corrgram.png"><img src="/images/wine_2_scattermatrix_corrgram.png" /></a>
-	<figcaption>Scatterplot using an alternative plotting function (this one can't handle categories as well).</figcaption>
+	<a href="/images/independence_1_diff.png"><img src="/images/independence_1_diff.png" /></a>
 </figure>
 
+<h1 id="simply-smoothed">Simply smoothed</h1>
+
+<p>Again, the raw data, but this time smoothing the lines using locally weighted regression.</p>
+
+<figure>
+	<a href="/images/independence_2_smooth.png"><img src="/images/independence_2_smooth.png" /></a>
+</figure>
+
+<h1 id="treating-the-polls-as-not-independent">Treating the polls as not independent</h1>
+
+<p>For this last figure, I’ve assumed that the polls are related to each other using a
+ multilevel model. As these polls are quite different in their methodology, I’ve let the slopes 
+ and intercepts vary for survey companies. Days till the vote is treated as something that 
+ is constant across the companies (I didn’t look into whether this is actually true). 
+ As the slopes don’t look linear, I’ve transformed the time variable in the 
+ model. The residuals get quite iffy when you get close to the voting day, so the model shouldn’t 
+ be taken seriously (having said that - the model suggests that 6 days out the <em>‘better together’</em> group 
+ have a lead of 1.1%).</p>
+
+<p>The model:</p>
+
+<script type="math/tex; mode=display">(No-Yes)_{ij} = \beta _{0} + \beta_{1}Company_{ij}+\beta_{2}DaysTillVote_{ij} + u_{0j} + u_{1j}Company_{ij}+e_{ij}</script>
+
+<figure>
+	<a href="/images/independence_3_model.png"><img src="/images/independence_3_model.png" /></a>
+</figure>
+
+<h1 id="the-data-source">The data source</h1>
+
+<p>This data was pulled from the .js file that runs the <a href="http://www.bbc.co.uk/news/events/scotland-decides/poll-tracker">BBC poll tracker, which is here</a>.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The course https://www.coursera.org/course/getdata <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>The js file I was practicing my parsing skills on http://news.bbcimg.co.uk/news/special/2014/newsspec_7419/english/js/data/polls.js <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
 				<div class="entry-related">
 					<h2>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h2>
 					<ul>
-						
-						<li><a href="http://epijim.uk/articles/independence/">Scottish independence polls</a></li>
 						
 						<li><a href="http://epijim.uk/articles/worldcup14/">Changing fate of the German football team</a></li>
 						
@@ -166,14 +197,16 @@ dev.off<span class="p">()</span></code></pre></div>
 						
 						<li><a href="http://epijim.uk/articles/sheep/">New Zealand and sheep</a></li>
 						
+						<li><a href="http://epijim.uk/articles/bitcoin/">The barons of bitcoin</a></li>
+						
 					</ul>
 				</div><!-- /.entry-related -->
 				<hr />
 				<div class="entry-meta">
-					<meta itemprop="keywords" content="R, Scatter plot matrix">
-					<span class="entry-tags"><a href="http://epijim.uk/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://epijim.uk/tag/scatter-plot-matrix/" title="Scatter plot matrix" class="tag" rel="tag">Scatter plot matrix</a></span>
+					<meta itemprop="keywords" content="R, Scotland, Multilevel models">
+					<span class="entry-tags"><a href="http://epijim.uk/tag/r/" title="R" class="tag" rel="tag">R</a><a href="http://epijim.uk/tag/scotland/" title="Scotland" class="tag" rel="tag">Scotland</a><a href="http://epijim.uk/tag/multilevel-models/" title="Multilevel models" class="tag" rel="tag">Multilevel models</a></span>
 					<span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Published by <span itemprop="name" class="fn"><a href="http://epijim.uk/about/" title="About James Black" itemprop="url">James Black</a></span> on </span>
-					<span class="entry-date"><time datetime="2014-04-10T00:00:00+01:00" itemprop="datePublished" class="published updated">April 10, 2014</time></span>
+					<span class="entry-date"><time datetime="2014-09-15T00:00:00+01:00" itemprop="datePublished" class="published updated">September 15, 2014</time></span>
 				</div><!-- /.entry-meta -->
 			</div><!-- /.entry-content -->
 			
@@ -228,7 +261,7 @@ dev.off<span class="p">()</span></code></pre></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'jamesblack'; // Required - Replace example with your forum shortname
-    var disqus_title = 'Scatter plot matrix with R';
+    var disqus_title = 'Scottish independence polls';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
