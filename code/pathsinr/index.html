@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plotting paths in R • James Black</title>
+    <meta name="description" content="Plotting GPS points over a path in R.">
+    <meta name="keywords" content="R, Paths, Map, GPS, Skiing">
+    
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="Plotting paths in R">
+	<meta name="twitter:description" content="Plotting GPS points over a path in R.">
+	
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="http://epijim.uk/images/120x120.gif">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Plotting paths in R">
+	<meta property="og:description" content="Plotting GPS points over a path in R.">
+	<meta property="og:url" content="http://epijim.uk/code/pathsinr/">
+	<meta property="og:site_name" content="James Black">
+    <link rel="author" href="https://plus.google.com/https://plus.google.com/112022213613617220776/"/>
+
+    <link rel="canonical" href="http://epijim.uk/code/pathsinr/">
+
+    <link href="http://epijim.uk/atom.xml" type="application/atom+xml" rel="alternate" title="James Black Atom Feed">
+    <link href="http://epijim.uk/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <style>
+    .sliding-menu-content {
+      top: 0;
+      right: 0;
+      text-align: center;
+      visibility: hidden;
+      height: 100%;
+      width: 100%;
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    </style>
+
+    <link rel="stylesheet" href="http://epijim.uk/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="http://epijim.uk/js/vendor/html5shiv.min.js"></script>
+      <script src="http://epijim.uk/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="http://epijim.uk" class="site-title">James Black</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">James Black</a></li>
+	
+    
+        
+    
+    <li><a href="http://epijim.uk/my-papers/" >Papers</a></li>
+  
+    
+        
+    
+    <li><a href="http://epijim.uk/code/" >Code</a></li>
+  
+    
+        
+    
+    <li><a href="http://epijim.uk/blog/" >Blog</a></li>
+  
+    
+        
+    
+    <li><a href="http://epijim.uk/about/" >About</a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+    <nav role="navigation" class="js-menu sliding-menu-content">
+	<ul class="menu-item">
+		<li>
+      
+        
+      
+			<a href="http://epijim.uk/my-papers/"><img src="http://epijim.uk/images/papers_thumb.png" alt="teaser" class="teaser"></a>
+			<a href="http://epijim.uk/my-papers/" class="title">Papers</a>
+			<p class="excerpt">My published journal articles.</p>
+		</li><li>
+      
+        
+      
+			<a href="http://epijim.uk/code/"><img src="http://epijim.uk/images/code_thumb.png" alt="teaser" class="teaser"></a>
+			<a href="http://epijim.uk/code/" class="title">Code</a>
+			<p class="excerpt">A collection of code snippets I think are really useful.</p>
+		</li><li>
+      
+        
+      
+			<a href="http://epijim.uk/blog/"><img src="http://epijim.uk/images/blog_thumb.jpg" alt="teaser" class="teaser"></a>
+			<a href="http://epijim.uk/blog/" class="title">Blog</a>
+			<p class="excerpt">My data based blog.</p>
+		</li><li>
+      
+        
+      
+			<a href="http://epijim.uk/about/"><img src="http://epijim.uk/images/about_thumb.png" alt="teaser" class="teaser"></a>
+			<a href="http://epijim.uk/about/" class="title">About</a>
+			<p class="excerpt">Get more information on, or contact, James Black.</p>
+		</li>
+	</ul>
+</nav>
+<button type="button" class="js-menu-trigger sliding-menu-button menulines-button x2" role="button" aria-label="Toggle Navigation">
+	<span class="menulines"></span>
+</button>
+
+<div class="js-menu-screen menu-screen"></div>
+
+    <div id="page-wrapper">
+      <!--[if lt IE 9]><div class="upgrade notice-danger"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+      <div id="main" role="main">			
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		
+		<nav class="breadcrumbs">
+  <a href="http://epijim.uk">Home</a> <span class="divider">/</span> <a href="http://epijim.uk/code/">Code</a> <span class="divider">/</span>
+</nav><!-- /.breadcrumbs -->
+		<div class="page-title">
+			<h1>Plotting paths in R</h1>
+		</div>
+		<div class="inner-wrap">
+			<nav class="toc"></nav><!-- /.toc -->
+			<div id="content" class="page-content" itemprop="articleBody">
+				<h2 id="get-the-base-map-from-google">Get the base map from google</h2>
+
+<p>In the plots below I use the <em>satellite</em> and <em>terrain</em> options of <em>maptype</em>. The <em>day1</em> object
+ is the centre of the map I want. <em>Zoom</em> controls the…zoom.</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">library</span><span class="p">(</span>ggmap<span class="p">)</span>
+day1 <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span>lon<span class="o">=</span><span class="m">10.874062</span><span class="p">,</span>
+          lat<span class="o">=</span> <span class="m">46.918028</span><span class="p">)</span> <span class="c1"># longitude of centre</span>
+
+basemap <span class="o">&lt;-</span> get_map<span class="p">(</span>location<span class="o">=</span>day1<span class="p">,</span> 
+                     zoom<span class="o">=</span><span class="m">14</span><span class="p">,</span>
+                     <span class="kn">source</span><span class="o">=</span><span class="s">&#39;google&#39;</span><span class="p">,</span> 
+                     maptype<span class="o">=</span><span class="s">&quot;satellite&quot;</span><span class="p">,</span> 
+                     <span class="c1">#color=&quot;bw&quot;</span>
+                     <span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="plot-ski-run-paths">Plot ski run paths</h2>
+
+<p>The code below plots individual paths using the index, <em>run_number</em>. So that the <em>ups</em>, and
+ <em>downs</em>, are a different colour, I cut the data using <em>which</em>. Usually I could just chuck 
+ up or down into colour, but this makes it easy to just plot runs down.  </p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</code></pre></div></td><td class="code"><div class="highlight"><pre>ggmap<span class="p">(</span>basemap<span class="p">)</span> <span class="o">+</span> 
+    geom_path<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>longitude<span class="p">,</span> y<span class="o">=</span>latitude<span class="p">,</span> 
+                                 group<span class="o">=</span>run_number<span class="p">),</span> 
+                             size<span class="o">=</span><span class="m">0.4</span><span class="p">,</span> 
+                             color<span class="o">=</span><span class="s">&quot;#0000FF4D&quot;</span><span class="p">,</span> 
+                             alpha<span class="o">=</span><span class="m">0.6</span><span class="p">,</span> 
+                             data<span class="o">=</span>map_data<span class="p">[</span> 
+                               <span class="kp">which</span><span class="p">(</span>map_data<span class="o">$</span>up<span class="o">==</span><span class="s">&#39;down&#39;</span><span class="p">),</span>
+                               <span class="p">])</span> <span class="o">+</span>
+    geom_path<span class="p">(</span>aes<span class="p">(</span>x<span class="o">=</span>longitude<span class="p">,</span> y<span class="o">=</span>latitude<span class="p">,</span> 
+                                  group<span class="o">=</span>run_number<span class="p">),</span> 
+                              size<span class="o">=</span><span class="m">0.7</span><span class="p">,</span> 
+                              color<span class="o">=</span><span class="s">&quot;#FF00004D&quot;</span><span class="p">,</span> 
+                              alpha<span class="o">=</span><span class="m">0.7</span><span class="p">,</span> 
+                              data<span class="o">=</span>map_data<span class="p">[</span> 
+                                <span class="kp">which</span><span class="p">(</span>map_data<span class="o">$</span>up<span class="o">==</span><span class="s">&#39;up&#39;</span><span class="p">),</span>
+                                <span class="p">])</span>
+</pre></div>
+</td></tr></table>
+
+<p>And the plots! </p>
+
+<figure class="half">
+	<img src="/images/ski_1_sat.png" />
+	<img src="/images/ski_2_ter.png" />
+	<figcaption>Our first day skiing. On the left is the basemap is a satellite photo, on the right it's a terrain map.</figcaption>
+</figure>
+
+				<hr />
+				<footer class="page-footer">
+					
+
+
+<div class="author-image">
+	<img src="http://epijim.uk/images/bio-photo.jpg" alt="James Black">
+</div><!-- ./author-image -->
+<div class="author-content">
+	<h3 class="author-name" >Written by <a href="http://epijim.uk" itemprop="author">James Black</a></h3>
+	<p class="author-bio">Reading Epidemiology at Jesus College, University of Cambridge.</p>
+</div><!-- ./author-content -->
+					<div class="inline-btn">
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=Plotting%20paths%20in%20R&amp;url=http://epijim.uk/code/pathsinr/&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://epijim.uk/code/pathsinr/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=http://epijim.uk/code/pathsinr/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
+</div><!-- /.share-this -->
+					<div class="page-meta">
+	<p>Updated <time datetime="2014-09-27T16:57:41Z" itemprop="dateModified">September 27, 2014</time>
+</div><!-- /.page-meta -->
+				</footer><!-- /.footer -->
+				<aside>
+					<hr />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = '';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+        
+      
+			<li><a href="http://epijim.uk/" >Home</a></li>
+		
+      
+        
+      
+			<li><a href="http://epijim.uk/my-papers/" >Papers</a></li>
+		
+      
+        
+      
+			<li><a href="http://epijim.uk/about/" >About</a></li>
+		
+      
+        
+      
+			<li><a href="http://epijim.uk/terms/" >Legal</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2014 <a href="http://epijim.uk">James Black</a> hosted by <a href="https://pages.github.com">Github</a> and powered by <a href="http://jekyllrb.com">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/">Skinny Bones</a>.</p>
+</footer>
+    </div>
+
+    <script src="http://epijim.uk/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="http://epijim.uk/js/main.js"></script>
+    
+    
+    <script type="text/javascript">
+      $('.toc').toc({
+        'selectors': 'h2', //elements to use as headings
+        'container': '.page-content', //element to find all selectors in
+        'smoothScrolling': true, //enable or disable smooth scrolling on click
+        'prefix': 'toc', //prefix for anchor tags and class names
+        'onHighlight': function(el) {}, //called when a new section is highlighted 
+        'highlightOnScroll': true, //add class to heading that is currently in focus
+        'highlightOffset': 100, //offset to trigger the next headline
+        'anchorName': function(i, heading, prefix) { //custom function for anchor name
+          return prefix+i;
+        },
+        'headerText': function(i, heading, $heading) { //custom function building the header-item text
+          return $heading.text();
+        },
+        'itemClass': function(i, heading, $heading, prefix) { //custom function for item class
+          return $heading[0].tagName.toLowerCase();
+        }
+      });
+    </script>
+    
+
+  </body>
+
+</html>
