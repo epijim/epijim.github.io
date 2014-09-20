@@ -9,7 +9,7 @@
     <subtitle>Jesuan and PhD student at Cambridge University</subtitle>
     <link href="http://epijim.uk/atom.xml" rel="self"/>
     <link href="http://epijim.uk/" rel="alternate" type="text/html"/>
-    <updated>2014-09-20T14:36:24+01:00</updated>
+    <updated>2014-09-20T14:38:20+01:00</updated>
     <id>http://epijim.uk/</id>
     <author>
 			<name>James Black</name>
@@ -54172,7 +54172,7 @@ The script I used to make this plot is at http://rpubs.com/epijim_nz/worldcup201
         	&lt;p&gt;The following paper was written by students I had the pleasure of teaching during the 2014 summer.
  They were all high school kids.&lt;/p&gt;
 
-&lt;iframe width=&quot;650&quot; height=&quot;4500&quot; src=&quot;http://epijim.uk/CamTrad2014/index.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;650&quot; height=&quot;1000&quot; src=&quot;http://epijim.uk/CamTrad2014/index.html&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 
         </content>
     </entry>
