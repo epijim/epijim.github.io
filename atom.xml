@@ -9,7 +9,7 @@
     <subtitle>Jesuan and PhD student at Cambridge University</subtitle>
     <link href="http://epijim.uk/atom.xml" rel="self"/>
     <link href="http://epijim.uk/" rel="alternate" type="text/html"/>
-    <updated>2014-09-20T13:41:48+01:00</updated>
+    <updated>2014-09-20T14:23:54+01:00</updated>
     <id>http://epijim.uk/</id>
     <author>
 			<name>James Black</name>
@@ -29,7 +29,7 @@
 					<email>james@epijim.uk</email>
 				</author>
         <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/independence_feature.png&quot;&gt;&lt;br/&gt;
+        	&lt;img src=&quot;http://epijim.uk/images/independence_feature.jpg&quot;&gt;&lt;br/&gt;
         	&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
 &lt;/script&gt;
 
@@ -110,7 +110,7 @@
 					<email>james@epijim.uk</email>
 				</author>
         <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/worldcup14_feature.png&quot;&gt;&lt;br/&gt;
+        	&lt;img src=&quot;http://epijim.uk/images/worldcup14_feature.jpg&quot;&gt;&lt;br/&gt;
         	&lt;p&gt;As the final game of the World Cup started, Germany had gone from outsiders to the team expected to win,
  while Brazil had fallen in disgrace from firm favourites to 4th place. &lt;/p&gt;
 
@@ -54188,7 +54188,7 @@ The script I used to make this plot is at http://rpubs.com/epijim_nz/worldcup201
 					<email>james@epijim.uk</email>
 				</author>
         <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/sheep_feature.png&quot;&gt;&lt;br/&gt;
+        	&lt;img src=&quot;http://epijim.uk/images/sheep_feature.jpg&quot;&gt;&lt;br/&gt;
         	&lt;p&gt;When I say I grew up in New Zealand, a sheep joke often rears it’s head. I’ve always wondered
  how well that stereotype actually fit modern New Zealand. The claim we have 60,000,000 sheep 
  comes up fairly frequently, but I had no idea if that was close to the 
@@ -54327,7 +54327,7 @@ The script I used to make this plot is at http://rpubs.com/epijim_nz/worldcup201
 					<email>james@epijim.uk</email>
 				</author>
         <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/simpsons_feature.png&quot;&gt;&lt;br/&gt;
+        	&lt;img src=&quot;http://epijim.uk/images/simpsons_feature.jpg&quot;&gt;&lt;br/&gt;
         	&lt;h2 id=&quot;definition&quot;&gt;Definition&lt;/h2&gt;
 
 &lt;p&gt;For the month of July (2014) I’ll be teaching medical science for a summer school in my college.
@@ -61393,7 +61393,7 @@ play3d&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;par3dinterp&lt;span class=&q
 					<email>james@epijim.uk</email>
 				</author>
         <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/ski_feature.png&quot;&gt;&lt;br/&gt;
+        	&lt;img src=&quot;http://epijim.uk/images/ski_feature.jpg&quot;&gt;&lt;br/&gt;
         	&lt;p&gt;A week ago Tina and I went skiing at an Austrian resort called Pitztal. While it’s a pretty small
  ski field by European standards&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, Pitztal sits on the highest glacier in 
  Tyrol, and has incredible snow. Below is a map. We mainly skied on the Pitztal Glacier, and only really went across 
@@ -61675,7 +61675,7 @@ basemap &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_map&lt;span c
 					<email>james@epijim.uk</email>
 				</author>
         <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/hygiene_feature.png&quot;&gt;&lt;br/&gt;
+        	&lt;img src=&quot;http://epijim.uk/images/hygiene_feature.jpg&quot;&gt;&lt;br/&gt;
         	&lt;figure&gt;
 	&lt;a href=&quot;/images/hygiene_1.png&quot;&gt;&lt;img src=&quot;/images/hygiene_1.png&quot; /&gt;&lt;/a&gt;
 	&lt;figcaption&gt;The dirtiest restaurants in Cambridge (Hygiene rating of 1), on the 20th Feb 2014.&lt;/figcaption&gt;
