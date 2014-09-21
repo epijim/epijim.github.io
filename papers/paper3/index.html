@@ -3,11 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Cardiovascular disease risk factors after diabetes diagnosis • James Black</title>
-    <meta name="description" content="Black, J. A., Sharp, S. J., Wareham, N. J., Sandbæk, A., Rutten, G. E., Lauritzen, T., … Simmons, R. K.
- (2014). Change in cardiovascular risk factors following early diagnosis of type 2 diabetes: 
- a cohort analysis of a cluster-randomised trial. 
- The British Journal of General Practice : The Journal of the Royal College of General Practitioners, 
- 64(621), e208–16. doi:10.3399/bjgp14X677833
+    <meta name="description" content="Background
 
 ">
     <meta name="keywords" content="Papers, Publications">
@@ -15,11 +11,7 @@
     
     	<!-- Twitter Cards -->
 	<meta name="twitter:title" content="Cardiovascular disease risk factors after diabetes diagnosis">
-	<meta name="twitter:description" content="Black, J. A., Sharp, S. J., Wareham, N. J., Sandbæk, A., Rutten, G. E., Lauritzen, T., … Simmons, R. K.
- (2014). Change in cardiovascular risk factors following early diagnosis of type 2 diabetes: 
- a cohort analysis of a cluster-randomised trial. 
- The British Journal of General Practice : The Journal of the Royal College of General Practitioners, 
- 64(621), e208–16. doi:10.3399/bjgp14X677833
+	<meta name="twitter:description" content="Background
 
 ">
 	
@@ -32,11 +24,7 @@
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Cardiovascular disease risk factors after diabetes diagnosis">
-	<meta property="og:description" content="Black, J. A., Sharp, S. J., Wareham, N. J., Sandbæk, A., Rutten, G. E., Lauritzen, T., … Simmons, R. K.
- (2014). Change in cardiovascular risk factors following early diagnosis of type 2 diabetes: 
- a cohort analysis of a cluster-randomised trial. 
- The British Journal of General Practice : The Journal of the Royal College of General Practitioners, 
- 64(621), e208–16. doi:10.3399/bjgp14X677833
+	<meta property="og:description" content="Background
 
 ">
 	<meta property="og:url" content="http://epijim.uk/papers/paper3/">
@@ -164,37 +152,45 @@
 		<div class="inner-wrap">
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p>Black, J. A., Sharp, S. J., Wareham, N. J., Sandbæk, A., Rutten, G. E., Lauritzen, T., … Simmons, R. K.
- (<strong>2014</strong>). Change in cardiovascular risk factors following early diagnosis of type 2 diabetes: 
- a cohort analysis of a cluster-randomised trial. 
- <em>The British Journal of General Practice : The Journal of the Royal College of General Practitioners</em>, 
- 64(621), e208–16. doi:10.3399/bjgp14X677833</p>
+				<h2 id="background">Background</h2>
 
-<p>Background: There is little evidence to inform the targeted treatment of individuals found
+<p>This paper is from my PhD thesis.</p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p><strong>Background</strong>: There is little evidence to inform the targeted treatment of individuals found
  early in the diabetes disease trajectory. AIM: To describe cardiovascular disease (CVD) 
  risk profiles and treatment of individual CVD risk factors by modelled CVD risk at 
  diagnosis; changes in treatment, modelled CVD risk, and CVD risk factors in the 5 years 
  following diagnosis; and how these are patterned by socioeconomic status. </p>
 
-<p>Design and setting: Cohort analysis of a cluster-randomised trial (ADDITION-Europe) in
+<p><strong>Design and setting</strong>: Cohort analysis of a cluster-randomised trial (ADDITION-Europe) in
  general practices in Denmark, England, and the Netherlands. </p>
 
-<p>Method: A total of 2418 individuals with screen-detected diabetes were divided into quartiles
+<p><strong>Method</strong>: A total of 2418 individuals with screen-detected diabetes were divided into quartiles
  of modelled 10-year CVD risk at diagnosis. Changes in treatment, modelled CVD risk, and 
  CVD risk factors were assessed at 5 years. </p>
 
-<p>Results: The largest reductions in risk factors 
+<p><strong>Results</strong>: The largest reductions in risk factors 
  and modelled CVD risk were seen in participants who were in the highest quartile of modelled 
  risk at baseline, suggesting that treatment was offered appropriately. Participants in the 
  lowest quartile of risk at baseline had very similar levels of modelled CVD risk at 5 
  years and showed the least variation in change in modelled risk. No association was found 
  between socioeconomic status and changes in CVD risk factors, suggesting that treatment was equitable. </p>
 
-<p>Conclusion: Diabetes management requires setting of individualised attainable targets.
+<p><strong>Conclusion</strong>: Diabetes management requires setting of individualised attainable targets.
  This analysis provides a reference point for patients, clinicians, and policymakers when 
  considering goals for changes in risk factors early in the course of the disease that 
  account for the diverse cardiometabolic profile present in individuals who are newly 
  diagnosed with type 2 diabetes.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Black, J. A., Sharp, S. J., Wareham, N. J., Sandbæk, A., Rutten, G. E., Lauritzen, T., … Simmons, R. K.
+ (<strong>2014</strong>). Change in cardiovascular risk factors following early diagnosis of type 2 diabetes: 
+ a cohort analysis of a cluster-randomised trial. 
+ <em>The British Journal of General Practice : The Journal of the Royal College of General Practitioners</em>, 
+ 64(621), e208–16. doi:10.3399/bjgp14X677833</p>
 
 
 				<hr />
@@ -284,6 +280,27 @@
     <script src="http://epijim.uk/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="http://epijim.uk/js/main.js"></script>
     
+    
+    <script type="text/javascript">
+      $('.toc').toc({
+        'selectors': 'h2', //elements to use as headings
+        'container': '.page-content', //element to find all selectors in
+        'smoothScrolling': true, //enable or disable smooth scrolling on click
+        'prefix': 'toc', //prefix for anchor tags and class names
+        'onHighlight': function(el) {}, //called when a new section is highlighted 
+        'highlightOnScroll': true, //add class to heading that is currently in focus
+        'highlightOffset': 100, //offset to trigger the next headline
+        'anchorName': function(i, heading, prefix) { //custom function for anchor name
+          return prefix+i;
+        },
+        'headerText': function(i, heading, $heading) { //custom function building the header-item text
+          return $heading.text();
+        },
+        'itemClass': function(i, heading, $heading, prefix) { //custom function for item class
+          return $heading[0].tagName.toLowerCase();
+        }
+      });
+    </script>
     
 
   </body>

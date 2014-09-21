@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Bariatric surgery in children • James Black</title>
-    <meta name="description" content="Black, J. A., White, B., Viner, R. M., &amp; Simmons, R. K. (2013). 
-Bariatric surgery for obese children and adolescents: 
-a systematic review and meta-analysis. 
-Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037
+    <meta name="description" content="Background
 
 ">
     <meta name="keywords" content="Papers, Publications">
@@ -14,10 +11,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037
     
     	<!-- Twitter Cards -->
 	<meta name="twitter:title" content="Bariatric surgery in children">
-	<meta name="twitter:description" content="Black, J. A., White, B., Viner, R. M., &amp; Simmons, R. K. (2013). 
-Bariatric surgery for obese children and adolescents: 
-a systematic review and meta-analysis. 
-Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037
+	<meta name="twitter:description" content="Background
 
 ">
 	
@@ -30,10 +24,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Bariatric surgery in children">
-	<meta property="og:description" content="Black, J. A., White, B., Viner, R. M., &amp; Simmons, R. K. (2013). 
-Bariatric surgery for obese children and adolescents: 
-a systematic review and meta-analysis. 
-Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037
+	<meta property="og:description" content="Background
 
 ">
 	<meta property="og:url" content="http://epijim.uk/papers/paper2/">
@@ -161,10 +152,13 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037
 		<div class="inner-wrap">
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
-				<p><em>Black, J. A., White, B., Viner, R. M., &amp; Simmons, R. K.</em> (2013). 
-<strong>Bariatric surgery for obese children and adolescents: 
-a systematic review and meta-analysis.</strong> 
-Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037</p>
+				<h2 id="background">Background</h2>
+
+<p>During my Masters in Epidemiology we had to complete two essays, and a thesis. This paper
+ was from my second essay. As I am not an expert in obesity surgery, two old colleagues 
+ from my time in London came on as co-authors (Billy and Russell from UCLH).</p>
+
+<h2 id="abstract">Abstract</h2>
 
 <p>The number of obese young people continues to rise, with a corresponding increase in extreme
  obesity and paediatric-adolescent bariatric surgery. </p>
@@ -183,7 +177,7 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037</p>
  using a random effects model. </p>
 
 <figure>
-	<img src="http://epijim.uk/images/paper2_meta.png" alt="Metaanalysis" />
+	<img src="http://epijim.uk/images/paper2_thumb.jpg" alt="Metaanalysis" />
 	<figcaption>Meta-analysis of BMI change after bariatric surgery for adolescent obesity, by surgery type and overall. AGB, adjustable gastric banding; BMI, body mass index; BPD, biliopancreatic diversion; CI, confidence interval; RYGB, Roux-en-Y gastric bypass; SG, sleeve gastrectomy.</figcaption>
 </figure>
 
@@ -197,6 +191,13 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037</p>
  clear reporting of complications and co-morbidity resolution, alongside measures of HRQol, 
  are needed to firmly establish the harms and benefits of bariatric 
  surgery in children and adolescents.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><em>Black, J. A., White, B., Viner, R. M., &amp; Simmons, R. K.</em> (2013). 
+<strong>Bariatric surgery for obese children and adolescents: 
+a systematic review and meta-analysis.</strong> 
+Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037</p>
 
 
 				<hr />
@@ -286,6 +287,27 @@ Obesity reviews, 14(8), 634–44. doi:10.1111/obr.12037</p>
     <script src="http://epijim.uk/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="http://epijim.uk/js/main.js"></script>
     
+    
+    <script type="text/javascript">
+      $('.toc').toc({
+        'selectors': 'h2', //elements to use as headings
+        'container': '.page-content', //element to find all selectors in
+        'smoothScrolling': true, //enable or disable smooth scrolling on click
+        'prefix': 'toc', //prefix for anchor tags and class names
+        'onHighlight': function(el) {}, //called when a new section is highlighted 
+        'highlightOnScroll': true, //add class to heading that is currently in focus
+        'highlightOffset': 100, //offset to trigger the next headline
+        'anchorName': function(i, heading, prefix) { //custom function for anchor name
+          return prefix+i;
+        },
+        'headerText': function(i, heading, $heading) { //custom function building the header-item text
+          return $heading.text();
+        },
+        'itemClass': function(i, heading, $heading, prefix) { //custom function for item class
+          return $heading[0].tagName.toLowerCase();
+        }
+      });
+    </script>
     
 
   </body>
