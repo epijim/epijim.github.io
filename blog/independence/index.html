@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Scottish independence polls • James Black</title>
     <meta name="description" content="Smoothing six Scottish independence polls six days out from the vote.">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="UK, Politics">
     
     
     	<!-- Twitter Cards -->
@@ -136,20 +136,22 @@
 
       <div id="main" role="main">	
 	<article class="wrap" itemscope itemtype="http://schema.org/Article">
-		
-		<div class="page-feature">
+			<div class="page-feature-header overlay">
+			
 			<div class="page-image">
 				<img src="http://epijim.uk/images/independence_feature.jpeg" class="page-feature-image" alt="Scottish independence polls" itemprop="image">
 				<div class="image-credit">Image source: <a href="http://herneman.blogspot.co.uk" itemprop="citation">Herneman</a></div><!-- /.image-credit -->
 			</div><!-- /.page-image -->
-		</div><!-- /.page-feature -->
-		
-		<nav class="breadcrumbs">
-  <a href="http://epijim.uk">Home</a> <span class="divider">/</span> <a href="http://epijim.uk/blog/">Blog</a> <span class="divider">/</span>
-</nav><!-- /.breadcrumbs -->
-		<div class="page-title">
-			<h1>Scottish independence polls</h1>
-		</div>
+			
+			<div class="page-title">
+        	<h1><span>Scottish independence polls</span></h1>
+        	<div class="page-meta">
+  
+    <span>Filed under: <a href="/tag/uk/" title="UK" rel="tag">UK</a>, <a href="/tag/politics/" title="Politics" rel="tag">Politics</a></span>
+  
+</div><!-- /.page-meta -->
+			</div><!-- /.page-title -->
+      	</div><!-- /.page-image-media -->
 		<div class="inner-wrap">
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
@@ -165,7 +167,7 @@
 <p>As it took me over an hour to figure out how to read that file, I thought I should probably
  plot the hard won data.</p>
 
-<h1 id="the-raw-data">The raw data</h1>
+<h2 id="the-raw-data">The raw data</h2>
 
 <p>Below is the data I pulled from that file. It contains 58 polls taken by six different companies.
  The first plot is just the raw data as a line graph.</p>
@@ -175,7 +177,7 @@
 	<figcaption>The six survey companies with lines connecting each repeated survey.</figcaption>
 </figure>
 
-<h1 id="simply-smoothed">Simply smoothed</h1>
+<h2 id="simply-smoothed">Simply smoothed</h2>
 
 <p>Again, the raw data, but this time smoothing the lines using locally weighted regression.</p>
 
@@ -184,7 +186,7 @@
 	<figcaption>Same as before, but now the lines are smoothed within each company. So each line is completely independent.</figcaption>
 </figure>
 
-<h1 id="treating-the-polls-as-not-independent">Treating the polls as not independent</h1>
+<h2 id="treating-the-polls-as-not-independent">Treating the polls as not independent</h2>
 
 <p>For this last figure, I’ve assumed that the polls are related to each other using a
  multilevel model. As these polls are quite different in their methodology, I’ve let the slopes 
@@ -204,7 +206,7 @@
 	<figcaption>Here each line is able to have it's own slope, and starting height, but all the slopes are assumed to come from the same wider population of possible survey methodologies (companies).</figcaption>
 </figure>
 
-<h1 id="the-data-source">The data source</h1>
+<h2 id="the-data-source">The data source</h2>
 
 <p>This data was pulled from the .js file that runs the <a href="http://www.bbc.co.uk/news/events/scotland-decides/poll-tracker">BBC poll tracker, which is here</a>.</p>
 
@@ -244,13 +246,13 @@
 					<h4>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h4>
 					<ul>
 						
+						<li><a href="http://epijim.uk/blog/great-circles/">Facebook friend migrations</a></li>
+						
 						<li><a href="http://epijim.uk/code/wes-anderson/">Wes Anderson palettes for R</a></li>
 						
 						<li><a href="http://epijim.uk/code/xkcd/">XKCD style graphs in R</a></li>
 						
 						<li><a href="http://epijim.uk/blog/worldcup14/">Changing fate of the German football team</a></li>
-						
-						<li><a href="http://epijim.uk/blog/CamTrad2014/">Does Redbull give you wings?</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->

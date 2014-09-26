@@ -14,7 +14,7 @@
 	
 	
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="http://epijim.uk/images/hygiene_feature.jpg">
+	<meta name="twitter:image" content="http://epijim.uk/images/hygiene_feature.jpeg">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_US">
@@ -136,20 +136,22 @@
 
       <div id="main" role="main">	
 	<article class="wrap" itemscope itemtype="http://schema.org/Article">
-		
-		<div class="page-feature">
+			<div class="page-feature-header overlay">
+			
 			<div class="page-image">
-				<img src="http://epijim.uk/images/hygiene_feature.jpg" class="page-feature-image" alt="Restaurant hygiene ratings in Cambridge" itemprop="image">
+				<img src="http://epijim.uk/images/hygiene_feature.jpeg" class="page-feature-image" alt="Restaurant hygiene ratings in Cambridge" itemprop="image">
 				<div class="image-credit">Image source: <a href="" itemprop="citation">Trailer of life</a></div><!-- /.image-credit -->
 			</div><!-- /.page-image -->
-		</div><!-- /.page-feature -->
-		
-		<nav class="breadcrumbs">
-  <a href="http://epijim.uk">Home</a> <span class="divider">/</span> <a href="http://epijim.uk/blog/">Blog</a> <span class="divider">/</span>
-</nav><!-- /.breadcrumbs -->
-		<div class="page-title">
-			<h1>Restaurant hygiene ratings in Cambridge</h1>
-		</div>
+			
+			<div class="page-title">
+        	<h1><span>Restaurant hygiene ratings in Cambridge</span></h1>
+        	<div class="page-meta">
+  
+    <span>Filed under: <a href="/tag/r/" title="R" rel="tag">R</a>, <a href="/tag/map/" title="Map" rel="tag">Map</a>, <a href="/tag/cambridge/" title="Cambridge" rel="tag">Cambridge</a></span>
+  
+</div><!-- /.page-meta -->
+			</div><!-- /.page-title -->
+      	</div><!-- /.page-image-media -->
 		<div class="inner-wrap">
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
@@ -334,13 +336,13 @@ ggsave<span class="p">(</span><span class="s">&quot;dodgey_name.pdf&quot;</span>
 					<h4>Related Articles <a href="#" onclick="(function(btn){var z=document.createElement('script');document.subtomeBtn=btn;z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(this);_gaq.push(['_trackEvent', 'Link', 'Subscribe']);" data-subtome-resource="http://epijim.uk" data-subtome-feeds="http://feeds.feedburner.com/epijim"><i class="fa fa-rss fa-fw"></i></a></h4>
 					<ul>
 						
+						<li><a href="http://epijim.uk/blog/great-circles/">Facebook friend migrations</a></li>
+						
 						<li><a href="http://epijim.uk/code/wes-anderson/">Wes Anderson palettes for R</a></li>
 						
 						<li><a href="http://epijim.uk/code/xkcd/">XKCD style graphs in R</a></li>
 						
 						<li><a href="http://epijim.uk/blog/independence/">Scottish independence polls</a></li>
-						
-						<li><a href="http://epijim.uk/blog/worldcup14/">Changing fate of the German football team</a></li>
 						
 					</ul>
 				</div><!-- /.entry-related -->
@@ -412,27 +414,6 @@ ggsave<span class="p">(</span><span class="s">&quot;dodgey_name.pdf&quot;</span>
     <script src="http://epijim.uk/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="http://epijim.uk/js/main.js"></script>
     
-    
-    <script type="text/javascript">
-      $('.toc').toc({
-        'selectors': 'h2', //elements to use as headings
-        'container': '.page-content', //element to find all selectors in
-        'smoothScrolling': true, //enable or disable smooth scrolling on click
-        'prefix': 'toc', //prefix for anchor tags and class names
-        'onHighlight': function(el) {}, //called when a new section is highlighted 
-        'highlightOnScroll': true, //add class to heading that is currently in focus
-        'highlightOffset': 100, //offset to trigger the next headline
-        'anchorName': function(i, heading, prefix) { //custom function for anchor name
-          return prefix+i;
-        },
-        'headerText': function(i, heading, $heading) { //custom function building the header-item text
-          return $heading.text();
-        },
-        'itemClass': function(i, heading, $heading, prefix) { //custom function for item class
-          return $heading[0].tagName.toLowerCase();
-        }
-      });
-    </script>
     
 
   </body>
