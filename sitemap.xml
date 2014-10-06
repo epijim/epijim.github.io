@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://epijim.uk/blog/pub-crawl/</loc>
+    
+    <lastmod>2014-10-05T00:00:00+01:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://epijim.uk/blog/pub-distances/</loc>
     
     <lastmod>2014-10-04T00:00:00+01:00</lastmod>
@@ -237,49 +245,49 @@
   
   <url>
     <loc>http://epijim.uk/my-papers/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/blog/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/about/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/terms/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/code/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/tag/</loc>
-    <lastmod>2014-10-04T18:14:51+01:00</lastmod>
+    <lastmod>2014-10-06T21:02:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -288,13 +296,13 @@
   
   <url>
     <loc>http://epijim.uk/iframecontent/pubgooglemap.html</loc>
-    <lastmod>2014-10-02T20:08:03Z</lastmod>
+    <lastmod>2014-10-05T21:21:42Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/iframecontent/pubgoogletable.html</loc>
-    <lastmod>2014-10-02T20:08:03Z</lastmod>
+    <loc>http://epijim.uk/iframecontent/pubgoogleTable.html</loc>
+    <lastmod>2014-10-05T21:21:42Z</lastmod>
     <priority>0.6</priority>
   </url>
   
@@ -365,8 +373,8 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/whiskyclub/index.html</loc>
-    <lastmod>2014-10-04T18:14:05Z</lastmod>
+    <loc>http://epijim.uk/whisky/index.html</loc>
+    <lastmod>2014-10-05T23:51:42Z</lastmod>
     <priority>0.6</priority>
   </url>
   
