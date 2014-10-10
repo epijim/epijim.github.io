@@ -172,12 +172,16 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-<p>There are 71 pubs in Cambridge, which means there are $(71-1)! = 1.2\times 10^{100}$ potential pub crawl routes
- (assuming it was possible to drink 71 pints in a row). So finding the optimum route is not 
- going to be easy. This type of problem was a 
- popular parlour game in the 1800’s<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, but is now known as the Travelling Salesmen Problem (or a Hamilton Path). 
- While there is an <a href="http://cran.r-project.org/web/packages/TSP/">R package called TSP</a> devoted to solving these problems, I took 
- a simplistic approach based off a Shiny app I hope to replicate at a later date.</p>
+<p>There are 71 pubs in Cambridge, which makes plotting the shortest possible
+ route is going to be difficult. If I wanted to start at home, and visit all
+ 71 pubs there would be $(72-1)! = 8.5\times 10^{101}$ potential pub crawl routes. That
+ kind of problem is often called the Travelling Salesman Problem, which was a popular
+ English parlour game in the 1800’s<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Pub crawls tend to
+ be a straight route though, so I need to solve a <em>hamilton path</em> through the pubs.</p>
+
+<p>While there is an <a href="http://cran.r-project.org/web/packages/TSP/">R package called TSP</a>
+ devoted to solving these problems, I took a simplistic approach based off a
+ Shiny app I hope to replicate at a later date.</p>
 
 <h2 id="the-route">The route</h2>
 
@@ -192,16 +196,16 @@
 <h2 id="solving-the-problem">Solving the problem</h2>
 
 <p>Simulated annealing is a technique inspired by annealing in metallurgy. In solving my pub crawl problem, the
- algorithm will initially be skewed toward picking longer routes, and as it continues to iterate 
- it will slowly ‘cool’ and become more and more likely to choose a shorter route. This helps ensure the algorithm 
- doesn’t get caught up in a local optimum route early. Sadly - just eyeballing - it appears 
- the plot above is probably a local maximum. It looks like some travel time could be saved if 
- the route visited the Mitre and Baron of Beef from the Pickerel, instead of it’s current 
+ algorithm will initially be skewed toward picking longer routes, and as it continues to iterate
+ it will slowly ‘cool’ and become more and more likely to choose a shorter route. This helps ensure the algorithm
+ doesn’t get caught up in a local optimum route early. Sadly - just eyeballing - it appears
+ the plot above is probably a local maximum. It looks like some travel time could be saved if
+ the route visited the Mitre and Baron of Beef from the Pickerel, instead of it’s current
  diversion from the Brewhouse. I reran the model multiple times, and it usually found a route between 30 and 36km.</p>
 
 <p>The gif below is another run, but it shows the map, the cooling curve, the distance travelled,
- and a histogram of all the distances recorded across the iterations as the model runs. This example also 
- illustrates how the algorithm can fail. Here it’s pretty obvious that starting at the Lord Byron Inn 
+ and a histogram of all the distances recorded across the iterations as the model runs. This example also
+ illustrates how the algorithm can fail. Here it’s pretty obvious that starting at the Lord Byron Inn
  and ending at the Tally Ho is not going to be the optimum route.</p>
 
 <p><img class="gfyitem" data-id="SharpReflectingAntbear" /></p>
@@ -224,15 +228,79 @@
 <p><img class="gfyitem" data-id="HarmoniousBlackIrrawaddydolphin" /></p>
 
 <p>Once again, a quick visual inspection shows that some travel time could be saved with minor
- tweaks to the last graph. While I still have long term plans to make a Cambridge interactive 
- pub crawl app via R (and shiny), for now the following XKCD plot sums up what this has taught me - 
- I just found a really complicated way to plot a pub crawl route which can be easily beaten 
+ tweaks to the last graph. While I still have long term plans to make a Cambridge interactive
+ pub crawl app via R (and shiny), for now the following XKCD plot sums up what this has taught me -
+ I just found a really complicated way to plot a pub crawl route which can be easily beaten
  by a person, as long as you’re planning on visiting less than 20ish pubs.</p>
 
 <figure>
 	<a href="/images/crawl_2_xkcd.png"><img src="/images/crawl_2_xkcd.png" /></a>
 	<figcaption>An XKCD cartoon on the Travelling Salesman Problem.</figcaption>
 </figure>
+
+<h2 id="my-function">My function</h2>
+
+<p>I wrapped up the output (not the giffing) in a function, which can be called from github.</p>
+
+<h3 id="load-the-function">Load the function</h3>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
+2
+3</code></pre></div></td><td class="code"><div class="highlight"><pre>install.packages<span class="p">(</span><span class="s">&#39;devtools&#39;</span><span class="p">)</span>
+<span class="kn">library</span><span class="p">(</span><span class="s">&#39;devtools&#39;</span><span class="p">)</span>
+source_gist<span class="p">(</span><span class="s">&quot;https://gist.github.com/epijim/8f4be4dae598e479add0&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p><code>ggmap</code> is required to run this function.</p>
+
+<h3 id="input-variables">Input variables</h3>
+
+<p><code>v_pubs</code> - either a list of pubs <code>c(pub1,pub2)</code> or a dataset with the latitude in
+ the first column and the longitude in the second. If feeding in a dataset, you also
+ need to set <code>cam_pubs=FALSE</code>.</p>
+
+<p><code>v_location</code> - defaults to “Cambridge, UK”. This value is given to <code>ggmap</code> when pulling
+ the base map. Only really needed if feeding in a different dataset. If using a different
+ basemap, <code>v_zoom</code> will allow the zoom on the base map to be set.</p>
+
+<p><code>listpubs</code> - defaults to <code>FALSE</code>. If set to <code>TRUE</code> the function will print the list of pubs
+ and then exit the function (ignoring all other options and not running the model). I
+ added this as the pub names need to be entered in perfectly into <code>v_pubs</code> for it to
+ work.</p>
+
+<h3 id="use">Use</h3>
+
+<p>The function, when loaded, will pull data from another gist which has the pubs in it.
+ You can see the names of the pubs by typing <code>jb_pubdistance(listpubs=T)</code>.</p>
+
+<p>A typical call to the function would be:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
+2</code></pre></div></td><td class="code"><div class="highlight"><pre>results <span class="o">&lt;-</span> jb_pubdistance<span class="p">(</span>v_pubs<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;The Maypole P.H.&quot;</span><span class="p">,</span><span class="s">&quot;The Eagle Public House&quot;</span><span class="p">,</span>
+                                   <span class="s">&quot;Pickerel Inn&quot;</span><span class="p">,</span><span class="s">&quot;Baron Of Beef&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<p>This will create a ggmap plot of the route, and an object called <code>results</code>. The following
+ results are stored.</p>
+
+<ul>
+  <li><code>results$distance</code> - the distance of the pub crawl</li>
+  <li><code>results$pubs_inorder</code> - the pubs in order. If using my pubs data, it will give some info on the pubs. If feeding in custom lats and lons, it will be the original dataset in trip order.</li>
+  <li><code>results$temperature</code> - the temperature values used over the iterations</li>
+</ul>
+
+<p>jb_pubdistance(listpubs=T)</p>
+
+<p>results &lt;- jb_pubdistance()
+results$distance
+results$pubs_inorder</p>
+
+<p>results2 &lt;- jb_pubdistance(cam_pubs=F,v_pubs=dataset)</p>
+
+<p>results3 &lt;- jb_pubdistance(v_pubs=c(“The Maypole P.H.”,”The Eagle Public House”,
+                                    “Pickerel Inn”,”Baron Of Beef”))</p>
 
 <div class="footnotes">
   <ol>
