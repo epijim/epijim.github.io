@@ -260,7 +260,19 @@ source_gist<span class="p">(</span><span class="s">&quot;https://gist.github.com
  the first column and the longitude in the second. If feeding in a dataset, you also
  need to set <code>cam_pubs=FALSE</code>.</p>
 
-<p><code>v_location</code> - defaults to “Cambridge, UK”. This value is given to <code>ggmap</code> when pulling
+<p><code>crow_distances</code> - defaults to <code>FALSE</code>. If set to <code>FALSE</code>, and <code>cam_pubs=TRUE</code> (the default),
+ the function will calculate the best route using Google maps based distance or time to walk. If
+ <code>crow_distances=TRUE</code>, the function will use straight line distances (taking into
+   account the Earth’s curvature). If <code>cam_pubs=FALSE</code>,
+ the function will always use straight line (<em>as the crow flies</em> data).</p>
+
+<p><code>units</code> - Defaults to <code>"minutes"</code>, which makes the function calculate the route based on
+ the Google maps derived walking time. Can also be set to <code>"metres"</code>, which will make the
+ function use and report the distance of the crawl in metres based on Google maps directions.
+ This option is only evaluated if <code>crow_distances=FALSE</code> and you are using the
+ inbuilt pub data.</p>
+
+<p><code>v_location</code> - defaults to <code>"Cambridge, UK"</code>. This value is given to <code>ggmap</code> when pulling
  the base map. Only really needed if feeding in a different dataset. If using a different
  basemap, <code>v_zoom</code> will allow the zoom on the base map to be set.</p>
 
@@ -281,6 +293,11 @@ source_gist<span class="p">(</span><span class="s">&quot;https://gist.github.com
                                    <span class="s">&quot;Pickerel Inn&quot;</span><span class="p">,</span><span class="s">&quot;Baron Of Beef&quot;</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
+
+<p>In the example above, we will get the default format for the results, which is based on
+ what google claims is the default walking time. See <em>Input variables</em> above on how to
+ feed in custom data, or get back the distance in metres in actual walking routes, or as
+ the crow flies.</p>
 
 <p>This will create a ggmap plot of the route, and an object called <code>results</code>. The following
  results are stored.</p>
