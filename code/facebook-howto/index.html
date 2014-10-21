@@ -149,7 +149,7 @@
 				<h2 id="background">Background</h2>
 
 <p>In an <a href="http://epijim.co.uk/articles/facebook-network/">earlier post I showed my facebook friend network</a>, plotted with R. Below is the code.
- I found the original code <a href="http://thinktostart.wordpress.com/2013/11/19/analyzing-facebook-with-r/">to access the Facebook API</a>, 
+ I found the original code <a href="http://thinktostart.wordpress.com/2013/11/19/analyzing-facebook-with-r/">to access the Facebook API</a>,
  and <a href="http://blog.revolutionanalytics.com/2013/11/how-to-analyze-you-facebook-friends-network-with-r.html">draw the plot</a>
  , on other sites.</p>
 
@@ -170,18 +170,22 @@
 <h2 id="setup-oauth">Setup OAuth</h2>
 
 <p>You need to get the necessary <em>APP ID</em> and <em>APP SECRET</em> from the <a href="https://developers.facebook.com/apps">facebook developers site</a>.
- Then feed that info into an object called <em>fb_auth</em>, which you call whenever you want to 
+ Then feed that info into an object called <em>fb_auth</em>, which you call whenever you want to
  access the API.</p>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
-2
-3
-4
-5
-6
-7
-8
-9</code></pre></div></td><td class="code"><div class="highlight"><pre>fb_oauth <span class="o">&lt;-</span> fbOAuth<span class="p">(</span>app_id<span class="o">=</span><span class="s">&quot;APP ID FROM SITE&quot;</span><span class="p">,</span> app_secret<span class="o">=</span><span class="s">&quot;APP SECRET FROM SITE&quot;</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</code></pre></div></td><td class="code"><div class="highlight"><pre>fb_oauth <span class="o">&lt;-</span> fbOAuth<span class="p">(</span>app_id<span class="o">=</span><span class="s">&quot;APP ID FROM SITE&quot;</span><span class="p">,</span> app_secret<span class="o">=</span><span class="s">&quot;APP SECRET FROM SITE&quot;</span><span class="p">)</span>
 <span class="c1">#now we have our fb_oauth connection</span>
 <span class="c1">#	so we will just save them to be able to use them later</span>
 <span class="kp">save</span><span class="p">(</span>fb_oauth<span class="p">,</span> file<span class="o">=</span><span class="s">&quot;fb_oauth&quot;</span><span class="p">)</span>
@@ -190,13 +194,17 @@
 
 me <span class="o">&lt;-</span> getUsers<span class="p">(</span><span class="s">&quot;me&quot;</span><span class="p">,</span> token<span class="o">=</span>fb_oauth<span class="p">)</span>
 me<span class="o">$</span>name <span class="c1"># my name # If it works - you&#39;ll see your name</span>
+
+my_friends <span class="o">&lt;-</span> getFriends<span class="p">(</span>token<span class="o">=</span>fb_oauth<span class="p">,</span> simplify<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="kp">head</span><span class="p">(</span>my_friends<span class="p">,</span> n<span class="o">=</span><span class="m">10</span><span class="p">)</span> <span class="c1">#first 10 friends - ID is the order they joined FB</span>
+<span class="kp">nrow</span><span class="p">(</span>my_friends<span class="p">)</span> <span class="c1"># number of friends</span>
 </pre></div>
 </td></tr></table>
 
 <h2 id="download-friends">Download friends</h2>
 
 <p>Now to download your friends. This isn’t needed for the network plot, but worth
- downloading anyway. </p>
+ downloading anyway.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
  2
@@ -226,15 +234,15 @@ me<span class="o">$</span>name <span class="c1"># my name # If it works - you&#3
 26
 27
 28
-29</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">#Too many friends in one group gets rejected by FB API. </span>
+29</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">#Too many friends in one group gets rejected by FB API.</span>
 <span class="c1">#Break into groups of 80.</span>
 split_my_friends_1 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">80</span><span class="p">,]</span>
-split_my_friends_2 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">81</span><span class="o">:</span><span class="m">160</span><span class="p">,]</span> 
-split_my_friends_3 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">161</span><span class="o">:</span><span class="m">240</span><span class="p">,]</span> 
-split_my_friends_4 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">241</span><span class="o">:</span><span class="m">320</span><span class="p">,]</span> 
-split_my_friends_5 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">321</span><span class="o">:</span><span class="m">400</span><span class="p">,]</span> 
-split_my_friends_6 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">401</span><span class="o">:</span><span class="m">480</span><span class="p">,]</span> 
-split_my_friends_7 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">481</span><span class="o">:</span><span class="kp">nrow</span><span class="p">(</span>my_friends<span class="p">),]</span> 
+split_my_friends_2 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">81</span><span class="o">:</span><span class="m">160</span><span class="p">,]</span>
+split_my_friends_3 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">161</span><span class="o">:</span><span class="m">240</span><span class="p">,]</span>
+split_my_friends_4 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">241</span><span class="o">:</span><span class="m">320</span><span class="p">,]</span>
+split_my_friends_5 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">321</span><span class="o">:</span><span class="m">400</span><span class="p">,]</span>
+split_my_friends_6 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">401</span><span class="o">:</span><span class="m">480</span><span class="p">,]</span>
+split_my_friends_7 <span class="o">&lt;-</span>  my_friends<span class="p">[</span><span class="m">481</span><span class="o">:</span><span class="kp">nrow</span><span class="p">(</span>my_friends<span class="p">),]</span>
 
 my_friends_info_1 <span class="o">&lt;-</span> getUsers<span class="p">(</span>split_my_friends_1<span class="o">$</span>id<span class="p">,</span> token<span class="o">=</span>fb_oauth<span class="p">,</span> private_info<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 my_friends_info_2 <span class="o">&lt;-</span> getUsers<span class="p">(</span>split_my_friends_2<span class="o">$</span>id<span class="p">,</span> token<span class="o">=</span>fb_oauth<span class="p">,</span> private_info<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
@@ -292,14 +300,14 @@ my_friends_info<span class="o">&lt;-</span> rbind.fill<span class="p">(</span>my
 14
 15
 16</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c1"># friends who are friends with me alone</span>
-singletons <span class="o">&lt;-</span> <span class="kp">rowSums</span><span class="p">(</span>tina_network<span class="p">)</span><span class="o">==</span><span class="m">0</span> 
+singletons <span class="o">&lt;-</span> <span class="kp">rowSums</span><span class="p">(</span>tina_network<span class="p">)</span><span class="o">==</span><span class="m">0</span>
 
 <span class="c1"># remove singletons</span>
 my_graph <span class="o">&lt;-</span> graph.adjacency<span class="p">(</span>tina_network<span class="p">[</span><span class="o">!</span>singletons<span class="p">,</span><span class="o">!</span>singletons<span class="p">])</span>
 
 <span class="c1"># make connections one way</span>
-my_graph_simple <span class="o">&lt;-</span> simplify<span class="p">(</span>my_graph<span class="p">,</span> 
-                            remove.multiple <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> remove.loops <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> 
+my_graph_simple <span class="o">&lt;-</span> simplify<span class="p">(</span>my_graph<span class="p">,</span>
+                            remove.multiple <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> remove.loops <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># set up plot</span>
 <span class="c1">#actual model</span>
@@ -328,7 +336,7 @@ E<span class="p">(</span>my_graph_simple<span class="p">)</span><span class="o">
 E<span class="p">(</span>my_graph_simple<span class="p">)</span><span class="o">$</span>width <span class="o">&lt;-</span> <span class="m">0.0001</span>
 
 <span class="c1"># Let&#39;s colour based on connectedness.</span>
-<span class="c1">#this is the number of &quot;shortest paths&quot; going </span>
+<span class="c1">#this is the number of &quot;shortest paths&quot; going</span>
 <span class="c1">#through a particular individual</span>
 hc4 <span class="o">&lt;-</span> heat.colors<span class="p">(</span><span class="m">10</span><span class="p">,</span>alpha<span class="o">=</span><span class="m">0.9</span><span class="p">)</span>
 betweenness <span class="o">&lt;-</span> betweenness<span class="p">(</span>my_graph_simple<span class="p">)</span>
@@ -342,21 +350,21 @@ vcolors2 <span class="o">&lt;-</span> hc4<span class="p">[</span>vcolors<span cl
 
 <div class="highlight"><pre><code class="language-r" data-lang="r">pdf<span class="p">(</span><span class="s">&#39;network_drl.pdf&#39;</span><span class="p">)</span>
 plot<span class="p">(</span>my_graph_simple<span class="p">,</span> vertex.size<span class="o">=</span><span class="m">2</span><span class="p">,</span> vertex.color<span class="o">=</span>vcolors2<span class="p">,</span>
-     vertex.label<span class="o">=</span><span class="kc">NA</span><span class="p">,</span> 
+     vertex.label<span class="o">=</span><span class="kc">NA</span><span class="p">,</span>
      vertex.label.cex<span class="o">=</span><span class="m">2</span><span class="p">,</span>
      edge.arrow.size<span class="o">=</span><span class="m">0</span><span class="p">,</span> edge.curved<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>layout<span class="o">=</span>layout.drl<span class="p">)</span>
 dev.off<span class="p">()</span>
 
 pdf<span class="p">(</span><span class="s">&#39;network_fr.pdf&#39;</span><span class="p">)</span>
 plot<span class="p">(</span>my_graph_simple<span class="p">,</span> vertex.size<span class="o">=</span><span class="m">2</span><span class="p">,</span> vertex.color<span class="o">=</span>vcolors2<span class="p">,</span>
-     vertex.label<span class="o">=</span><span class="kc">NA</span><span class="p">,</span> 
+     vertex.label<span class="o">=</span><span class="kc">NA</span><span class="p">,</span>
      vertex.label.cex<span class="o">=</span><span class="m">2</span><span class="p">,</span>
      edge.arrow.size<span class="o">=</span><span class="m">0</span><span class="p">,</span> edge.curved<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>layout<span class="o">=</span>layout.fr<span class="p">)</span>
 dev.off<span class="p">()</span>
 
 pdf<span class="p">(</span><span class="s">&#39;network_kk.pdf&#39;</span><span class="p">)</span>
 plot<span class="p">(</span>my_graph_simple<span class="p">,</span> vertex.size<span class="o">=</span><span class="m">2</span><span class="p">,</span> vertex.color<span class="o">=</span>vcolors2<span class="p">,</span>
-     vertex.label<span class="o">=</span><span class="kc">NA</span><span class="p">,</span> 
+     vertex.label<span class="o">=</span><span class="kc">NA</span><span class="p">,</span>
      vertex.label.cex<span class="o">=</span><span class="m">2</span><span class="p">,</span>
      edge.arrow.size<span class="o">=</span><span class="m">0</span><span class="p">,</span> edge.curved<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span>layout<span class="o">=</span>layout.kk<span class="p">)</span>
 dev.off<span class="p">()</span></code></pre></div>
