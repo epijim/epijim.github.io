@@ -167,7 +167,7 @@
 5
 6
 7</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c1"># Get the data from my gist on github</span>
-<span class="c1">#   note: readcsv() wasn&#39;t supporting ssl when this was written, which is </span>
+<span class="c1">#   note: readcsv() wasn&#39;t supporting ssl when this was written, which is</span>
 <span class="c1">#   why I do the convuluted method</span>
   temporaryFile <span class="o">&lt;-</span> <span class="kp">tempfile</span><span class="p">()</span>
   download.file<span class="p">(</span><span class="s">&quot;https://gist.githubusercontent.com/epijim/8819934/raw/6c76df80eb095065a9ce0fa4b8f94410ad528fed/college_data.csv&quot;</span>
@@ -183,7 +183,7 @@
  into percentages.</p>
 
 <p>I also pull out the college list. I’m trying to use the base R <em>reshape</em> here, as I’m terrible with it,
- but if I was using <em>reShape</em> from the <em>Hmisc</em> package I would just pull colleges names accross as a 
+ but if I was using <em>reShape</em> from the <em>Hmisc</em> package I would just pull colleges names accross as a
  non-time-varying variable.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
@@ -203,7 +203,7 @@
 </td></tr></table>
 
 <p>Now reshaping the dataset - as I mentioned before, this code is shoddy. <em>reShape</em> is my usual go to. Right now
- I am in a plane on the way back from a conference though, so I can’t search stackoverflow for some help on 
+ I am in a plane on the way back from a conference though, so I can’t search stackoverflow for some help on
  how to use <em>reshape</em>.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
@@ -211,7 +211,7 @@
 3
 4
 5
-6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c1"># reshape for plot - reShape (from hmisc) is a lot easier to use, but this is my horrible </span>
+6</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="c1"># reshape for plot - reShape (from hmisc) is a lot easier to use, but this is my horrible</span>
 <span class="c1">#   base R attempt at reshape...</span>
   mydata <span class="o">&lt;-</span> mydata<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Percent_male&quot;</span><span class="p">,</span><span class="s">&quot;Percent_female&quot;</span><span class="p">,</span><span class="s">&quot;p_under&quot;</span><span class="p">,</span> <span class="s">&quot;p_post&quot;</span><span class="p">,</span><span class="s">&quot;p_fellow&quot;</span><span class="p">)]</span>
   mydata_long <span class="o">&lt;-</span> reshape<span class="p">(</span>mydata<span class="p">,</span> idvar <span class="o">=</span> <span class="s">&quot;College_id&quot;</span><span class="p">,</span> ids <span class="o">=</span> <span class="kp">row.names</span><span class="p">(</span>mydata<span class="p">),</span>
@@ -221,7 +221,7 @@
 </td></tr></table>
 
 <p>So for the bubble plot, I need x and y values to be the index, saying where the bubble appears. I’m stripping
- out the labels here, and then I add them back in when I set up the plot. This seemed the easiest way to me, 
+ out the labels here, and then I add them back in when I set up the plot. This seemed the easiest way to me,
  but I need to come back to this at some point as I shouldn’t need to do this.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
@@ -253,15 +253,15 @@ mydata_long<span class="o">$</span>y <span class="o">&lt;-</span> <span class="k
 
 <span class="c1"># ggplot2 base layer</span>
 g <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata_long<span class="p">)</span>
- 
+
 <span class="c1"># Bubble plots - edit limits and seq based on your data</span>
-<span class="p">(</span>g <span class="o">+</span> geom_point<span class="p">(</span>aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">,</span> 
+<span class="p">(</span>g <span class="o">+</span> geom_point<span class="p">(</span>aes<span class="p">(</span>x <span class="o">=</span> x<span class="p">,</span> y <span class="o">=</span> y<span class="p">,</span>
                     size <span class="o">=</span> Percent_male<span class="p">,</span> colour <span class="o">=</span> Percent_male<span class="p">),</span>
                 shape<span class="o">=</span><span class="m">16</span><span class="p">,</span> alpha<span class="o">=</span><span class="m">0.80</span><span class="p">)</span> <span class="o">+</span>
    scale_colour_gradient<span class="p">(</span>limits <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">),</span> low<span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">,</span> high<span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span> breaks<span class="o">=</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> by <span class="o">=</span> <span class="m">10</span><span class="p">))</span>  <span class="o">+</span>
-   scale_y_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">31</span><span class="p">,</span> 
+   scale_y_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">31</span><span class="p">,</span>
                       labels<span class="o">=</span>college_list<span class="p">)</span><span class="o">+</span>
-   scale_x_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span> 
+   scale_x_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span>
                       labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Fellow&quot;</span><span class="p">,</span> <span class="s">&quot;Postgrad&quot;</span><span class="p">,</span> <span class="s">&quot;Undergrad&quot;</span><span class="p">,</span><span class="s">&quot;Female&quot;</span><span class="p">,</span><span class="s">&quot;Male&quot;</span><span class="p">))</span> <span class="o">+</span>
    labs<span class="p">(</span>size<span class="o">=</span> <span class="s">&quot;Percent&quot;</span><span class="p">,</span>
         colour<span class="o">=</span><span class="s">&quot;Percent&quot;</span><span class="p">,</span>
@@ -309,9 +309,9 @@ ggplot<span class="p">(</span>mydata_long<span class="p">,</span>aes<span class=
              shape<span class="o">=</span><span class="m">21</span><span class="p">,</span>fill<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">)</span><span class="o">+</span>
   geom_text<span class="p">(</span>aes<span class="p">(</span>label<span class="o">=</span>Percent_male<span class="p">),</span>size<span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="o">+</span>
   scale_size_identity<span class="p">()</span><span class="o">+</span>
-  scale_x_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span> 
+  scale_x_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span>
                       labels<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Fellow&quot;</span><span class="p">,</span> <span class="s">&quot;Postgrad&quot;</span><span class="p">,</span> <span class="s">&quot;Undergrad&quot;</span><span class="p">,</span><span class="s">&quot;Female&quot;</span><span class="p">,</span><span class="s">&quot;Male&quot;</span><span class="p">))</span><span class="o">+</span>
-  scale_y_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">31</span><span class="p">,</span> 
+  scale_y_continuous<span class="p">(</span>breaks <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">31</span><span class="p">,</span>
                       labels<span class="o">=</span>college_list<span class="p">)</span><span class="o">+</span>
   coord_fixed<span class="p">(</span>ratio<span class="o">=</span><span class="m">0.4</span><span class="p">)</span><span class="o">+</span>
   theme<span class="p">(</span>panel.grid.major<span class="o">=</span>element_line<span class="p">(</span>linetype<span class="o">=</span><span class="m">2</span><span class="p">,</span>color<span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">),</span>
@@ -386,7 +386,20 @@ ggplot<span class="p">(</span>mydata_long<span class="p">,</span>aes<span class=
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		
+		<div class="ads"><style>
+.responsive-ads { width: 300px; height: 200px; }
+@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle responsive-ads"
+	style="display:inline-block"
+	data-ad-client="ca-pub-8433594162604860"
+	data-ad-slot="9138304032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><!-- /.ads -->
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 

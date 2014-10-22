@@ -148,11 +148,11 @@
 			<div id="content" class="page-content" itemprop="articleBody">
 				<h2 id="what-is-xkcd">What is XKCD?</h2>
 
-<p>As wikipedia states: </p>
+<p>As wikipedia states:</p>
 
 <blockquote>
-  <p>XKCD, is a webcomic created by Randall Munroe. The comic’s tagline describes it as a 
-	“Stick-figure strip featuring humour about technology, science, 
+  <p>XKCD, is a webcomic created by Randall Munroe. The comic’s tagline describes it as a
+	“Stick-figure strip featuring humour about technology, science,
 	mathematics and relationships”</p>
 </blockquote>
 
@@ -166,15 +166,15 @@
 <h2 id="the-xkcd-package">The XKCD package</h2>
 
 <p>In 2013 someone called Emilio Manzanera released a package caller <a href="http://xkcd.r-forge.r-project.org"><em>xkcd</em></a> onto CRAN.
- The package is basically a ggplot2 wrapper that makes graphs look like they came from an 
- XKCD comic. It has three main functions: <em>xkcdman, xkcdline and xkcdrect</em>. </p>
+ The package is basically a ggplot2 wrapper that makes graphs look like they came from an
+ XKCD comic. It has three main functions: <em>xkcdman, xkcdline and xkcdrect</em>.</p>
 
 <p>From the <em>xkcd</em> help file:</p>
 
 <blockquote>
   <p>The xkcdman function creates a XKCD man and the other one plot pseudo handwritten objects.
- These functions are derived from the geom_path of the package ggplot2. 
- All the funcionalities of the ggplot system can be used. 
+ These functions are derived from the geom_path of the package ggplot2.
+ All the funcionalities of the ggplot system can be used.
  See the vignettes for detailed examples.</p>
 </blockquote>
 
@@ -255,7 +255,7 @@ bardata <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class
 	<span class="kp">head</span><span class="p">(</span>linedata<span class="p">)</span>
 
 <span class="c1">#################################################</span>
-<span class="c1"># Check font status </span>
+<span class="c1"># Check font status</span>
 
 <span class="c1">#do you have xkcd fonts?</span>
 <span class="kr">if</span><span class="p">(</span> <span class="s">&quot;xkcd&quot;</span> <span class="o">%in%</span> fonts<span class="p">())</span> <span class="p">{</span>
@@ -276,7 +276,7 @@ bardata <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class
 <span class="c1">#then import all fonts - run line below on first run - it&#39;s SLOW</span>
 <span class="c1">#font_import()</span>
 
-<span class="c1">#load all fonts - run line below on first run </span>
+<span class="c1">#load all fonts - run line below on first run</span>
 <span class="c1">#loadfonts()</span>
 
 <span class="c1">#opens the xkcd-intro.pdf</span>
@@ -301,11 +301,11 @@ yrange <span class="o">&lt;-</span> <span class="kp">range</span><span class="p"
 <span class="kp">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="c1"># for reproducibility, as hand effect is just jitter</span>
 
 <span class="c1"># R wouldn&#39;t let me use the xkcd font in a device - I didn&#39;t try and find away round</span>
-plot <span class="o">&lt;-</span> ggplot<span class="p">()</span> <span class="o">+</span> geom_point<span class="p">(</span>aes<span class="p">(</span>Year.founded<span class="p">,</span> Fixed.assets<span class="p">),</span> data<span class="o">=</span>collegesdata<span class="p">)</span> <span class="o">+</span> 
+plot <span class="o">&lt;-</span> ggplot<span class="p">()</span> <span class="o">+</span> geom_point<span class="p">(</span>aes<span class="p">(</span>Year.founded<span class="p">,</span> Fixed.assets<span class="p">),</span> data<span class="o">=</span>collegesdata<span class="p">)</span> <span class="o">+</span>
   xkcdaxis<span class="p">(</span>xrange<span class="p">,</span>yrange<span class="p">)</span> <span class="o">+</span>
-  ylab<span class="p">(</span><span class="s">&quot;Fixed assets (pounds)&quot;</span><span class="p">)</span> 
-  <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Year founded&quot;</span><span class="p">)</span> <span class="o">+</span> 
-  labs<span class="p">(</span>title<span class="o">=</span><span class="s">&quot;Cambridge college wealth \nagainst year founded&quot;</span><span class="p">)</span> 
+  ylab<span class="p">(</span><span class="s">&quot;Fixed assets (pounds)&quot;</span><span class="p">)</span>
+  <span class="o">+</span> xlab<span class="p">(</span><span class="s">&quot;Year founded&quot;</span><span class="p">)</span> <span class="o">+</span>
+  labs<span class="p">(</span>title<span class="o">=</span><span class="s">&quot;Cambridge college wealth \nagainst year founded&quot;</span><span class="p">)</span>
 plot
 </pre></div>
 </td></tr></table>
@@ -352,11 +352,11 @@ mapping <span class="o">&lt;-</span> aes<span class="p">(</span>xmin<span class=
 
 plot2 <span class="o">&lt;-</span> ggplot<span class="p">()</span> <span class="o">+</span> xkcdrect<span class="p">(</span>mapping<span class="p">,</span>data<span class="p">)</span> <span class="o">+</span>
   xkcdaxis<span class="p">(</span>xrange<span class="p">,</span>yrange<span class="p">)</span> <span class="o">+</span>
-  xlab<span class="p">(</span><span class="s">&quot;Jesus College Combination room&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Number of people&quot;</span><span class="p">)</span> <span class="o">+</span> 
+  xlab<span class="p">(</span><span class="s">&quot;Jesus College Combination room&quot;</span><span class="p">)</span> <span class="o">+</span> ylab<span class="p">(</span><span class="s">&quot;Number of people&quot;</span><span class="p">)</span> <span class="o">+</span>
   annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">1</span><span class="p">,</span> y <span class="o">=</span> <span class="m">100</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Fellows&quot;</span><span class="p">,</span> family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span> <span class="o">+</span>
   annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">2</span><span class="p">,</span> y <span class="o">=</span> <span class="m">220</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;PhD&#39;ers&quot;</span><span class="p">,</span> family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span> <span class="o">+</span>
   annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">3</span><span class="p">,</span> y <span class="o">=</span> <span class="m">150</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Other grads&quot;</span><span class="p">,</span> family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span> <span class="o">+</span>
-  annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">4</span><span class="p">,</span> y <span class="o">=</span> <span class="m">490</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Undergrads&quot;</span><span class="p">,</span> family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span> 
+  annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">4</span><span class="p">,</span> y <span class="o">=</span> <span class="m">490</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Undergrads&quot;</span><span class="p">,</span> family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span>
 plot2
 </pre></div>
 </td></tr></table>
@@ -436,7 +436,7 @@ dataman <span class="o">&lt;-</span> <span class="kt">data.frame</span><span cla
                          angleleftleg <span class="o">=</span> <span class="m">3</span><span class="o">*</span><span class="kc">pi</span><span class="o">/</span><span class="m">2</span>  <span class="o">+</span> <span class="kc">pi</span> <span class="o">/</span> <span class="m">12</span> <span class="p">,</span>
                          anglerightleg <span class="o">=</span> <span class="m">3</span><span class="o">*</span><span class="kc">pi</span><span class="o">/</span><span class="m">2</span>  <span class="o">-</span> <span class="kc">pi</span> <span class="o">/</span> <span class="m">12</span><span class="p">,</span>
                          angleofneck <span class="o">=</span> runif<span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="o">*</span><span class="kc">pi</span><span class="o">/</span><span class="m">2</span><span class="o">-</span><span class="kc">pi</span><span class="o">/</span><span class="m">10</span><span class="p">,</span> <span class="m">3</span><span class="o">*</span><span class="kc">pi</span><span class="o">/</span><span class="m">2</span><span class="o">+</span><span class="kc">pi</span><span class="o">/</span><span class="m">10</span><span class="p">))</span>
-datalines <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>xbegin<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2005</span><span class="p">,</span><span class="m">2021.6</span><span class="p">),</span>ybegin<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">11</span><span class="p">,</span><span class="m">4.5</span><span class="p">),</span> 
+datalines <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>xbegin<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2005</span><span class="p">,</span><span class="m">2021.6</span><span class="p">),</span>ybegin<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">11</span><span class="p">,</span><span class="m">4.5</span><span class="p">),</span>
 	xend<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">2006</span><span class="p">,</span><span class="m">2022.1</span><span class="p">),</span> yend<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">11.2</span><span class="p">,</span><span class="m">4.7</span><span class="p">))</span>
 p <span class="o">&lt;-</span> ggplot<span class="p">()</span> <span class="o">+</span> geom_smooth<span class="p">(</span>mapping<span class="o">=</span>aes<span class="p">(</span>x<span class="o">=</span>year<span class="p">,</span> y <span class="o">=</span>prev<span class="p">,</span> colour<span class="o">=</span><span class="kp">as.character</span><span class="p">(</span>country<span class="p">)),</span>
                             <span class="p">,</span>se<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> data <span class="o">=</span>data<span class="p">,</span> method<span class="o">=</span><span class="s">&quot;loess&quot;</span><span class="p">)</span>
@@ -444,11 +444,11 @@ p <span class="o">+</span> xkcdaxis<span class="p">(</span>xrange<span class="p"
     ylab<span class="p">(</span><span class="s">&quot;Predicted raw prevelance of diabetes (percent)&quot;</span><span class="p">)</span> <span class="o">+</span>
     xkcdman<span class="p">(</span>mapping<span class="p">,</span> dataman<span class="p">)</span> <span class="o">+</span>
     scale_colour_discrete<span class="p">(</span>name <span class="o">=</span> <span class="s">&quot;Country&quot;</span><span class="p">)</span><span class="o">+</span>
-    annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">2010.5</span><span class="p">,</span> y <span class="o">=</span> <span class="m">11.7</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Diabetes is\nincreasing!&quot;</span><span class="p">,</span> 
+    annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">2010.5</span><span class="p">,</span> y <span class="o">=</span> <span class="m">11.7</span><span class="p">,</span> label <span class="o">=</span> <span class="s">&quot;Diabetes is\nincreasing!&quot;</span><span class="p">,</span>
     	family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span> <span class="o">+</span>
-    annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">2024.5</span><span class="p">,</span> 
-    	y <span class="o">=</span> <span class="m">5.6</span><span class="p">,</span> 
-    	label <span class="o">=</span> <span class="s">&quot;Left of the dotted line \nare collected data\nright side are IDF predictions&quot;</span><span class="p">,</span> 
+    annotate<span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span> x<span class="o">=</span><span class="m">2024.5</span><span class="p">,</span>
+    	y <span class="o">=</span> <span class="m">5.6</span><span class="p">,</span>
+    	label <span class="o">=</span> <span class="s">&quot;Left of the dotted line \nare collected data\nright side are IDF predictions&quot;</span><span class="p">,</span>
     	family<span class="o">=</span><span class="s">&quot;xkcd&quot;</span> <span class="p">)</span> <span class="o">+</span>
     xkcdline<span class="p">(</span>aes<span class="p">(</span>xbegin<span class="o">=</span>xbegin<span class="p">,</span>ybegin<span class="o">=</span>ybegin<span class="p">,</span>xend<span class="o">=</span>xend<span class="p">,</span>yend<span class="o">=</span>yend<span class="p">),</span>
     	datalines<span class="p">,</span> xjitteramount <span class="o">=</span> <span class="m">0.12</span><span class="p">)</span> <span class="o">+</span>
@@ -505,7 +505,20 @@ p <span class="o">+</span> xkcdaxis<span class="p">(</span>xrange<span class="p"
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		
+		<div class="ads"><style>
+.responsive-ads { width: 300px; height: 200px; }
+@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle responsive-ads"
+	style="display:inline-block"
+	data-ad-client="ca-pub-8433594162604860"
+	data-ad-slot="9138304032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><!-- /.ads -->
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 

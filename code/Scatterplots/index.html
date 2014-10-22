@@ -147,7 +147,7 @@
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
 				<p>After the histogram, scatter plots are pretty much always the first plot I make when
- exploring a dataset. The code for the plots below mainly come from two sites. Which 
+ exploring a dataset. The code for the plots below mainly come from two sites. Which
  are both brilliant sources for info on using R.</p>
 
 <ol>
@@ -159,7 +159,7 @@
 
 <h2 id="data-im-using">Data I’m using</h2>
 
-<p>To make it easily to replicate I put the data I’m using in a gist. </p>
+<p>To make it easily to replicate I put the data I’m using in a gist.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
  2
@@ -200,8 +200,8 @@ mydata<span class="o">$</span>College_char <span class="o">&lt;-</span> <span cl
 7
 8
 9</code></pre></div></td><td class="code"><div class="highlight"><pre>png<span class="p">(</span><span class="s">&quot;scatterplot_1_rug.png&quot;</span><span class="p">,</span>width<span class="o">=</span><span class="m">800</span><span class="p">)</span>
-  ggplot<span class="p">(</span>mydata<span class="p">,</span>aes<span class="p">(</span>Founded<span class="p">,</span>Wine_budget<span class="p">))</span><span class="o">+</span> 
-    geom_point<span class="p">()</span><span class="o">+</span> 
+  ggplot<span class="p">(</span>mydata<span class="p">,</span>aes<span class="p">(</span>Founded<span class="p">,</span>Wine_budget<span class="p">))</span><span class="o">+</span>
+    geom_point<span class="p">()</span><span class="o">+</span>
     geom_rug<span class="p">(</span>col<span class="o">=</span><span class="s">&quot;darkred&quot;</span><span class="p">,</span>alpha<span class="o">=</span><span class="m">0.4</span><span class="p">)</span><span class="o">+</span>
   theme_bw<span class="p">()</span><span class="o">+</span>
   xlab<span class="p">(</span><span class="s">&quot;Year college was founded&quot;</span><span class="p">)</span><span class="o">+</span>
@@ -269,11 +269,11 @@ dev.off<span class="p">()</span>
 <span class="kn">library</span><span class="p">(</span>gridExtra<span class="p">)</span>
 <span class="c1">#placeholder plot - prints nothing at all</span>
 empty <span class="o">&lt;-</span> ggplot<span class="p">()</span><span class="o">+</span>geom_point<span class="p">(</span>aes<span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> colour<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">)</span> <span class="o">+</span>
-  theme<span class="p">(</span>                              
-    plot.background <span class="o">=</span> element_blank<span class="p">(),</span> 
-    panel.grid.major <span class="o">=</span> element_blank<span class="p">(),</span> 
-    panel.grid.minor <span class="o">=</span> element_blank<span class="p">(),</span> 
-    panel.border <span class="o">=</span> element_blank<span class="p">(),</span> 
+  theme<span class="p">(</span>
+    plot.background <span class="o">=</span> element_blank<span class="p">(),</span>
+    panel.grid.major <span class="o">=</span> element_blank<span class="p">(),</span>
+    panel.grid.minor <span class="o">=</span> element_blank<span class="p">(),</span>
+    panel.border <span class="o">=</span> element_blank<span class="p">(),</span>
     panel.background <span class="o">=</span> element_blank<span class="p">(),</span>
     axis.title.x <span class="o">=</span> element_blank<span class="p">(),</span>
     axis.title.y <span class="o">=</span> element_blank<span class="p">(),</span>
@@ -283,32 +283,32 @@ empty <span class="o">&lt;-</span> ggplot<span class="p">()</span><span class="o
   <span class="p">)</span>
 
 <span class="c1">#scatterplot of x and y variables</span>
-scatter <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata<span class="p">,</span>aes<span class="p">(</span>Founded<span class="p">,</span> Wine_budget<span class="p">))</span><span class="o">+</span> 
-  geom_point<span class="p">(</span>aes<span class="p">(</span>color<span class="o">=</span>Rating<span class="p">))</span><span class="o">+</span> 
-  scale_color_manual<span class="p">(</span>values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span><span class="o">+</span> 
+scatter <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata<span class="p">,</span>aes<span class="p">(</span>Founded<span class="p">,</span> Wine_budget<span class="p">))</span><span class="o">+</span>
+  geom_point<span class="p">(</span>aes<span class="p">(</span>color<span class="o">=</span>Rating<span class="p">))</span><span class="o">+</span>
+  scale_color_manual<span class="p">(</span>values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span><span class="o">+</span>
   theme_bw<span class="p">()</span><span class="o">+</span>
   theme<span class="p">(</span>legend.position<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>legend.justification<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">))</span><span class="o">+</span>
   xlab<span class="p">(</span><span class="s">&quot;Year college was founded&quot;</span><span class="p">)</span><span class="o">+</span>
   ylab<span class="p">(</span><span class="s">&quot;Wine budget in thousands of £&quot;</span><span class="p">)</span>
 
 <span class="c1">#marginal density of x - plot on top</span>
-plot_top <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata<span class="p">,</span> aes<span class="p">(</span>Founded<span class="p">,</span> fill<span class="o">=</span>Rating<span class="p">))</span> <span class="o">+</span> 
-  geom_density<span class="p">(</span>alpha<span class="o">=</span><span class="m">.5</span><span class="p">)</span> <span class="o">+</span> 
-  scale_fill_manual<span class="p">(</span>values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span> <span class="o">+</span> 
+plot_top <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata<span class="p">,</span> aes<span class="p">(</span>Founded<span class="p">,</span> fill<span class="o">=</span>Rating<span class="p">))</span> <span class="o">+</span>
+  geom_density<span class="p">(</span>alpha<span class="o">=</span><span class="m">.5</span><span class="p">)</span> <span class="o">+</span>
+  scale_fill_manual<span class="p">(</span>values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span> <span class="o">+</span>
   theme_bw<span class="p">()</span><span class="o">+</span>
   theme<span class="p">(</span>legend.position <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">,</span>axis.title.x <span class="o">=</span> element_blank<span class="p">())</span> <span class="c1"># removes density x</span>
 
 <span class="c1">#marginal density of y - plot on the right</span>
-plot_right <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata<span class="p">,</span> aes<span class="p">(</span>Wine_budget<span class="p">,</span> fill<span class="o">=</span>Rating<span class="p">))</span> <span class="o">+</span> 
-  geom_density<span class="p">(</span>alpha<span class="o">=</span><span class="m">.5</span><span class="p">)</span> <span class="o">+</span> 
-  coord_flip<span class="p">()</span> <span class="o">+</span> 
-  scale_fill_manual<span class="p">(</span>values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span> <span class="o">+</span> 
+plot_right <span class="o">&lt;-</span> ggplot<span class="p">(</span>mydata<span class="p">,</span> aes<span class="p">(</span>Wine_budget<span class="p">,</span> fill<span class="o">=</span>Rating<span class="p">))</span> <span class="o">+</span>
+  geom_density<span class="p">(</span>alpha<span class="o">=</span><span class="m">.5</span><span class="p">)</span> <span class="o">+</span>
+  coord_flip<span class="p">()</span> <span class="o">+</span>
+  scale_fill_manual<span class="p">(</span>values <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;purple&quot;</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">))</span> <span class="o">+</span>
   theme_bw<span class="p">()</span><span class="o">+</span>
-  theme<span class="p">(</span>legend.position <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">,</span>axis.title.y <span class="o">=</span> element_blank<span class="p">())</span> <span class="c1"># removes density y </span>
+  theme<span class="p">(</span>legend.position <span class="o">=</span> <span class="s">&quot;none&quot;</span><span class="p">,</span>axis.title.y <span class="o">=</span> element_blank<span class="p">())</span> <span class="c1"># removes density y</span>
 
 <span class="c1">#arrange the plots together, with appropriate height and width for each row and column</span>
 png<span class="p">(</span><span class="s">&quot;scatterplot_2_hist.png&quot;</span><span class="p">,</span>width<span class="o">=</span><span class="m">800</span><span class="p">)</span>
-grid.arrange<span class="p">(</span>plot_top<span class="p">,</span> empty<span class="p">,</span> scatter<span class="p">,</span> plot_right<span class="p">,</span> 
+grid.arrange<span class="p">(</span>plot_top<span class="p">,</span> empty<span class="p">,</span> scatter<span class="p">,</span> plot_right<span class="p">,</span>
              ncol<span class="o">=</span><span class="m">2</span><span class="p">,</span> nrow<span class="o">=</span><span class="m">2</span><span class="p">,</span> widths<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> heights<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">4</span><span class="p">),</span>
              main<span class="o">=</span><span class="s">&quot;Scatter of year Cambridge college founded and wine budget \nby A/B/C Board of Graduate Studies college grading&quot;</span><span class="p">)</span>
 dev.off<span class="p">()</span>
@@ -322,12 +322,12 @@ dev.off<span class="p">()</span>
 <h2 id="dealing-with-large-datasets">Dealing with large datasets</h2>
 
 <p>When you have lots of points, it becomes hard to see the outliers in a scatter plot. A
- super simple solution is just to make the points a bit transparent. Although that can hide 
+ super simple solution is just to make the points a bit transparent. Although that can hide
  the outliers.</p>
 
-<p>In the plot below there are more than 16,000,000 data points. As it’s financial data, on 
- the price paid for bitcoins, it’s all very closely clustered in one spot. This makes it 
- hard to see the outliers, where trades occurred that were well below or above the market 
+<p>In the plot below there are more than 16,000,000 data points. As it’s financial data, on
+ the price paid for bitcoins, it’s all very closely clustered in one spot. This makes it
+ hard to see the outliers, where trades occurred that were well below or above the market
  value of a bitcoin. The hexbin plot allows you to see this data.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
@@ -340,8 +340,8 @@ dev.off<span class="p">()</span>
 8
 9</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">library</span><span class="p">(</span>hexbin<span class="p">)</span>
 png<span class="p">(</span><span class="s">&quot;scatter_2_hexbin.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">800</span><span class="p">)</span>
-  bin<span class="o">&lt;-</span>hexbin<span class="p">(</span>bitcoin<span class="o">$</span>When<span class="p">,</span> bitcoin<span class="o">$</span>priceperbitcoin_log<span class="p">,</span> xbins<span class="o">=</span><span class="m">50</span><span class="p">)</span> 
-  plot<span class="p">(</span>bin<span class="p">,</span> 
+  bin<span class="o">&lt;-</span>hexbin<span class="p">(</span>bitcoin<span class="o">$</span>When<span class="p">,</span> bitcoin<span class="o">$</span>priceperbitcoin_log<span class="p">,</span> xbins<span class="o">=</span><span class="m">50</span><span class="p">)</span>
+  plot<span class="p">(</span>bin<span class="p">,</span>
        main<span class="o">=</span><span class="s">&quot;Price per bitcoin over time in 16,748,682 Mt.Gox transactions&quot;</span><span class="p">,</span>
        xlab<span class="o">=</span><span class="s">&quot;Days since Jan 1st 1970&quot;</span><span class="p">,</span>
        ylab<span class="o">=</span><span class="s">&quot;Log10 of price per bitcoin&quot;</span>
@@ -385,16 +385,16 @@ density <span class="o">&lt;-</span> densCols<span class="p">(</span>mydata_naom
 mydata_naomit<span class="o">$</span>density <span class="o">&lt;-</span> col2rgb<span class="p">(</span>density<span class="p">)[</span><span class="m">1</span><span class="p">,]</span> <span class="o">+</span> <span class="m">1L</span>
 
 <span class="c1">## Map densities to colors</span>
-colours <span class="o">&lt;-</span>  colorRampPalette<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;#000099&quot;</span><span class="p">,</span> <span class="s">&quot;#00FEFF&quot;</span><span class="p">,</span> <span class="s">&quot;#45FE4F&quot;</span><span class="p">,</span> 
+colours <span class="o">&lt;-</span>  colorRampPalette<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;#000099&quot;</span><span class="p">,</span> <span class="s">&quot;#00FEFF&quot;</span><span class="p">,</span> <span class="s">&quot;#45FE4F&quot;</span><span class="p">,</span>
                             <span class="s">&quot;#FCFF00&quot;</span><span class="p">,</span> <span class="s">&quot;#FF9400&quot;</span><span class="p">,</span> <span class="s">&quot;#FF3100&quot;</span><span class="p">))(</span><span class="m">256</span><span class="p">)</span>
 mydata_naomit<span class="o">$</span>colours <span class="o">&lt;-</span> colours<span class="p">[</span>mydata_naomit<span class="o">$</span>density<span class="p">]</span>
 
 <span class="c1">## Plot it, reordering rows so that densest points are plotted on top</span>
 png<span class="p">(</span><span class="s">&quot;scatter_3_heatmap.png&quot;</span><span class="p">)</span>
-plot<span class="p">(</span>Undergrad_acceptances<span class="o">~</span>Undergrad_applications<span class="p">,</span> 
-     data<span class="o">=</span>mydata_naomit<span class="p">[</span><span class="kp">order</span><span class="p">(</span>mydata_naomit<span class="o">$</span>density<span class="p">),],</span> 
+plot<span class="p">(</span>Undergrad_acceptances<span class="o">~</span>Undergrad_applications<span class="p">,</span>
+     data<span class="o">=</span>mydata_naomit<span class="p">[</span><span class="kp">order</span><span class="p">(</span>mydata_naomit<span class="o">$</span>density<span class="p">),],</span>
      pch<span class="o">=</span><span class="m">20</span><span class="p">,</span> col<span class="o">=</span>colours<span class="p">,</span> cex<span class="o">=</span><span class="m">2</span><span class="p">,</span>
-     xlab<span class="o">=</span><span class="s">&quot;Undergraduate applications&quot;</span><span class="p">,</span> 
+     xlab<span class="o">=</span><span class="s">&quot;Undergraduate applications&quot;</span><span class="p">,</span>
      ylab<span class="o">=</span><span class="s">&quot;Undergraduate acceptances&quot;</span><span class="p">)</span>
 dev.off<span class="p">()</span>
 </pre></div>
@@ -416,9 +416,9 @@ dev.off<span class="p">()</span>
 5
 6
 7</code></pre></div></td><td class="code"><div class="highlight"><pre>png<span class="p">(</span><span class="s">&quot;scatter_3_contour.png&quot;</span><span class="p">,</span> width<span class="o">=</span><span class="m">800</span><span class="p">)</span>
-plot<span class="p">(</span>mydata_naomit<span class="p">,</span> 
-     xlab<span class="o">=</span><span class="s">&quot;Undergraduate applications&quot;</span><span class="p">,</span> 
-     ylab<span class="o">=</span><span class="s">&quot;Undergraduate acceptances&quot;</span><span class="p">,</span> 
+plot<span class="p">(</span>mydata_naomit<span class="p">,</span>
+     xlab<span class="o">=</span><span class="s">&quot;Undergraduate applications&quot;</span><span class="p">,</span>
+     ylab<span class="o">=</span><span class="s">&quot;Undergraduate acceptances&quot;</span><span class="p">,</span>
      pch<span class="o">=</span><span class="m">1</span><span class="p">,</span> cex<span class="o">=</span><span class="m">.4</span><span class="p">)</span>
 contour<span class="p">(</span>z<span class="p">,</span> drawlabels<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> nlevels<span class="o">=</span><span class="kp">levels</span><span class="p">,</span> col<span class="o">=</span>colours<span class="p">,</span> add<span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 dev.off<span class="p">()</span>
@@ -433,10 +433,10 @@ dev.off<span class="p">()</span>
 <h2 id="interactive-scatter-plots">Interactive scatter plots</h2>
 
 <p>The rCharts package allows you to make awesome, interactive charts. There are are a number
- of libraries available, and each does things slightly differently. None of it seems well 
- documented, and it’s often confusing if you try and relate the documentation from the 
- original libraries back to the rCharts plots. I found it easier to either edit the charts 
- once they are in html, or to use <em>str()</em> on a plot environment to get a rough idea of 
+ of libraries available, and each does things slightly differently. None of it seems well
+ documented, and it’s often confusing if you try and relate the documentation from the
+ original libraries back to the rCharts plots. I found it easier to either edit the charts
+ once they are in html, or to use <em>str()</em> on a plot environment to get a rough idea of
  what’s editable.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
@@ -470,9 +470,9 @@ dev.off<span class="p">()</span>
 
 selectedfactor <span class="o">=</span> mydata<span class="o">$</span>College
 
-rchart <span class="o">&lt;-</span> rPlot<span class="p">(</span>Firsts_2013 <span class="o">~</span> Wine_budget <span class="p">,</span> 
-            data <span class="o">=</span> mydata<span class="p">,</span> 
-            type <span class="o">=</span> <span class="s">&quot;point&quot;</span><span class="p">,</span> 
+rchart <span class="o">&lt;-</span> rPlot<span class="p">(</span>Firsts_2013 <span class="o">~</span> Wine_budget <span class="p">,</span>
+            data <span class="o">=</span> mydata<span class="p">,</span>
+            type <span class="o">=</span> <span class="s">&quot;point&quot;</span><span class="p">,</span>
             width <span class="o">=</span> <span class="m">500</span><span class="p">,</span>
             color <span class="o">=</span> <span class="s">&quot;College_char&quot;</span><span class="p">)</span>
 rchart<span class="o">$</span>guides<span class="p">(</span>y <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>min <span class="o">=</span> <span class="m">0</span><span class="p">,</span> max <span class="o">=</span> <span class="m">40</span><span class="p">))</span>
@@ -484,36 +484,36 @@ rchart<span class="o">$</span>guides<span class="p">(</span>
   <span class="p">),</span>
   y<span class="o">=</span><span class="kt">list</span><span class="p">(</span>title<span class="o">=</span><span class="s">&quot;% with firsts&quot;</span><span class="p">),</span>
   x<span class="o">=</span><span class="kt">list</span><span class="p">(</span>title<span class="o">=</span><span class="s">&quot;Yearly wine budget in thousands (£)&quot;</span><span class="p">))</span>
-rchart<span class="o">$</span>set<span class="p">(</span>width <span class="o">=</span> <span class="m">550</span><span class="p">)</span> 
-rchart<span class="o">$</span>set<span class="p">(</span>height <span class="o">=</span> <span class="m">460</span><span class="p">)</span> 
+rchart<span class="o">$</span>set<span class="p">(</span>width <span class="o">=</span> <span class="m">550</span><span class="p">)</span>
+rchart<span class="o">$</span>set<span class="p">(</span>height <span class="o">=</span> <span class="m">460</span><span class="p">)</span>
 
 rchart<span class="o">$</span><span class="kp">save</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> cdn<span class="o">=</span><span class="bp">F</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>Most of above is pretty self explanatory - except maybe <em>cdn</em>. If you know you’ll have
- internet access, set it as true. If you have no internet, or don’t want to rely on the rCharts site, 
+ internet access, set it as true. If you have no internet, or don’t want to rely on the rCharts site,
  set it as false and put the javascript that runs the plot on your computer/server.</p>
 
 <html>
   <head>
-    
+
     <script src="/jamesscripts/polychart2.standalone.js" type="text/javascript"></script>
-    
+
     <style>
     .rChart {
       display: block;
-      margin-left: auto; 
+      margin-left: auto;
       margin-right: auto;
       width: 550px;
       height: 460px;
     }  
     </style>
-    
+
   </head>
   <body>
     <div id="charteba1c84cbc4" class="rChart polycharts"></div>  
-    
+
     <script type="text/javascript">
     var chartParams = {
  "dom": "charteba1c84cbc4",
@@ -561,46 +561,46 @@ rchart<span class="o">$</span><span class="kp">save</span><span class="p">(</spa
 "Tompkin_Mean09to13": [    4.9,   11.3,    9.6, null,   12.3, null,   12.6,    2.7,   17.8,   20.8,    7.8,   25.5,   27.3,   10.6,   15.9,   27.4,   15.9,     23,   22.1,    6.2,   18.4,    8.6,   18.1,    9.8,   15.1,    9.2,   28.4,   12.8,    2.9,   11.9,     26 ],
 "TompkinsScore_2013": [  66.76,  68.17,  66.08, null,  64.94, null,  66.05,  68.72,  64.16,  62.92,  64.85,  60.33,  57.92,  67.47,  65.49,  57.43,     65,  60.74,  60.92,  70.85,  66.41,  66.89,  61.95,  64.59,  64.37,  66.51,  56.35,  65.84,  73.66,  68.94,  60.51 ],
 "Firsts_2013": [   24.7,   28.3,   25.3, null,   23.9, null,     23,   30.5,   21.4,   18.5,   21.1,     16,   13.2,   27.1,   25.9,   13.4,   22.8,   13.9,   15.8,   33.7,   27.8,   26.3,   16.2,   21.6,   19.8,   26.9,   13.4,   25.1,   41.7,   28.1,   18.9 ],
-"College_char": [ "Christ's", "Churchill", "Clare", "Clare Hall", "Corpus Christi", "Darwin", "Downing", "Emma", "Fitzwilliam", "Girton", "Caius", "Homerton", "Hughes Hall", "Jesus", "King's", "Lucy Cavendish", "Magdalene", "Murray Edwards", "Newnham", "Pembroke", "Peterhouse", "Queens", "Robinson", "Selwyn", "Sidney", "St Catharine's", "St Edmund's", "St John's", "Trinity", "Trinity Hall", "Wolfson" ] 
+"College_char": [ "Christ's", "Churchill", "Clare", "Clare Hall", "Corpus Christi", "Darwin", "Downing", "Emma", "Fitzwilliam", "Girton", "Caius", "Homerton", "Hughes Hall", "Jesus", "King's", "Lucy Cavendish", "Magdalene", "Murray Edwards", "Newnham", "Pembroke", "Peterhouse", "Queens", "Robinson", "Selwyn", "Sidney", "St Catharine's", "St Edmund's", "St John's", "Trinity", "Trinity Hall", "Wolfson" ]
 },
 "facet": null,
 "type": "point",
 "width":    500,
-"color": "College_char" 
-} 
+"color": "College_char"
+}
 ],
 "facet": [],
 "guides": {
  "y": {
  "min":      0,
 "max":     40,
-"title": "% with firsts" 
+"title": "% with firsts"
 },
 "x": {
  "min":      0,
 "max":  4e+05,
-"title": "Yearly wine budget in thousands (£)" 
+"title": "Yearly wine budget in thousands (£)"
 },
 "color": {
  "numticks": 31,
-"labels": [ "Caius", "Christ's", "Churchill", "Clare", "Clare Hall", "Corpus Christi", "Darwin", "Downing", "Emma", "Fitzwilliam", "Girton", "Homerton", "Hughes Hall", "Jesus", "King's", "Lucy Cavendish", "Magdalene", "Murray Edwards", "Newnham", "Pembroke", "Peterhouse", "Queens", "Robinson", "Selwyn", "Sidney", "St Catharine's", "St Edmund's", "St John's", "Trinity", "Trinity Hall", "Wolfson" ] 
-} 
+"labels": [ "Caius", "Christ's", "Churchill", "Clare", "Clare Hall", "Corpus Christi", "Darwin", "Downing", "Emma", "Fitzwilliam", "Girton", "Homerton", "Hughes Hall", "Jesus", "King's", "Lucy Cavendish", "Magdalene", "Murray Edwards", "Newnham", "Pembroke", "Peterhouse", "Queens", "Robinson", "Selwyn", "Sidney", "St Catharine's", "St Edmund's", "St John's", "Trinity", "Trinity Hall", "Wolfson" ]
+}
 },
 "coord": [],
-"id": "charteba1c84cbc4" 
+"id": "charteba1c84cbc4"
 }
     _.each(chartParams.layers, function(el){
         el.data = polyjs.data(el.data)
     })
     var graph_charteba1c84cbc4 = polyjs.chart(chartParams);
 </script>
-    
+
   </body>
 </html>
 
 <h2 id="d-scatter-plots">3D scatter plots</h2>
 
-<p>A 3D scatter plot from <a href="/articles/ski-2014/">my post about mapping ski data</a>. The 3D scatter plot is super simple to make: 
+<p>A 3D scatter plot from <a href="/articles/ski-2014/">my post about mapping ski data</a>. The 3D scatter plot is super simple to make:
 code <a href="/articles/3Dscatter/">is here</a>.</p>
 
 <figure>
@@ -676,7 +676,20 @@ code <a href="/articles/3Dscatter/">is here</a>.</p>
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		
+		<div class="ads"><style>
+.responsive-ads { width: 300px; height: 200px; }
+@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle responsive-ads"
+	style="display:inline-block"
+	data-ad-client="ca-pub-8433594162604860"
+	data-ad-slot="9138304032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><!-- /.ads -->
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 

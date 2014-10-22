@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Scatter plot matrix with R • James Black</title>
-    <meta name="description" content="Making two types of scatter plot matrix with R.">
-    <meta name="keywords" content="r, scatter plot matrix">
+    <title>Courses • James Black</title>
+    <meta name="description" content="Courses I've done.">
+    <meta name="keywords" content="courses">
     
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Scatter plot matrix with R">
-	<meta name="twitter:description" content="Making two types of scatter plot matrix with R.">
+	<meta name="twitter:title" content="Courses">
+	<meta name="twitter:description" content="Courses I've done.">
 	
 	
 	
@@ -19,13 +19,13 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Scatter plot matrix with R">
-	<meta property="og:description" content="Making two types of scatter plot matrix with R.">
-	<meta property="og:url" content="http://epijim.uk/code/Scatterplotmatrix/">
+	<meta property="og:title" content="Courses">
+	<meta property="og:description" content="Courses I've done.">
+	<meta property="og:url" content="http://epijim.uk/courses/">
 	<meta property="og:site_name" content="James Black">
     <link rel="author" href="https://plus.google.com/https://plus.google.com/112022213613617220776/"/>
 
-    <link rel="canonical" href="http://epijim.uk/code/Scatterplotmatrix/">
+    <link rel="canonical" href="http://epijim.uk/courses/">
 
     <link href="http://epijim.uk/atom.xml" type="application/atom+xml" rel="alternate" title="James Black Atom Feed">
     <link href="http://epijim.uk/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -137,84 +137,78 @@
       <div id="main" role="main">			
 	<article class="wrap" itemscope itemtype="http://schema.org/Article">
 		
-		<nav class="breadcrumbs">
-  <a href="http://epijim.uk">Home</a> <span class="divider">/</span> <a href="http://epijim.uk/code/">Code</a> <span class="divider">/</span>
-</nav><!-- /.breadcrumbs -->
+		
 		<div class="page-title">
-			<h1>Scatter plot matrix with R</h1>
+			<h1>Courses</h1>
 		</div>
 		<div class="inner-wrap">
 			<nav class="toc"></nav><!-- /.toc -->
 			<div id="content" class="page-content" itemprop="articleBody">
-				<h2 id="mixed-variables">Mixed variables</h2>
+				<p>As a number of people have asked about courses I recommend, I decided to keep a track of them
+ all here.</p>
 
-<p>Scatter plot matrices tend to be something I always run, but never present. So I don’t bother
- with making them pretty. My two favourite functions are <em>ggpairs</em>, and <em>corrgram</em>.</p>
+<h2 id="diabetes">Diabetes</h2>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
-2
-3
-4
-5</code></pre></div></td><td class="code"><div class="highlight"><pre>png<span class="p">(</span><span class="s">&quot;scattermatrix.png&quot;</span><span class="p">)</span>
-ggpairs<span class="p">(</span>mydata<span class="p">,</span>
-        <span class="c1">#axisLabels = &quot;none&quot;</span>
-<span class="p">)</span>
-dev.off<span class="p">()</span>
-</pre></div>
-</td></tr></table>
+<h3 id="diabetes-diagnosis-treatment-and-opportunities">Diabetes: diagnosis, treatment, and opportunities</h3>
 
-<figure>
-	<a href="/images/wine_1_scattermatrix.jpeg"><img src="/images/wine_1_scattermatrix.jpeg" /></a>
-	<figcaption>Scatterplot matrix of pairwise correlations. Plot type is defined by data in each pair.</figcaption>
-</figure>
+<p><em>5 week online course provided by UCSF (via Coursera.org)</em>: <a href="https://www.coursera.org/course/ucsfdiabetes">This course</a>, provides a good introduction to
+ diabetes care in practice. It’s not at all intellectual<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, and provides a relatively
+ in depth listing of facts concerning what defines a patient with diabetes, what is current
+ treatment norms, and what are they at risk of.</p>
 
-<h2 id="all-continuous">All continuous</h2>
+<h2 id="r">R</h2>
 
-<p>This second plot type doesn’t handle discrete variables, so is good when you just want
- continuous vs. continuous pairs.</p>
+<h3 id="the-data-scientists-toolbox">The Data Scientists Toolbox</h3>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r">1
-2
-3
-4
-5
-6</code></pre></div></td><td class="code"><div class="highlight"><pre>png<span class="p">(</span><span class="s">&quot;scattermatrix_corrgram.png&quot;</span><span class="p">)</span>
-corrgram<span class="p">(</span>mydata<span class="p">,</span>
-         order<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> lower.panel<span class="o">=</span>panel.pts<span class="p">,</span>
-         upper.panel<span class="o">=</span>panel.ellipse<span class="p">,</span> text.panel<span class="o">=</span>panel.txt<span class="p">,</span>
-         diag.panel<span class="o">=</span>panel.minmax<span class="p">)</span>
-dev.off<span class="p">()</span>
-</pre></div>
-</td></tr></table>
+<p><em>4 week online course provided by Johns Hopkins University (via Coursera.org)</em>: <a href="https://www.coursera.org/course/datascitoolbox">This course</a>,
+ introducing git and R as tools for data science. Good course, although I already use git and R, and the course only teaches the basics. If you know
+ how to push or fork a git, or what CRAN and a vector is (and why it gives R a huge advantage over simpler packages like R and Stata), you don’t need this
+ course.</p>
 
-<figure>
-	<a href="/images/wine_2_scattermatrix_corrgram.jpeg"><img src="/images/wine_2_scattermatrix_corrgram.jpeg" /></a>
-	<figcaption>Scatterplot using an alternative plotting function (this one can't handle categories as well).</figcaption>
-</figure>
+<h3 id="codeschool---try-r">Codeschool - Try R</h3>
+
+<p><em>Online interactive course</em>: <a href="https://www.codeschool.com/courses/try-r">This course</a> is beyond amazing. It’s an introduction
+ to R where you type into your browser, and it responds interactively. The free intro course is short,
+ but lots of fun. Definitely the ideal first introduction to R.</p>
+
+<h2 id="general-data-analysis-and-visualisation">General data analysis and visualisation</h2>
+
+<h3 id="introduction-to-data-visualisation">Introduction to data visualisation</h3>
+
+<p><em>Evening session at The Guardian</em>: <a href="http://www.theguardian.com/guardian-masterclasses/intorduction-to-data-visualisation-digital-course">This is a single (paid) session</a>
+ introducing tools used by the Guardian newspaper for their infographics.
+ While the evening was very interesting, it’s also a little disappointing. The Guardian appears
+ to be relatively methodologically inept compared to the data journalists at places like the New York Times and ESPN.
+ So not the place to go if you want to hear how to do things well.</p>
+
+<h3 id="maps-and-the-geo-spatial-revolution">Maps and the geo-spatial revolution</h3>
+
+<p><em>5 week uncredited online course provided by Penn State (via Coursera.org)</em>: <a href="https://www.coursera.org/course/maps">A fun course</a>, that provides a basic introduction to GIS.
+ I learnt lots of terminology, and some history, of GIS, but this course is targeted at people with no experience.
+ If you know how to plot a path, and a point, with ggmaps in R, you’re already beyond the course content.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>By ‘not at all intellectual’ I mean the content of the course never asks you to think, it just lists <em>what’s what</em>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
 				<hr />
 				<footer class="page-footer">
 					
-
-
-<div class="author-image">
-	<img src="http://epijim.uk/images/bio-photo.jpg" alt="James Black">
-</div><!-- ./author-image -->
-<div class="author-content">
-	<h3 class="author-name" >Written by <a href="http://epijim.uk" itemprop="author">James Black</a></h3>
-	<p class="author-bio">Reading Epidemiology at Jesus College, University of Cambridge.</p>
-</div><!-- ./author-content -->
 					<div class="inline-btn">
-	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=Scatter%20plot%20matrix%20with%20R&amp;url=http://epijim.uk/code/Scatterplotmatrix/&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
-	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://epijim.uk/code/Scatterplotmatrix/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=http://epijim.uk/code/Scatterplotmatrix/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=Courses&amp;url=http://epijim.uk/courses/&amp;via=" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://epijim.uk/courses/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+	<a class="btn-social google-plus"  href="https://plus.google.com/share?url=http://epijim.uk/courses/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a>
 </div><!-- /.share-this -->
 					<div class="page-meta">
-	<p>Updated <time datetime="2014-09-27T16:57:41Z" itemprop="dateModified">September 27, 2014</time>
+	<p>Updated <time datetime="2014-10-22T16:39:03Z" itemprop="datePublished">October 22, 2014</time></p>
 </div><!-- /.page-meta -->
 					<div class="page-meta">
   
-    <span>Filed under: <a href="/tag/r/" title="r" rel="tag">r</a>, <a href="/tag/scatter-plot-matrix/" title="scatter plot matrix" rel="tag">scatter plot matrix</a></span>
+    <span>Filed under: <a href="/tag/courses/" title="courses" rel="tag">courses</a></span>
   
 </div><!-- /.page-meta -->
 				</footer><!-- /.footer -->
@@ -236,20 +230,7 @@ dev.off<span class="p">()</span>
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		<div class="ads"><style>
-.responsive-ads { width: 300px; height: 200px; }
-@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
-@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
-</style>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle responsive-ads"
-	style="display:inline-block"
-	data-ad-client="ca-pub-8433594162604860"
-	data-ad-slot="9138304032"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></div><!-- /.ads -->
+		
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 

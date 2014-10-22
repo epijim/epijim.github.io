@@ -165,35 +165,35 @@ tt, code, pre {
    font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
 }
 
-h1 { 
-   font-size:2.2em; 
+h1 {
+   font-size:2.2em;
 }
 
-h2 { 
-   font-size:1.8em; 
+h2 {
+   font-size:1.8em;
 }
 
-h3 { 
-   font-size:1.4em; 
+h3 {
+   font-size:1.4em;
 }
 
-h4 { 
-   font-size:1.0em; 
+h4 {
+   font-size:1.0em;
 }
 
-h5 { 
-   font-size:0.9em; 
+h5 {
+   font-size:0.9em;
 }
 
-h6 { 
-   font-size:0.8em; 
+h6 {
+   font-size:0.8em;
 }
 
 a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre {	
+pre {
    margin-top: 0;
    max-width: 95%;
    border: 1px solid #ccc;
@@ -228,54 +228,54 @@ hr {
 }
 
 @media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
    }
 
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
+   body {
+      font-size:12pt;
+      max-width:100%;
    }
 
-   hr { 
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
       visibility: hidden;
       page-break-before: always;
    }
 
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
    }
 
-   tr, img { 
-      page-break-inside: avoid; 
+   tr, img {
+      page-break-inside: avoid;
    }
 
-   img { 
-      max-width: 100% !important; 
+   img {
+      max-width: 100% !important;
    }
 
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
    }
 
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
    }
 
-   h2, h3 { 
-      page-break-after: avoid; 
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
    }
 }
 
@@ -359,11 +359,11 @@ hljs.initHighlightingOnLoad();
 
 <pre><code>## Loading required package: reshape
 ## Loading required package: plyr
-## 
+##
 ## Attaching package: &#39;reshape&#39;
-## 
+##
 ## The following objects are masked from &#39;package:plyr&#39;:
-## 
+##
 ##     rename, round_any
 </code></pre>
 
@@ -441,7 +441,7 @@ data &lt;- read.csv(text = data, stringsAsFactors = F)
 
 <h1>Set up the data how I want it</h1>
 
-<p>Just in case, I&#39;ll duplicate <em>college</em> as a string variable, and make 
+<p>Just in case, I&#39;ll duplicate <em>college</em> as a string variable, and make
   <em>grad college</em> a factor.</p>
 
 <pre><code class="r">data$College_char &lt;- as.character(data$College)
@@ -491,23 +491,23 @@ cat(beta_hat_0, beta_hat_1)
 summary(simple)
 </code></pre>
 
-<pre><code>## 
+<pre><code>##
 ## Call:
 ## lm(formula = Firsts_2013 ~ log_Wine_budget, data = sample)
-## 
+##
 ## Residuals:
-##    Min     1Q Median     3Q    Max 
-## -7.152 -2.136 -0.084  1.858 11.237 
-## 
+##    Min     1Q Median     3Q    Max
+## -7.152 -2.136 -0.084  1.858 11.237
+##
 ## Coefficients:
-##                 Estimate Std. Error t value  Pr(&gt;|t|)    
+##                 Estimate Std. Error t value  Pr(&gt;|t|)
 ## (Intercept)      -46.157     11.024   -4.19   0.00029 ***
 ## log_Wine_budget    6.221      0.986    6.31 0.0000011 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
+##
 ## Residual standard error: 4.15 on 26 degrees of freedom
-## Multiple R-squared:  0.605,  Adjusted R-squared:  0.59 
+## Multiple R-squared:  0.605,  Adjusted R-squared:  0.59
 ## F-statistic: 39.8 on 1 and 26 DF,  p-value: 0.00000111
 </code></pre>
 
@@ -517,7 +517,7 @@ summary(simple)
 coef(raw_fit)
 </code></pre>
 
-<pre><code>## (Intercept) Wine_budget 
+<pre><code>## (Intercept) Wine_budget
 ## 18.32024204  0.00005192
 </code></pre>
 
@@ -533,32 +533,32 @@ coef(raw_fit)
 
 <p>Now, a model also adjusting for the number of <em>members</em> in a college, the <em>age</em> and the <em>percent female</em>.</p>
 
-<pre><code class="r">ols &lt;- lm(Firsts_2013 ~ Members + log_Wine_budget + Age_College + Percent_female, 
+<pre><code class="r">ols &lt;- lm(Firsts_2013 ~ Members + log_Wine_budget + Age_College + Percent_female,
     data = sample)
 summary(ols)
 </code></pre>
 
-<pre><code>## 
+<pre><code>##
 ## Call:
-## lm(formula = Firsts_2013 ~ Members + log_Wine_budget + Age_College + 
+## lm(formula = Firsts_2013 ~ Members + log_Wine_budget + Age_College +
 ##     Percent_female, data = sample)
-## 
+##
 ## Residuals:
-##    Min     1Q Median     3Q    Max 
-## -6.141 -2.498 -0.524  1.757 10.180 
-## 
+##    Min     1Q Median     3Q    Max
+## -6.141 -2.498 -0.524  1.757 10.180
+##
 ## Coefficients:
-##                  Estimate Std. Error t value Pr(&gt;|t|)   
-## (Intercept)     -29.98560   15.34763   -1.95   0.0630 . 
-## Members           0.00479    0.00415    1.15   0.2608   
+##                  Estimate Std. Error t value Pr(&gt;|t|)
+## (Intercept)     -29.98560   15.34763   -1.95   0.0630 .
+## Members           0.00479    0.00415    1.15   0.2608
 ## log_Wine_budget   4.44586    1.51712    2.93   0.0075 **
-## Age_College       0.00575    0.00469    1.23   0.2319   
-## Percent_female   -0.05144    0.04886   -1.05   0.3034   
+## Age_College       0.00575    0.00469    1.23   0.2319
+## Percent_female   -0.05144    0.04886   -1.05   0.3034
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
+##
 ## Residual standard error: 4.14 on 23 degrees of freedom
-## Multiple R-squared:  0.652,  Adjusted R-squared:  0.592 
+## Multiple R-squared:  0.652,  Adjusted R-squared:  0.592
 ## F-statistic: 10.8 on 4 and 23 DF,  p-value: 0.0000449
 </code></pre>
 
@@ -578,7 +578,7 @@ summary(ols)
 <pre><code class="r">d1 &lt;- cooks.distance(ols)
 r &lt;- stdres(ols)
 a &lt;- cbind(sample, d1, r)
-a[d1 &gt; 4/nrow(sample), c(&quot;Firsts_2013&quot;, &quot;Members&quot;, &quot;Age_College&quot;, &quot;log_Wine_budget&quot;, 
+a[d1 &gt; 4/nrow(sample), c(&quot;Firsts_2013&quot;, &quot;Members&quot;, &quot;Age_College&quot;, &quot;log_Wine_budget&quot;,
     &quot;Percent_female&quot;)]
 </code></pre>
 
@@ -607,7 +607,7 @@ a[d1 &gt; 4/nrow(sample), c(&quot;Firsts_2013&quot;, &quot;Members&quot;, &quot;
 wine_min &lt;- log(10000)
 wine_max &lt;- log(400000)
 wine_step &lt;- 40
-plot_data &lt;- data.frame(log_Wine_budget = seq(from = wine_min, to = wine_max, 
+plot_data &lt;- data.frame(log_Wine_budget = seq(from = wine_min, to = wine_max,
     length.out = wine_step))
 </code></pre>
 
@@ -625,7 +625,7 @@ plot_data$Members &lt;- mean(Members)
 
 <p>Final OLS model </p>
 
-<pre><code class="r">ols &lt;- lm(Firsts_2013 ~ log_Wine_budget + Age_College + Percent_female + Members, 
+<pre><code class="r">ols &lt;- lm(Firsts_2013 ~ log_Wine_budget + Age_College + Percent_female + Members,
     data = sample)
 pred_ols &lt;- data.frame(predict(ols, plot_data, interval = &quot;predict&quot;))
 detach(sample)
@@ -646,11 +646,11 @@ plot_data_gg &lt;- melt(plot_data_gg, id.vars = &quot;Wine_budget&quot;)
 # colour of the legend
 cols &lt;- c(`#000099` = &quot;black&quot;, pred_simple = &quot;red&quot;, pred_ols = &quot;blue&quot;)
 
-ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = &quot;test&quot;, 
-    ) + geom_line() + ylim(0, 50) + geom_point(data = sample, aes(x = Wine_budget, 
-    y = Firsts_2013, colour = &quot;#000099&quot;), show_guide = FALSE) + coord_fixed(ratio = 10000/1) + 
-    theme_bw() + xlab(&quot;Wine budget (£)&quot;) + ylab(&quot;Percent with firsts&quot;) + theme(legend.title = element_blank()) + 
-    scale_colour_manual(values = cols, breaks = c(&quot;#000099&quot;, &quot;pred_ols&quot;, &quot;pred_simple&quot;), 
+ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = &quot;test&quot;,
+    ) + geom_line() + ylim(0, 50) + geom_point(data = sample, aes(x = Wine_budget,
+    y = Firsts_2013, colour = &quot;#000099&quot;), show_guide = FALSE) + coord_fixed(ratio = 10000/1) +
+    theme_bw() + xlab(&quot;Wine budget (£)&quot;) + ylab(&quot;Percent with firsts&quot;) + theme(legend.title = element_blank()) +
+    scale_colour_manual(values = cols, breaks = c(&quot;#000099&quot;, &quot;pred_ols&quot;, &quot;pred_simple&quot;),
         labels = c(&quot;A college&quot;, &quot;Adjusted&quot;, &quot;Unadjusted&quot;))
 </code></pre>
 
@@ -704,7 +704,20 @@ ggplot(plot_data_gg, aes(x = Wine_budget, y = value, colour = variable), xlab = 
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		
+		<div class="ads"><style>
+.responsive-ads { width: 300px; height: 200px; }
+@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle responsive-ads"
+	style="display:inline-block"
+	data-ad-client="ca-pub-8433594162604860"
+	data-ad-slot="9138304032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><!-- /.ads -->
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 

@@ -171,7 +171,7 @@
 <h3 id="d-density--contour-map">3D density / contour map</h3>
 
 <p>And a density/contour plot. The data here is 2004 Tompkins scores for all the colleges
- at Cambridge against 2013 scores. As you can see, this graph isn’t that useful for looking 
+ at Cambridge against 2013 scores. As you can see, this graph isn’t that useful for looking
  at <em>x</em> vs. <em>y</em>.</p>
 
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="language-r" data-lang="r"> 1
@@ -209,7 +209,7 @@ data <span class="o">&lt;-</span> read.csv<span class="p">(</span>text<span clas
 <span class="kn">library</span><span class="p">(</span>MASS<span class="p">)</span> <span class="c1"># derives the z axis</span>
 
 <span class="c1"># Open graph</span>
-rgl.open<span class="p">()</span> 
+rgl.open<span class="p">()</span>
 
 <span class="c1"># Get the z axis</span>
 fit <span class="o">&lt;-</span> data<span class="p">[,</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;Tompkin_1997&quot;</span><span class="p">,</span><span class="s">&quot;Tompkin_2013&quot;</span><span class="p">)]</span>
@@ -223,7 +223,7 @@ par3d<span class="p">(</span>zoom <span class="o">=</span> <span class="m">0.5</
 
 <span class="c1"># Animate it</span>
 M <span class="o">=</span> par3d<span class="p">(</span><span class="s">&quot;userMatrix&quot;</span><span class="p">)</span>
-play3d<span class="p">(</span>par3dinterp<span class="p">(</span>userMatrix <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>M<span class="p">,</span> rotate3d<span class="p">(</span>M<span class="p">,</span> <span class="kc">pi</span><span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span> 
+play3d<span class="p">(</span>par3dinterp<span class="p">(</span>userMatrix <span class="o">=</span> <span class="kt">list</span><span class="p">(</span>M<span class="p">,</span> rotate3d<span class="p">(</span>M<span class="p">,</span> <span class="kc">pi</span><span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span>
                                      rotate3d<span class="p">(</span>M<span class="p">,</span> <span class="kc">pi</span><span class="o">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))),</span> duration <span class="o">=</span> <span class="m">5</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -276,7 +276,20 @@ play3d<span class="p">(</span>par3dinterp<span class="p">(</span>userMatrix <spa
 				</aside>
 			</div><!-- /.content -->
 		</div><!-- /.inner-wrap -->
-		
+		<div class="ads"><style>
+.responsive-ads { width: 300px; height: 200px; }
+@media(min-width: 520px) { .responsive-ads { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .responsive-ads { width: 160px; height: 600px; } }
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle responsive-ads"
+	style="display:inline-block"
+	data-ad-client="ca-pub-8433594162604860"
+	data-ad-slot="9138304032"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><!-- /.ads -->
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 
