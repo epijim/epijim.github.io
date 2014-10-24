@@ -253,56 +253,308 @@
   
   <url>
     <loc>http://epijim.uk/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/blog/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/about/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/courses/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/my-papers/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/terms/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/code/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://epijim.uk/tag/</loc>
-    <lastmod>2014-10-24T16:04:47+01:00</lastmod>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/papers/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/publications/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/hrqol/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/r/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/python/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/geocoding/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/wine/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/cambridge%20University/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/facebook/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/network/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/map/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/cambridge/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/dotplot/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/skiing/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/paths/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/gps/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/scatter%20plot/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/bubbletable/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/scatter%20plot%20matrix/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/animated/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/hindex/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/javascript/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/d3/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/simpson's%20paradox/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/nz/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/caffeine/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/football/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/germany/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/uk/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/politics/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/xkcd/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/great%20circles/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/xml/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/api/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/google/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://epijim.uk/tag/weather/</loc>
+    <lastmod>2014-10-24T16:12:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
