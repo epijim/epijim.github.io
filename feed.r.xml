@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
-    
-
-    <title>James Black</title>
-    <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.4.0</generator>
-		<icon>http://epijim.uk/apple-touch-icon-precomposed.png</icon>
-    <subtitle>Jesuan and PhD student at Cambridge University</subtitle>
-    <link href="http://epijim.uk/atom.xml" rel="self"/>
-    <link href="http://epijim.uk/" rel="alternate" type="text/html"/>
-    <updated>2014-10-27T20:21:50+00:00</updated>
-    <id>http://epijim.uk/</id>
-    <author>
-			<name>James Black</name>
-			<uri>http://epijim.uk/</uri>
-			<email>james@epijim.uk</email>
-		</author>
-
-    
-    <entry>
-        <title>When is it nice in Cambridge (interactive app)?</title>
-        <link href="http://epijim.uk/blog/when-cam-nice-app/"/>
-        <updated>2014-10-25T00:00:00+01:00</updated>
-        <id>http://epijim.uk/blog/when-cam-nice-app</id>
-        <author>
-					<name>James Black</name>
-					<uri>http://epijim.uk/</uri>
-					<email>james@epijim.uk</email>
-				</author>
-        <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/weather_feature.jpg&quot;&gt;&lt;br/&gt;
-        	&lt;p&gt;&lt;a href=&quot;http:epijim.uk/blog/when-cam-nice/&quot;&gt;Last week&lt;/a&gt; I plotted when the weather is nice in Cambridge.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title> - Miscellaneous</title>
+		<description>Posts categorized as containing R code</description>
+		<link>http://epijim.uk</link>
+		<atom:link href="http://epijim.uk/feed.r.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>When is it nice in Cambridge (interactive app)?</title>
+				<description>&lt;p&gt;&lt;a href=&quot;http:epijim.uk/blog/when-cam-nice/&quot;&gt;Last week&lt;/a&gt; I plotted when the weather is nice in Cambridge.&lt;/p&gt;
 
 &lt;p&gt;After getting pointed towards the University Weather Station data, I decided to recreate it
 using the this better data source as an interactive app where people can define
@@ -40,23 +18,15 @@ what nice means themselves.&lt;/p&gt;
 &lt;/iframe&gt;
 
 &lt;p&gt;This app is built using R, and hosted on the free Shiny servers on ShinyApps.io.&lt;/p&gt;
-
-        </content>
-    </entry>
-    
-    <entry>
-        <title>When is it nice in Cambridge?</title>
-        <link href="http://epijim.uk/blog/when-cam-nice/"/>
-        <updated>2014-10-21T00:00:00+01:00</updated>
-        <id>http://epijim.uk/blog/when-cam-nice</id>
-        <author>
-					<name>James Black</name>
-					<uri>http://epijim.uk/</uri>
-					<email>james@epijim.uk</email>
-				</author>
-        <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/weather_feature.jpg&quot;&gt;&lt;br/&gt;
-        	&lt;p&gt;As winter descends on Cambridge (it’s currently 8°C), I wondered if winter started
+</description>
+				<pubDate>Sat, 25 Oct 2014 00:00:00 +0100</pubDate>
+				<link>http://epijim.uk/blog/when-cam-nice-app/</link>
+				<guid isPermaLink="true">http://epijim.uk/blog/when-cam-nice-app/</guid>
+			</item>
+		
+			<item>
+				<title>When is it nice in Cambridge?</title>
+				<description>&lt;p&gt;As winter descends on Cambridge (it’s currently 8°C), I wondered if winter started
  this early last year. Earlier this year I came across a post
  where someone had plotted where in America
  the weather was most consistently nice.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; As part of the course I’m doing at the moment,
@@ -120,23 +90,15 @@ and other days in grey. Specifically:&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
-
-        </content>
-    </entry>
-    
-    <entry>
-        <title>Optimum pub crawl route through all 71 Cambridge pubs</title>
-        <link href="http://epijim.uk/blog/pub-crawl/"/>
-        <updated>2014-10-05T00:00:00+01:00</updated>
-        <id>http://epijim.uk/blog/pub-crawl</id>
-        <author>
-					<name>James Black</name>
-					<uri>http://epijim.uk/</uri>
-					<email>james@epijim.uk</email>
-				</author>
-        <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/pub_feature.jpg&quot;&gt;&lt;br/&gt;
-        	&lt;script&gt;
+</description>
+				<pubDate>Tue, 21 Oct 2014 00:00:00 +0100</pubDate>
+				<link>http://epijim.uk/blog/when-cam-nice/</link>
+				<guid isPermaLink="true">http://epijim.uk/blog/when-cam-nice/</guid>
+			</item>
+		
+			<item>
+				<title>Optimum pub crawl route through all 71 Cambridge pubs</title>
+				<description>&lt;script&gt;
  (function(d, t) {
     var g = d.createElement(t),
         s = d.getElementsByTagName(t)[0];
@@ -301,23 +263,15 @@ source_gist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
-
-        </content>
-    </entry>
-    
-    <entry>
-        <title>Distance to the nearest pub</title>
-        <link href="http://epijim.uk/blog/pub-distances/"/>
-        <updated>2014-10-04T00:00:00+01:00</updated>
-        <id>http://epijim.uk/blog/pub-distances</id>
-        <author>
-					<name>James Black</name>
-					<uri>http://epijim.uk/</uri>
-					<email>james@epijim.uk</email>
-				</author>
-        <content type="html">
-        	&lt;img src=&quot;http://epijim.uk/images/pub_feature.jpg&quot;&gt;&lt;br/&gt;
-        	&lt;p&gt;The plot below shows the distance to the nearest pub, from a grid of
+</description>
+				<pubDate>Sun, 05 Oct 2014 00:00:00 +0100</pubDate>
+				<link>http://epijim.uk/blog/pub-crawl/</link>
+				<guid isPermaLink="true">http://epijim.uk/blog/pub-crawl/</guid>
+			</item>
+		
+			<item>
+				<title>Distance to the nearest pub</title>
+				<description>&lt;p&gt;The plot below shows the distance to the nearest pub, from a grid of
  spots in Cambridge. Starting in the top left of the green box, I ran a script that calls 
  the &lt;code&gt;Google Distance Matrix API&lt;/code&gt; to ask where the nearest pub is. It then moves a little to the right, 
  and asks again. When it hits the far side of the box, it drops down and 
@@ -401,23 +355,15 @@ source_gist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
-
-        </content>
-    </entry>
-    
-    <entry>
-        <title>Using Google API</title>
-        <link href="http://epijim.uk/code/googleapi/"/>
-        <updated>2014-10-04T00:00:00+01:00</updated>
-        <id>http://epijim.uk/code/googleapi</id>
-        <author>
-					<name>James Black</name>
-					<uri>http://epijim.uk/</uri>
-					<email>james@epijim.uk</email>
-				</author>
-        <content type="html">
-        	
-        	&lt;p&gt;The following is the function I used to make my blog post on the distance to the nearest pub.
+</description>
+				<pubDate>Sat, 04 Oct 2014 00:00:00 +0100</pubDate>
+				<link>http://epijim.uk/blog/pub-distances/</link>
+				<guid isPermaLink="true">http://epijim.uk/blog/pub-distances/</guid>
+			</item>
+		
+			<item>
+				<title>Using Google API</title>
+				<description>&lt;p&gt;The following is the function I used to make my blog post on the distance to the nearest pub.
  This function was used to get the walking distance and time from a point I specified, to the
  nearest pub.&lt;/p&gt;
 
@@ -496,8 +442,11 @@ source_gist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
-
-        </content>
-    </entry>
-    
-</feed>
+</description>
+				<pubDate>Sat, 04 Oct 2014 00:00:00 +0100</pubDate>
+				<link>http://epijim.uk/code/googleapi/</link>
+				<guid isPermaLink="true">http://epijim.uk/code/googleapi/</guid>
+			</item>
+		
+	</channel>
+</rss>
