@@ -3,7 +3,15 @@
   
   
   <url>
-    <loc>http://epijim.uk/blog/when-cam-nice-app/</loc>
+    <loc>https://epijim.uk/papers/paper5/</loc>
+    
+    <lastmod>2015-03-30T00:00:00+01:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://epijim.uk/blog/when-cam-nice-app/</loc>
     
     <lastmod>2014-10-25T00:00:00+01:00</lastmod>
     
@@ -11,7 +19,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/when-cam-nice/</loc>
+    <loc>https://epijim.uk/blog/when-cam-nice/</loc>
     
     <lastmod>2014-10-21T00:00:00+01:00</lastmod>
     
@@ -19,7 +27,15 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/pub-crawl/</loc>
+    <loc>https://epijim.uk/blog/crime-cambridge/</loc>
+    
+    <lastmod>2014-10-19T00:00:00+01:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://epijim.uk/blog/pub-crawl/</loc>
     
     <lastmod>2014-10-05T00:00:00+01:00</lastmod>
     
@@ -27,7 +43,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/pub-distances/</loc>
+    <loc>https://epijim.uk/blog/pub-distances/</loc>
     
     <lastmod>2014-10-04T00:00:00+01:00</lastmod>
     
@@ -35,7 +51,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/googleapi/</loc>
+    <loc>https://epijim.uk/code/googleapi/</loc>
     
     <lastmod>2014-10-04T00:00:00+01:00</lastmod>
     
@@ -43,7 +59,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/scrapexml/</loc>
+    <loc>https://epijim.uk/code/scrapexml/</loc>
     
     <lastmod>2014-10-03T00:00:00+01:00</lastmod>
     
@@ -51,7 +67,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/great-circles/</loc>
+    <loc>https://epijim.uk/blog/great-circles/</loc>
     
     <lastmod>2014-09-25T00:00:00+01:00</lastmod>
     
@@ -59,7 +75,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/wes-anderson/</loc>
+    <loc>https://epijim.uk/code/wes-anderson/</loc>
     
     <lastmod>2014-09-21T00:00:00+01:00</lastmod>
     
@@ -67,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/xkcd/</loc>
+    <loc>https://epijim.uk/code/xkcd/</loc>
     
     <lastmod>2014-09-20T00:00:00+01:00</lastmod>
     
@@ -75,7 +91,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/independence/</loc>
+    <loc>https://epijim.uk/blog/independence/</loc>
     
     <lastmod>2014-09-15T00:00:00+01:00</lastmod>
     
@@ -83,7 +99,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/worldcup14/</loc>
+    <loc>https://epijim.uk/blog/worldcup14/</loc>
     
     <lastmod>2014-08-20T00:00:00+01:00</lastmod>
     
@@ -91,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/CamTrad2014/</loc>
+    <loc>https://epijim.uk/blog/CamTrad2014/</loc>
     
     <lastmod>2014-08-01T00:00:00+01:00</lastmod>
     
@@ -99,7 +115,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/sheep/</loc>
+    <loc>https://epijim.uk/blog/sheep/</loc>
     
     <lastmod>2014-06-08T00:00:00+01:00</lastmod>
     
@@ -107,7 +123,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/simpsons/</loc>
+    <loc>https://epijim.uk/blog/simpsons/</loc>
     
     <lastmod>2014-04-29T00:00:00+01:00</lastmod>
     
@@ -115,7 +131,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/hindex/</loc>
+    <loc>https://epijim.uk/code/hindex/</loc>
     
     <lastmod>2014-04-11T00:00:00+01:00</lastmod>
     
@@ -123,7 +139,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/gifsinr/</loc>
+    <loc>https://epijim.uk/code/gifsinr/</loc>
     
     <lastmod>2014-04-11T00:00:00+01:00</lastmod>
     
@@ -131,7 +147,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/Scatterplots/</loc>
+    <loc>https://epijim.uk/code/Scatterplots/</loc>
     
     <lastmod>2014-04-10T00:00:00+01:00</lastmod>
     
@@ -139,7 +155,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/Scatterplotmatrix/</loc>
+    <loc>https://epijim.uk/code/Scatterplotmatrix/</loc>
     
     <lastmod>2014-04-10T00:00:00+01:00</lastmod>
     
@@ -147,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/bubbletable/</loc>
+    <loc>https://epijim.uk/code/bubbletable/</loc>
     
     <lastmod>2014-04-01T00:00:00+01:00</lastmod>
     
@@ -155,7 +171,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/3Dscatter/</loc>
+    <loc>https://epijim.uk/code/3Dscatter/</loc>
     
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     
@@ -163,7 +179,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/ski-2014/</loc>
+    <loc>https://epijim.uk/blog/ski-2014/</loc>
     
     <lastmod>2014-03-09T00:00:00+00:00</lastmod>
     
@@ -171,7 +187,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/pathsinr/</loc>
+    <loc>https://epijim.uk/code/pathsinr/</loc>
     
     <lastmod>2014-03-09T00:00:00+00:00</lastmod>
     
@@ -179,7 +195,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/dotplot/</loc>
+    <loc>https://epijim.uk/code/dotplot/</loc>
     
     <lastmod>2014-03-09T00:00:00+00:00</lastmod>
     
@@ -187,7 +203,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/restaurant-hygiene/</loc>
+    <loc>https://epijim.uk/blog/restaurant-hygiene/</loc>
     
     <lastmod>2014-02-19T00:00:00+00:00</lastmod>
     
@@ -195,7 +211,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/facebook-howto/</loc>
+    <loc>https://epijim.uk/code/facebook-howto/</loc>
     
     <lastmod>2014-02-19T00:00:00+00:00</lastmod>
     
@@ -203,7 +219,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/articles/welcome-to-jekyll/</loc>
+    <loc>https://epijim.uk/articles/welcome-to-jekyll/</loc>
     
     <lastmod>2014-02-17T00:00:00+00:00</lastmod>
     
@@ -211,7 +227,15 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/regression/</loc>
+    <loc>https://epijim.uk/blog/analysing-mcr-page/</loc>
+    
+    <lastmod>2014-02-16T00:00:00+00:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://epijim.uk/code/regression/</loc>
     
     <lastmod>2014-02-11T00:00:00+00:00</lastmod>
     
@@ -219,7 +243,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/mapping-python/</loc>
+    <loc>https://epijim.uk/blog/mapping-python/</loc>
     
     <lastmod>2013-12-19T00:00:00+00:00</lastmod>
     
@@ -227,7 +251,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/papers/paper4/</loc>
+    <loc>https://epijim.uk/papers/paper4/</loc>
     
     <lastmod>2011-07-31T00:00:00+01:00</lastmod>
     
@@ -235,7 +259,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/papers/paper3/</loc>
+    <loc>https://epijim.uk/papers/paper3/</loc>
     
     <lastmod>2011-07-31T00:00:00+01:00</lastmod>
     
@@ -243,7 +267,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/papers/paper2/</loc>
+    <loc>https://epijim.uk/papers/paper2/</loc>
     
     <lastmod>2011-07-31T00:00:00+01:00</lastmod>
     
@@ -251,7 +275,7 @@
   </url>
   
   <url>
-    <loc>http://epijim.uk/papers/paper1/</loc>
+    <loc>https://epijim.uk/papers/paper1/</loc>
     
     <lastmod>2011-07-31T00:00:00+01:00</lastmod>
     
@@ -260,57 +284,57 @@
   
   
   <url>
-    <loc>http://epijim.uk/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/code/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/code/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/courses/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/courses/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/about/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/about/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/my-papers/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/my-papers/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/terms/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/terms/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/blog/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/blog/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/tag/</loc>
-    <lastmod>2014-10-27T20:32:00+00:00</lastmod>
+    <loc>https://epijim.uk/tag/</loc>
+    <lastmod>2015-03-31T22:00:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -318,85 +342,85 @@
   
   
   <url>
-    <loc>http://epijim.uk/iframecontent/pubgooglemap.html</loc>
+    <loc>https://epijim.uk/iframecontent/pubgooglemap.html</loc>
     <lastmod>2014-10-05T21:21:42Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/iframecontent/pubgoogleTable.html</loc>
+    <loc>https://epijim.uk/iframecontent/pubgoogleTable.html</loc>
     <lastmod>2014-10-05T21:21:42Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/controls/datgui.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/controls/datgui.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/controls/page.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/controls/page.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/controls/script.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/controls/script.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/layouts/chart.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/layouts/chart.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/layouts/linePlusBar.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/layouts/linePlusBar.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/layouts/multiChart.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/layouts/multiChart.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/layouts/nvd3Facet_d3grid.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/layouts/nvd3Facet_d3grid.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/layouts/nvd3FacetPlot.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/layouts/nvd3FacetPlot.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/layouts/script.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/layouts/script.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/jamesscripts/nvd3/nvd3.html</loc>
+    <loc>https://epijim.uk/jamesscripts/nvd3/nvd3.html</loc>
     <lastmod>2014-04-10T07:22:46Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/safeshare/index.html</loc>
+    <loc>https://epijim.uk/safeshare/index.html</loc>
     <lastmod>2014-06-12T10:06:47Z</lastmod>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://epijim.uk/whisky/index.html</loc>
+    <loc>https://epijim.uk/whisky/index.html</loc>
     <lastmod>2014-10-16T08:08:31Z</lastmod>
     <priority>0.6</priority>
   </url>
